@@ -5,7 +5,10 @@ import chart from '../img/chart.png';
 
 const styles = (theme) => ({
 	container: {
-		margin: '3%'
+		padding: '3%'
+	},
+	section: {
+		padding: '0 15% 0 5%'
 	},
 	image: {
 		backgroundImage: `url(${chart})`,
@@ -42,11 +45,11 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes }) => {
 	return (
-		<Grid container className={classes.container}>
+		<Grid container justify="space-between" className={classes.container}>
 			<Grid item xs={12} md={4}>
 				<div className={classes.image} />
 			</Grid>
-			<Grid item xs={12} md={6}>
+			<Grid className={classes.section} item xs={12} md={8}>
 				<h1 className={classes.title}>Let's build.</h1>
 				<br />
 				<div className={classes.paragraph}>
