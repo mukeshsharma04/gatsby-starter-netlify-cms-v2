@@ -52,9 +52,56 @@ const theme = createMuiTheme({
       fontStretch: 'normal',
       lineHeight: 'normal',
       letterSpacing: 'normal' 
+    },
+
+    paragraph: {
+      fontSize: '16px',
+      fontWeight: 500,
+      color: '#333333',
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 'normal',
+      letterSpacing: 'normal' ,
+      lineHeight: 1.5
+    },
+
+    link: {
+      fontSize: '16px',
+      fontWeight: 500,
+      color: '#4198ff',
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 'normal',
+      letterSpacing: 'normal'
+    },
+
+    hero: {
+      fontSize: '30px',
+      fontWeight: 900,
+      color: '#ffffff',
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 'normal',
+      letterSpacing: 'normal' 
+    },
+
+    button: {
+      fontSize: '14px',
+      fontWeight: 500,
+      color: '#ffffff',
+      textAlign: 'center'
+    },
+
+    quote: {
+      fontSize: '20px',
+      fontWeight: 900,
+      color: '#6f73ff',
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 'normal',
+      letterSpacing: 'normal' ,
+      lineHeight: 2
     }
-
-
 
   }
 });
