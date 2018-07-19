@@ -12,93 +12,116 @@ import logo from '../img/primoko-logo-white.png';
 import Drawer from '@material-ui/core/Drawer';
 import ListItemLink from './ListItemLink';
 import Divider from '@material-ui/core/Divider';
+import Close from '@material-ui/icons/Close';
 
 const styles = (theme) => ({
-  root: {
-    flexGrow: 1
-  },
+	root: {
+		flexGrow: 1
+	},
 
-  flex: {
-    flexGrow: 1
-  },
+	flex: {
+		flexGrow: 1
+	},
 
-  menuButton: {
-    margin: '.5rem 1rem'
-  },
+	menuButton: {
+		margin: '.5rem 1rem'
+	},
 
-  navLink: {
-    color: 'white',
-    padding: '.5rem 1rem',
-    fontWeight: 500,
-    textDecoration: 'none',
-    '&:hover': {
-      borderBottom: '3px solid #fff',
-      color: '#fff',
-      lineHeight: 2
-    }
+	navLink: {
+		color: 'white',
+		padding: '.5rem 1rem',
+		fontWeight: 500,
+		textDecoration: 'none',
+		'&:hover': {
+			borderBottom: '3px solid #fff',
+			color: '#fff',
+			lineHeight: 2
+		}
+	},
+	list: {
+		paddingTop: '15px',
+		width: 250
+	},
+	mobileMenuText: {
+    color: '#ffffff',
+    padding: '0'
+	},
+	toolbar: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'flex-end',
+		padding: '0 8px'
+	},
+	drawer: {
+    backgroundColor: '#333333',
+    height: '-webkit-fill-available'
   },
-  list: {
-    paddingTop: '15px',
-    width: 250
-  },
-  mobileMenuText: {
-    padding: '10px !important'
+  closeIcon: {
+    color: '#ffffff'
   }
 });
 
 class NavBar extends React.Component {
-  state = {
-    showDrawer: false
-  };
+	state = {
+		showDrawer: false
+	};
 
-  render() {
-    const { classes } = this.props;
+	render() {
+		const { classes } = this.props;
 
-    return (
-      <div className={classes.root}>
-        <AppBar position="static" style={{ background: 'linear-gradient(to right, #4B96FC, #6F77FB)' }}>
-          <Toolbar varient="dense">
-            <Typography variant="title" color="inherit" className={classes.flex}>
-              <Link to="/"><img src={logo} alt="Primoko" style={{ height: '20px' }} /></Link>
-            </Typography>
-            <Link to="/about" className={classes.navLink}>
-              About
+		return (
+			<div className={classes.root}>
+				<AppBar position="static" style={{ background: 'linear-gradient(to right, #4B96FC, #6F77FB)' }}>
+					<Toolbar varient="dense">
+						<Typography variant="title" color="inherit" className={classes.flex}>
+							<Link to="/">
+								<img src={logo} alt="Primoko" style={{ height: '20px' }} />
+							</Link>
+						</Typography>
+						<Link to="/about" className={classes.navLink}>
+							About
 						</Link>
-            <Link to="/products" className={classes.navLink}>
-              Products
+						<Link to="/products" className={classes.navLink}>
+							Products
 						</Link>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-              <MenuIcon onClick={() => this.setState({ showDrawer: true })} />
-              <Drawer
-                anchor="right"
-                open={this.state.showDrawer}
-                onClose={() => this.setState({ showDrawer: false })}
-              >
-                <div
-                  tabIndex={0}
-                  role="button"
-                  onClick={() => this.setState({ showDrawer: false })}
-                  onKeyDown={() => this.setState({ showDrawer: false })}
-                >
-                  <div className={classes.list}>
-                    <List component="nav">
-                      <ListItemLink to="/about" style={classes.mobileMenuText} primary="About" />
-                      <Divider />
-                      <ListItemLink
-                        to="/products"
-                        style={classes.mobileMenuText}
-                        primary="Products"
-                      />
-                    </List>
-                  </div>
-                </div>
-              </Drawer>
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-      </div>
-    );
-  }
+						<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+							<MenuIcon onClick={() => this.setState({ showDrawer: true })} />
+							<Drawer
+								anchor="right"
+								open={this.state.showDrawer}
+								onClose={() => this.setState({ showDrawer: false })}
+							>
+								<div
+									className={classes.drawer}
+									tabIndex={0}
+									role="button"
+									onClick={() => this.setState({ showDrawer: false })}
+									onKeyDown={() => this.setState({ showDrawer: false })}
+								>
+									<div className={classes.list}>
+										<List component="nav">
+											<div className={classes.toolbar}>
+												<IconButton>
+													<Close className={classes.closeIcon}/>
+												</IconButton>
+											</div>
+											<ListItemLink to="/about" style={classes.mobileMenuText} primary="About" />
+											<Divider />
+											<ListItemLink
+												to="/products"
+												style={classes.mobileMenuText}
+												primary="Products"
+											/>
+										</List>
+									</div>
+								</div>
+							</Drawer>
+						</IconButton>
+					</Toolbar>
+				</AppBar>
+			</div>
+		);
+	}
 }
 
 export default withStyles(styles, { withTheme: true })(NavBar);
