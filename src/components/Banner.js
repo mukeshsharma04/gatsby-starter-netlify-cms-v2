@@ -18,11 +18,12 @@ const styles = (theme) => ({
 		...theme.typography.hero,
 		width: 'fit-content',
 		color: 'white',
-		background: `linear-gradient(101deg, #4198ff, #6f73ff)`
+    background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
+    padding: '10px'
 	},
 	container: {
 		position: 'absolute',
-		top: '50%'
+		top: '40%'
 	}
 });
 
