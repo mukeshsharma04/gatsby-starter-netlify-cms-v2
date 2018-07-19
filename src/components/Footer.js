@@ -113,7 +113,7 @@ const Footer = ({ classes }) => {
 		<div className={classes.root}>
 			<Grid className={classes.row} container>
 				<Grid item xs={6} md={6}>
-					<img className={classes.logo} src={logo} alt="primoko" />
+					<Link to="/"><img className={classes.logo} src={logo} alt="primoko" /></Link>
 				</Grid>
 				<Grid item xs={6} md={6} className={classes.right}>
 					<Link className={classes.link} to="/">
@@ -191,17 +191,19 @@ const Footer = ({ classes }) => {
 						<Grid item xs={6} md={6}>
 							<Grid direction="column" className={classes.row} container>
 								<Grid item xs={12}>
-									<Typography
-										variant="headline"
-										className={classes.heading}
-										color="inherit"
-										gutterBottom
-									>
-										About Primoko
+									<Link className={classes.link} to="/about">
+										<Typography
+											variant="headline"
+											className={classes.heading}
+											color="inherit"
+											gutterBottom
+										>
+											About Primoko
 									</Typography>
+									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/about">
 										<Typography
 											variant="subheading"
 											className={classNames(classes.paragraph, classes.margin)}
@@ -213,7 +215,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/about/team">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -225,7 +227,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/about/careers">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}

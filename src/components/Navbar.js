@@ -58,20 +58,21 @@ class NavBar extends React.Component {
 
     return (
       <div className={classes.root}>
-      <AppBar position="static" style={{ background: 'linear-gradient(to right, #4B96FC, #6F77FB)' }}>
-        <Toolbar varient="dense">
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            <img src={logo} alt='Primoko' style={{ height: "20px" }} />
-          </Typography>
-          <Link to='/about' className={classes.navLink}>About</Link>
-          <Link to='/products' className={classes.navLink}>Products</Link>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" >
-            <MenuIcon onClick={this.toggleDrawer()} />
-          </IconButton>
-                 
-        </Toolbar>
-      </AppBar>
-      <Drawer anchor="right" open={this.state.showDrawer} onClose={this.toggleDrawer()}>
+        <AppBar position="static" style={{ background: 'linear-gradient(to right, #4B96FC, #6F77FB)' }}>
+          <Toolbar varient="dense">
+            <Typography variant="title" color="inherit" className={classes.flex}>
+              <Link to="/"><img src={logo} alt='Primoko' style={{ height: "20px" }} /></Link>
+            </Typography>
+
+            <Link to='/about' className={classes.navLink}>About</Link>
+            <Link to='/products' className={classes.navLink}>Products</Link>
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" >
+              <MenuIcon onClick={this.toggleDrawer()} />
+            </IconButton>
+
+          </Toolbar>
+        </AppBar>
+        <Drawer anchor="right" open={this.state.showDrawer} onClose={this.toggleDrawer()}>
           <div
             tabIndex={0}
             role="button"
@@ -79,8 +80,8 @@ class NavBar extends React.Component {
             <div><Link to='/about'>About</Link></div>
             <div><Link to='/products'>Products</Link></div>
           </div>
-        </Drawer>   
-    </div>
+        </Drawer>
+      </div>
     );
   }
 
