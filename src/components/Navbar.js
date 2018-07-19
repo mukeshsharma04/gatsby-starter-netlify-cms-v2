@@ -1,41 +1,55 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Link from 'gatsby-link';
 
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  flex: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
 
-const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
+  navLink: {
+    color: 'white',
+    padding: '.5rem 1rem',
+    textDecoration: 'none'
+  }
+};
+
+function ButtonAppBar(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" style={{background: 'linear-gradient(to right, #4B96FC, #6F77FB)'}}>
+        <Toolbar varient="dense">
+          <Typography variant="title" color="inherit" className={classes.flex}>
+            Primoko
+          </Typography>
+          <Link to='/about' className={classes.navLink}>About</Link>
+          <Link to='/products' className={classes.navLink}>Products</Link>
+          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            <MenuIcon />
+          </IconButton>          
+        </Toolbar>
+      </AppBar>
     </div>
-  </nav>
-)
+  );
+}
 
-export default Navbar
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(ButtonAppBar);
