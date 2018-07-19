@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: '@material-ui/core',
       options: {
-        pathToTheme: 'src/theme',
+        pathToTheme: 'src/theme.js',
       },
     },
     '@material-ui/icons'

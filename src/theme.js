@@ -18,4 +18,45 @@ const theme = createMuiTheme({
     // E.g., shift from Red 500 to Red 300 or Red 700.
     tonalOffset: 0.2,
   },
+
+  typography: {
+    fontFamily: [
+      '"Lato"',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+
+    title: {
+      fontSize: '30px',
+      fontWeight: 500,
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 'normal',
+      letterSpacing: 'normal',
+      color: '#333333'
+    },
+
+    subheading: {
+      fontSize: '18px',
+      fontWeight: 900,
+      color: '#666666',
+      fontStyle: 'normal',
+      fontStretch: 'normal',
+      lineHeight: 'normal',
+      letterSpacing: 'normal' 
+    }
+
+
+
+  }
 });
+
+export default theme;

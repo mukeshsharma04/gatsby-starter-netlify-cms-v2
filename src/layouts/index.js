@@ -3,14 +3,16 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Navbar from '../components/Navbar'
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import theme from './../theme';
 import './all.sass'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + Netlify CMS" />
+  <MuiThemeProvider theme={theme}>
+    <Helmet title="Primoko" />
     <Navbar />
     <div>{children()}</div>
-  </div>
+  </MuiThemeProvider>
 )
 
 TemplateWrapper.propTypes = {

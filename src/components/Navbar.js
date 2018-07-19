@@ -20,7 +20,6 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
-
   navLink: {
     color: 'white',
     padding: '.5rem 1rem',
