@@ -1,6 +1,6 @@
 import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import Typography from '@material-ui/core/Typography';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,7 @@ const ListItemLink = (props) => {
 	return (
 		<li>
 			<ListItem button component={Link} to={to}>
-				<ListItemText className={style} primary={primary} />
+				<p className={style}>{primary}</p>
 			</ListItem>
 		</li>
 	);

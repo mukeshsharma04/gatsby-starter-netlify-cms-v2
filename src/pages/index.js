@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Banner from '../components/Banner';
+import LetsBuild from '../components/LetsBuild';
+import BlueSection from '../components/BlueSection';
+import Quotes from '../components/Quotes';
 
 export default class IndexPage extends React.Component {
 	render() {
@@ -11,7 +14,10 @@ export default class IndexPage extends React.Component {
 		return (
 			<React.Fragment>
 				<Banner />
-				<section className="section">
+				<LetsBuild />
+				<BlueSection />
+				<Quotes />
+				{/* <section className="section">
 					<div className="container">
 						<div className="content">
 							<h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
@@ -40,7 +46,7 @@ export default class IndexPage extends React.Component {
 							</div>
 						))}
 					</div>
-				</section>
+				</section> */}
 			</React.Fragment>
 		);
 	}
