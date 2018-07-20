@@ -17,14 +17,15 @@ const styles = (theme) => ({
 		letterSpacing: 'normal',
 		borderLeft: '9px solid #6f73ff',
 		backgroundColor: '#ffffff',
-		width: 'fit-content'
+		width: 'fit-content',
+		paddingLeft: '5%'
 	},
 	author: {
 		...theme.typography.quote,
 		color: '#6f73ff',
 		letterSpacing: 'normal',
 		textAlign: 'right',
-		padding: '3% 23%'
+		padding: '3% 18%'
 	}
 });
 

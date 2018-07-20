@@ -11,8 +11,8 @@ import Link from 'gatsby-link';
 import logo from '../img/primoko-logo-white.png';
 import Drawer from '@material-ui/core/Drawer';
 import ListItemLink from './ListItemLink';
-import Divider from '@material-ui/core/Divider';
 import Close from '@material-ui/icons/Close';
+import classNames from 'classnames';
 
 const styles = (theme) => ({
 	root: {
@@ -29,7 +29,7 @@ const styles = (theme) => ({
 
 	navLink: {
 		color: 'white',
-		padding: '.5rem 1rem',
+		padding: '1.3rem 1rem',
 		fontWeight: 500,
 		textDecoration: 'none',
 		'&:hover': {
@@ -38,13 +38,22 @@ const styles = (theme) => ({
 			lineHeight: 2
 		}
 	},
+	active: {
+		borderBottom: '3px solid #fff',
+		color: '#fff',
+		lineHeight: 2
+	},
 	list: {
-		paddingTop: '15px',
-		width: 250
+		width: 350
 	},
 	mobileMenuText: {
+		...theme.typography.link,
 		color: '#ffffff',
 		padding: '0'
+	},
+	mobileSubMenuText: {
+		...theme.typography.subLink,
+		paddingLeft: '7%'
 	},
 	toolbar: {
 		display: 'flex',
@@ -53,17 +62,31 @@ const styles = (theme) => ({
 		padding: '0 8px'
 	},
 	drawer: {
-		backgroundColor: '#333333',
-		height: '-webkit-fill-available'
+		backgroundColor: '#333333'
 	},
 	closeIcon: {
 		color: '#ffffff'
+	},
+	button: {
+		width: '151px',
+		height: '57px',
+		border: 'solid 2px #ffffff',
+		textAlign: 'center',
+		padding: '3%'
+	},
+	space: {
+		marginTop: '5%'
 	}
 });
 
 class NavBar extends React.Component {
 	state = {
 		showDrawer: false
+	};
+
+	activeLink = (route) => {
+		const location = typeof window !== 'undefined' ? window.location.pathname : '';
+		return route === location && true;
 	};
 
 	render() {
@@ -79,21 +102,39 @@ class NavBar extends React.Component {
 							</Link>
 						</Typography>
 						<Hidden smDown implementation="css">
-						<Link to="/about" className={classes.navLink}>
-							About
-						</Link>
-						<Link to="/services" className={classes.navLink}>
-							Services
-						</Link>
-						<Link to="/results" className={classes.navLink}>
-							Results
-						</Link>
-						<Link to="/difference" className={classes.navLink}>
-							The Primoko Difference
-						</Link>
-						<Link to="/letstalk" className={classes.navLink}>
-							Let's Talk
-						</Link>
+							<Link
+								to="/about"
+								className={classNames(classes.navLink, this.activeLink('/about') && classes.active)}
+							>
+								About
+							</Link>
+							<Link
+								to="/services"
+								className={classNames(classes.navLink, this.activeLink('/services') && classes.active)}
+							>
+								Services
+							</Link>
+							<Link
+								to="/results"
+								className={classNames(classes.navLink, this.activeLink('/results') && classes.active)}
+							>
+								Results
+							</Link>
+							<Link
+								to="/difference"
+								className={classNames(
+									classes.navLink,
+									this.activeLink('/difference') && classes.active
+								)}
+							>
+								The Primoko Difference
+							</Link>
+							<Link
+								to="/letstalk"
+								className={classNames(classes.navLink, this.activeLink('/letstalk') && classes.active)}
+							>
+								Let's Talk
+							</Link>
 						</Hidden>
 						<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
 							<MenuIcon onClick={() => this.setState({ showDrawer: true })} />
@@ -116,12 +157,146 @@ class NavBar extends React.Component {
 													<Close className={classes.closeIcon} />
 												</IconButton>
 											</div>
-											<ListItemLink to="/about" style={classes.mobileMenuText} primary="About" />
-											<Divider />
 											<ListItemLink
-												to="/products"
-												style={classes.mobileMenuText}
-												primary="Products"
+												to="/home"
+												style={classNames(classes.mobileMenuText, classes.space)}
+												primary="Home"
+											/>
+											<ListItemLink
+												to="/about"
+												style={classNames(classes.mobileMenuText, classes.space)}
+												primary="About Primoko"
+											/>
+											<div>
+												<ListItemLink
+													to="/overview"
+													style={classes.mobileSubMenuText}
+													primary="Overview"
+													subLink
+												/>
+												<ListItemLink
+													to="/team"
+													style={classes.mobileSubMenuText}
+													primary="Team"
+													subLink
+												/>
+												<ListItemLink
+													to="/careers"
+													style={classes.mobileSubMenuText}
+													primary="Careers"
+													subLink
+												/>
+											</div>
+											<ListItemLink
+												to="/services"
+												style={classNames(classes.mobileMenuText, classes.space)}
+												primary="Services"
+											/>
+											<div>
+												<ListItemLink
+													to="/overview"
+													style={classes.mobileSubMenuText}
+													primary="Overview"
+													subLink
+												/>
+												<ListItemLink
+													to="/mobile"
+													style={classes.mobileSubMenuText}
+													primary="Mobile"
+													subLink
+												/>
+												<ListItemLink
+													to="/web"
+													style={classes.mobileSubMenuText}
+													primary="Web"
+													subLink
+												/>
+												<ListItemLink
+													to="/devops"
+													style={classes.mobileSubMenuText}
+													primary="DevOps"
+													subLink
+												/>
+												<ListItemLink
+													to="/recruitment-staffing"
+													style={classes.mobileSubMenuText}
+													primary="Recruitment &amp; Staffing"
+													subLink
+												/>
+												<ListItemLink
+													to="/salesforce"
+													style={classes.mobileSubMenuText}
+													primary="Salesforce"
+													subLink
+												/>
+											</div>
+											<ListItemLink
+												to="/results"
+												style={classNames(classes.mobileMenuText, classes.space)}
+												primary="Results"
+											/>
+											<div>
+												<ListItemLink
+													to="/clients-testimonials"
+													style={classes.mobileSubMenuText}
+													primary="Clients &amp; "
+													subLink
+												/>
+												<ListItemLink
+													to="/select-case-studies"
+													style={classes.mobileSubMenuText}
+													primary="Select Case Studies"
+													subLink
+												/>
+											</div>
+											<ListItemLink
+												to="/difference"
+												style={classNames(classes.mobileMenuText, classes.space)}
+												primary="The Primoko Difference"
+											/>
+											<div>
+												<div>
+													<ListItemLink
+														to="/overview"
+														style={classes.mobileSubMenuText}
+														primary="Overview"
+														subLink
+													/>
+													<ListItemLink
+														to="/process"
+														style={classes.mobileSubMenuText}
+														primary="Process"
+														subLink
+													/>
+													<ListItemLink
+														to="/manifesto"
+														style={classes.mobileSubMenuText}
+														primary="Manifesto"
+														subLink
+													/>
+													<ListItemLink
+														to="/pricing"
+														style={classes.mobileSubMenuText}
+														primary="Pricing"
+														subLink
+													/>
+													<ListItemLink
+														to="/faqs"
+														style={classes.mobileSubMenuText}
+														primary="FAQs"
+														subLink
+													/>
+												</div>
+											</div>
+											<ListItemLink
+												to="/letstalk"
+												style={classNames(classes.mobileMenuText, classes.button, classes.space)}
+												primary="Let's Talk"
+											/>
+											<ListItemLink
+												to="/login"
+												style={classNames(classes.mobileMenuText, classes.space)}
+												primary="Client Login"
 											/>
 										</List>
 									</div>

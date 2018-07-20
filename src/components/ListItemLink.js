@@ -1,12 +1,17 @@
 import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
-import Typography from '@material-ui/core/Typography';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
 
 const ListItemLink = (props) => {
-	const { primary, to, style } = props;
-	return (
+	const { primary, to, style, subLink } = props;
+	return subLink ? (
+		<li>
+			<a href={to}>
+				<p className={style}>{primary}</p>
+			</a>
+		</li>
+	) : (
 		<li>
 			<ListItem button component={Link} to={to}>
 				<p className={style}>{primary}</p>
