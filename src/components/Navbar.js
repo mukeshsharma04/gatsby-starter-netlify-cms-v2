@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -78,6 +78,7 @@ class NavBar extends React.Component {
 								<img src={logo} alt="Primoko" style={{ height: '20px' }} />
 							</Link>
 						</Typography>
+						<Hidden smDown implementation="css">
 						<Link to="/about" className={classes.navLink}>
 							About
 						</Link>
@@ -93,6 +94,7 @@ class NavBar extends React.Component {
 						<Link to="/letstalk" className={classes.navLink}>
 							Let's Talk
 						</Link>
+						</Hidden>
 						<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
 							<MenuIcon onClick={() => this.setState({ showDrawer: true })} />
 							<Drawer

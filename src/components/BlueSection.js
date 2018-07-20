@@ -6,7 +6,8 @@ import zeros from '../img/zeros.png';
 const styles = (theme) => ({
 	container: {
 		padding: '3%',
-		background: 'linear-gradient(112deg, #4198ff, #6f73ff)'
+		background: 'linear-gradient(112deg, #4198ff, #6f73ff)',
+		overflow: 'hidden'
 	},
 	section: {
 		padding: '0 15% 0 5%'

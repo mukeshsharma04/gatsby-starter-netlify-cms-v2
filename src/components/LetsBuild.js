@@ -5,7 +5,8 @@ import chart from '../img/chart.png';
 
 const styles = (theme) => ({
 	container: {
-		padding: '3%'
+		padding: '3%',
+		overflow: 'hidden'
 	},
 	section: {
 		padding: '0 15% 0 5%'
