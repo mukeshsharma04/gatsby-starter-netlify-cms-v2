@@ -43,8 +43,8 @@ const styles = (theme) => ({
 		width: 250
 	},
 	mobileMenuText: {
-    color: '#ffffff',
-    padding: '0'
+		color: '#ffffff',
+		padding: '0'
 	},
 	toolbar: {
 		display: 'flex',
@@ -53,12 +53,12 @@ const styles = (theme) => ({
 		padding: '0 8px'
 	},
 	drawer: {
-    backgroundColor: '#333333',
-    height: '-webkit-fill-available'
-  },
-  closeIcon: {
-    color: '#ffffff'
-  }
+		backgroundColor: '#333333',
+		height: '-webkit-fill-available'
+	},
+	closeIcon: {
+		color: '#ffffff'
+	}
 });
 
 class NavBar extends React.Component {
@@ -81,8 +81,17 @@ class NavBar extends React.Component {
 						<Link to="/about" className={classes.navLink}>
 							About
 						</Link>
-						<Link to="/products" className={classes.navLink}>
-							Products
+						<Link to="/services" className={classes.navLink}>
+							Services
+						</Link>
+						<Link to="/results" className={classes.navLink}>
+							Results
+						</Link>
+						<Link to="/difference" className={classes.navLink}>
+							The Primoko Difference
+						</Link>
+						<Link to="/letstalk" className={classes.navLink}>
+							Let's Talk
 						</Link>
 						<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
 							<MenuIcon onClick={() => this.setState({ showDrawer: true })} />
@@ -102,7 +111,7 @@ class NavBar extends React.Component {
 										<List component="nav">
 											<div className={classes.toolbar}>
 												<IconButton>
-													<Close className={classes.closeIcon}/>
+													<Close className={classes.closeIcon} />
 												</IconButton>
 											</div>
 											<ListItemLink to="/about" style={classes.mobileMenuText} primary="About" />
