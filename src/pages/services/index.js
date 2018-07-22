@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import TabBar from '../../components/TabBar';
 
 export default class index extends Component {
   render() {
     return (
-      <div>
-        Services
-      </div>
+      <React.Fragment>
+        <TabBar data={['Overview','Mobile','Web','DevOps','Salesforce','Pricing']}/>
+      </React.Fragment>
     )
   }
 }
