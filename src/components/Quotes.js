@@ -1,41 +1,59 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
 	container: {
 		padding: '3%',
-		height: '392px',
+		height: '350px',
 		backgroundColor: '#f8f8f8'
-	},
-	section: {
-		padding: 'auto'
 	},
 	quote: {
 		...theme.typography.quote,
 		color: '#6f73ff',
-		letterSpacing: 'normal',
-		borderLeft: '9px solid #6f73ff',
+		borderLeft: '7px solid #6f73ff',
+		margin: '25px auto',
+		padding: '7px 0',
+		maxWidth: '90%'
+	},
+
+	quoteMultiline: {
 		backgroundColor: '#ffffff',
-		width: 'fit-content',
-		paddingLeft: '5%'
+		display: 'inline',
+		padding: '0.8rem',
+		boxDecorationBreak: 'clone',
+		WebkitBoxDecorationBreak: 'clone',
+		'&:before': {
+			content: 'open-quote'
+		},
+		'&:after': {
+			content: 'close-quote'
+		}
 	},
 	author: {
 		...theme.typography.quote,
 		color: '#6f73ff',
-		letterSpacing: 'normal',
-		textAlign: 'right',
-		padding: '3% 18%'
+		textAlign: 'right'
+	},
+	emdash: {
+		padding: '10px'
 	}
 });
 
-export default withStyles(styles)(({ classes }) => {
+export default withStyles(styles)(({ classes, author, quote }) => {
 	return (
 		<Grid container justify="center" alignItems="center" className={classes.container}>
-			<Grid className={classes.section} item xs={12} md={4}>
-				<div className={classes.quote}>“A clever person solves a problem.</div>
-				<div className={classes.quote}>A wise person avoids it.”</div>
-				<div className={classes.author}>— Albert Einstein</div>
+			<Grid item xs={12} md={6} lg={6}>
+				<Typography className={classes.quote}>
+					<span className={classes.quoteMultiline}>
+						{quote}
+					</span>
+				</Typography>
+				<Typography className={classes.author}>
+					<span className={classes.emdash} dangerouslySetInnerHTML={{ __html: "&#8212;" }} />
+					{author}
+				</Typography>
 			</Grid>
 		</Grid>
 	);

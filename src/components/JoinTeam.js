@@ -12,37 +12,14 @@ const styles = (theme) => ({
   section: {
     padding: '0 15% 0 5%'
   },
-  image: {
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    [theme.breakpoints.down('sm')]: {
-      width: '350px',
-      height: '350px'
-    },
-    [theme.breakpoints.up('md')]: {
-      width: '425px',
-      height: '370px'
-    },
-    [theme.breakpoints.up('lg')]: {
-      width: '425px',
-      height: '370px'
-    }
-  },
   title: {
     ...theme.typography.title
   },
   paragraph: {
     ...theme.typography.paragraph,
   },
-  textWhite: {
-    ...theme.typography.paragraph,
-    fontWeight: '900',
-    textDecoration: 'underline'
-  },
   button: {
     ...theme.typography.button,
-    margin: theme.spacing.unit,
     backgroundImage: 'linear-gradient(99deg, #4198ff, #6f73ff)',
     borderRadius: '19.5px',
     padding: '10px',
@@ -50,7 +27,6 @@ const styles = (theme) => ({
     height: '39px',
     textTransform: 'initial'
   }
-
 });
 
 export default withStyles(styles)(({ classes }) => {
@@ -58,13 +34,13 @@ export default withStyles(styles)(({ classes }) => {
   return (
     <Grid container className={classes.container}>
       <Grid className={classes.section} item xs={12}>
-        <Typography variant="title" gutterBottom>
+        <Typography className={classes.title} gutterBottom>
           Join the team
         </Typography>
         <br />
-        <p style={{ fontWeight: 500 }}>
+        <Typography className={classes.paragraph} gutterBottom>
           Are you a nerd looking for home?
-        </p>
+        </Typography>
         <br />
         <Button variant="contained" aria-label="Delete" className={classes.button}>
           See career opportunities

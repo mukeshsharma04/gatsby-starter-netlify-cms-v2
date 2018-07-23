@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import zeros from '../img/zeros.png';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
   container: {
@@ -32,6 +33,12 @@ const styles = (theme) => ({
   title: {
     ...theme.typography.title
   },
+  subTitle: {
+    ...theme.typography.title,
+    width: 'fit-content',
+    borderBottom: '6px solid #6f73ff',
+    paddingBottom: '8px'
+  },
   paragraph: {
     ...theme.typography.paragraph,
   },
@@ -46,35 +53,32 @@ export default withStyles(styles)(({ classes }) => {
   return (
     <Grid container className={classes.container}>
       <Grid className={classes.section} item xs={12} md={8}>
-        <h1 className={classes.title}>
+        <Typography className={classes.title}>
           A software engineering firm with only software engineers. Imagine that.
-				</h1>
+				</Typography>
         <br />
-        <h1 className={classes.title} style={{ borderBottom: '2px solid red' }}>
+        <Typography className={classes.subTitle}>
           Our people are good.
-        </h1>
-        <div className={classes.paragraph}>
+        </Typography>
+        <div>
           <br />
-          <p>
+          <Typography className={classes.paragraph}>
             Primoko is a software engineering firm whose founders bring 50+ years of software engineering experience to the table to tackle your most challenging engineering projects
-					</p>
+					</Typography>
           <br />
-          <p>Give us a bull; we’ll bring our cape.</p>
+          <Typography className={classes.paragraph}>Give us a bull; we’ll bring our cape.</Typography>
           <br />
-          <br />
-          <p>
+          <Typography className={classes.paragraph}>
             Give us a runaway train; we’ll bring our catch engine.
-          </p>
+          </Typography>
           <br />
-          <br />
-          <p>
+          <Typography className={classes.paragraph}>
             Give us your most difficult engineering obstacle; we’ll bring an engineering expert with the skills and tools to face it.
-					</p>
+					</Typography>
         </div>
-        <br />
       </Grid>
       <Grid item xs={12} md={4}>
-        <div className={classes.image} />
+        <div style={{width: '409px', height: '404px', backgroundColor: '#f8f8f8'}} />
       </Grid>
     </Grid>
   );
