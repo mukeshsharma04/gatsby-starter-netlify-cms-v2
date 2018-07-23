@@ -53,7 +53,6 @@ const styles = (theme) => ({
 	},
 	mobileSubMenuText: {
 		...theme.typography.subLink,
-		color: 'yellow',
 		paddingLeft: '7%'
 	},
 	toolbar: {
