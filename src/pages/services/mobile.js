@@ -79,7 +79,8 @@ export default withStyles(styles)(({ classes }) => {
 			</Grid>
 			<Quotes
 				quote="Mobile is becoming not only the new digital hub, but also the bridge to the physical world. That’s why mobile will affect more than just your digital operations - it will transorm your entire business."
-				author="Thomas Husson, VP and Principal Analyst at Forrester Research"
+				author="Thomas Husson,"
+				authorRole="VP and Principal Analyst at Forrester Research"
 			/>
 		</React.Fragment>
 	);

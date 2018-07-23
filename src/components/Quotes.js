@@ -41,7 +41,7 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes, author, quote }) => {
+export default withStyles(styles)(({ classes, author, quote, authorRole }) => {
 	return (
 		<Grid container justify="center" alignItems="center" className={classes.container}>
 			<Grid item xs={12} md={6} lg={6}>
@@ -54,6 +54,9 @@ export default withStyles(styles)(({ classes, author, quote }) => {
 					<span className={classes.emdash} dangerouslySetInnerHTML={{ __html: "&#8212;" }} />
 					{author}
 				</Typography>
+				<Typography className={classes.author}>
+					{authorRole}
+				</Typography>				
 			</Grid>
 		</Grid>
 	);

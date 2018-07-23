@@ -177,7 +177,7 @@ export default withStyles(styles)(
 							</Typography>
 						</Grid>
 					</Grid>
-					<Quotes quote="The best way to get a project done faster is to start sooner [like now]." author="Jim Highsmith, with our parenthetical and emphasis" />
+					<Quotes quote="The best way to get a project done faster is to start sooner [like now]." author="Jim Highsmith," authorRole="with our parenthetical and emphasis" />
 				</React.Fragment>
 			);
 		}
