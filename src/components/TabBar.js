@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
+import Link from 'gatsby-link'
 
 const styles = (theme) => ({
 	root: {
@@ -17,33 +17,8 @@ const styles = (theme) => ({
 		backgroundColor: '#1890ff'
 	},
 	tabRoot: {
-		textTransform: 'initial',
-		minWidth: 72,
-		fontWeight: theme.typography.fontWeightRegular,
-		marginRight: theme.spacing.unit * 4,
-		fontFamily: [
-			'-apple-system',
-			'BlinkMacSystemFont',
-			'"Segoe UI"',
-			'Roboto',
-			'"Helvetica Neue"',
-			'Arial',
-			'sans-serif',
-			'"Apple Color Emoji"',
-			'"Segoe UI Emoji"',
-			'"Segoe UI Symbol"'
-		].join(','),
-		'&:hover': {
-			color: '#40a9ff',
-			opacity: 1
-		},
-		'&$tabSelected': {
-			color: '#1890ff',
-			fontWeight: theme.typography.fontWeightMedium
-		},
-		'&:focus': {
-			color: '#40a9ff'
-		}
+		...theme.typography.tabLink,
+		minWidth: 'unset'
 	},
 	tabSelected: {}
 });
@@ -67,13 +42,17 @@ class TabBar extends React.Component {
 					value={value}
 					onChange={this.handleChange}
 					classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
+					scrollable
+					scrollButtons="on"
 				>
 					{data.map((v, k) => (
 						<Tab
 							key={k}
 							disableRipple
 							classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-							label={v}
+							label={v.label}
+							component={Link}
+							to={v.value}
 						/>
 					))}
 				</Tabs>

@@ -1,19 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
 import Banner from '../components/Banner';
 import LetsBuild from '../components/LetsBuild';
 import BlueSection from '../components/BlueSection';
 import Quotes from '../components/Quotes';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import banner from '../img/banner.jpg';
 
-export default class IndexPage extends React.Component {
+const styles = (theme) => ({
+	text: {
+		...theme.typography.hero,
+		width: 'fit-content',
+		color: 'white',
+		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
+		padding: '10px'
+	}
+});
+
+class IndexPage extends React.Component {
 	render() {
-		const { data } = this.props;
+		const { data, classes } = this.props;
 		const { edges: posts } = data.allMarkdownRemark;
+		const text = (
+			<React.Fragment>
+				<Typography className={classes.text} align="left">
+					If you can dream it,
+				</Typography>
+				<Typography className={classes.text} align="left">
+					our software engineers can build it.
+				</Typography>
+			</React.Fragment>
+		);
 
 		return (
 			<React.Fragment>
-				<Banner />
+				<Banner text={text} banner={banner} height="600px" />
 				<LetsBuild />
 				<BlueSection />
 				<Quotes />
@@ -83,3 +105,5 @@ export const pageQuery = graphql`
 		}
 	}
 `;
+
+export default withStyles(styles)(IndexPage);

@@ -66,7 +66,7 @@ const theme = createMuiTheme({
 			lineHeight: 1.5
 		},
 
-		link: {
+		tabLink: {
 			fontSize: '16px',
 			fontWeight: 500,
 			color: '#4198ff',
