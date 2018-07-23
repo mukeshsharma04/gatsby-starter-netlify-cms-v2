@@ -53,6 +53,7 @@ const styles = (theme) => ({
 	},
 	mobileSubMenuText: {
 		...theme.typography.subLink,
+		color: 'yellow',
 		paddingLeft: '7%'
 	},
 	toolbar: {
@@ -194,7 +195,7 @@ class NavBar extends React.Component {
 											/>
 											<div>
 												<ListItemLink
-													to="/services/overview"
+													to="/services"
 													style={classes.mobileSubMenuText}
 													primary="Overview"
 													subLink
@@ -290,7 +291,11 @@ class NavBar extends React.Component {
 											</div>
 											<ListItemLink
 												to="/letstalk"
-												style={classNames(classes.mobileMenuText, classes.button, classes.space)}
+												style={classNames(
+													classes.mobileMenuText,
+													classes.button,
+													classes.space
+												)}
 												primary="Let's Talk"
 											/>
 											<ListItemLink
