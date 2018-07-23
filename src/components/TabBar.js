@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Link from 'gatsby-link'
 
 const styles = (theme) => ({
 	root: {
@@ -49,7 +50,9 @@ class TabBar extends React.Component {
 							key={k}
 							disableRipple
 							classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-							label={v}
+							label={v.label}
+							component={Link}
+							to={v.value}
 						/>
 					))}
 				</Tabs>

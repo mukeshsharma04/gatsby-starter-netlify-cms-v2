@@ -9,7 +9,6 @@ import classNames from 'classnames';
 import Chip from '@material-ui/core/Chip';
 import Button from '../../components/Button';
 
-
 const styles = (theme) => ({
 	container: {
 		padding: theme.spacing.unit * 10
@@ -78,7 +77,16 @@ export default withStyles(styles)(
 
 			return (
 				<React.Fragment>
-					<TabBar data={[ 'Overview', 'Mobile', 'Web', 'DevOps', 'Salesforce', 'Pricing' ]} />
+					<TabBar
+						data={[
+							{ label: 'Overview', value: '/services' },
+							{ label: 'Mobile', value: '/services/mobile' },
+							{ label: 'Web', value: '/services/web' },
+							{ label: 'DevOps', value: '/services/devops' },
+							{ label: 'Salesforce', value: '/services/salesforce' },
+							{ label: 'Pricing', value: '/services/pricing' }
+						]}
+					/>
 					<Banner text={text} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
@@ -109,7 +117,7 @@ export default withStyles(styles)(
 								Technology we’ve worked with:
 							</Typography>
 							<div className={classes.space}>
-								{mobile.map((v,k) => <Chip key={k} label={v} className={classes.chip} />)}
+								{mobile.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Button text="See mobile services" />
 						</Grid>
@@ -123,7 +131,7 @@ export default withStyles(styles)(
 								Technology we’ve worked with:
 							</Typography>
 							<div className={classes.space}>
-								{web.map((v,k) => <Chip key={k} label={v} className={classes.chip} />)}
+								{web.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Button text="See web services" />
 						</Grid>
@@ -138,7 +146,7 @@ export default withStyles(styles)(
 								Technology we’ve worked with:
 							</Typography>
 							<div className={classes.space}>
-								{devOps.map((v,k) => <Chip key={k} label={v} className={classes.chip} />)}
+								{devOps.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Button text="See mobile services" />
 						</Grid>
