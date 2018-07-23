@@ -8,6 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import classNames from 'classnames';
 import Chip from '@material-ui/core/Chip';
 import Button from '../../components/Button';
+import Quotes from '../../components/Quotes';
 
 const styles = (theme) => ({
 	container: {
@@ -166,6 +167,17 @@ export default withStyles(styles)(
 						</Grid>
 					</Grid>
 					<Banner height="322px" />
+					<Grid container className={classes.container} justify="space-between">
+						<Grid item xs={12} md={12}>
+							<Typography className={classes.title}>Pricing</Typography>
+							<Typography className={classNames(classes.paragraph, classes.space)}>
+								“How much does it cost?” That’s the big question we’re asked most often. And although we
+								can’t say for certainty without exploring the scope and nature of your project, we can
+								give you an idea.
+							</Typography>
+						</Grid>
+					</Grid>
+					<Quotes quote="The best way to get a project done faster is to start sooner [like now]." author="Jim Highsmith, with our parenthetical and emphasis" />
 				</React.Fragment>
 			);
 		}

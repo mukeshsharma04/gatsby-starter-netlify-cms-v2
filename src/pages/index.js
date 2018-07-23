@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
 				<Banner text={text} banner={banner} height="600px" />
 				<LetsBuild />
 				<BlueSection />
-				<Quotes />
+				<Quotes quote="A clever person solves a problem. A wise person avoids it." author="Albert Einstein" />
 				{/* <section className="section">
 					<div className="container">
 						<div className="content">

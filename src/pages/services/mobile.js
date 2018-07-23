@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
+import Quotes from '../../components/Quotes';
 
 const styles = (theme) => ({
 	container: {
@@ -31,49 +32,55 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes }) => {
 	return (
-		<Grid container className={classes.container} justify="space-between">
-			<Grid item xs={12} md={6}>
-				<Typography className={classes.title}>If you can dream it, we can build it.</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
-					As you read these words, chances are that a high percent of your prospects and customers are online,
-					doing email and chat, playing games, watching videos, and in general conducting business, managing
-					life stuff, and having fun.
-				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
-					Primoko’s elite engineers who specialize in creating complex yet usable mobile applications will
-					connect you with your market in new and creative ways.
-				</Typography>
-				<Grid container className={classes.space}>
-					<Grid className={classes.list} item xs={6} md={6}>
-						<ul>
-							<li>• &#160; Games</li>
-							<li>• &#160; Education apps</li>
-							<li>• &#160; Loyalty apps</li>
-							<li>• &#160; Booking apps</li>
-							<li>• &#160; Calendar apps</li>
-						</ul>
+		<React.Fragment>
+			<Grid container className={classes.container} justify="space-between">
+				<Grid item xs={12} md={6}>
+					<Typography className={classes.title}>If you can dream it, we can build it.</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						As you read these words, chances are that a high percent of your prospects and customers are
+						online, doing email and chat, playing games, watching videos, and in general conducting
+						business, managing life stuff, and having fun.
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						Primoko’s elite engineers who specialize in creating complex yet usable mobile applications will
+						connect you with your market in new and creative ways.
+					</Typography>
+					<Grid container className={classes.space}>
+						<Grid className={classes.list} item xs={6} md={6}>
+							<ul>
+								<li>• &#160; Games</li>
+								<li>• &#160; Education apps</li>
+								<li>• &#160; Loyalty apps</li>
+								<li>• &#160; Booking apps</li>
+								<li>• &#160; Calendar apps</li>
+							</ul>
+						</Grid>
+						<Grid className={classes.list} item xs={6} md={6}>
+							<ul>
+								<li>• &#160; Design apps</li>
+								<li>• &#160; Travel guide apps</li>
+								<li>• &#160; Health and wellness apps</li>
+								<li>• &#160; Marketplace apps</li>
+								<li>• &#160; Productivity apps</li>
+							</ul>
+						</Grid>
 					</Grid>
-					<Grid className={classes.list} item xs={6} md={6}>
-						<ul>
-							<li>• &#160; Design apps</li>
-							<li>• &#160; Travel guide apps</li>
-							<li>• &#160; Health and wellness apps</li>
-							<li>• &#160; Marketplace apps</li>
-							<li>• &#160; Productivity apps</li>
-						</ul>
-					</Grid>
+					<Typography className={classNames(classes.paragraph, classes.space)}>The list goes on.</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						Contact Primoko today. Tell us what you’d like to create, and we’ll tell you how we can bring it
+						to life.
+					</Typography>
 				</Grid>
-				<Typography className={classNames(classes.paragraph, classes.space)}>The list goes on.</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
-					Contact Primoko today. Tell us what you’d like to create, and we’ll tell you how we can bring it to
-					life.
-				</Typography>
+				<Grid item xs={12} md={4}>
+					<div className={classes.outerBox}>
+						<div className={classes.screen}>Hello</div>
+					</div>
+				</Grid>
 			</Grid>
-			<Grid item xs={12} md={4}>
-				<div className={classes.outerBox}>
-					<div className={classes.screen}>Hello</div>
-				</div>
-			</Grid>
-		</Grid>
+			<Quotes
+				quote="Mobile is becoming not only the new digital hub, but also the bridge to the physical world. That’s why mobile will affect more than just your digital operations - it will transorm your entire business."
+				author="Thomas Husson, VP and Principal Analyst at Forrester Research"
+			/>
+		</React.Fragment>
 	);
 });

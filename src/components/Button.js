@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
 
 const styles = (theme) => ({
 	button: {
@@ -8,8 +9,8 @@ const styles = (theme) => ({
 		marginBottom: theme.spacing.unit * 5,
 		paddingTop: theme.spacing.unit,
 		paddingBottom: theme.spacing.unit,
-		paddingLeft: theme.spacing.unit*4,
-		paddingRight: theme.spacing.unit*4,
+		paddingLeft: theme.spacing.unit * 4,
+		paddingRight: theme.spacing.unit * 4,
 		width: 'fit-content',
 		borderRadius: '19.5px',
 		background: `linear-gradient(to right, #4B96FC, #6F77FB)`
@@ -27,9 +28,9 @@ const styles = (theme) => ({
 });
 
 export default withStyles(styles)((props) => {
-	const { classes, text } = props;
+	const { classes, text, className } = props;
 	return (
-		<div className={classes.button}>
+		<div className={classNames(classes.button, ...className)}>
 			<p className={classes.buttonText}>{text}</p>
 		</div>
 	);
