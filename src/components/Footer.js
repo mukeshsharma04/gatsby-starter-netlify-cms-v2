@@ -117,7 +117,7 @@ const Footer = ({ classes }) => {
 				</Grid>
 				<Grid item xs={6} md={6} className={classes.right}>
 					<Link className={classes.link} to="/">
-						<Typography variant="subheading" className={classes.client} color="inherit" gutterBottom>
+						<Typography variant="subheading" className={classes.client} color="inherit" gutterBottom={true}>
 							Client Login
 						</Typography>
 					</Link>
@@ -137,7 +137,7 @@ const Footer = ({ classes }) => {
 									variant="subheading"
 									className={classes.client}
 									color="inherit"
-									gutterBottom
+									gutterBottom={true}
 								>
 									Let’s talk
 								</Typography>
@@ -156,7 +156,7 @@ const Footer = ({ classes }) => {
 										variant="subheading"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom
+										gutterBottom={true}
 									>
 										Email address
 									</Typography>
@@ -169,7 +169,7 @@ const Footer = ({ classes }) => {
 										variant="subheading"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom
+										gutterBottom={true}
 									>
 										Message
 									</Typography>
@@ -196,7 +196,7 @@ const Footer = ({ classes }) => {
 											variant="headline"
 											className={classes.heading}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											About Primoko
 									</Typography>
@@ -208,7 +208,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Overview
 										</Typography>
@@ -220,7 +220,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Team
 										</Typography>
@@ -232,7 +232,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Careers
 										</Typography>
@@ -247,7 +247,7 @@ const Footer = ({ classes }) => {
 										variant="headline"
 										className={classes.heading}
 										color="inherit"
-										gutterBottom
+										gutterBottom={true}
 									>
 										Results
 									</Typography>
@@ -258,7 +258,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Clients &amp; Testimonials
 										</Typography>
@@ -270,7 +270,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Select Case Studies
 										</Typography>
@@ -288,7 +288,7 @@ const Footer = ({ classes }) => {
 										variant="headline"
 										className={classes.heading}
 										color="inherit"
-										gutterBottom
+										gutterBottom={true}
 									>
 										Services
 									</Typography>
@@ -299,7 +299,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Overview
 										</Typography>
@@ -311,7 +311,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Mobile
 										</Typography>
@@ -323,7 +323,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Web
 										</Typography>
@@ -335,7 +335,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											DevOps
 										</Typography>
@@ -347,7 +347,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Recruitment & Staffing
 										</Typography>
@@ -359,7 +359,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Salesforce
 										</Typography>
@@ -374,7 +374,7 @@ const Footer = ({ classes }) => {
 										variant="headline"
 										className={classes.heading}
 										color="inherit"
-										gutterBottom
+										gutterBottom={true}
 									>
 										The Primoko Difference
 									</Typography>
@@ -385,7 +385,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Overview
 										</Typography>
@@ -397,7 +397,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Process
 										</Typography>
@@ -409,7 +409,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Manifesto
 										</Typography>
@@ -421,7 +421,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											Pricing
 										</Typography>
@@ -433,7 +433,7 @@ const Footer = ({ classes }) => {
 											variant="subheading"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom
+											gutterBottom={true}
 										>
 											FAQs
 										</Typography>
@@ -445,7 +445,7 @@ const Footer = ({ classes }) => {
 
 					{/*Third Row*/}
 					<Grid container className={classes.space}>
-						<Typography variant="subheading" className={classes.paragraph} color="inherit" gutterBottom>
+						<Typography variant="subheading" className={classes.paragraph} color="inherit" gutterBottom={true}>
 							Copyright © 2018 Primoko Inc and respective clients. All rights reserved.
 						</Typography>
 					</Grid>
@@ -462,7 +462,7 @@ const Footer = ({ classes }) => {
 									variant="subheading"
 									className={classes.client}
 									color="inherit"
-									gutterBottom
+									gutterBottom={true}
 								>
 									Let’s talk
 								</Typography>
@@ -481,7 +481,7 @@ const Footer = ({ classes }) => {
 										variant="subheading"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom
+										gutterBottom={true}
 									>
 										Email address
 									</Typography>
@@ -494,7 +494,7 @@ const Footer = ({ classes }) => {
 										variant="subheading"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom
+										gutterBottom={true}
 									>
 										Message
 									</Typography>

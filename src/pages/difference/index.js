@@ -66,12 +66,12 @@ export default withStyles(styles)(({ classes }) => {
 			<Banner text={text} height="425px" />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={8}>
-					<Typography className={classes.title}>Why Primoko?</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.title} gutterBottom={true}>Why Primoko?</Typography>
+					<Typography className={classes.paragraph} gutterBottom={true}>
 						If you search the web for “web development” or “app development,” you’ll find millions of
 						companies plying their wares.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.paragraph} gutterBottom={true}>
 						We’re one of those millions, but here’s what makes us different.
 					</Typography>
 					<div className={classes.unordered}>
@@ -87,7 +87,7 @@ export default withStyles(styles)(({ classes }) => {
 							cases, your contact will be a senior engineer, senior enough to be your company’s CTO.
 						</Typography>
 					</div>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.paragraph} gutterBottom={true}>
 						We like to chase the hard engineering problems, the kind that hold companies back. Problems like
 						x, another example, and another example.
 					</Typography>

@@ -51,9 +51,9 @@ export default withStyles(styles)(({ classes }) => {
 				<div className={classes.image} />
 			</Grid>
 			<Grid className={classes.section} item xs={12} md={8}>
-				<h1 className={classes.title}>Let's build.</h1>
+				<h1 className={classes.title} gutterBottom={true}>Let's build.</h1>
 				<br />
-				<div className={classes.paragraph}>
+				<div className={classes.paragraph} gutterBottom={true}>
 					<p>
 						You've undertaken a project. Or You're creating a product. Congratulations! The future looks
 						bright. But your existing staff lacks competency in the required technology. Or maybe you lack

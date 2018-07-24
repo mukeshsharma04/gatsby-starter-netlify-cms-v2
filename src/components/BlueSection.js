@@ -50,11 +50,11 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<Grid container className={classes.container}>
 			<Grid className={classes.section} item xs={12} md={8}>
-				<h1 className={classes.title}>
+				<h1 className={classes.title} gutterBottom={true}>
 					A software engineering firm with only software engineers. Imagine that.
 				</h1>
 				<br />
-				<div className={classes.paragraph}>
+				<div className={classes.paragraph} gutterBottom={true}>
 					<p>
 						We’re not kidding. We’ve no sales people, no marketing people, no business development people,
 						no customer relations people.

@@ -48,15 +48,15 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.outerBox} />
 				</Grid>
 				<Grid item xs={12} md={6}>
-					<Typography className={classes.title}>Your customers are using the web. Are you?</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.title} gutterBottom={true}>Your customers are using the web. Are you?</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						Looking to streamline internal operations? Become more flexible and versatile? Reach more
 						customers? Create additional streams of income? Serve existing clients better?
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						A web app can do that.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						And an entire subset of our software engineers at Primoko live for creating rich web
 						applications, such as those for:
 					</Typography>
@@ -79,7 +79,7 @@ export default withStyles(styles)(({ classes }) => {
 							</ul>
 						</Grid>
 					</Grid>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						We invite you to contact us for a free consultation today.
 					</Typography>
 				</Grid>

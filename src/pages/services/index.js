@@ -90,17 +90,17 @@ export default withStyles(styles)(
 					<Banner text={text} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
-							<Typography className={classes.title}>
+							<Typography className={classes.title} gutterBottom={true}>
 								Custom software development for even the most persistent and seemingly impossible
 								difficulties.
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								Software engineering is the fuel that makes your business growth and innovation
 								possible. But it can also be a roadblock, especially if your team isn’t familiar with
 								the technologies you need to move your project from idea to reality, and more so if your
 								team members don’t know what they don’t know.
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								We at Primoko DO know what others don’t. And our expert and elite engineers with various
 								specialties are standing by to act as the fuel that will make your project go.
 							</Typography>
@@ -108,8 +108,8 @@ export default withStyles(styles)(
 						</Grid>
 
 						<Grid item xs={12} md={5}>
-							<Typography className={classes.title}>Mobile</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classes.title} gutterBottom={true}>Mobile</Typography>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								We use React Native and other mobile technologies to develop must-have mobile apps for
 								iOS and Android—including for Apple Watch and WearOS.
 							</Typography>
@@ -122,8 +122,8 @@ export default withStyles(styles)(
 							<Button text="See mobile services" />
 						</Grid>
 						<Grid item xs={12} md={5}>
-							<Typography className={classes.title}>Web</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classes.title} gutterBottom={true}>Web</Typography>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								Need web development and design? We have you covered, especially on the JavaScript
 								stack—NodeJS, React, Angular, AWS, and Firebase.
 							</Typography>
@@ -137,8 +137,8 @@ export default withStyles(styles)(
 						</Grid>
 
 						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title}>DevOps</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classes.title} gutterBottom={true}>DevOps</Typography>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								Merge your delivery pipeline and customer feedback loop for development at high
 								velocity.
 							</Typography>
@@ -151,8 +151,8 @@ export default withStyles(styles)(
 							<Button text="See mobile services" />
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title}>Salesforce</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classes.title} gutterBottom={true}>Salesforce</Typography>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								Merge your delivery pipeline and customer feedback loop for development at high
 								velocity.
 							</Typography>
@@ -168,8 +168,8 @@ export default withStyles(styles)(
 					<Banner height="322px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
-							<Typography className={classes.title}>Pricing</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classes.title} gutterBottom={true}>Pricing</Typography>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								“How much does it cost?” That’s the big question we’re asked most often. And although we
 								can’t say for certainty without exploring the scope and nature of your project, we can
 								give you an idea.

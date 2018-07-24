@@ -67,7 +67,7 @@ export default withStyles(styles)(({ classes }) => {
 			<Banner height="500px" />
 			<Grid container className={classes.container} justify="space-between" spacing={40}>
 				<Grid item xs={12} md={7}>
-					<Typography className={classes.title}>Contact us</Typography>
+					<Typography className={classes.title} gutterBottom={true}>Contact us</Typography>
 					<form>
 						<Grid container justify="space-between" spacing={40}>
 							<Grid item xs={12} md={6}>
@@ -109,22 +109,22 @@ export default withStyles(styles)(({ classes }) => {
 					</form>
 				</Grid>
 				<Grid item xs={12} md={4}>
-					<Typography className={classes.title} gutterBottom>
+					<Typography className={classes.title} gutterBottom={true}>
 						Our office
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.paragraph} gutterBottom={true}>
 						231 Clarksville Rd
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.paragraph} gutterBottom={true}>
 						Suite 3
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.paragraph} gutterBottom={true}>
 						West Windsor, NJ - 08550
 					</Typography>
-					<Typography className={classes.link} gutterBottom>
+					<Typography className={classes.link} gutterBottom={true}>
 						(413) 248-7626
 					</Typography>
-					<Typography className={classes.link} gutterBottom>
+					<Typography className={classes.link} gutterBottom={true}>
 						hello@primoko.com
 					</Typography>
 				</Grid>

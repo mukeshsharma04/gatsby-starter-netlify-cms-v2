@@ -26,6 +26,7 @@ const styles = (theme) => ({
 		paddingBottom: '70px'
 	},
 	teamTitle: {
+		paddingTop: '5%',
 		...theme.typography.subheading,
 		textAlign: 'center'
 	},
@@ -47,11 +48,11 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<Grid container className={classes.container}>
 			<Grid item xs={12}>
-				<Typography className={classes.title} gutterBottom>
+				<Typography className={classes.title} gutterBottom={true}>
 					Meet the team
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph}>
+				<Typography className={classes.paragraph} gutterBottom={true}>
 					Our band of hardcore engineers also happens to be good at the soft stuff, like planning, managing,
 					and serving our clients.
 				</Typography>

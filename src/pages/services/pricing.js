@@ -8,20 +8,31 @@ import TabBar from '../../components/TabBar';
 
 const styles = (theme) => ({
 	container: {
-		padding: theme.spacing.unit * 8
+		[theme.breakpoints.down('sm')]: {
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		}
 	},
 	row: {
 		paddingLeft: theme.spacing.unit * 5,
 		paddingRight: theme.spacing.unit * 5
 	},
 	divider: {
-		borderRight: 'solid 1px #d1d1d1'
+		[theme.breakpoints.up('sm')]: {
+			borderRight: 'solid 1px #d1d1d1'
+		}
 	},
 	title: {
 		...theme.typography.title
 	},
 	paragraph: {
-		...theme.typography.paragraph
+		...theme.typography.paragraph,
+		display: 'list-item'
 	},
 	space: {
 		marginTop: theme.spacing.unit * 4
@@ -51,14 +62,14 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Simple
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 					</Typography>
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
@@ -67,14 +78,14 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Moderate
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 					</Typography>
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
@@ -83,14 +94,14 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Complex
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
-						• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 					</Typography>
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>

@@ -35,7 +35,7 @@ export default withStyles(styles)(({ classes }) => {
 		<React.Fragment>
 			<Grid container className={classes.container} justify="space-between" spacing={40}>
 				<Grid item xs={12} md={12}>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.paragraph} gutterBottom={true}>
 						You have questions? We have answers. (But if you don’t see your question here, let’s talk.)
 					</Typography>
 				</Grid>

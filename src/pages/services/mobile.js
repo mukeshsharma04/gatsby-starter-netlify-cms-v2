@@ -45,13 +45,13 @@ export default withStyles(styles)(({ classes }) => {
 			<TabBar />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
-					<Typography className={classes.title}>If you can dream it, we can build it.</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classes.title} gutterBottom={true}>If you can dream it, we can build it.</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						As you read these words, chances are that a high percent of your prospects and customers are
 						online, doing email and chat, playing games, watching videos, and in general conducting
 						business, managing life stuff, and having fun.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						Primoko’s elite engineers who specialize in creating complex yet usable mobile applications will
 						connect you with your market in new and creative ways.
 					</Typography>
@@ -75,8 +75,8 @@ export default withStyles(styles)(({ classes }) => {
 							</ul>
 						</Grid>
 					</Grid>
-					<Typography className={classes.paragraph} gutterBottom>The list goes on.</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>The list goes on.</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						Contact Primoko today. Tell us what you’d like to create, and we’ll tell you how we can bring it
 						to life.
 					</Typography>

@@ -54,7 +54,7 @@ export default withStyles(styles)(({ classes }) => {
   return (
     <Grid container className={classes.container}>
       <Grid className={classes.section} item xs={12} md={8}>
-        <Typography className={classes.title}>
+        <Typography className={classes.title} gutterBottom={true}>
           A software engineering firm with only software engineers. Imagine that.
 				</Typography>
         <br />
@@ -63,17 +63,17 @@ export default withStyles(styles)(({ classes }) => {
         </Typography>
         <div>
           <br />
-          <Typography className={classes.paragraph}>
+          <Typography className={classes.paragraph} gutterBottom={true}>
             Primoko is a software engineering firm whose founders bring 50+ years of software engineering experience to the table to tackle your most challenging engineering projects
 					</Typography>
           <br />
-          <Typography className={classes.paragraph}>Give us a bull; we’ll bring our cape.</Typography>
+          <Typography className={classes.paragraph} gutterBottom={true}>Give us a bull; we’ll bring our cape.</Typography>
           <br />
-          <Typography className={classes.paragraph}>
+          <Typography className={classes.paragraph} gutterBottom={true}>
             Give us a runaway train; we’ll bring our catch engine.
           </Typography>
           <br />
-          <Typography className={classes.paragraph}>
+          <Typography className={classes.paragraph} gutterBottom={true}>
             Give us your most difficult engineering obstacle; we’ll bring an engineering expert with the skills and tools to face it.
 					</Typography>
         </div>

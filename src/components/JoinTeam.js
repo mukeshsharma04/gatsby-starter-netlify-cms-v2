@@ -38,11 +38,11 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<Grid container className={classes.container}>
 			<Grid item xs={12}>
-				<Typography className={classes.title} gutterBottom>
+				<Typography className={classes.title} gutterBottom={true}>
 					Join the team
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph} gutterBottom>
+				<Typography className={classes.paragraph} gutterBottom={true}>
 					Are you a nerd looking for home?
 				</Typography>
 				<br />
