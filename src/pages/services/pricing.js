@@ -106,7 +106,7 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
 				</Grid>
-				<Button className={classes.button} text="Get a quote" />
+				<Button style={classes.button} text="Get a quote" />
 			</Grid>
 		</React.Fragment>
 	);

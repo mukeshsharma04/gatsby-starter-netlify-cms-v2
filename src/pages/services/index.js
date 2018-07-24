@@ -53,6 +53,14 @@ const styles = (theme) => ({
 		backgroundColor: 'white',
 		marginRight: theme.spacing.unit,
 		marginBottom: theme.spacing.unit
+	},
+	button: {
+		[theme.breakpoints.down('sm')]: {
+			width: '100%'
+		},
+		[theme.breakpoints.up('md')]: {
+			width: '60%'
+		},
 	}
 });
 
@@ -119,7 +127,7 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								{mobile.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
-							<Button text="See mobile services" />
+							<Button style={classes.button} text="See mobile services" />
 						</Grid>
 						<Grid item xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom={true}>Web</Typography>
@@ -133,7 +141,7 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								{web.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
-							<Button text="See web services" />
+							<Button style={classes.button} text="See web services" />
 						</Grid>
 
 						<Grid className={classes.space} item xs={12} md={5}>
@@ -148,7 +156,7 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								{devOps.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
-							<Button text="See mobile services" />
+							<Button style={classes.button} text="See mobile services" />
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom={true}>Salesforce</Typography>
@@ -162,7 +170,7 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								<Chip label="Salesforce commerce" className={classes.chip} />
 							</div>
-							<Button text="See web services" />
+							<Button style={classes.button} text="See web services" />
 						</Grid>
 					</Grid>
 					<Banner height="322px" />

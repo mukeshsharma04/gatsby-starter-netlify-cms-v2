@@ -10,14 +10,14 @@ import Button from '../components/Button';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-      padding: theme.spacing.unit * 2
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing.unit * 7
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing.unit * 10
-    }
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		}
 	},
 	title: {
 		...theme.typography.title
@@ -48,7 +48,7 @@ const styles = (theme) => ({
 		border: 'solid 1px #d1d1d1'
 	},
 	textfield: {
-    width: '100%',
+		width: '100%',
 		height: '121px',
 		borderRadius: '4px',
 		backgroundColor: '#f8f8f8',
@@ -67,7 +67,9 @@ export default withStyles(styles)(({ classes }) => {
 			<Banner height="500px" />
 			<Grid container className={classes.container} justify="space-between" spacing={40}>
 				<Grid item xs={12} md={7}>
-					<Typography className={classes.title} gutterBottom={true}>Contact us</Typography>
+					<Typography className={classes.title} gutterBottom={true}>
+						Contact us
+					</Typography>
 					<form>
 						<Grid container justify="space-between" spacing={40}>
 							<Grid item xs={12} md={6}>
@@ -102,10 +104,12 @@ export default withStyles(styles)(({ classes }) => {
 						<Grid container justify="space-between" spacing={40}>
 							<Grid item xs={12} md={12}>
 								<label className={classes.label}>Message</label>
-								<textarea className={classes.textfield} name="message"></textarea>
+								<textarea className={classes.textfield} name="message" />
 							</Grid>
 						</Grid>
-            <Button text="Send message"/>
+						<Grid item xs={12} md={4}>
+							<Button text="Send message" />
+						</Grid>
 					</form>
 				</Grid>
 				<Grid item xs={12} md={4}>

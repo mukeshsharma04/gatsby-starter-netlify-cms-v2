@@ -52,6 +52,14 @@ const styles = (theme) => ({
 	},
 	blockade: {
 		height: '210px'
+	},
+	button: {
+		[theme.breakpoints.down('sm')]: {
+			width: '60%'
+		},
+		[theme.breakpoints.up('md')]: {
+			width: '40%'
+		},
 	}
 });
 
@@ -93,7 +101,7 @@ export default withStyles(styles)(({ classes }) => {
 						We like to chase the hard engineering problems, the kind that hold companies back. Problems like
 						x, another example, and another example.
 					</Typography>
-					<Button text="Read our manifesto" />
+					<Button style={classes.button} text="Read our manifesto" />
 				</Grid>
 				<Grid item xs={12} md={3}>
 					<div className={classes.block}>

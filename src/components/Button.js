@@ -11,7 +11,6 @@ const styles = (theme) => ({
 		paddingBottom: theme.spacing.unit,
 		paddingLeft: theme.spacing.unit * 4,
 		paddingRight: theme.spacing.unit * 4,
-		width: 'fit-content',
 		borderRadius: '19.5px',
 		background: `linear-gradient(to right, #4B96FC, #6F77FB)`
 	},
@@ -28,9 +27,9 @@ const styles = (theme) => ({
 });
 
 export default withStyles(styles)((props) => {
-	const { classes, text, className } = props;
+	const { classes, text, style } = props;
 	return (
-		<div className={classNames(classes.button, ...className)}>
+		<div className={classNames(classes.button, ...style)}>
 			<p className={classes.buttonText}>{text}</p>
 		</div>
 	);
