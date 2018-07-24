@@ -27,7 +27,7 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes }) => {
 	return (
-		<Grid container className={classes.container}>
+		<Grid id="career" container className={classes.container}>
 			<Grid item xs={12}>
 				<Typography className={classes.title} gutterBottom={true}>
 					Join the team

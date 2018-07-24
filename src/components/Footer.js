@@ -225,7 +225,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/about/team">
+									<Link className={classes.link} to="/about/#team">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -237,7 +237,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/about/careers">
+									<Link className={classes.link} to="/about/#career">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -304,7 +304,7 @@ const Footer = ({ classes }) => {
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/services">
 										<Typography
 											variant="subheading"
 											className={classNames(classes.paragraph, classes.margin)}
@@ -316,7 +316,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/services/mobile">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -328,7 +328,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/services/web">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -340,7 +340,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/services/devops">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -352,7 +352,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/services/recruitment-staffing">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -364,7 +364,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/services/salesforce">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -390,7 +390,7 @@ const Footer = ({ classes }) => {
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/the-primoko-difference">
 										<Typography
 											variant="subheading"
 											className={classNames(classes.paragraph, classes.margin)}
@@ -402,7 +402,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/the-primoko-difference/process">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -414,7 +414,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/the-primoko-difference/manifesto">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -426,7 +426,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/services/pricing">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}
@@ -438,7 +438,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/the-primoko-difference/faqs">
 										<Typography
 											variant="subheading"
 											className={classes.paragraph}

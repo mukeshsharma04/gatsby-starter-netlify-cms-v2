@@ -46,7 +46,7 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes }) => {
 	return (
-		<Grid container className={classes.container}>
+		<Grid id="team" container className={classes.container}>
 			<Grid item xs={12}>
 				<Typography className={classes.title} gutterBottom={true}>
 					Meet the team

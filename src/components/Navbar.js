@@ -121,10 +121,10 @@ class NavBar extends React.Component {
 								Results
 							</Link>
 							<Link
-								to="/difference"
+								to="/the-primoko-difference"
 								className={classNames(
 									classes.navLink,
-									this.activeLink('/difference') && classes.active
+									this.activeLink('/the-primoko-difference') && classes.active
 								)}
 							>
 								The Primoko Difference
@@ -239,7 +239,7 @@ class NavBar extends React.Component {
 												<ListItemLink
 													to="/results/clients-testimonials"
 													style={classes.mobileSubMenuText}
-													primary="Clients &amp; "
+													primary="Clients &amp; Testimonials"
 													subLink
 												/>
 												<ListItemLink
@@ -250,26 +250,26 @@ class NavBar extends React.Component {
 												/>
 											</div>
 											<ListItemLink
-												to="/difference"
+												to="/the-primoko-difference"
 												style={classNames(classes.mobileMenuText, classes.space)}
 												primary="The Primoko Difference"
 											/>
 											<div>
 												<div>
 													<ListItemLink
-														to="/difference/overview"
+														to="/the-primoko-difference/overview"
 														style={classes.mobileSubMenuText}
 														primary="Overview"
 														subLink
 													/>
 													<ListItemLink
-														to="/difference/process"
+														to="/the-primoko-difference/process"
 														style={classes.mobileSubMenuText}
 														primary="Process"
 														subLink
 													/>
 													<ListItemLink
-														to="/difference/manifesto"
+														to="/the-primoko-difference/manifesto"
 														style={classes.mobileSubMenuText}
 														primary="Manifesto"
 														subLink
@@ -281,7 +281,7 @@ class NavBar extends React.Component {
 														subLink
 													/>
 													<ListItemLink
-														to="/difference/faqs"
+														to="/the-primoko-difference/faqs"
 														style={classes.mobileSubMenuText}
 														primary="FAQs"
 														subLink

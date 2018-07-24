@@ -23,9 +23,9 @@ export const servicesFields = [
 	{ label: 'Pricing', value: '/services/pricing' }
 ];
 export const thePrimokoDiffernceFields = [
-	{ label: 'Overview', value: '/difference' },
-	{ label: 'Process', value: '/difference/process' },
-	{ label: 'Manifesto', value: '/difference/manifesto' },
+	{ label: 'Overview', value: '/the-primoko-difference' },
+	{ label: 'Process', value: '/the-primoko-difference/process' },
+	{ label: 'Manifesto', value: '/the-primoko-difference/manifesto' },
 	{ label: 'Pricing', value: '/services/pricing' },
-	{ label: 'FAQs', value: '/difference/faqs' }
+	{ label: 'FAQs', value: '/the-primoko-difference/faqs' }
 ];
