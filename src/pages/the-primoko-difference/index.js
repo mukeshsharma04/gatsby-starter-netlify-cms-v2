@@ -8,6 +8,7 @@ import Button from '../../components/Button';
 import logo from '../../img/primoko-logo-white.png';
 import TabBar from '../../components/TabBar';
 import { thePrimokoDiffernceFields } from '../../metadata';
+import Link from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -97,7 +98,7 @@ export default withStyles(styles)(({ classes }) => {
 						x, another example, and another example.
 					</Typography>
 					<Grid item xs={12} md={4}>
-						<Button text="Read our manifesto" fullWidth />
+						<Button text="Read our manifesto" fullWidth to='/the-primoko-difference/manifesto' component={Link} />
 					</Grid>
 				</Grid>
 				<Grid item xs={12} md={3}>
