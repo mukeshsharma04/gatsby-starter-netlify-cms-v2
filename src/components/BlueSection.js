@@ -2,15 +2,21 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import zeros from '../img/zeros.png';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
 	container: {
-		padding: '3%',
+		[theme.breakpoints.down('sm')]: {
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		},
 		background: 'linear-gradient(112deg, #4198ff, #6f73ff)',
 		overflow: 'hidden'
-	},
-	section: {
-		padding: '0 15% 0 5%'
 	},
 	image: {
 		backgroundImage: `url(${zeros})`,
@@ -48,28 +54,28 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes }) => {
 	return (
-		<Grid container className={classes.container}>
-			<Grid className={classes.section} item xs={12} md={8}>
-				<h1 className={classes.title} gutterBottom={true}>
+		<Grid container justify="space-between" className={classes.container}>
+			<Grid item xs={12} md={7}>
+				<Typography className={classes.title} gutterBottom={true}>
 					A software engineering firm with only software engineers. Imagine that.
-				</h1>
+				</Typography>
 				<br />
-				<div className={classes.paragraph} gutterBottom={true}>
-					<p>
-						We’re not kidding. We’ve no sales people, no marketing people, no business development people,
-						no customer relations people.
-					</p>
-					<br />
-					<p>Everyone in the company is an engineer first.</p>
-					<br />
-					<p>
-						Some of our software development engineers are elite. Some are top-notch experts with years of
-						experience architecting large projects.
-					</p>
-					<p>
-						But we are all engineers.<br />And we are all very good at what we do.
-					</p>
-				</div>
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					We’re not kidding. We’ve no sales people, no marketing people, no business development people, no
+					customer relations people.
+				</Typography>
+				<br />
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					Everyone in the company is an engineer first.
+				</Typography>
+				<br />
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					Some of our software development engineers are elite. Some are top-notch experts with years of
+					experience architecting large projects.
+				</Typography>
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					But we are all engineers.<br />And we are all very good at what we do.
+				</Typography>
 				<br />
 				<a href="/" className={classes.textWhite}>
 					Meet the team.

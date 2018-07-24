@@ -2,14 +2,20 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import chart from '../img/chart.png';
+import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
 	container: {
-		padding: '3%',
+		[theme.breakpoints.down('sm')]: {
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		},
 		overflow: 'hidden'
-	},
-	section: {
-		padding: '0 15% 0 5%'
 	},
 	image: {
 		backgroundImage: `url(${chart})`,
@@ -50,24 +56,26 @@ export default withStyles(styles)(({ classes }) => {
 			<Grid item xs={12} md={4}>
 				<div className={classes.image} />
 			</Grid>
-			<Grid className={classes.section} item xs={12} md={8}>
-				<h1 className={classes.title} gutterBottom={true}>Let's build.</h1>
+			<Grid item xs={12} md={7}>
+				<Typography className={classes.title} gutterBottom={true}>
+					Let's build.
+				</Typography>
 				<br />
-				<div className={classes.paragraph} gutterBottom={true}>
-					<p>
-						You've undertaken a project. Or You're creating a product. Congratulations! The future looks
-						bright. But your existing staff lacks competency in the required technology. Or maybe you lack
-						the staff you need, period.
-					</p>
-					<br />
-					<p>That's where Primoko comes in.</p>
-					<br />
-					<p>
-						We're ready to put our expert software engineers to work for and with you, advising you on all
-						the architecture decisions, mapping out the pros and cons of different technologies, and getting
-						your project, or product, up and running.
-					</p>
-				</div>
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					You've undertaken a project. Or You're creating a product. Congratulations! The future looks bright.
+					But your existing staff lacks competency in the required technology. Or maybe you lack the staff you
+					need, period.
+				</Typography>
+				<br />
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					That's where Primoko comes in.
+				</Typography>
+				<br />
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					We're ready to put our expert software engineers to work for and with you, advising you on all the
+					architecture decisions, mapping out the pros and cons of different technologies, and getting your
+					project, or product, up and running.
+				</Typography>
 				<br />
 				<a href="/" className={classes.textBlue}>
 					Learn more about our software development services.
