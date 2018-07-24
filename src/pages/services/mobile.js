@@ -31,6 +31,12 @@ const styles = (theme) => ({
 	list: {
 		paddingLeft: theme.spacing.unit * 2
 	},
+	subTitle: {
+		...theme.typography.title,
+		width: 'fit-content',
+		borderBottom: '6px solid #6f73ff',
+		paddingBottom: '8px'
+	},
 	outerBox: {
 		width: '281px',
 		height: '569px',
@@ -46,7 +52,7 @@ export default withStyles(styles)(({ classes }) => {
 			<TabBar fields={servicesFields}/>
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
-					<Typography className={classes.title} gutterBottom={true}>If you can dream it, we can build it.</Typography>
+					<Typography className={classes.title} gutterBottom={true}>If you can dream it, <span className={classes.subTitle}>we can build it.</span></Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						As you read these words, chances are that a high percent of your prospects and customers are
 						online, doing email and chat, playing games, watching videos, and in general conducting

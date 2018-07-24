@@ -169,19 +169,19 @@ class NavBar extends React.Component {
 											/>
 											<div>
 												<ListItemLink
-													to="/about/overview"
+													to="/about"
 													style={classes.mobileSubMenuText}
 													primary="Overview"
 													subLink
 												/>
 												<ListItemLink
-													to="/about/team"
+													to="/about/#team"
 													style={classes.mobileSubMenuText}
 													primary="Team"
 													subLink
 												/>
 												<ListItemLink
-													to="/about/careers"
+													to="/about/#career"
 													style={classes.mobileSubMenuText}
 													primary="Careers"
 													subLink
@@ -257,7 +257,7 @@ class NavBar extends React.Component {
 											<div>
 												<div>
 													<ListItemLink
-														to="/the-primoko-difference/overview"
+														to="/the-primoko-difference"
 														style={classes.mobileSubMenuText}
 														primary="Overview"
 														subLink
@@ -275,7 +275,7 @@ class NavBar extends React.Component {
 														subLink
 													/>
 													<ListItemLink
-														to="/pricing"
+														to="/services/pricing"
 														style={classes.mobileSubMenuText}
 														primary="Pricing"
 														subLink
