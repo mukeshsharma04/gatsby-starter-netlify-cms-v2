@@ -13,7 +13,7 @@ const styles = (theme) => ({
       padding: theme.spacing.unit * 2
     },
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing.unit * 5
+      padding: theme.spacing.unit * 7
     },
     [theme.breakpoints.up('lg')]: {
       padding: theme.spacing.unit * 10
@@ -96,7 +96,7 @@ export default withStyles(styles)(({ classes }) => {
 				<Grid item xs={12} md={3}>
 					<div className={classes.block}>
 						<Grid container className={classes.blockade} justify="center" alignItems="center">
-							<img src={logo} class={classes.logo} />
+							<img src={logo} className={classes.logo} />
 						</Grid>
 					</div>
 				</Grid>

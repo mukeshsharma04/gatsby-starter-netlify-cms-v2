@@ -14,7 +14,7 @@ const styles = (theme) => ({
 	root: {
 		backgroundColor: '#333333',
 		flexGrow: 1,
-		padding: theme.spacing.unit * 5,
+		padding: theme.spacing.unit * 7,
 		color: '#ffffff'
 	},
 	row: {

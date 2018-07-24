@@ -6,78 +6,82 @@ import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 
 const styles = (theme) => ({
-  container: {
-    padding: '3%',
-    overflow: 'hidden'
-  },
-  section: {
-    padding: '0 15% 0 5%'
-  },
-  title: {
-    ...theme.typography.title
-  },
-  paragraph: {
-    ...theme.typography.paragraph,
-    maxWidth: '526px',
-    paddingBottom: '70px'
-  },
-  teamTitle: {
-    ...theme.typography.subheading,
-    maxWidth: '200px',
-    textAlign: 'center',
-    margin: '33px 30px 17px 30px'
-  },
-  avatarDefault: {
-    backgroundColor: '#f8f8f8',
-    width: '200px',
-    height: '200px',
-    margin: '0px 30px'
-  },
+	container: {
+		[theme.breakpoints.down('sm')]: {
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		}
+	},
+	title: {
+		...theme.typography.title
+	},
+	paragraph: {
+		...theme.typography.paragraph,
+		maxWidth: '526px',
+		paddingBottom: '70px'
+	},
+	teamTitle: {
+		...theme.typography.subheading,
+		textAlign: 'center'
+	},
+	avatarDefault: {
+		margin: 'auto',
+		backgroundColor: '#f8f8f8',
+		[theme.breakpoints.down('sm')]: {
+			width: '150px',
+			height: '150px'
+		},
+		[theme.breakpoints.up('md')]: {
+			width: '200px',
+			height: '200px'
+		}
+	}
 });
 
 export default withStyles(styles)(({ classes }) => {
-
-  return (
-    <Grid container className={classes.container} >
-      <Grid className={classes.section} item xs={12}>
-        <Typography className={classes.title} gutterBottom>
-          Meet the team
-        </Typography>
-        <br />
-        <Typography className={classes.paragraph}>
-          Our band of hardcore engineers also happens to be good at the soft stuff, like planning, managing, and serving our clients.
-        </Typography>
-      </Grid>
-      <Grid container justify="center" spacing={40} alignItems="center">
-        <Grid className={classes.section} item>
-          <Avatar className={classes.avatarDefault} />
-          <Typography className={classes.teamTitle}>
-            First Lastname <br /> Role
-          </Typography>
-        </Grid>
-        <Grid className={classes.section} item>
-          <Avatar className={classes.avatarDefault} />
-          <Typography className={classes.teamTitle}>
-            First Lastname <br /> Role
-          </Typography>
-        </Grid>
-        <Grid className={classes.section} item>
-          <Avatar className={classes.avatarDefault} />
-          <Typography className={classes.teamTitle}>
-            First Lastname <br /> Role
-          </Typography>
-        </Grid>
-        <Grid className={classes.section} item>
-          <Avatar className={classes.avatarDefault} />
-          <Typography className={classes.teamTitle}>
-            First Lastname <br /> Role
-          </Typography>
-
-        </Grid>
-
-      </Grid>
-
-    </Grid>
-  );
-
+	return (
+		<Grid container className={classes.container}>
+			<Grid item xs={12}>
+				<Typography className={classes.title} gutterBottom>
+					Meet the team
+				</Typography>
+				<br />
+				<Typography className={classes.paragraph}>
+					Our band of hardcore engineers also happens to be good at the soft stuff, like planning, managing,
+					and serving our clients.
+				</Typography>
+			</Grid>
+			<Grid container justify="center" spacing={24} alignItems="center">
+				<Grid className={classes.section} xs={6} md={3} item>
+					<Avatar className={classes.avatarDefault} />
+					<Typography className={classes.teamTitle}>
+						First Lastname <br /> Role
+					</Typography>
+				</Grid>
+				<Grid className={classes.section} xs={6} md={3} item>
+					<Avatar className={classes.avatarDefault} />
+					<Typography className={classes.teamTitle}>
+						First Lastname <br /> Role
+					</Typography>
+				</Grid>
+				<Grid className={classes.section} xs={6} md={3} item>
+					<Avatar className={classes.avatarDefault} />
+					<Typography className={classes.teamTitle}>
+						First Lastname <br /> Role
+					</Typography>
+				</Grid>
+				<Grid className={classes.section} xs={6} md={3} item>
+					<Avatar className={classes.avatarDefault} />
+					<Typography className={classes.teamTitle}>
+						First Lastname <br /> Role
+					</Typography>
+				</Grid>
+			</Grid>
+		</Grid>
+	);
 });

@@ -11,7 +11,7 @@ import Quote from '../components/Quotes';
 const styles = (theme) => ({
   divider: {
     backgroundColor: '#d1d1d1',
-    margin: '0px 70px'
+    margin: '0 5%'
   }
 });
 
