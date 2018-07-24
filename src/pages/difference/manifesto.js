@@ -3,6 +3,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
+import TabBar from '../../components/TabBar';
+import { thePrimokoDiffernceFields } from '../../metadata';
 
 const styles = (theme) => ({
 	container: {
@@ -42,6 +44,7 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
+			<TabBar fields={thePrimokoDiffernceFields} />
 			<div className={classes.parallax} />
 			<Grid container className={classes.container} justify="center">
 				<Grid className={classes.row} item xs={12} md={12}>

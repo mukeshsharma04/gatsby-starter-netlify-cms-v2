@@ -48,7 +48,10 @@ const styles = (theme) => ({
 		...theme.typography.paragraph,
 		fontWeight: '900',
 		color: '#ffffff',
-		textDecoration: 'underline'
+		textDecoration: 'underline',
+		'&:hover' : {
+			color: '#ffffff'
+		}
 	}
 });
 

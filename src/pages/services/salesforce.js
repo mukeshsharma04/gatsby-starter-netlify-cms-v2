@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import Quotes from '../../components/Quotes';
 import TabBar from '../../components/TabBar';
+import { servicesFields } from '../../metadata';
 
 const styles = (theme) => ({
 	container: {
@@ -32,7 +33,7 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
-			<TabBar />
+			<TabBar fields={servicesFields}/>
 			<Grid container className={classes.container}>
 				<Grid item xs={12} md={12}>
 					<Typography className={classes.title} gutterBottom={true}>We will put Salesforce to work for you.</Typography>

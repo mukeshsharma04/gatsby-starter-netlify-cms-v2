@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from 'gatsby-link';
 import classNames from 'classnames';
+import Hidden from '@material-ui/core/Hidden';
 
 const styles = (theme) => ({
 	root: {
@@ -39,63 +40,26 @@ class NavBar extends React.Component {
 	};
 
 	render() {
-		const { classes } = this.props;
+		const { classes, fields } = this.props;
 
 		return (
-			<div className={classes.root}>
-				<AppBar position="static" className={classes.appBar}>
-					<Toolbar varient="dense">
-						<Link
-							to="/services"
-							className={classNames(classes.navLink, this.activeLink('/services') && classes.active)}
-						>
-							Overview
-						</Link>
-						<Link
-							to="/services/mobile"
-							className={classNames(
-								classes.navLink,
-								this.activeLink('/services/mobile') && classes.active
-							)}
-						>
-							Mobile
-						</Link>
-						<Link
-							to="/services/web"
-							className={classNames(classes.navLink, this.activeLink('/services/web') && classes.active)}
-						>
-							Web
-						</Link>
-						<Link
-							to="/services/devops"
-							className={classNames(
-								classes.navLink,
-								this.activeLink('/services/devops') && classes.active
-							)}
-						>
-							DevOps
-						</Link>
-						<Link
-							to="/services/salesforce"
-							className={classNames(
-								classes.navLink,
-								this.activeLink('/services/salesforce') && classes.active
-							)}
-						>
-							Salesforce
-						</Link>
-						<Link
-							to="/services/pricing"
-							className={classNames(
-								classes.navLink,
-								this.activeLink('/services/pricing') && classes.active
-							)}
-						>
-							Pricing
-						</Link>
-					</Toolbar>
-				</AppBar>
-			</div>
+			<Hidden xsDown>
+				<div className={classes.root}>
+					<AppBar position="static" className={classes.appBar}>
+						<Toolbar varient="dense">
+							{fields.map((v, k) => (
+								<Link
+									key={k}
+									to={v.value}
+									className={classNames(classes.navLink, this.activeLink(v.value) && classes.active)}
+								>
+									{v.label}
+								</Link>
+							))}
+						</Toolbar>
+					</AppBar>
+				</div>
+			</Hidden>
 		);
 	}
 }

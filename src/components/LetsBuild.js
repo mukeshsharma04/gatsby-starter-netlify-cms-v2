@@ -46,7 +46,10 @@ const styles = (theme) => ({
 	textBlue: {
 		...theme.typography.paragraph,
 		fontWeight: '900',
-		color: '#4198ff'
+		color: '#4198ff',
+		'&:hover' : {
+			color: '#4198ff',
+		}
 	}
 });
 

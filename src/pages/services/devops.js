@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import TabBar from '../../components/TabBar';
+import { servicesFields } from '../../metadata';
 
 const styles = (theme) => ({
 	container: {
@@ -38,7 +39,7 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
-			<TabBar />
+			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title} gutterBottom={true}>DevOps. It's not just for unicorns anymore.</Typography>

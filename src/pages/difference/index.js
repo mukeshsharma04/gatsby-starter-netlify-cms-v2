@@ -6,6 +6,8 @@ import classNames from 'classnames';
 import Banner from '../../components/Banner';
 import Button from '../../components/Button';
 import logo from '../../img/primoko-logo-white.png';
+import TabBar from '../../components/TabBar';
+import { thePrimokoDiffernceFields } from '../../metadata';
 
 const styles = (theme) => ({
 	container: {
@@ -63,6 +65,7 @@ export default withStyles(styles)(({ classes }) => {
 	);
 	return (
 		<React.Fragment>
+			<TabBar fields={thePrimokoDiffernceFields} />
 			<Banner text={text} height="425px" />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={8}>

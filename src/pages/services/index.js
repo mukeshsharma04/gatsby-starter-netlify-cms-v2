@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import Chip from '@material-ui/core/Chip';
 import Button from '../../components/Button';
 import Quotes from '../../components/Quotes';
+import { mobile, web, devOps, servicesFields } from '../../metadata';
 
 const styles = (theme) => ({
 	container: {
@@ -67,26 +68,9 @@ export default withStyles(styles)(
 				</Typography>
 			);
 
-			const mobile = [ 'iOS', 'Android', 'React Native', 'Swift', 'Objetive-C', 'Xcode' ];
-			const web = [
-				'Mongo DB',
-				'Express JS',
-				'Angular',
-				'Node JS',
-				'Linux',
-				'Apache',
-				'MySQL',
-				'PHP',
-				'JQuery',
-				'React',
-				'AWS',
-				'Firebase'
-			];
-			const devOps = [ 'Jenkins', 'CruiseControl', 'AWS', 'Docker', 'Maven', 'Ant', 'Git', 'SVN' ];
-
 			return (
 				<React.Fragment>
-					<TabBar />
+					<TabBar fields={servicesFields} />
 					<Banner text={text} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
