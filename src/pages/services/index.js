@@ -53,14 +53,6 @@ const styles = (theme) => ({
 		backgroundColor: 'white',
 		marginRight: theme.spacing.unit,
 		marginBottom: theme.spacing.unit
-	},
-	button: {
-		[theme.breakpoints.down('sm')]: {
-			width: '100%'
-		},
-		[theme.breakpoints.up('md')]: {
-			width: '60%'
-		},
 	}
 });
 
@@ -116,7 +108,9 @@ export default withStyles(styles)(
 						</Grid>
 
 						<Grid item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>Mobile</Typography>
+							<Typography className={classes.title} gutterBottom={true}>
+								Mobile
+							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								We use React Native and other mobile technologies to develop must-have mobile apps for
 								iOS and Android—including for Apple Watch and WearOS.
@@ -127,10 +121,14 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								{mobile.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
-							<Button styles={classes.button} text="See mobile services" />
+							<Grid item xs={10} md={8}>
+								<Button text="See mobile services" fullWidth />
+							</Grid>
 						</Grid>
 						<Grid item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>Web</Typography>
+							<Typography className={classes.title} gutterBottom={true}>
+								Web
+							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								Need web development and design? We have you covered, especially on the JavaScript
 								stack—NodeJS, React, Angular, AWS, and Firebase.
@@ -141,11 +139,15 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								{web.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
-							<Button styles={classes.button} text="See web services" />
+							<Grid item xs={10} md={8}>
+								<Button text="See web services" fullWidth />
+							</Grid>
 						</Grid>
 
 						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>DevOps</Typography>
+							<Typography className={classes.title} gutterBottom={true}>
+								DevOps
+							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								Merge your delivery pipeline and customer feedback loop for development at high
 								velocity.
@@ -156,10 +158,14 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								{devOps.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
-							<Button styles={classes.button} text="See mobile services" />
+							<Grid item xs={10} md={8}>
+								<Button text="See DevOps services" fullWidth />
+							</Grid>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>Salesforce</Typography>
+							<Typography className={classes.title} gutterBottom={true}>
+								Salesforce
+							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								Merge your delivery pipeline and customer feedback loop for development at high
 								velocity.
@@ -170,13 +176,17 @@ export default withStyles(styles)(
 							<div className={classes.space}>
 								<Chip label="Salesforce commerce" className={classes.chip} />
 							</div>
-							<Button styles={classes.button} text="See web services" />
+							<Grid item xs={10} md={8}>
+								<Button text="See Salesforce services" fullWidth />
+							</Grid>
 						</Grid>
 					</Grid>
 					<Banner height="322px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
-							<Typography className={classes.title} gutterBottom={true}>Pricing</Typography>
+							<Typography className={classes.title} gutterBottom={true}>
+								Pricing
+							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 								“How much does it cost?” That’s the big question we’re asked most often. And although we
 								can’t say for certainty without exploring the scope and nature of your project, we can

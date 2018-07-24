@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import Button from '../components/Button';
 
 const styles = (theme) => ({
 	container: {
@@ -22,15 +22,6 @@ const styles = (theme) => ({
 	},
 	paragraph: {
 		...theme.typography.paragraph
-	},
-	button: {
-		...theme.typography.button,
-		backgroundImage: 'linear-gradient(99deg, #4198ff, #6f73ff)',
-		borderRadius: '19.5px',
-		padding: '10px',
-		width: '260px',
-		height: '39px',
-		textTransform: 'initial'
 	}
 });
 
@@ -46,9 +37,9 @@ export default withStyles(styles)(({ classes }) => {
 					Are you a nerd looking for home?
 				</Typography>
 				<br />
-				<Button variant="contained" aria-label="Delete" styles={classes.button}>
-					See career opportunities
-				</Button>
+				<Grid item xs={12} md={4}>
+					<Button text="See career opportunities" fullWidth/>
+				</Grid>
 			</Grid>
 		</Grid>
 	);

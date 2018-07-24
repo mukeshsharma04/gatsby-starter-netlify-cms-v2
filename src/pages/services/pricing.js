@@ -44,12 +44,6 @@ const styles = (theme) => ({
 		textAlign: 'center',
 		padding: theme.spacing.unit * 2,
 		margin: 'auto'
-	},
-	button: {
-		marginTop: '30px',
-		margin: 'auto',
-		width: '260px',
-		height: '39px'
 	}
 });
 
@@ -106,7 +100,11 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
 				</Grid>
-				<Button styles={classes.button} text="Get a quote" />
+				<Grid container justify="center" className={classes.space}>
+					<Grid item xs={12} md={4}>
+						<Button text="Get a quote" fullWidth />
+					</Grid>
+				</Grid>
 			</Grid>
 		</React.Fragment>
 	);

@@ -1,36 +1,25 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import classNames from 'classnames';
 
 const styles = (theme) => ({
 	button: {
-		cursor: 'pointer',
-		marginTop: theme.spacing.unit * 3,
-		marginBottom: theme.spacing.unit * 5,
-		paddingTop: theme.spacing.unit,
-		paddingBottom: theme.spacing.unit,
-		paddingLeft: theme.spacing.unit * 4,
-		paddingRight: theme.spacing.unit * 4,
+		...theme.typography.button,
+		margin: theme.spacing.unit,
+		paddingLeft: theme.spacing.unit * 5,
+		paddingRight: theme.spacing.unit * 5,
 		borderRadius: '19.5px',
-		background: `linear-gradient(to right, #4B96FC, #6F77FB)`
-	},
-	buttonText: {
-		fontSize: '14px',
-		fontWeight: '500',
-		fontStyle: 'normal',
-		fontStretch: 'normal',
-		lineHeight: 'normal',
-		letterSpacing: 'normal',
-		textAlign: 'center',
-		color: '#ffffff'
+		background: `linear-gradient(to right, #4B96FC, #6F77FB)`,
+		textTransform: 'initial'
 	}
 });
 
 export default withStyles(styles)((props) => {
-	const { classes, text, styles } = props;
+	const { classes, text, styles, fullWidth } = props;
 	return (
-		<div className={classNames(classes.button, ...styles)}>
-			<p className={classes.buttonText}>{text}</p>
-		</div>
+		<Button className={classNames(classes.button, styles)} fullWidth={fullWidth}>
+			{text}
+		</Button>
 	);
 });

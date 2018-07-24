@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 const styles = (theme) => ({
 	container: {
 		padding: '3%',
-		height: '350px',
+		minHeight: '350px',
 		backgroundColor: '#f8f8f8'
 	},
 	quote: {
