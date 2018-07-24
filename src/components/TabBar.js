@@ -1,68 +1,103 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Link from 'gatsby-link'
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Link from 'gatsby-link';
+import classNames from 'classnames';
 
 const styles = (theme) => ({
 	root: {
-		flexGrow: 1,
-		backgroundColor: theme.palette.background.paper
+		flexGrow: 1
 	},
-	tabsRoot: {
-		borderBottom: '1px solid #e8e8e8'
+	appBar: {
+		backgroundColor: 'rgba(255, 255, 255, 0.98)',
+		boxShadow: '0 1px 0 0 #dfdfdf',
+		height: '60px'
 	},
-	tabsIndicator: {
-		backgroundColor: '#1890ff'
+	navLink: {
+		color: '#4198ff',
+		padding: '0.8rem 1rem',
+		fontWeight: 500,
+		textDecoration: 'none',
+		'&:hover': {
+			color: '#4198ff',
+			borderBottom: '3px solid #469AFC',
+			lineHeight: 2
+		}
 	},
-	tabRoot: {
-		...theme.typography.tabLink,
-		minWidth: 'unset'
-	},
-	tabSelected: {}
+	active: {
+		color: '#4198ff',
+		borderBottom: '3px solid #469AFC',
+		lineHeight: 2
+	}
 });
 
-class TabBar extends React.Component {
-	state = {
-		value: 0
-	};
-
-	handleChange = (event, value) => {
-		this.setState({ value });
+class NavBar extends React.Component {
+	activeLink = (route) => {
+		const location = typeof window !== 'undefined' ? window.location.pathname : '';
+		return route === location && true;
 	};
 
 	render() {
-		const { classes, data } = this.props;
-		const { value } = this.state;
+		const { classes } = this.props;
 
 		return (
 			<div className={classes.root}>
-				<Tabs
-					value={value}
-					onChange={this.handleChange}
-					classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
-					scrollable
-					scrollButtons="on"
-				>
-					{data.map((v, k) => (
-						<Tab
-							key={k}
-							disableRipple
-							classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-							label={v.label}
-							component={Link}
-							to={v.value}
-						/>
-					))}
-				</Tabs>
+				<AppBar position="static" className={classes.appBar}>
+					<Toolbar varient="dense">
+						<Link
+							to="/services"
+							className={classNames(classes.navLink, this.activeLink('/services') && classes.active)}
+						>
+							Overview
+						</Link>
+						<Link
+							to="/services/mobile"
+							className={classNames(
+								classes.navLink,
+								this.activeLink('/services/mobile') && classes.active
+							)}
+						>
+							Mobile
+						</Link>
+						<Link
+							to="/services/web"
+							className={classNames(classes.navLink, this.activeLink('/services/web') && classes.active)}
+						>
+							Web
+						</Link>
+						<Link
+							to="/services/devops"
+							className={classNames(
+								classes.navLink,
+								this.activeLink('/services/devops') && classes.active
+							)}
+						>
+							DevOps
+						</Link>
+						<Link
+							to="/services/salesforce"
+							className={classNames(
+								classes.navLink,
+								this.activeLink('/services/salesforce') && classes.active
+							)}
+						>
+							Salesforce
+						</Link>
+						<Link
+							to="/services/pricing"
+							className={classNames(
+								classes.navLink,
+								this.activeLink('/services/pricing') && classes.active
+							)}
+						>
+							Pricing
+						</Link>
+					</Toolbar>
+				</AppBar>
 			</div>
 		);
 	}
 }
 
-TabBar.propTypes = {
-	classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(TabBar);
+export default withStyles(styles, { withTheme: true })(NavBar);

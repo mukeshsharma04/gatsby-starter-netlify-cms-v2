@@ -13,14 +13,14 @@ import Quotes from '../../components/Quotes';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-      padding: theme.spacing.unit * 2
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing.unit * 5
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing.unit * 10
-    }
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 5
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		}
 	},
 	text: {
 		...theme.typography.hero,
@@ -86,16 +86,7 @@ export default withStyles(styles)(
 
 			return (
 				<React.Fragment>
-					<TabBar
-						data={[
-							{ label: 'Overview', value: '/services' },
-							{ label: 'Mobile', value: '/services/mobile' },
-							{ label: 'Web', value: '/services/web' },
-							{ label: 'DevOps', value: '/services/devops' },
-							{ label: 'Salesforce', value: '/services/salesforce' },
-							{ label: 'Pricing', value: '/services/pricing' }
-						]}
-					/>
+					<TabBar />
 					<Banner text={text} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
@@ -185,7 +176,11 @@ export default withStyles(styles)(
 							</Typography>
 						</Grid>
 					</Grid>
-					<Quotes quote="The best way to get a project done faster is to start sooner [like now]." author="Jim Highsmith," authorRole="with our parenthetical and emphasis" />
+					<Quotes
+						quote="The best way to get a project done faster is to start sooner [like now]."
+						author="Jim Highsmith,"
+						authorRole="with our parenthetical and emphasis"
+					/>
 				</React.Fragment>
 			);
 		}

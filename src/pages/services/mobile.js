@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import Quotes from '../../components/Quotes';
+import TabBar from '../../components/TabBar';
 
 const styles = (theme) => ({
 	container: {
@@ -41,6 +42,7 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
+			<TabBar />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title}>If you can dream it, we can build it.</Typography>
@@ -81,7 +83,7 @@ export default withStyles(styles)(({ classes }) => {
 				</Grid>
 				<Grid item xs={12} md={4}>
 					<div className={classes.outerBox}>
-						<div className={classes.screen}>Hello</div>
+						<div className={classes.screen}></div>
 					</div>
 				</Grid>
 			</Grid>

@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import Banner from '../../components/Banner';
+import TabBar from '../../components/TabBar';
 
 const styles = (theme) => ({
 	container: {
@@ -41,6 +42,7 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
+			<TabBar />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={5}>
 					<div className={classes.outerBox} />

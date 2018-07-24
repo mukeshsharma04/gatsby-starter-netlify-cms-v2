@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import Button from '../../components/Button';
+import TabBar from '../../components/TabBar';
 
 const styles = (theme) => ({
 	container: {
@@ -43,56 +44,59 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes }) => {
 	return (
-		<Grid container className={classes.container}>
-			<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
-				<Typography className={classes.title} align="center">
-					Simple
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-				</Typography>
-				<div className={classes.space} />
-				<div className={classes.rangeButton}>$1,000 — $10,000</div>
+		<React.Fragment>
+			<TabBar />
+			<Grid container className={classes.container}>
+				<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
+					<Typography className={classes.title} align="center">
+						Simple
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					</Typography>
+					<div className={classes.space} />
+					<div className={classes.rangeButton}>$1,000 — $10,000</div>
+				</Grid>
+				<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
+					<Typography className={classes.title} align="center">
+						Moderate
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					</Typography>
+					<div className={classes.space} />
+					<div className={classes.rangeButton}>$1,000 — $10,000</div>
+				</Grid>
+				<Grid className={classes.row} item xs={12} md={4}>
+					<Typography className={classes.title} align="center">
+						Complex
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					</Typography>
+					<div className={classes.space} />
+					<div className={classes.rangeButton}>$1,000 — $10,000</div>
+				</Grid>
+				<Button className={classes.button} text="Get a quote" />
 			</Grid>
-			<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
-				<Typography className={classes.title} align="center">
-					Moderate
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-				</Typography>
-				<div className={classes.space} />
-				<div className={classes.rangeButton}>$1,000 — $10,000</div>
-			</Grid>
-			<Grid className={classes.row} item xs={12} md={4}>
-				<Typography className={classes.title} align="center">
-					Complex
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-				</Typography>
-				<div className={classes.space} />
-				<div className={classes.rangeButton}>$1,000 — $10,000</div>
-			</Grid>
-			<Button className={classes.button} text="Get a quote" />
-		</Grid>
+		</React.Fragment>
 	);
 });

@@ -3,18 +3,19 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
+import TabBar from '../../components/TabBar';
 
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-      padding: theme.spacing.unit * 2
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing.unit * 5
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing.unit * 10
-    }
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 5
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		}
 	},
 	title: {
 		...theme.typography.title
@@ -36,33 +37,37 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes }) => {
 	return (
-		<Grid container className={classes.container} justify="space-between">
-			<Grid item xs={12} md={6}>
-				<Typography className={classes.title}>DevOps. It's not just for unicorns anymore.</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					DevOps, a practice that eliminates the development and operations silos, has become all the rage
-					among companies of all sizes. And for good reason.
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					When development and operations unite, your once-disparate teams work as a single unit over a highly
-					automated application lifecycle, from building, testing, and releasing to feedback monitoring and
-					iteration planning.
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					With the help of tools, technology, and DevOps best practices, this marriage leads to continuous
-					improvement in every area: faster deployments, faster time to market, higher reliability, reduced
-					risk, increased scale, and tighter security.
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					It’s the future, here and now.{' '}
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom>
-					Contact Primoko for a free consultation. Discover how far our talented, creative team can take you.
-				</Typography>
+		<React.Fragment>
+			<TabBar />
+			<Grid container className={classes.container} justify="space-between">
+				<Grid item xs={12} md={6}>
+					<Typography className={classes.title}>DevOps. It's not just for unicorns anymore.</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						DevOps, a practice that eliminates the development and operations silos, has become all the rage
+						among companies of all sizes. And for good reason.
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						When development and operations unite, your once-disparate teams work as a single unit over a
+						highly automated application lifecycle, from building, testing, and releasing to feedback
+						monitoring and iteration planning.
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						With the help of tools, technology, and DevOps best practices, this marriage leads to continuous
+						improvement in every area: faster deployments, faster time to market, higher reliability,
+						reduced risk, increased scale, and tighter security.
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						It’s the future, here and now.{' '}
+					</Typography>
+					<Typography className={classes.paragraph} gutterBottom>
+						Contact Primoko for a free consultation. Discover how far our talented, creative team can take
+						you.
+					</Typography>
+				</Grid>
+				<Grid item xs={12} md={5}>
+					<div className={classes.outerBox} />
+				</Grid>
 			</Grid>
-			<Grid item xs={12} md={5}>
-				<div className={classes.outerBox} />
-			</Grid>
-		</Grid>
+		</React.Fragment>
 	);
 });
