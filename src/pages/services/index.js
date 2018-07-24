@@ -12,7 +12,15 @@ import Quotes from '../../components/Quotes';
 
 const styles = (theme) => ({
 	container: {
-		padding: theme.spacing.unit * 10
+		[theme.breakpoints.down('sm')]: {
+      padding: theme.spacing.unit * 2
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing.unit * 5
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing.unit * 10
+    }
 	},
 	text: {
 		...theme.typography.hero,
@@ -95,13 +103,13 @@ export default withStyles(styles)(
 								Custom software development for even the most persistent and seemingly impossible
 								difficulties.
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)}>
+							<Typography className={classes.paragraph} gutterBottom>
 								Software engineering is the fuel that makes your business growth and innovation
 								possible. But it can also be a roadblock, especially if your team isn’t familiar with
 								the technologies you need to move your project from idea to reality, and more so if your
 								team members don’t know what they don’t know.
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)}>
+							<Typography className={classes.paragraph} gutterBottom>
 								We at Primoko DO know what others don’t. And our expert and elite engineers with various
 								specialties are standing by to act as the fuel that will make your project go.
 							</Typography>
@@ -110,7 +118,7 @@ export default withStyles(styles)(
 
 						<Grid item xs={12} md={5}>
 							<Typography className={classes.title}>Mobile</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)}>
+							<Typography className={classes.paragraph} gutterBottom>
 								We use React Native and other mobile technologies to develop must-have mobile apps for
 								iOS and Android—including for Apple Watch and WearOS.
 							</Typography>
@@ -124,7 +132,7 @@ export default withStyles(styles)(
 						</Grid>
 						<Grid item xs={12} md={5}>
 							<Typography className={classes.title}>Web</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)}>
+							<Typography className={classes.paragraph} gutterBottom>
 								Need web development and design? We have you covered, especially on the JavaScript
 								stack—NodeJS, React, Angular, AWS, and Firebase.
 							</Typography>
@@ -139,7 +147,7 @@ export default withStyles(styles)(
 
 						<Grid className={classes.space} item xs={12} md={5}>
 							<Typography className={classes.title}>DevOps</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)}>
+							<Typography className={classes.paragraph} gutterBottom>
 								Merge your delivery pipeline and customer feedback loop for development at high
 								velocity.
 							</Typography>
@@ -153,7 +161,7 @@ export default withStyles(styles)(
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
 							<Typography className={classes.title}>Salesforce</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)}>
+							<Typography className={classes.paragraph} gutterBottom>
 								Merge your delivery pipeline and customer feedback loop for development at high
 								velocity.
 							</Typography>
@@ -170,7 +178,7 @@ export default withStyles(styles)(
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
 							<Typography className={classes.title}>Pricing</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)}>
+							<Typography className={classes.paragraph} gutterBottom>
 								“How much does it cost?” That’s the big question we’re asked most often. And although we
 								can’t say for certainty without exploring the scope and nature of your project, we can
 								give you an idea.

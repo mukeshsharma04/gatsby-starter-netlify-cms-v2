@@ -7,7 +7,15 @@ import classNames from 'classnames';
 
 const styles = (theme) => ({
 	container: {
-		padding: theme.spacing.unit * 10
+		[theme.breakpoints.down('sm')]: {
+      padding: theme.spacing.unit * 2
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing.unit * 5
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing.unit * 10
+    }
 	},
 	title: {
 		...theme.typography.title
@@ -26,7 +34,7 @@ export default withStyles(styles)(({ classes }) => {
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={12}>
 					<Typography className={classes.title}>Selected clients</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)}>
+					<Typography className={classes.paragraph} gutterBottom>
 						Primoko is proud to bring you our expert and elite engineering experience with the following
 						companies.
 					</Typography>

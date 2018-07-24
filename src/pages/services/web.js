@@ -7,7 +7,15 @@ import Banner from '../../components/Banner';
 
 const styles = (theme) => ({
 	container: {
-		padding: theme.spacing.unit * 10
+		[theme.breakpoints.down('sm')]: {
+      padding: theme.spacing.unit * 2
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing.unit * 5
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing.unit * 10
+    }
 	},
 	title: {
 		...theme.typography.title
@@ -39,14 +47,14 @@ export default withStyles(styles)(({ classes }) => {
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title}>Your customers are using the web. Are you?</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)}>
+					<Typography className={classes.paragraph} gutterBottom>
 						Looking to streamline internal operations? Become more flexible and versatile? Reach more
 						customers? Create additional streams of income? Serve existing clients better?
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)}>
+					<Typography className={classes.paragraph} gutterBottom>
 						A web app can do that.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)}>
+					<Typography className={classes.paragraph} gutterBottom>
 						And an entire subset of our software engineers at Primoko live for creating rich web
 						applications, such as those for:
 					</Typography>
@@ -69,7 +77,7 @@ export default withStyles(styles)(({ classes }) => {
 							</ul>
 						</Grid>
 					</Grid>
-					<Typography className={classNames(classes.paragraph, classes.space)}>
+					<Typography className={classes.paragraph} gutterBottom>
 						We invite you to contact us for a free consultation today.
 					</Typography>
 				</Grid>

@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
   container: {
-    padding: '3%',
+    marginTop: '3%',
+    marginBottom: '3%',
     overflow: 'hidden'
   },
   section: {

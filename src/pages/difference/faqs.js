@@ -6,7 +6,15 @@ import classNames from 'classnames';
 
 const styles = (theme) => ({
 	container: {
-		padding: theme.spacing.unit * 10
+		[theme.breakpoints.down('sm')]: {
+      padding: theme.spacing.unit * 2
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing.unit * 5
+    },
+    [theme.breakpoints.up('lg')]: {
+      padding: theme.spacing.unit * 10
+    }
 	},
 	title: {
 		...theme.typography.title
@@ -25,9 +33,9 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
-			<Grid container className={classes.container} justify="space-between">
+			<Grid container className={classes.container} justify="space-between" spacing={40}>
 				<Grid item xs={12} md={12}>
-					<Typography className={classNames(classes.paragraph, classes.space)}>
+					<Typography className={classes.paragraph} gutterBottom>
 						You have questions? We have answers. (But if you don’t see your question here, let’s talk.)
 					</Typography>
 				</Grid>

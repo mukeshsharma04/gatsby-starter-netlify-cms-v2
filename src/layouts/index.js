@@ -12,7 +12,7 @@ const TemplateWrapper = ({ children }) => (
   <MuiThemeProvider theme={theme}>
     <Helmet title="Primoko" />
     <Navbar />
-    <div>{children()}</div>
+    <div style={{overflow: 'hidden'}}>{children()}</div>
 		<Footer />
   </MuiThemeProvider>
 )

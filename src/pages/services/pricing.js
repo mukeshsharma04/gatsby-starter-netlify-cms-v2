@@ -48,13 +48,13 @@ export default withStyles(styles)(({ classes }) => {
 				<Typography className={classes.title} align="center">
 					Simple
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 				</Typography>
 				<div className={classes.space} />
@@ -64,13 +64,13 @@ export default withStyles(styles)(({ classes }) => {
 				<Typography className={classes.title} align="center">
 					Moderate
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 				</Typography>
 				<div className={classes.space} />
@@ -80,13 +80,13 @@ export default withStyles(styles)(({ classes }) => {
 				<Typography className={classes.title} align="center">
 					Complex
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</Typography>
-				<Typography className={classNames(classes.paragraph, classes.space)}>
+				<Typography className={classes.paragraph} gutterBottom>
 					• Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
 				</Typography>
 				<div className={classes.space} />
