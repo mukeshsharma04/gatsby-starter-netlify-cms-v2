@@ -9,12 +9,21 @@ import classNames from 'classnames';
 
 import logo from '../img/primoko-logo-white.png';
 import linkedin from '../img/linkedin.png';
+import Button from './Button';
 
 const styles = (theme) => ({
 	root: {
 		backgroundColor: '#333333',
 		flexGrow: 1,
-		padding: theme.spacing.unit * 7,
+		[theme.breakpoints.down('sm')]: {
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		},
 		color: '#ffffff'
 	},
 	row: {
@@ -84,7 +93,6 @@ const styles = (theme) => ({
 	},
 	buttonText: {
 		paddingTop: '10px',
-		width: '260px',
 		height: '19px',
 		fontSize: '14px',
 		fontWeight: '500',
@@ -113,7 +121,9 @@ const Footer = ({ classes }) => {
 		<div className={classes.root}>
 			<Grid className={classes.row} container>
 				<Grid item xs={6} md={6}>
-					<Link to="/"><img className={classes.logo} src={logo} alt="primoko" /></Link>
+					<Link to="/">
+						<img className={classes.logo} src={logo} alt="primoko" />
+					</Link>
 				</Grid>
 				<Grid item xs={6} md={6} className={classes.right}>
 					<Link className={classes.link} to="/">
@@ -174,7 +184,7 @@ const Footer = ({ classes }) => {
 										Message
 									</Typography>
 								</Grid>
-								<textarea className={classes.textBox} name="message" type="text" id="message"></textarea>
+								<textarea className={classes.textBox} name="message" type="text" id="message" />
 							</div>
 							<div className={classNames(classes.button, classes.space)}>
 								<p className={classes.buttonText}>Send Message</p>
@@ -199,7 +209,7 @@ const Footer = ({ classes }) => {
 											gutterBottom={true}
 										>
 											About Primoko
-									</Typography>
+										</Typography>
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
@@ -445,7 +455,12 @@ const Footer = ({ classes }) => {
 
 					{/*Third Row*/}
 					<Grid container className={classes.space}>
-						<Typography variant="subheading" className={classes.paragraph} color="inherit" gutterBottom={true}>
+						<Typography
+							variant="subheading"
+							className={classes.paragraph}
+							color="inherit"
+							gutterBottom={true}
+						>
 							Copyright © 2018 Primoko Inc and respective clients. All rights reserved.
 						</Typography>
 					</Grid>
@@ -499,11 +514,9 @@ const Footer = ({ classes }) => {
 										Message
 									</Typography>
 								</Grid>
-								<textarea className={classes.textBox} name="message" type="text" id="message"></textarea>
+								<textarea className={classes.textBox} name="message" type="text" id="message" />
 							</div>
-							<div className={classNames(classes.button, classes.space)}>
-								<p className={classes.buttonText}>Send Message</p>
-							</div>
+							<Button text="Send Message" />
 						</form>
 					</Grid>
 				</Hidden>

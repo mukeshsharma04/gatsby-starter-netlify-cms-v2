@@ -10,14 +10,14 @@ import logo from '../../img/primoko-logo-white.png';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-      padding: theme.spacing.unit * 2
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing.unit * 7
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing.unit * 10
-    }
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		}
 	},
 	title: {
 		...theme.typography.title
@@ -49,10 +49,10 @@ const styles = (theme) => ({
 	logo: {
 		width: '153.5px',
 		height: '31px'
-  },
-  blockade:{
-    height: '210px'
-  }
+	},
+	blockade: {
+		height: '210px'
+	}
 });
 
 export default withStyles(styles)(({ classes }) => {
@@ -66,7 +66,9 @@ export default withStyles(styles)(({ classes }) => {
 			<Banner text={text} height="425px" />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={8}>
-					<Typography className={classes.title} gutterBottom={true}>Why Primoko?</Typography>
+					<Typography className={classes.title} gutterBottom={true}>
+						Why Primoko?
+					</Typography>
 					<Typography className={classes.paragraph} gutterBottom={true}>
 						If you search the web for “web development” or “app development,” you’ll find millions of
 						companies plying their wares.
@@ -87,7 +89,7 @@ export default withStyles(styles)(({ classes }) => {
 							cases, your contact will be a senior engineer, senior enough to be your company’s CTO.
 						</Typography>
 					</div>
-					<Typography className={classes.paragraph} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						We like to chase the hard engineering problems, the kind that hold companies back. Problems like
 						x, another example, and another example.
 					</Typography>
