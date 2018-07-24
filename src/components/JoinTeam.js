@@ -46,7 +46,7 @@ export default withStyles(styles)(({ classes }) => {
 					Are you a nerd looking for home?
 				</Typography>
 				<br />
-				<Button variant="contained" aria-label="Delete" style={classes.button}>
+				<Button variant="contained" aria-label="Delete" styles={classes.button}>
 					See career opportunities
 				</Button>
 			</Grid>

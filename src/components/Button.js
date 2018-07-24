@@ -27,9 +27,9 @@ const styles = (theme) => ({
 });
 
 export default withStyles(styles)((props) => {
-	const { classes, text, style } = props;
+	const { classes, text, styles } = props;
 	return (
-		<div className={classNames(classes.button, ...style)}>
+		<div className={classNames(classes.button, ...styles)}>
 			<p className={classes.buttonText}>{text}</p>
 		</div>
 	);

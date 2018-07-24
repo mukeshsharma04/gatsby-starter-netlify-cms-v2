@@ -101,7 +101,7 @@ export default withStyles(styles)(({ classes }) => {
 						We like to chase the hard engineering problems, the kind that hold companies back. Problems like
 						x, another example, and another example.
 					</Typography>
-					<Button style={classes.button} text="Read our manifesto" />
+					<Button styles={classes.button} text="Read our manifesto" />
 				</Grid>
 				<Grid item xs={12} md={3}>
 					<div className={classes.block}>
