@@ -25,7 +25,6 @@ const styles = (theme) => ({
 	parallax: {
 		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
 		minHeight: '500px',
-		backgroundAttachment: 'fixed',
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover'
@@ -48,6 +47,10 @@ const styles = (theme) => ({
 	},
 	space: {
 		marginTop: theme.spacing.unit * 4
+	},
+	image: {
+		height: '50%',
+		width: '100%'
 	}
 });
 

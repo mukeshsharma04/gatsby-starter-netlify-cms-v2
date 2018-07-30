@@ -37,31 +37,34 @@ const styles = (theme) => ({
 	},
 	title: {
 		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mtitle
+			...theme.typography.mtitle,
+			color: '#333333'
 		},
 		[theme.breakpoints.up('sm')]: {
-			...theme.typography.title
-		},
-		color: '#333333'
+			...theme.typography.title,
+			color: '#333333'
+		}
 	},
 	paragraph: {
 		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mparagraph
+			...theme.typography.mparagraph,
+			color: '#333333'
 		},
 		[theme.breakpoints.up('sm')]: {
-			...theme.typography.paragraph
-		},
-		color: '#333333'
+			...theme.typography.paragraph,
+			color: '#333333'
+		}
 	},
 	textBlue: {
 		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mparagraph
+			...theme.typography.mparagraph,
+			color: '#4198ff',
 		},
 		[theme.breakpoints.up('sm')]: {
-			...theme.typography.paragraph
+			...theme.typography.paragraph,
+			color: '#4198ff',
 		},
 		fontWeight: '900',
-		color: '#4198ff',
 		'&:hover': {
 			color: '#4198ff'
 		}
