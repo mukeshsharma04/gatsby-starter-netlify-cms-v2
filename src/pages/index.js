@@ -6,7 +6,7 @@ import BlueSection from '../components/BlueSection';
 import Quotes from '../components/Quotes';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import banner from '../img/banner.jpg';
+import { withPrefix } from 'gatsby-link'
 
 const styles = (theme) => ({
 	text: {
@@ -35,7 +35,7 @@ class IndexPage extends React.Component {
 
 		return (
 			<React.Fragment>
-				<Banner text={text} banner={banner} height="600px" />
+				<Banner text={text} banner={withPrefix('/img/banner.jpg')} height="600px" />
 				<LetsBuild />
 				<BlueSection />
 				<Quotes quote="A clever person solves a problem. A wise person avoids it." author="Albert Einstein" />

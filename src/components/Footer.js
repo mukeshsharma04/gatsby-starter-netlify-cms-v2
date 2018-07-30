@@ -4,11 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Hidden from '@material-ui/core/Hidden';
-import Link from 'gatsby-link';
+import Link, { withPrefix } from 'gatsby-link';
 import classNames from 'classnames';
 
-import logo from '../img/primoko-logo-white.png';
-import linkedin from '../img/linkedin.png';
 import Button from './Button';
 
 const styles = (theme) => ({
@@ -122,7 +120,7 @@ const Footer = ({ classes }) => {
 			<Grid className={classes.row} container>
 				<Grid item xs={6} md={6}>
 					<Link to="/">
-						<img className={classes.logo} src={logo} alt="primoko" />
+						<img className={classes.logo} src={withPrefix('/img/primoko-logo-white.png')} alt="primoko" />
 					</Link>
 				</Grid>
 				<Grid item xs={6} md={6} className={classes.right}>
@@ -154,7 +152,11 @@ const Footer = ({ classes }) => {
 							</Grid>
 							<Grid item xs={6} md={6} className={classes.right}>
 								<Link className={classes.link} to="/">
-									<img className={classes.linkedin} src={linkedin} alt="primoko" />
+									<img
+										className={classes.linkedin}
+										src={withPrefix('/img/linkedin.png')}
+										alt="primoko"
+									/>
 								</Link>
 							</Grid>
 						</Grid>
@@ -484,7 +486,11 @@ const Footer = ({ classes }) => {
 							</Grid>
 							<Grid item xs={6} md={6} className={classes.right}>
 								<Link className={classes.link} to="/">
-									<img className={classes.linkedin} src={linkedin} alt="primoko" />
+									<img
+										className={classes.linkedin}
+										src={withPrefix('/img/linkedin.png')}
+										alt="primoko"
+									/>
 								</Link>
 							</Grid>
 						</Grid>

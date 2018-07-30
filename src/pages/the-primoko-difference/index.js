@@ -5,10 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import Banner from '../../components/Banner';
 import Button from '../../components/Button';
-import logo from '../../img/primoko-logo-white.png';
 import TabBar from '../../components/TabBar';
 import { thePrimokoDiffernceFields } from '../../metadata';
-import Link from 'gatsby-link';
+import Link, { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -98,13 +97,18 @@ export default withStyles(styles)(({ classes }) => {
 						x, another example, and another example.
 					</Typography>
 					<Grid item xs={12} md={4}>
-						<Button text="Read our manifesto" fullWidth to='/the-primoko-difference/manifesto' component={Link} />
+						<Button
+							text="Read our manifesto"
+							fullWidth
+							to="/the-primoko-difference/manifesto"
+							component={Link}
+						/>
 					</Grid>
 				</Grid>
 				<Grid item xs={12} md={3}>
 					<div className={classes.block}>
 						<Grid container className={classes.blockade} justify="center" alignItems="center">
-							<img src={logo} className={classes.logo} />
+							<img src={withPrefix('/img/primoko-logo-white.png')} className={classes.logo} />
 						</Grid>
 					</div>
 				</Grid>

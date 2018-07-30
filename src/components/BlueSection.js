@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import zeros from '../img/zeros.png';
+import { withPrefix } from 'gatsby-link'
 import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
@@ -19,7 +19,7 @@ const styles = (theme) => ({
 		overflow: 'hidden'
 	},
 	image: {
-		backgroundImage: `url(${zeros})`,
+		backgroundImage: `url(${withPrefix('/img/zeros.png')})`,
 		backgroundSize: 'contain',
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',

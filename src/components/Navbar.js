@@ -7,8 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import Link from 'gatsby-link';
-import logo from '../img/primoko-logo-white.png';
+import Link, { withPrefix } from 'gatsby-link';
 import Drawer from '@material-ui/core/Drawer';
 import ListItemLink from './ListItemLink';
 import Close from '@material-ui/icons/Close';
@@ -98,7 +97,11 @@ class NavBar extends React.Component {
 					<Toolbar varient="dense">
 						<Typography variant="title" color="inherit" className={classes.flex}>
 							<Link to="/">
-								<img src={logo} alt="Primoko" style={{ height: '20px' }} />
+								<img
+									src={withPrefix('/img/primoko-logo-white.png')}
+									alt="Primoko"
+									style={{ height: '20px' }}
+								/>
 							</Link>
 						</Typography>
 						<Hidden smDown implementation="css">
