@@ -50,6 +50,9 @@ const styles = (theme) => ({
 	pricing: {
 		height: '69px',
 		marginBottom: '45px'
+	},
+	quoteButton: {
+		textAlign: 'center'
 	}
 });
 
@@ -115,9 +118,9 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
 				</Grid>
-				<Grid container justify="center" className={classes.space}>
-					<Grid item xs={12} md={4}>
-						<Button text="Get a quote" fullWidth />
+				<Grid container direction="row" alignItems="center" justify="center" className={classes.space}>
+					<Grid className={classes.quoteButton} item xs={12} md={4}>
+						<Button text="Get a quote" />
 					</Grid>
 				</Grid>
 			</Grid>

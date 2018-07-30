@@ -107,11 +107,11 @@ export default withStyles(styles)(
 								{mobile.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See mobile services" fullWidth />
+								<Button text="See mobile services" />
 							</Grid>
 						</Grid>
 						<Grid item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classNames(classes.title, classes.space)} gutterBottom={true}>
 								Web
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
@@ -125,10 +125,9 @@ export default withStyles(styles)(
 								{web.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See web services" fullWidth />
+								<Button text="See web services" />
 							</Grid>
 						</Grid>
-
 						<Grid className={classes.space} item xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom={true}>
 								DevOps
@@ -144,7 +143,7 @@ export default withStyles(styles)(
 								{devOps.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See DevOps services" fullWidth />
+								<Button text="See DevOps services" />
 							</Grid>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
@@ -162,7 +161,7 @@ export default withStyles(styles)(
 								<Chip label="Salesforce commerce" className={classes.chip} />
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See Salesforce services" fullWidth />
+								<Button text="See Salesforce services" />
 							</Grid>
 						</Grid>
 					</Grid>

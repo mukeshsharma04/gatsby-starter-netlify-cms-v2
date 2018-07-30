@@ -8,6 +8,7 @@ const styles = (theme) => ({
 		...theme.typography.button,
 		paddingLeft: theme.spacing.unit * 5,
 		paddingRight: theme.spacing.unit * 5,
+		marginTop: theme.spacing.unit * 2,
 		borderRadius: '19.5px',
 		background: `linear-gradient(to right, #4B96FC, #6F77FB)`,
 		textTransform: 'initial'
