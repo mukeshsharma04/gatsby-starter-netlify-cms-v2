@@ -10,7 +10,7 @@ import Chip from '@material-ui/core/Chip';
 import Button from '../../components/Button';
 import Quotes from '../../components/Quotes';
 import { mobile, web, devOps, servicesFields } from '../../metadata';
-import { withPrefix } from 'gatsby-link';
+import Link, { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -92,7 +92,7 @@ export default withStyles(styles)(
 							<Divider className={classes.divider} />
 						</Grid>
 
-						<Grid item xs={12} md={5}>
+						<Grid item className={classes.space} xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom={true}>
 								Mobile
 							</Typography>
@@ -107,11 +107,11 @@ export default withStyles(styles)(
 								{mobile.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See mobile services" />
+								<Button text="See mobile services" to="/services/mobile" component={Link} />
 							</Grid>
 						</Grid>
-						<Grid item xs={12} md={5}>
-							<Typography className={classNames(classes.title, classes.space)} gutterBottom={true}>
+						<Grid className={classes.space} item xs={12} md={5}>
+							<Typography className={classes.title} gutterBottom={true}>
 								Web
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
@@ -125,7 +125,7 @@ export default withStyles(styles)(
 								{web.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See web services" />
+								<Button text="See web services" to="/services/web" component={Link} />
 							</Grid>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
@@ -143,7 +143,7 @@ export default withStyles(styles)(
 								{devOps.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See DevOps services" />
+								<Button text="See DevOps services" to="/services/devops" component={Link} />
 							</Grid>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
@@ -161,7 +161,7 @@ export default withStyles(styles)(
 								<Chip label="Salesforce commerce" className={classes.chip} />
 							</div>
 							<Grid item xs={10} md={8}>
-								<Button text="See Salesforce services" />
+								<Button text="See Salesforce services" to="/services/salesforce" component={Link} />
 							</Grid>
 						</Grid>
 					</Grid>
