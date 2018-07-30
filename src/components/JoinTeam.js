@@ -37,7 +37,7 @@ export default withStyles(styles)(({ classes }) => {
 					Are you a nerd looking for home?
 				</Typography>
 				<br />
-				<Grid item xs={12} md={4}>
+				<Grid item xs={12} md={3}>
 					<Button text="See career opportunities" fullWidth/>
 				</Grid>
 			</Grid>

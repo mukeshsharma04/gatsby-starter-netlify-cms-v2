@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -17,7 +18,7 @@ const styles = (theme) => ({
 		overflow: 'hidden'
 	},
 	image: {
-		backgroundColor: '#f8f8f8',
+		backgroundImage: `url(${withPrefix('/img/team.png')})`,
 		backgroundSize: 'contain',
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',

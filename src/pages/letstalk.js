@@ -2,7 +2,6 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import classNames from 'classnames';
 import Banner from '../components/Banner';
 import Divider from '@material-ui/core/Divider';
 import Button from '../components/Button';
@@ -64,7 +63,17 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
-			<Banner height="500px" />
+			<div style={{ width: '100%', height: '500' }}>
+				<iframe
+					width="100%"
+					height="600"
+					src="https://maps.google.com/maps?width=100%&height=500&hl=en&coord=28.494747,77.0773577,17z&q=Primoko%20Softwares%20pvt%20ltd+(Primoko)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+					frameBorder="0"
+					scrolling="no"
+					marginHeight="0"
+					marginWidth="0"
+				/>
+			</div>
 			<Grid container className={classes.container} justify="space-between" spacing={40}>
 				<Grid item xs={12} md={7}>
 					<Typography className={classes.title} gutterBottom={true}>

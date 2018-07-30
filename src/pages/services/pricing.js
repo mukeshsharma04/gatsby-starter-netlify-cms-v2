@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import Button from '../../components/Button';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -45,15 +46,22 @@ const styles = (theme) => ({
 		textAlign: 'center',
 		padding: theme.spacing.unit * 2,
 		margin: 'auto'
+	},
+	pricing: {
+		height: '69px',
+		marginBottom: '45px'
 	}
 });
 
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
-			<TabBar fields={servicesFields}/>
+			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container}>
 				<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
+					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
+						<img src={withPrefix('/img/cupcake.png')} />
+					</Grid>
 					<Typography className={classes.title} align="center">
 						Simple
 					</Typography>
@@ -70,6 +78,9 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
 				</Grid>
 				<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
+					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
+						<img src={withPrefix('/img/cake.png')} />
+					</Grid>
 					<Typography className={classes.title} align="center">
 						Moderate
 					</Typography>
@@ -86,6 +97,9 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
 				</Grid>
 				<Grid className={classes.row} item xs={12} md={4}>
+					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
+						<img src={withPrefix('/img/wedding-cake.png')} />
+					</Grid>
 					<Typography className={classes.title} align="center">
 						Complex
 					</Typography>

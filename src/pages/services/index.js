@@ -10,6 +10,7 @@ import Chip from '@material-ui/core/Chip';
 import Button from '../../components/Button';
 import Quotes from '../../components/Quotes';
 import { mobile, web, devOps, servicesFields } from '../../metadata';
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -71,7 +72,7 @@ export default withStyles(styles)(
 			return (
 				<React.Fragment>
 					<TabBar fields={servicesFields} />
-					<Banner text={text} height="425px" />
+					<Banner banner={withPrefix('/img/agency.jpg')} text={text} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
 							<Typography className={classes.title} gutterBottom={true}>
@@ -165,7 +166,7 @@ export default withStyles(styles)(
 							</Grid>
 						</Grid>
 					</Grid>
-					<Banner height="322px" />
+					<Banner banner={withPrefix('/img/code.jpg')} height="322px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
 							<Typography className={classes.title} gutterBottom={true}>

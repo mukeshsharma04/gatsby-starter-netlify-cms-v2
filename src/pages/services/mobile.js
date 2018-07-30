@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import Quotes from '../../components/Quotes';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -40,9 +41,6 @@ const styles = (theme) => ({
 	outerBox: {
 		width: '281px',
 		height: '569px',
-		borderRadius: '100px',
-		backgroundColor: 'white',
-		boxShadow: 'inset 3px 8px 6px 0 rgba(181, 181, 181, 0.12), inset -6px 0 3px 0 rgba(0, 0, 0, 0.02)'
 	}
 });
 
@@ -89,9 +87,7 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={4}>
-					<div className={classes.outerBox}>
-						<div className={classes.screen}></div>
-					</div>
+				<img src={withPrefix('/img/we-know-mobile.png')} />
 				</Grid>
 			</Grid>
 			<Quotes

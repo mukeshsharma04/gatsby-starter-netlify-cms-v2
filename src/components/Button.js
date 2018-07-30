@@ -6,7 +6,6 @@ import classNames from 'classnames';
 const styles = (theme) => ({
 	button: {
 		...theme.typography.button,
-		margin: theme.spacing.unit,
 		paddingLeft: theme.spacing.unit * 5,
 		paddingRight: theme.spacing.unit * 5,
 		borderRadius: '19.5px',

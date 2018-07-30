@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -29,10 +30,7 @@ const styles = (theme) => ({
 	},
 	outerBox: {
 		width: '459.6px',
-		height: '300.5px',
-		borderRadius: '14.2px',
-		backgroundColor: 'var(--white)',
-		boxShadow: '0 1px 15px 0 rgba(0, 0, 0, 0.15), inset 0 1px 1px 0 #ffffff'
+		height: '300.5px'
 	}
 });
 
@@ -42,7 +40,9 @@ export default withStyles(styles)(({ classes }) => {
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
-					<Typography className={classes.title} gutterBottom={true}>DevOps. It's not just for unicorns anymore.</Typography>
+					<Typography className={classes.title} gutterBottom={true}>
+						DevOps. It's not just for unicorns anymore.
+					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						DevOps, a practice that eliminates the development and operations silos, has become all the rage
 						among companies of all sizes. And for good reason.
@@ -66,7 +66,9 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={5}>
-					<div className={classes.outerBox} />
+					<div className={classes.outerBox}>
+						<img src={withPrefix('/img/illustration-dev-ops.png')} />
+					</div>
 				</Grid>
 			</Grid>
 		</React.Fragment>

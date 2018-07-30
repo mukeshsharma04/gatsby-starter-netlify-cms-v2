@@ -66,7 +66,7 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
 			<TabBar fields={thePrimokoDiffernceFields} />
-			<Banner text={text} height="425px" />
+			<Banner banner={withPrefix('/img/achievement.jpg')} text={text} height="425px" />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={8}>
 					<Typography className={classes.title} gutterBottom={true}>
