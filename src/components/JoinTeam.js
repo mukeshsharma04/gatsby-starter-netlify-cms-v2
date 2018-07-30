@@ -18,10 +18,20 @@ const styles = (theme) => ({
 		overflow: 'hidden'
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		}
 	}
 });
 
@@ -38,7 +48,7 @@ export default withStyles(styles)(({ classes }) => {
 				</Typography>
 				<br />
 				<Grid item xs={12} md={3}>
-					<Button text="See career opportunities" fullWidth/>
+					<Button text="See career opportunities" fullWidth />
 				</Grid>
 			</Grid>
 		</Grid>

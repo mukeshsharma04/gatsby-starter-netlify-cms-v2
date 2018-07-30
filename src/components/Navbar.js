@@ -46,12 +46,21 @@ const styles = (theme) => ({
 		width: 350
 	},
 	mobileMenuText: {
-		...theme.typography.link,
-		color: '#ffffff',
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mlink,
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.link,
+		},
 		padding: '0'
 	},
 	mobileSubMenuText: {
-		...theme.typography.subLink,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.msubLink,
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.subLink,
+		},
 		paddingLeft: '7%'
 	},
 	toolbar: {
@@ -74,7 +83,7 @@ const styles = (theme) => ({
 		padding: '3%'
 	},
 	space: {
-		marginTop: '5%'
+		marginTop: '4%'
 	}
 });
 
@@ -161,7 +170,7 @@ class NavBar extends React.Component {
 												</IconButton>
 											</div>
 											<ListItemLink
-												to="/home"
+												to="/"
 												style={classNames(classes.mobileMenuText, classes.space)}
 												primary="Home"
 											/>

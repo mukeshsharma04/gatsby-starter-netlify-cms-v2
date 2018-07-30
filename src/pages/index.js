@@ -10,7 +10,12 @@ import { withPrefix } from 'gatsby-link'
 
 const styles = (theme) => ({
 	text: {
-		...theme.typography.hero,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mhero
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.hero
+		},
 		width: 'fit-content',
 		color: 'white',
 		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,

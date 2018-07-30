@@ -30,10 +30,20 @@ const styles = (theme) => ({
 		}
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		},
 		display: 'list-item'
 	},
 	space: {

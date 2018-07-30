@@ -18,16 +18,31 @@ const styles = (theme) => ({
 		}
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		},
 		maxWidth: '526px',
 		paddingBottom: '70px'
 	},
 	teamTitle: {
 		paddingTop: '5%',
-		...theme.typography.subheading,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.msubheading
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.subheading
+		},
 		textAlign: 'center'
 	},
 	avatarDefault: {

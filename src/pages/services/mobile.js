@@ -21,10 +21,20 @@ const styles = (theme) => ({
     }
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		}
 	},
 	space: {
 		marginTop: theme.spacing.unit * 4
@@ -33,7 +43,12 @@ const styles = (theme) => ({
 		paddingLeft: theme.spacing.unit * 2
 	},
 	subTitle: {
-		...theme.typography.title,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		},
 		width: 'fit-content',
 		borderBottom: '6px solid #6f73ff',
 		paddingBottom: '8px'

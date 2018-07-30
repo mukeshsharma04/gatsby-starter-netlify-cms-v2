@@ -45,6 +45,16 @@ const theme = createMuiTheme({
 			color: '#333333'
 		},
 
+		mtitle: {
+			fontSize: '25px',
+			fontWeight: 500,
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal',
+			color: '#333333'
+		},
+
 		subheading: {
 			fontSize: '18px',
 			fontWeight: 900,
@@ -66,6 +76,17 @@ const theme = createMuiTheme({
 			lineHeight: 1.5
 		},
 
+		mparagraph: {
+			fontSize: '14px',
+			fontWeight: 500,
+			color: '#333333',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal',
+			lineHeight: 1.5
+		},
+
 		tabLink: {
 			fontSize: '16px',
 			fontWeight: 500,
@@ -76,8 +97,28 @@ const theme = createMuiTheme({
 			letterSpacing: 'normal'
 		},
 
+		mtabLink: {
+			fontSize: '14px',
+			fontWeight: 500,
+			color: '#4198ff',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal'
+		},
+
 		hero: {
 			fontSize: '30px',
+			fontWeight: 900,
+			color: '#ffffff',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal'
+		},
+
+		mhero: {
+			fontSize: '25px',
 			fontWeight: 900,
 			color: '#ffffff',
 			fontStyle: 'normal',
@@ -115,9 +156,31 @@ const theme = createMuiTheme({
 			color: '#ffffff'
 		},
 
+		mlink: {
+			fontFamily: 'Lato',
+			fontSize: '20px',
+			fontWeight: '900',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal',
+			color: '#ffffff'
+		},
+
 		subLink: {
 			fontFamily: 'Lato',
 			fontSize: '20px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '1.35',
+			letterSpacing: 'normal',
+			color: '#ffffff'
+		},
+
+		msubLink: {
+			fontFamily: 'Lato',
+			fontSize: '14px',
 			fontWeight: '500',
 			fontStyle: 'normal',
 			fontStretch: 'normal',

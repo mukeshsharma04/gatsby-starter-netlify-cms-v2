@@ -20,10 +20,20 @@ const styles = (theme) => ({
 		}
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		}
 	},
 	space: {
 		marginTop: theme.spacing.unit * 4
@@ -33,10 +43,12 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
-			<TabBar fields={servicesFields}/>
+			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container}>
 				<Grid item xs={12} md={12}>
-					<Typography className={classes.title} gutterBottom={true}>We will put Salesforce to work for you.</Typography>
+					<Typography className={classes.title} gutterBottom={true}>
+						We will put Salesforce to work for you.
+					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						Ah, the promise. Salesforce will help you track deals faster, sell faster, connection with
 						customers faster, and blaze your way to business growth—you guessed it—faster.

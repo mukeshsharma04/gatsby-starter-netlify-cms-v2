@@ -32,19 +32,39 @@ const styles = (theme) => ({
 		}
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	subTitle: {
-		...theme.typography.title,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		},
 		width: 'fit-content',
 		borderBottom: '6px solid #6f73ff',
 		paddingBottom: '8px'
 	},
 	paragraph: {
-		...theme.typography.paragraph
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		}
 	},
 	textWhite: {
-		...theme.typography.paragraph,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		},
 		fontWeight: '900',
 		textDecoration: 'underline'
 	}

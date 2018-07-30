@@ -25,17 +25,32 @@ const styles = (theme) => ({
 		}
 	},
 	text: {
-		...theme.typography.hero,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mhero
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.hero
+		},
 		width: 'fit-content',
 		color: 'white',
 		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
 		padding: '10px'
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		}
 	},
 	space: {
 		marginTop: theme.spacing.unit * 4
@@ -46,7 +61,12 @@ const styles = (theme) => ({
 		backgroundColor: '#d1d1d1'
 	},
 	blueText: {
-		...theme.typography.paragraph,
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		},
 		color: '#6f73ff'
 	},
 	chip: {

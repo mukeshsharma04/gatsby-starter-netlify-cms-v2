@@ -17,11 +17,11 @@ const styles = (theme) => ({
 		[theme.breakpoints.up('lg')]: {
 			padding: theme.spacing.unit * 10
 		}
-  },
-  row: {
-    boxShadow: '0 2px 20px 0 rgba(0, 0, 0, 0.15)',
-    padding: '5%',
-  },
+	},
+	row: {
+		boxShadow: '0 2px 20px 0 rgba(0, 0, 0, 0.15)',
+		padding: '5%'
+	},
 	parallax: {
 		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
 		minHeight: '500px',
@@ -31,10 +31,20 @@ const styles = (theme) => ({
 		backgroundSize: 'cover'
 	},
 	title: {
-		...theme.typography.title
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mparagraph
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph
+		}
 	},
 	space: {
 		marginTop: theme.spacing.unit * 4
@@ -48,13 +58,8 @@ export default withStyles(styles)(({ classes }) => {
 			<div className={classes.parallax} />
 			<Grid container className={classes.container} justify="center">
 				<Grid className={classes.row} item xs={12} md={12}>
-					<Typography className={classes.title} gutterBottom={true}>Manifesto</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<Typography className={classes.title} gutterBottom={true}>
+						Manifesto
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -77,7 +82,16 @@ export default withStyles(styles)(({ classes }) => {
 						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
 						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>— The Primoko team</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+						— The Primoko team
+					</Typography>
 				</Grid>
 			</Grid>
 		</React.Fragment>

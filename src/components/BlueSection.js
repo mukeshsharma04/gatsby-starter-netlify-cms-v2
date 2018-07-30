@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby-link';
 import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
@@ -37,19 +37,31 @@ const styles = (theme) => ({
 		}
 	},
 	title: {
-		...theme.typography.title,
-		color: '#ffffff'
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mtitle,
+			color: '#ffffff'
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.title,
+			color: '#ffffff'
+		}
 	},
 	paragraph: {
-		...theme.typography.paragraph,
-		color: '#ffffff'
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.maragraph,
+			color: '#ffffff'
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.paragraph,
+			color: '#ffffff'
+		},
 	},
 	textWhite: {
 		...theme.typography.paragraph,
 		fontWeight: '900',
 		color: '#ffffff',
 		textDecoration: 'underline',
-		'&:hover' : {
+		'&:hover': {
 			color: '#ffffff'
 		}
 	}
