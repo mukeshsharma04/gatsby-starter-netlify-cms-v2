@@ -16,9 +16,9 @@ const styles = (theme) => ({
 });
 
 export default withStyles(styles)((props) => {
-	const { classes, text, styles, fullWidth, to, component} = props;
+	const { classes, text, styles, fullWidth, to, component, onClick} = props;
 	return (
-		<Button className={classNames(classes.button, styles)} fullWidth={fullWidth} to={to} component={component}>
+		<Button className={classNames(classes.button, styles)} fullWidth={fullWidth} to={to} component={component} onClick={onClick}>
 			{text}
 		</Button>
 	);
