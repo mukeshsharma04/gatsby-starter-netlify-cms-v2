@@ -28,6 +28,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://primoko.us18.list-manage.com/subscribe/post?u=cce4fbebc0424af3a6cc4edfd&amp;id=d7a14bd6d3',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,

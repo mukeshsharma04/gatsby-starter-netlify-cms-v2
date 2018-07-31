@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Button from '../components/Button';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 const styles = (theme) => ({
 	container: {
@@ -75,26 +76,71 @@ const styles = (theme) => ({
 });
 
 class LetsTalk extends React.Component {
-	state = {
-		name: '',
-		email: '',
-		phone: '',
-		subject: '',
-		message: ''
-	};
+	constructor() {
+		super();
+		this.state = {
+			name: ``,
+			email: ``,
+			phone: ``,
+			subject: ``,
+			message: ``
+		};
+	}
 
-	handleSubmit = (e) => {
-console.log("Hello");
-	};
-
-	handleChange = (e) => {
+	// Update state each time user edits their email address
+	_handleEmailChange = (e) => {
 		this.setState({ [e.target.name]: e.target.value });
-		console.log(this.state);
+	};
+
+	_postEmailToMailchimp = (email, attributes) => {
+		addToMailchimp(email, attributes)
+			.then((result) => {
+				// Mailchimp always returns a 200 response
+				// So we check the result for MC errors & failures
+				if (result.result !== `success`) {
+					this.setState({
+						status: `error`,
+						msg: result.msg
+					});
+				} else {
+					// Email address succesfully subcribed to Mailchimp
+					this.setState({
+						status: `success`,
+						msg: result.msg
+					});
+				}
+			})
+			.catch((err) => {
+				// Network failures, timeouts, etc
+				this.setState({
+					status: `error`,
+					msg: err
+				});
+			});
+	};
+
+	_handleFormSubmit = (e) => {
+		e.preventDefault();
+		e.stopPropagation();
+
+		this.setState(
+			{
+				status: `sending`,
+				msg: null
+			},
+			// setState callback (subscribe email to MC)
+			this._postEmailToMailchimp(this.state.email, {
+				FNAME: this.state.name,
+				EMAIL: this.state.email,
+				PHONE: this.state.phone,
+				SUBJECT: this.state.subject,
+				MESSAGE: this.state.message
+			})
+		);
 	};
 
 	render() {
 		const { classes } = this.props;
-		const { name, email, phone, subject, message } = this.state;
 		return (
 			<React.Fragment>
 				<div style={{ width: '100%', height: '500' }}>
@@ -113,39 +159,21 @@ console.log("Hello");
 						<Typography className={classes.title} gutterBottom={true}>
 							Contact us
 						</Typography>
-						<form>
+						<form id="email-capture" method="post" noValidate>
 							<Grid container justify="space-between" spacing={40}>
 								<Grid item xs={12} md={6}>
 									<label className={classes.label}>Name</label>
-									<input
-										onChange={this.handleChange}
-										required
-										value={name}
-										className={classes.input}
-										name="name"
-									/>
+									<input onChange={this._handleEmailChange} className={classes.input} name="name" />
 								</Grid>
 								<Grid item xs={12} md={6}>
 									<label className={classes.label}>Email address</label>
-									<input
-										onChange={this.handleChange}
-										required
-										value={email}
-										className={classes.input}
-										name="email"
-									/>
+									<input onChange={this._handleEmailChange} className={classes.input} name="email" />
 								</Grid>
 							</Grid>
 							<Grid container justify="space-between" spacing={40}>
 								<Grid item xs={12} md={6}>
 									<label className={classes.label}>Phone number (optional)</label>
-									<input
-										onChange={this.handleChange}
-										required
-										value={phone}
-										className={classes.input}
-										name="phone"
-									/>
+									<input onChange={this._handleEmailChange} className={classes.input} name="phone" />
 								</Grid>
 							</Grid>
 
@@ -159,9 +187,7 @@ console.log("Hello");
 								<Grid item xs={12} md={6}>
 									<label className={classes.label}>Subject</label>
 									<input
-										onChange={this.handleChange}
-										required
-										value={subject}
+										onChange={this._handleEmailChange}
 										className={classes.input}
 										name="subject"
 									/>
@@ -172,16 +198,14 @@ console.log("Hello");
 								<Grid item xs={12} md={12}>
 									<label className={classes.label}>Message</label>
 									<textarea
-										onChange={this.handleChange}
-										required
-										value={message}
+										onChange={this._handleEmailChange}
 										className={classes.textfield}
 										name="message"
 									/>
 								</Grid>
 							</Grid>
 							<Grid item xs={12} md={4}>
-								<Button onClick={this.handleSubmit} text="Send message" />
+								<Button onClick={this._handleFormSubmit} text="Send message" />
 							</Grid>
 						</form>
 					</Grid>
