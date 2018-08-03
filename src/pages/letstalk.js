@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import Button from '../components/Button';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
+import Quotes from '../components/Quotes';
 
 const styles = (theme) => ({
 	container: {
@@ -230,7 +231,22 @@ class LetsTalk extends React.Component {
 							hello@primoko.com
 						</Typography>
 					</Grid>
+					<Grid item xs={12} md={12}>
+						<Typography className={classes.paragraph} gutterBottom={true}>
+							Have questions? Want to run an idea by us? Ready for a quote?
+						</Typography>
+						<Typography className={classes.paragraph} gutterBottom={true}>
+							We’d love to hear from you.
+						</Typography>
+						<Typography className={classes.paragraph} gutterBottom={true}>
+							Please call us, or complete the form that follows
+						</Typography>
+					</Grid>
 				</Grid>
+				<Quotes
+					author="David Guterson"
+					quote="Everybody has a world, and that world is completely hidden until we begin to inquire. As soon as we do, that entire world opens to us and yields itself. And you see how full and complex it is."
+				/>
 			</React.Fragment>
 		);
 	}

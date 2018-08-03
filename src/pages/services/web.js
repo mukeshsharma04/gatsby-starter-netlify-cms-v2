@@ -40,7 +40,8 @@ const styles = (theme) => ({
 		marginTop: theme.spacing.unit * 4
 	},
 	list: {
-		paddingLeft: theme.spacing.unit * 2
+		paddingLeft: theme.spacing.unit * 2,
+		listStyle: 'disc'
 	},
 	outerBox: {
 		[theme.breakpoints.up('sm')]: {
@@ -62,35 +63,37 @@ export default withStyles(styles)(({ classes }) => {
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title} gutterBottom={true}>
-						Your customers are using the web. Are you?
+						Web app development
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-						Looking to streamline internal operations? Become more flexible and versatile? Reach more
-						customers? Create additional streams of income? Serve existing clients better?
+						Ready to bring you and your users together with a functionally rich and intuitively easy web
+						application? An entire subset of our software engineers at Primoko live for creating websites
+						like that to meet business objectives.
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-						A web app can do that.
+						Whether you want a from-scratch website, repairs to an existing and problematic site, or a team
+						to take over the build, enhancement, or maintenance of a site, Primoko is the team to call.
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-						And an entire subset of our software engineers at Primoko live for creating rich web
-						applications, such as those for:
+						We will work closely with you from concept, planning, and design, to development, deployment,
+						and support for projects that run the gamut:
 					</Typography>
 					<Grid container className={classes.space}>
-						<Grid className={classes.list} item xs={6} md={6}>
-							<ul>
-								<li>• &#160; Online banking</li>
-								<li>• &#160; Content management</li>
-								<li>• &#160; Social Networking</li>
-								<li>• &#160; eCommerce</li>
-								<li>• &#160; Calendar apps</li>
+						<Grid item xs={6} md={6}>
+							<ul className={classes.list}>
+								<li>Online banking</li>
+								<li>Content management</li>
+								<li>Social Networking</li>
+								<li>eCommerce</li>
+								<li>Calendar apps</li>
 							</ul>
 						</Grid>
-						<Grid className={classes.list} item xs={6} md={6}>
-							<ul>
-								<li>• &#160; Online reservations</li>
-								<li>• &#160; Shopping carts</li>
-								<li>• &#160; Interactive games</li>
-								<li>• &#160; And more</li>
+						<Grid item xs={6} md={6}>
+							<ul className={classes.list}>
+								<li>Online reservations</li>
+								<li>Shopping carts</li>
+								<li>Interactive games</li>
+								<li>And more</li>
 							</ul>
 						</Grid>
 					</Grid>

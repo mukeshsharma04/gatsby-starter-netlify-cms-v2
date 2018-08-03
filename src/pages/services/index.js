@@ -75,6 +75,23 @@ const styles = (theme) => ({
 		backgroundColor: 'white',
 		marginRight: theme.spacing.unit,
 		marginBottom: theme.spacing.unit
+	},
+	block: {
+		width: '260px',
+		height: '206px',
+		background: `linear-gradient(to right, #4198ff, #6f73ff)`
+	},
+	logo: {
+		width: '153.5px',
+		height: '31px'
+	},
+	blockade: {
+		height: '210px'
+	},
+	client: {
+		color: 'white',
+		fontSize: '16px',
+		fontWeight: '500'
 	}
 });
 
@@ -83,7 +100,7 @@ export default withStyles(styles)(
 		render() {
 			const { classes } = this.props;
 
-			const text = (
+			const tag = (
 				<Typography className={classes.text} align="center">
 					Services
 				</Typography>
@@ -92,7 +109,7 @@ export default withStyles(styles)(
 			return (
 				<React.Fragment>
 					<TabBar fields={servicesFields} />
-					<Banner banner={withPrefix('/img/agency.jpg')} text={text} height="425px" />
+					<Banner banner={withPrefix('/img/agency.jpg')} tag={tag} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
 							<Typography className={classes.title} gutterBottom={true}>
@@ -100,14 +117,14 @@ export default withStyles(styles)(
 								difficulties.
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-								Software engineering is the fuel that makes your business growth and innovation
-								possible. But it can also be a roadblock, especially if your team isn’t familiar with
-								the technologies you need to move your project from idea to reality, and more so if your
+								Software engineering is the magic that makes business growth and innovation possible.
+								But it can also be a roadblock, especially if your team isn’t familiar with the
+								technologies you need to move your project from idea to reality, and more so if your
 								team members don’t know what they don’t know.
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-								We at Primoko DO know what others don’t. And our expert and elite engineers with various
-								specialties are standing by to act as the fuel that will make your project go.
+								We at Primoko DO know what others don’t. And our engineers with various specialties are
+								standing by to act as the fuel that will make your project go.
 							</Typography>
 							<Divider className={classes.divider} />
 						</Grid>
@@ -117,8 +134,8 @@ export default withStyles(styles)(
 								Mobile
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-								We use React Native and other mobile technologies to develop must-have mobile apps for
-								iOS and Android—including for Apple Watch and WearOS.
+								Stay ahead of the curve by adapting tomorrow’s technology for your mobile application.
+								Experience includes work in the banking and luxury ecommerce domains.
 							</Typography>
 							<Typography className={classNames(classes.blueText, classes.space)}>
 								Technology we’ve worked with:
@@ -135,8 +152,9 @@ export default withStyles(styles)(
 								Web
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-								Need web development and design? We have you covered, especially on the JavaScript
-								stack—NodeJS, React, Angular, AWS, and Firebase.
+								Web apps that work will differentiate and drive your business. From coding specific
+								solutions and solving technical problems to holding full ownership—from design and
+								development to testing and ongoing maintenance—Primoko has you covered.
 							</Typography>
 							<Typography className={classNames(classes.blueText, classes.space)}>
 								Technology we’ve worked with:
@@ -153,8 +171,9 @@ export default withStyles(styles)(
 								DevOps
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-								Merge your delivery pipeline and customer feedback loop for development at high
-								velocity.
+								Imagine feedback cycles measured in hours instead of weeks. Imagine simplicity,
+								performance, and speed. Imagine automation wherever it fits. We are big fans of DevOps,
+								especially of automating it as much as possible.
 							</Typography>
 							<Typography className={classNames(classes.blueText, classes.space)}>
 								Technology we’ve worked with:
@@ -171,8 +190,8 @@ export default withStyles(styles)(
 								Salesforce
 							</Typography>
 							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-								Merge your delivery pipeline and customer feedback loop for development at high
-								velocity.
+								Build a unified view of your customer with a new Salesforce integration and
+								implementation. Or, breath new life into an existing implementation.
 							</Typography>
 							<Typography className={classNames(classes.blueText, classes.space)}>
 								Technology we’ve worked with:
@@ -196,6 +215,36 @@ export default withStyles(styles)(
 								can’t say for certainty without exploring the scope and nature of your project, we can
 								give you an idea.
 							</Typography>
+						</Grid>
+						<Grid className={classes.space} item xs={12} md={8}>
+							<Typography className={classes.title} gutterBottom={true}>
+								Elite Engineer Recruitment
+							</Typography>
+							<Typography className={classes.paragraph} gutterBottom={true}>
+								Need brilliant talent for your organization? Find elite software engineers the same
+								caliber as those that work for Primoko by connecting with the same recruiters we use at
+								our sister company, Humanoko.
+							</Typography>
+							<Typography className={classes.paragraph} gutterBottom={true}>
+								Backstory: we created Humanoko after our clients, who had been bombarding us with
+								requests to find elite engineers, began trying to poach ours! That’s when we knew it was
+								time to create a recruitment firm specializing in bringing forward-thinking companies
+								and brilliant software engineers together; that’s when we launched Humanoko.
+							</Typography>
+						</Grid>
+						<Grid className={classNames(classes.space)} item xs={12} md={3}>
+							<div className={classes.block}>
+								<Grid container className={classes.blockade} justify="center" alignItems="center">
+									<Typography
+										variant="subheading"
+										className={classes.client}
+										color="inherit"
+										gutterBottom={true}
+									>
+										HUMANOKO
+									</Typography>
+								</Grid>
+							</div>
 						</Grid>
 					</Grid>
 					<Quotes

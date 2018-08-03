@@ -30,18 +30,18 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes, text, banner, height }) => {
+export default withStyles(styles)(({ classes, text, tag, banner, height }) => {
 	return (
 		<div>
 			<img src={banner} style={{ height: height, width: '100%' }} />
 			<Grid className={classes.container} direction="row" justify="center" alignItems="center" container>
-				{text && (
+				{text ? (
 					<Grid item xs={12} md={6} lg={6}>
 						<Typography className={classes.text}>
 							<span className={classes.textMultiline}>{text}</span>
 						</Typography>
 					</Grid>
-				)}
+				) : tag}
 			</Grid>
 		</div>
 	);

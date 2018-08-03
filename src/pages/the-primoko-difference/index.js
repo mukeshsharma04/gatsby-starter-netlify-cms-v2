@@ -73,7 +73,7 @@ const styles = (theme) => ({
 });
 
 export default withStyles(styles)(({ classes }) => {
-	const text = (
+	const tag = (
 		<Typography className={classes.text} align="center">
 			The Primoko Difference
 		</Typography>
@@ -81,35 +81,42 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
 			<TabBar fields={thePrimokoDiffernceFields} />
-			<Banner banner={withPrefix('/img/achievement.jpg')} text={text} height="425px" />
+			<Banner banner={withPrefix('/img/achievement.jpg')} tag={tag} height="425px" />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={8}>
 					<Typography className={classes.title} gutterBottom={true}>
-						Why Primoko?
+						Why Primoko? We speak geek.
 					</Typography>
 					<Typography className={classes.paragraph} gutterBottom={true}>
-						If you search the web for “web development” or “app development,” you’ll find millions of
-						companies plying their wares.
+						If you search the web for "web development," "software development," or "app development,"
+						you’ll find millions of companies plying their wares.
 					</Typography>
 					<Typography className={classes.paragraph} gutterBottom={true}>
 						We’re one of those millions, but here’s what makes us different.
 					</Typography>
 					<div className={classes.unordered}>
 						<Typography className={classNames(classes.paragraph, classes.space, classes.list)}>
-							We’re engineers. All of us. We have no sales people, no marketing people, no biz dev people,
-							no customer relations people.
+							We’re all engineers. Seriously. Even our sales, marketing, and customer relations people
+							started as engineers before branching out into other functions. This means we all speak
+							geek.
 						</Typography>
 						<Typography className={classNames(classes.paragraph, classes.space, classes.list)}>
-							When you call us, you’ll speak with an engineer.
+							When you work with us, you’ll speak with an engineer.
 						</Typography>
 						<Typography className={classNames(classes.paragraph, classes.space, classes.list)}>
 							Your Technical Account Manager will not be a sales person or even a junior engineer. In most
-							cases, your contact will be a senior engineer, senior enough to be your company’s CTO.
+							cases, your contact will be a senior engineer, senior enough to collaborate with your CTO.
+							If you do not have a CTO, then we are happy to wear that hat and help you to craft
+							technology that is in your best interest, advising you as if we were your CTO and not a
+							third party.
+						</Typography>
+						<Typography className={classNames(classes.paragraph, classes.space, classes.list)}>
+							If you need a high level of support, we will work as if we are part of your company, not a
+							separate, outside vendor.
 						</Typography>
 					</div>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
-						We like to chase the hard engineering problems, the kind that hold companies back. Problems like
-						x, another example, and another example.
+						We like to chase the hard engineering problems, the kind that hold companies back.
 					</Typography>
 					<Grid item xs={12} md={4}>
 						<Button
