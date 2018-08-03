@@ -44,7 +44,8 @@ export default withStyles(styles)(({ classes }) => {
 				</Typography>
 				<br />
 				<Typography className={classes.paragraph} gutterBottom={true}>
-					Are you a nerd looking for home?
+					Are you a nerd looking for home? Or a nerd looking to work from home? Checkout our current
+					opportunities.
 				</Typography>
 				<br />
 				<Grid item xs={12} md={3}>

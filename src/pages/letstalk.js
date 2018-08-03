@@ -83,7 +83,8 @@ class LetsTalk extends React.Component {
 			email: ``,
 			phone: ``,
 			subject: ``,
-			message: ``
+			message: ``,
+			status: ``
 		};
 	}
 

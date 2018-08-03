@@ -6,7 +6,7 @@ import BlueSection from '../components/BlueSection';
 import Quotes from '../components/Quotes';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	text: {
@@ -27,20 +27,10 @@ class IndexPage extends React.Component {
 	render() {
 		const { data, classes } = this.props;
 		const { edges: posts } = data.allMarkdownRemark;
-		const text = (
-			<React.Fragment>
-				<Typography className={classes.text} align="left">
-					If you can dream it,
-				</Typography>
-				<Typography className={classes.text} align="left">
-					our software engineers can build it.
-				</Typography>
-			</React.Fragment>
-		);
 
 		return (
 			<React.Fragment>
-				<Banner text={text} banner={withPrefix('/img/banner.jpg')} height="600px" />
+				<Banner text={'Hi. We’re Primoko. Our elite team of engineers is ready to move you from ideas to launch.'} banner={withPrefix('/img/banner.jpg')} height="600px" />
 				<LetsBuild />
 				<BlueSection />
 				<Quotes quote="A clever person solves a problem. A wise person avoids it." author="Albert Einstein" />

@@ -54,7 +54,7 @@ const styles = (theme) => ({
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.paragraph,
 			color: '#ffffff'
-		},
+		}
 	},
 	textWhite: {
 		...theme.typography.paragraph,
@@ -72,29 +72,24 @@ export default withStyles(styles)(({ classes }) => {
 		<Grid container justify="space-between" className={classes.container}>
 			<Grid item xs={12} md={7}>
 				<Typography className={classes.title} gutterBottom={true}>
-					A software engineering firm with only software engineers. Imagine that.
+					Only engineers drive our bus. In other words, we’re a software engineering firm with only software
+					engineers. Imagine that!
 				</Typography>
 				<br />
 				<Typography className={classes.paragraph} gutterBottom={true}>
-					We’re not kidding. We’ve no sales people, no marketing people, no business development people, no
-					customer relations people.
+					We’re software engineers first. Yes, we do handle the sales, marketing, customer relations and other
+					non-engineering functions, but everyone in the company comes from a technical background.
 				</Typography>
 				<br />
 				<Typography className={classes.paragraph} gutterBottom={true}>
-					Everyone in the company is an engineer first.
+					We’re also elite, meaning that we’re very good at what we do. We bring years of experience
+					architecting large projects to the table and look forward to stepping in at whatever level you need
+					us.
 				</Typography>
-				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
-					Some of our software development engineers are elite. Some are top-notch experts with years of
-					experience architecting large projects.
-				</Typography>
-				<Typography className={classes.paragraph} gutterBottom={true}>
-					But we are all engineers.<br />And we are all very good at what we do.
-				</Typography>
-				<br />
+				{/* <br />
 				<a href="/" className={classes.textWhite}>
 					Meet the team.
-				</a>
+				</a> */}
 			</Grid>
 			<Grid item xs={12} md={4}>
 				<div className={classes.image} />

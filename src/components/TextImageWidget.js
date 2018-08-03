@@ -75,15 +75,15 @@ export default withStyles(styles)(({ classes }) => {
 		<Grid container justify="space-between" className={classes.container}>
 			<Grid item xs={12} md={7}>
 				<Typography className={classes.title} gutterBottom={true}>
-					A software engineering firm with only software engineers. Imagine that.
+					Software engineering companies are only as good as their people. Our people are good.
 				</Typography>
 				<br />
-				<Typography className={classes.subTitle}>Our people are good.</Typography>
+				{/* <Typography className={classes.subTitle}>Our people are good.</Typography> */}
 				<div>
 					<br />
 					<Typography className={classes.paragraph} gutterBottom={true}>
 						Primoko is a software engineering firm whose founders bring 50+ years of software engineering
-						experience to the table to tackle your most challenging engineering projects
+						experience to the table to tackle your most challenging engineering projects.
 					</Typography>
 					<br />
 					<Typography className={classes.paragraph} gutterBottom={true}>

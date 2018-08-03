@@ -58,11 +58,11 @@ const styles = (theme) => ({
 	textBlue: {
 		[theme.breakpoints.down('sm')]: {
 			...theme.typography.mparagraph,
-			color: '#4198ff',
+			color: '#4198ff'
 		},
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.paragraph,
-			color: '#4198ff',
+			color: '#4198ff'
 		},
 		fontWeight: '900',
 		'&:hover': {
@@ -83,9 +83,9 @@ export default withStyles(styles)(({ classes }) => {
 				</Typography>
 				<br />
 				<Typography className={classes.paragraph} gutterBottom={true}>
-					You've undertaken a project. Or You're creating a product. Congratulations! The future looks bright.
-					But your existing staff lacks competency in the required technology. Or maybe you lack the staff you
-					need, period.
+					You’ve undertaken a project. Or you’re creating a product. Congratulations! The future looks bright.
+					But your team is already loaded or isn’t fully trained in the required technologies. Maybe there
+					simply is not enough bandwidth.
 				</Typography>
 				<br />
 				<Typography className={classes.paragraph} gutterBottom={true}>
@@ -93,13 +93,14 @@ export default withStyles(styles)(({ classes }) => {
 				</Typography>
 				<br />
 				<Typography className={classes.paragraph} gutterBottom={true}>
-					We're ready to put our expert software engineers to work for and with you, advising you on all the
-					architecture decisions, mapping out the pros and cons of different technologies, and getting your
-					project, or product, up and running.
+					We can step in and quickly begin advising you on all architecture decisions, mapping out the pros
+					and cons of various design decisions, and coding and implementing your vision. We’re not jacks of
+					all trades here; we’re experts in a few. If those few are what you’re looking for, then you’ll be
+					hard-pressed to find better engineers anywhere.
 				</Typography>
 				<br />
 				<a href="/" className={classes.textBlue}>
-					Learn more about our software development services.
+					[Learn more about our software development services.]
 				</a>
 			</Grid>
 		</Grid>

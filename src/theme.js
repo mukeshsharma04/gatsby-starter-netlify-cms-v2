@@ -113,7 +113,7 @@ const theme = createMuiTheme({
 			color: '#ffffff',
 			fontStyle: 'normal',
 			fontStretch: 'normal',
-			lineHeight: 'normal',
+			lineHeight: '62px',
 			letterSpacing: 'normal'
 		},
 
@@ -123,7 +123,7 @@ const theme = createMuiTheme({
 			color: '#ffffff',
 			fontStyle: 'normal',
 			fontStretch: 'normal',
-			lineHeight: 'normal',
+			lineHeight: '55px',
 			letterSpacing: 'normal'
 		},
 
