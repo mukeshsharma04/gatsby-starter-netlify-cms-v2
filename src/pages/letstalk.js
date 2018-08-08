@@ -145,19 +145,8 @@ class LetsTalk extends React.Component {
 		const { classes } = this.props;
 		return (
 			<React.Fragment>
-				<div style={{ width: '100%', height: '500' }}>
-					<iframe
-						width="100%"
-						height="600"
-						src="https://maps.google.com/maps?width=100%&height=500&hl=en&coord=28.494747,77.0773577,17z&q=Primoko%20Softwares%20pvt%20ltd+(Primoko)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-						frameBorder="0"
-						scrolling="no"
-						marginHeight="0"
-						marginWidth="0"
-					/>
-				</div>
 				<Grid container className={classes.container} justify="space-between" spacing={40}>
-					<Grid item xs={12} md={7}>
+					<Grid item xs={12} md={12} lg={7}>
 						<Typography className={classes.title} gutterBottom={true}>
 							Contact us
 						</Typography>
@@ -211,25 +200,41 @@ class LetsTalk extends React.Component {
 							</Grid>
 						</form>
 					</Grid>
-					<Grid item xs={12} md={4}>
-						<Typography className={classes.title} gutterBottom={true}>
-							Our office
-						</Typography>
-						<Typography className={classes.paragraph} gutterBottom={true}>
-							231 Clarksville Rd
-						</Typography>
-						<Typography className={classes.paragraph} gutterBottom={true}>
-							Suite 3
-						</Typography>
-						<Typography className={classes.paragraph} gutterBottom={true}>
-							West Windsor, NJ - 08550
-						</Typography>
-						<Typography className={classes.link} gutterBottom={true}>
-							(413) 248-7626
-						</Typography>
-						<Typography className={classes.link} gutterBottom={true}>
-							hello@primoko.com
-						</Typography>
+					<Grid item xs={12} md={12} lg={4}>
+						<Grid direction="row" justify="center" container>
+							<Grid item xs={12} sm={5} md={5} lg={12}>
+								<Typography className={classes.title} gutterBottom={true}>
+									Our office
+								</Typography>
+								<Typography className={classes.paragraph} gutterBottom={true}>
+									231 Clarksville Rd
+								</Typography>
+								<Typography className={classes.paragraph} gutterBottom={true}>
+									Suite 3
+								</Typography>
+								<Typography className={classes.paragraph} gutterBottom={true}>
+									West Windsor, NJ - 08550
+								</Typography>
+								<Typography className={classes.link} gutterBottom={true}>
+									(413) 248-7626
+								</Typography>
+								<Typography className={classes.link} gutterBottom={true}>
+									hello@primoko.com
+								</Typography>
+							</Grid>
+							&#160;
+							<Grid item xs={12} sm={7} md={7} lg={12}>
+								<iframe
+									width="350"
+									height="298"
+									src="https://maps.google.com/maps?width=400&amp;height=298&amp;hl=en&amp;q=231%20Clarksville%20Rd%20Suite%203%20West%20Windsor%2C%20NJ%20-%2008550+(Primoko)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+									frameBorder="0"
+									scrolling="no"
+									marginHeight="0"
+									marginWidth="0"
+								/>
+							</Grid>
+						</Grid>
 					</Grid>
 					<Grid item xs={12} md={12}>
 						<Typography className={classes.paragraph} gutterBottom={true}>

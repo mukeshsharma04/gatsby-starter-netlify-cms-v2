@@ -30,7 +30,11 @@ class IndexPage extends React.Component {
 
 		return (
 			<React.Fragment>
-				<Banner text={'Hi. We’re Primoko. Our elite team of engineers is ready to move you from ideas to launch.'} banner={withPrefix('/img/banner.jpg')} height="600px" />
+				<Banner
+					text={'Hi. We’re Primoko. Our elite team of engineers is ready to move you from ideas to launch.'}
+					banner={withPrefix('/img/banner.jpg')}
+					height="600px"
+				/>
 				<LetsBuild />
 				<BlueSection />
 				<Quotes quote="A clever person solves a problem. A wise person avoids it." author="Albert Einstein" />
