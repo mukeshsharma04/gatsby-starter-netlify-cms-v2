@@ -15,7 +15,8 @@ const styles = (theme) => ({
 		[theme.breakpoints.up('lg')]: {
 			padding: theme.spacing.unit * 10
 		},
-		overflow: 'hidden'
+		overflow: 'hidden',
+		textAlign: 'center'
 	},
 	title: {
 		[theme.breakpoints.down('sm')]: {
@@ -39,18 +40,21 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<Grid id="career" container className={classes.container}>
 			<Grid item xs={12}>
+				<br />
 				<Typography className={classes.title} gutterBottom={true}>
 					Join the team
 				</Typography>
-				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				{/* <Typography className={classes.paragraph} gutterBottom={true}>
 					Are you a nerd looking for home? Or a nerd looking to work from home? Checkout our current
 					opportunities.
+				</Typography> */}
+				<Typography className={classes.paragraph} gutterBottom={true}>
+					Are you a nerd looking for home?
 				</Typography>
-				<br />
 				<Grid item xs={12} md={3}>
 					<Button text="See career opportunities" fullWidth />
 				</Grid>
+				<br />
 			</Grid>
 		</Grid>
 	);

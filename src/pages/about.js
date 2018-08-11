@@ -6,10 +6,23 @@ import { withPrefix } from 'gatsby-link';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '../components/Button';
+import Hidden from '@material-ui/core/Hidden';
+import JoinTeam from '../components/JoinTeam';
 
 const styles = (theme) => ({
 	banner: {
-		position: 'relative'
+		position: 'relative',
+		backgroundImage: `url(${withPrefix('/img/typing.png')})`,
+		backgroundPosition: 'center',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		width: '100%',
+		[theme.breakpoints.down('sm')]: {
+			height: '200px'
+		},
+		[theme.breakpoints.up('sm')]: {
+			height: '348px'
+		}
 	},
 	block: {
 		width: '380px',
@@ -51,21 +64,25 @@ const About = ({ classes }) => {
 		<div>
 			<TextImageWidget />
 			<div className={classes.banner}>
-				<img src={withPrefix('/img/typing.png')} style={{ height: '348px', width: '100%' }} />
-				<Grid container direction="row" justify="flex-end" alignItems="center" className={classes.block}>
-					<Grid container justify="center" alignItems="center">
-						<Grid item>
-							<Typography className={classes.subTitle} align="center">
-								Join the team
-							</Typography>
-							<Typography className={classes.paragraph} align="center">
-								Are you a nerd looking for home?
-							</Typography>
-							<Button styles={classes.button} text="See career opportunities" />
+				<Hidden xsDown>
+					<Grid container direction="row" justify="flex-end" alignItems="center" className={classes.block}>
+						<Grid container justify="center" alignItems="center">
+							<Grid item>
+								<Typography className={classes.subTitle} align="center">
+									Join the team
+								</Typography>
+								<Typography className={classes.paragraph} align="center">
+									Are you a nerd looking for home?
+								</Typography>
+								<Button styles={classes.button} text="See career opportunities" />
+							</Grid>
 						</Grid>
 					</Grid>
-				</Grid>
+				</Hidden>
 			</div>
+			<Hidden smUp>
+				<JoinTeam />
+			</Hidden>
 			<Quote
 				author="Martin Fowler"
 				quote="Any fool can write code that a computer can understand. Good programmers write code that humans can understand."

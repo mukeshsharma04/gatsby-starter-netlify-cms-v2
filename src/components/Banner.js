@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	...theme.typography,
@@ -32,8 +33,17 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(({ classes, text, tag, banner, height }) => {
 	return (
-		<div>
-			<img src={banner} style={{ height: height, width: '100%' }} />
+		<div
+			style={{
+				position: 'relative',
+				backgroundImage: `url(${withPrefix(banner)})`,
+				backgroundPosition: 'center',
+				backgroundRepeat: 'no-repeat',
+				backgroundSize: 'cover',
+				width: '100%',
+				height: height
+			}}
+		>
 			<Grid className={classes.container} direction="row" justify="center" alignItems="center" container>
 				{text ? (
 					<Grid item xs={12} md={6} lg={6}>
@@ -41,7 +51,9 @@ export default withStyles(styles)(({ classes, text, tag, banner, height }) => {
 							<span className={classes.textMultiline}>{text}</span>
 						</Typography>
 					</Grid>
-				) : tag}
+				) : (
+					tag
+				)}
 			</Grid>
 		</div>
 	);
