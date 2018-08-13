@@ -23,6 +23,7 @@ const styles = (theme) => ({
 	},
 
 	navLink: {
+		...theme.typography.link,
 		color: 'white',
 		padding: '1.3rem 1rem',
 		fontWeight: 500,
@@ -93,6 +94,20 @@ const styles = (theme) => ({
 	},
 	margin: {
 		marginTop: '40px'
+	},
+	letstalk: {
+		...theme.typography.link,
+		color: 'white',
+		fontWeight: 500,
+		textDecoration: 'none',
+		'&:hover': {
+			textDecoration: 'none'
+		},
+		width: '96px',
+		height: '25px',
+		borderRadius: '12.5px',
+		backgroundColor: 'rgba(0, 0, 0, 0.25)',
+		padding: '0.5% 2%'
 	}
 });
 
@@ -150,10 +165,7 @@ class NavBar extends React.Component {
 							>
 								The Primoko Difference
 							</Link>
-							<Link
-								to="/letstalk"
-								className={classNames(classes.navLink, this.activeLink('/letstalk') && classes.active)}
-							>
+							<Link to="/letstalk" className={classNames(classes.letstalk)}>
 								Let's Talk
 							</Link>
 						</Hidden>
@@ -184,7 +196,11 @@ class NavBar extends React.Component {
 											</Hidden>
 											<ListItemLink
 												to="/"
-												style={classNames(classes.hamburger, classes.sectionSpace, classes.margin)}
+												style={classNames(
+													classes.hamburger,
+													classes.sectionSpace,
+													classes.margin
+												)}
 												primary="Home"
 											/>
 											<ListItemLink

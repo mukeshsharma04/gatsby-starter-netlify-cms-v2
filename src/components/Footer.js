@@ -11,6 +11,7 @@ import Button from './Button';
 
 const styles = (theme) => ({
 	root: {
+		...theme.typography.footerSection,
 		backgroundColor: '#333333',
 		flexGrow: 1,
 		[theme.breakpoints.down('sm')]: {
@@ -105,6 +106,7 @@ const styles = (theme) => ({
 		marginTop: '15px'
 	},
 	link: {
+		...theme.typography.footerLinks,
 		textDecoration: 'none',
 		color: 'inherit',
 		'&:hover': {
@@ -125,7 +127,13 @@ const Footer = ({ classes }) => {
 				</Grid>
 				<Grid item xs={6} md={6} className={classes.right}>
 					<Link className={classes.link} to="/">
-						<Typography variant="subheading" className={classes.client} color="inherit" gutterBottom={true}>
+						<Typography
+							variant="subheading"
+							align="right"
+							className={classes.client}
+							color="inherit"
+							gutterBottom={true}
+						>
 							Client Login
 						</Typography>
 					</Link>
@@ -166,6 +174,7 @@ const Footer = ({ classes }) => {
 								<Grid item xs={12}>
 									<Typography
 										variant="subheading"
+										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
 										gutterBottom={true}
@@ -179,6 +188,7 @@ const Footer = ({ classes }) => {
 								<Grid item xs={12}>
 									<Typography
 										variant="subheading"
+										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
 										gutterBottom={true}
@@ -197,7 +207,7 @@ const Footer = ({ classes }) => {
 				{/*Second Column For Mobile End*/}
 
 				{/*First Column Start*/}
-				<Grid item xs={12} md={6}>
+				<Grid item xs={12} md={4}>
 					{/*First Row*/}
 					<Grid container>
 						<Grid item xs={6} md={6}>
@@ -218,6 +228,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/about">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
 											gutterBottom={true}
@@ -230,6 +241,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/about/#team">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -242,6 +254,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/about/#career">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -268,6 +281,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
 											gutterBottom={true}
@@ -280,6 +294,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -309,6 +324,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/services">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
 											gutterBottom={true}
@@ -321,6 +337,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/services/mobile">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -333,6 +350,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/services/web">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -345,6 +363,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/services/devops">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -357,6 +376,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/services/recruitment-staffing">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -369,6 +389,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/services/salesforce">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -395,6 +416,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/the-primoko-difference">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
 											gutterBottom={true}
@@ -407,6 +429,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/the-primoko-difference/process">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -419,6 +442,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/the-primoko-difference/manifesto">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -431,6 +455,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/services/pricing">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -443,6 +468,7 @@ const Footer = ({ classes }) => {
 									<Link className={classes.link} to="/the-primoko-difference/faqs">
 										<Typography
 											variant="subheading"
+											align="left"
 											className={classes.paragraph}
 											color="inherit"
 											gutterBottom={true}
@@ -459,6 +485,7 @@ const Footer = ({ classes }) => {
 					<Grid container className={classes.space}>
 						<Typography
 							variant="subheading"
+							align="left"
 							className={classes.paragraph}
 							color="inherit"
 							gutterBottom={true}
@@ -469,6 +496,53 @@ const Footer = ({ classes }) => {
 				</Grid>
 				{/*First Column End*/}
 
+				{/* Client Part Start */}
+				<Grid item xs={12} md={3}>
+					<Grid container>
+						<Grid item xs={12} md={12}>
+							<Grid direction="column" className={classes.row} container>
+								<Grid item xs={12}>
+									<Typography
+										variant="headline"
+										className={classes.heading}
+										color="inherit"
+										gutterBottom={true}
+									>
+										Careers
+									</Typography>
+								</Grid>
+								<Grid item xs={12}>
+									<Link className={classes.link} to="/the-primoko-difference">
+										<Typography
+											variant="subheading"
+											align="left"
+											className={classNames(classes.paragraph, classes.margin)}
+											color="inherit"
+											gutterBottom={true}
+										>
+											Sr. Software Engineer (iOS)
+										</Typography>
+									</Link>
+								</Grid>
+								<Grid item xs={12}>
+									<Link className={classes.link} to="/the-primoko-difference/process">
+										<Typography
+											variant="subheading"
+											align="left"
+											className={classes.paragraph}
+											color="inherit"
+											gutterBottom={true}
+										>
+											Sr. Software Engineer (React)
+										</Typography>
+									</Link>
+								</Grid>
+							</Grid>
+						</Grid>
+					</Grid>
+				</Grid>
+				{/* Client Part End */}
+
 				{/*Second Column For Desktop* Start*/}
 				<Hidden xsDown>
 					<Grid item xs={12} md={3}>
@@ -477,6 +551,7 @@ const Footer = ({ classes }) => {
 							<Grid item xs={6} md={6}>
 								<Typography
 									variant="subheading"
+									align="left"
 									className={classes.client}
 									color="inherit"
 									gutterBottom={true}
@@ -500,6 +575,7 @@ const Footer = ({ classes }) => {
 								<Grid item xs={12}>
 									<Typography
 										variant="subheading"
+										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
 										gutterBottom={true}
@@ -513,6 +589,7 @@ const Footer = ({ classes }) => {
 								<Grid item xs={12}>
 									<Typography
 										variant="subheading"
+										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
 										gutterBottom={true}
