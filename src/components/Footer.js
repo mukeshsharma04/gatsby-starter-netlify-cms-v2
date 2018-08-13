@@ -113,6 +113,33 @@ const styles = (theme) => ({
 			textDecoration: 'none',
 			color: 'inherit'
 		}
+	},
+	tooltip: {
+		marginLeft: '5%',
+		padding: '1px',
+		position: 'relative',
+		background: '#6f73ff',
+		borderRadius: '5px',
+		'&::after': {
+			right: '100%',
+			top: '50%',
+			border: 'solid transparent',
+			content: '" "',
+			height: '0',
+			width: '0',
+			position: 'absolute',
+			pointerEvents: 'none',
+			borderColor: 'rgba(111, 115, 255, 0)',
+			borderRightColor: '#6f73ff',
+			borderWidth: '5px',
+			marginTop: '-5px'
+		}
+	},
+	flex: {
+		display: 'flex'
+	},
+	client: {
+		height: '25px'
 	}
 });
 
@@ -207,7 +234,7 @@ const Footer = ({ classes }) => {
 				{/*Second Column For Mobile End*/}
 
 				{/*First Column Start*/}
-				<Grid item xs={12} md={4}>
+				<Grid item xs={12} md={5}>
 					{/*First Row*/}
 					<Grid container>
 						<Grid item xs={6} md={6}>
@@ -501,14 +528,16 @@ const Footer = ({ classes }) => {
 					<Grid container>
 						<Grid item xs={12} md={12}>
 							<Grid direction="column" className={classes.row} container>
-								<Grid item xs={12}>
+								<Grid item xs={12} className={classes.client}>
 									<Typography
 										variant="headline"
-										className={classes.heading}
+										className={classNames(classes.heading, classes.flex)}
 										color="inherit"
 										gutterBottom={true}
 									>
-										Careers
+										Careers<div className={classNames(classes.tooltip, classes.paragraph)}>
+											100% Remote work available
+										</div>
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
