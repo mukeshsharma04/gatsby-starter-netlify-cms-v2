@@ -36,18 +36,31 @@ const theme = createMuiTheme({
 		].join(','),
 
 		title: {
+			fontFamily: 'Lato',
 			fontSize: '30px',
-			fontWeight: 500,
+			fontWeight: '500',
 			fontStyle: 'normal',
 			fontStretch: 'normal',
 			lineHeight: 'normal',
 			letterSpacing: 'normal',
 			color: '#333333'
+		},
+
+		hamburgerSection: {
+			fontFamily: 'Lato',
+			fontSize: '25px',
+			fontWeight: '900',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal',
+			color: '#ffffff'
 		},
 
 		mtitle: {
+			fontFamily: 'Lato',
 			fontSize: '25px',
-			fontWeight: 500,
+			fontWeight: '500',
 			fontStyle: 'normal',
 			fontStretch: 'normal',
 			lineHeight: 'normal',
@@ -55,46 +68,150 @@ const theme = createMuiTheme({
 			color: '#333333'
 		},
 
+		quote: {
+			fontFamily: 'Lato',
+			fontSize: '20px',
+			fontWeight: '900',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '2',
+			letterSpacing: 'normal',
+			color: '#6f73ff'
+		},
+
+		mHamburgerTitle: {
+			fontFamily: 'Lato',
+			fontSize: '20px',
+			fontWeight: '900',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal',
+			color: '#ffffff'
+		},
+
+		dropdownLi: {
+			fontFamily: 'Lato',
+			fontSize: '20px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '1.35',
+			letterSpacing: 'normal',
+			color: '#ffffff'
+		},
+
 		subheading: {
+			fontFamily: 'Lato',
 			fontSize: '18px',
-			fontWeight: 900,
-			color: '#666666',
+			fontWeight: '900',
 			fontStyle: 'normal',
 			fontStretch: 'normal',
 			lineHeight: 'normal',
-			letterSpacing: 'normal'
+			letterSpacing: 'normal',
+			textAlign: 'center',
+			color: '#666666'
 		},
 
-		paragraph: {
+		footerSection: {
+			fontFamily: 'Lato',
 			fontSize: '16px',
-			fontWeight: 500,
-			color: '#333333',
+			fontWeight: '900',
 			fontStyle: 'normal',
 			fontStretch: 'normal',
 			lineHeight: 'normal',
 			letterSpacing: 'normal',
-			lineHeight: 1.5
-		},
-
-		mparagraph: {
-			fontSize: '14px',
-			fontWeight: 500,
-			color: '#333333',
-			fontStyle: 'normal',
-			fontStretch: 'normal',
-			lineHeight: 'normal',
-			letterSpacing: 'normal',
-			lineHeight: 1.5
+			color: '#ffffff'
 		},
 
 		tabLink: {
+			fontFamily: 'Lato',
 			fontSize: '16px',
-			fontWeight: 500,
-			color: '#4198ff',
+			fontWeight: 'bold',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '1.5',
+			letterSpacing: 'normal',
+			textAlign: 'center',
+			color: '#333333'
+		},
+
+		paragraph: {
+			fontFamily: 'Lato',
+			fontSize: '16px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '1.5',
+			letterSpacing: 'normal',
+			color: '#333333'
+		},
+
+		link: {
+			fontFamily: 'Lato',
+			fontSize: '16px',
+			fontWeight: '500',
 			fontStyle: 'normal',
 			fontStretch: 'normal',
 			lineHeight: 'normal',
-			letterSpacing: 'normal'
+			letterSpacing: 'normal',
+			color: '#4198ff'
+		},
+
+		mLink: {
+			fontFamily: 'Lato',
+			fontSize: '14px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal',
+			color: '#4198ff'
+		},
+
+		mDropdownLi: {
+			fontFamily: 'Lato',
+			fontSize: '14px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '1.71',
+			letterSpacing: 'normal',
+			color: '#ffffff'
+		},
+
+		mParagraph: {
+			fontFamily: 'Lato',
+			fontSize: '14px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '1.43',
+			letterSpacing: 'normal',
+			color: '#333333'
+		},
+
+		button: {
+			fontFamily: 'Lato',
+			fontSize: '14px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: 'normal',
+			letterSpacing: 'normal',
+			textAlign: 'center',
+			color: '#ffffff'
+		},
+
+		footerLinks: {
+			fontFamily: 'Lato',
+			fontSize: '12px',
+			fontWeight: '500',
+			fontStyle: 'normal',
+			fontStretch: 'normal',
+			lineHeight: '1.33',
+			letterSpacing: 'normal',
+			color: '#ffffff'
 		},
 
 		mtabLink: {
@@ -125,46 +242,6 @@ const theme = createMuiTheme({
 			fontStretch: 'normal',
 			lineHeight: '55px',
 			letterSpacing: 'normal'
-		},
-
-		button: {
-			fontSize: '14px',
-			fontWeight: 500,
-			color: '#ffffff',
-			textAlign: 'center'
-		},
-
-		quote: {
-			fontSize: '20px',
-			fontWeight: 900,
-			color: '#6f73ff',
-			fontStyle: 'normal',
-			fontStretch: 'normal',
-			lineHeight: 'normal',
-			letterSpacing: 'normal',
-			lineHeight: 2
-		},
-
-		link: {
-			fontFamily: 'Lato',
-			fontSize: '25px',
-			fontWeight: '900',
-			fontStyle: 'normal',
-			fontStretch: 'normal',
-			lineHeight: 'normal',
-			letterSpacing: 'normal',
-			color: '#ffffff'
-		},
-
-		mlink: {
-			fontFamily: 'Lato',
-			fontSize: '20px',
-			fontWeight: '900',
-			fontStyle: 'normal',
-			fontStretch: 'normal',
-			lineHeight: 'normal',
-			letterSpacing: 'normal',
-			color: '#ffffff'
 		},
 
 		subLink: {

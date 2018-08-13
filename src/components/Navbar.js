@@ -18,10 +18,6 @@ const styles = (theme) => ({
 		flexGrow: 1
 	},
 
-	flex: {
-		flexGrow: 1
-	},
-
 	menuButton: {
 		margin: '.5rem 1rem'
 	},
@@ -45,22 +41,12 @@ const styles = (theme) => ({
 	list: {
 		width: 350
 	},
-	mobileMenuText: {
-		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mlink,
-		},
-		[theme.breakpoints.up('sm')]: {
-			...theme.typography.link,
-		},
+	hamburger: {
+		...theme.typography.mHamburgerTitle,
 		padding: '0'
 	},
-	mobileSubMenuText: {
-		[theme.breakpoints.down('sm')]: {
-			...theme.typography.msubLink,
-		},
-		[theme.breakpoints.up('sm')]: {
-			...theme.typography.subLink,
-		},
+	mhamburger: {
+		...theme.typography.mDropdownLi,
 		paddingLeft: '7%'
 	},
 	toolbar: {
@@ -69,21 +55,44 @@ const styles = (theme) => ({
 		justifyContent: 'flex-end',
 		padding: '0 8px'
 	},
-	drawer: {
-		backgroundColor: '#333333'
-	},
 	closeIcon: {
 		color: '#ffffff'
 	},
 	button: {
-		width: '151px',
-		height: '57px',
-		border: 'solid 2px #ffffff',
-		textAlign: 'center',
-		padding: '3%'
+		...theme.typography.mHamburgerTitle,
+		width: '140px',
+		height: '41px',
+		borderRadius: '28.5px',
+		backgroundColor: '#ffffff',
+		padding: theme.spacing.unit,
+		color: '#333333',
+		textAlign: 'center'
 	},
-	space: {
-		marginTop: '4%'
+	client: {
+		width: '140px',
+		height: '41px',
+		borderRadius: '28.5px',
+		border: 'solid 2px #ffffff',
+		padding: theme.spacing.unit * 1 / 2,
+		textAlign: 'center'
+	},
+	sectionSpace: {
+		marginTop: theme.spacing.unit * 2
+	},
+	titleSpace: {
+		marginTop: theme.spacing.unit * 1 / 2
+	},
+	paragraphSpace: {
+		marginTop: theme.spacing.unit * 1 / 4
+	},
+	drawerPaper: {
+		[theme.breakpoints.down('xs')]: {
+			width: '100%'
+		},
+		backgroundColor: '#333333'
+	},
+	margin: {
+		marginTop: '40px'
 	}
 });
 
@@ -104,7 +113,7 @@ class NavBar extends React.Component {
 			<div className={classes.root}>
 				<AppBar position="static" style={{ background: 'linear-gradient(to right, #4B96FC, #6F77FB)' }}>
 					<Toolbar varient="dense">
-						<Typography variant="title" color="inherit" className={classes.flex}>
+						<Typography variant="title" color="inherit" className={classes.root}>
 							<Link to="/">
 								<img
 									src={withPrefix('/img/primoko-logo-white.png')}
@@ -153,10 +162,12 @@ class NavBar extends React.Component {
 							<Drawer
 								anchor="right"
 								open={this.state.showDrawer}
+								classes={{
+									paper: classes.drawerPaper
+								}}
 								onClose={() => this.setState({ showDrawer: false })}
 							>
 								<div
-									className={classes.drawer}
 									tabIndex={0}
 									role="button"
 									onClick={() => this.setState({ showDrawer: false })}
@@ -164,137 +175,139 @@ class NavBar extends React.Component {
 								>
 									<div className={classes.list}>
 										<List component="nav">
-											<div className={classes.toolbar}>
-												<IconButton>
-													<Close className={classes.closeIcon} />
-												</IconButton>
-											</div>
+											<Hidden smUp>
+												<div className={classes.toolbar}>
+													<IconButton>
+														<Close className={classes.closeIcon} />
+													</IconButton>
+												</div>
+											</Hidden>
 											<ListItemLink
 												to="/"
-												style={classNames(classes.mobileMenuText, classes.space)}
+												style={classNames(classes.hamburger, classes.sectionSpace, classes.margin)}
 												primary="Home"
 											/>
 											<ListItemLink
 												to="/about"
-												style={classNames(classes.mobileMenuText, classes.space)}
+												style={classNames(classes.hamburger, classes.titleSpace)}
 												primary="About Primoko"
 											/>
 											<div>
 												<ListItemLink
 													to="/about"
-													style={classes.mobileSubMenuText}
+													style={classNames(classes.mhamburger, classes.paragraphSpace)}
 													primary="Overview"
 													subLink
 												/>
 												<ListItemLink
 													to="/about/#team"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="Team"
 													subLink
 												/>
 												<ListItemLink
 													to="/about/#career"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="Careers"
 													subLink
 												/>
 											</div>
 											<ListItemLink
 												to="/services"
-												style={classNames(classes.mobileMenuText, classes.space)}
+												style={classNames(classes.hamburger, classes.titleSpace)}
 												primary="Services"
 											/>
 											<div>
 												<ListItemLink
 													to="/services"
-													style={classes.mobileSubMenuText}
+													style={classNames(classes.mhamburger, classes.paragraphSpace)}
 													primary="Overview"
 													subLink
 												/>
 												<ListItemLink
 													to="/services/mobile"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="Mobile"
 													subLink
 												/>
 												<ListItemLink
 													to="/services/web"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="Web"
 													subLink
 												/>
 												<ListItemLink
 													to="/services/devops"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="DevOps"
 													subLink
 												/>
 												<ListItemLink
 													to="/services/recruitment-staffing"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="Recruitment &amp; Staffing"
 													subLink
 												/>
 												<ListItemLink
 													to="/services/salesforce"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="Salesforce"
 													subLink
 												/>
 											</div>
 											<ListItemLink
 												to="/results"
-												style={classNames(classes.mobileMenuText, classes.space)}
+												style={classNames(classes.hamburger, classes.titleSpace)}
 												primary="Results"
 											/>
 											<div>
 												<ListItemLink
 													to="/results/clients-testimonials"
-													style={classes.mobileSubMenuText}
+													style={classNames(classes.mhamburger, classes.paragraphSpace)}
 													primary="Clients &amp; Testimonials"
 													subLink
 												/>
 												<ListItemLink
 													to="/results/select-case-studies"
-													style={classes.mobileSubMenuText}
+													style={classes.mhamburger}
 													primary="Select Case Studies"
 													subLink
 												/>
 											</div>
 											<ListItemLink
 												to="/the-primoko-difference"
-												style={classNames(classes.mobileMenuText, classes.space)}
+												style={classNames(classes.hamburger, classes.titleSpace)}
 												primary="The Primoko Difference"
 											/>
 											<div>
 												<div>
 													<ListItemLink
 														to="/the-primoko-difference"
-														style={classes.mobileSubMenuText}
+														style={classNames(classes.mhamburger, classes.paragraphSpace)}
 														primary="Overview"
 														subLink
 													/>
 													<ListItemLink
 														to="/the-primoko-difference/process"
-														style={classes.mobileSubMenuText}
+														style={classes.mhamburger}
 														primary="Process"
 														subLink
 													/>
 													<ListItemLink
 														to="/the-primoko-difference/manifesto"
-														style={classes.mobileSubMenuText}
+														style={classes.mhamburger}
 														primary="Manifesto"
 														subLink
 													/>
 													<ListItemLink
 														to="/services/pricing"
-														style={classes.mobileSubMenuText}
+														style={classes.mhamburger}
 														primary="Pricing"
 														subLink
 													/>
 													<ListItemLink
 														to="/the-primoko-difference/faqs"
-														style={classes.mobileSubMenuText}
+														style={classes.mhamburger}
 														primary="FAQs"
 														subLink
 													/>
@@ -303,15 +316,19 @@ class NavBar extends React.Component {
 											<ListItemLink
 												to="/letstalk"
 												style={classNames(
-													classes.mobileMenuText,
+													classes.hamburger,
 													classes.button,
-													classes.space
+													classes.titleSpace
 												)}
 												primary="Let's Talk"
 											/>
 											<ListItemLink
 												to="/login"
-												style={classNames(classes.mobileMenuText, classes.space)}
+												style={classNames(
+													classes.hamburger,
+													classes.client,
+													classes.titleSpace
+												)}
 												primary="Client Login"
 											/>
 										</List>
