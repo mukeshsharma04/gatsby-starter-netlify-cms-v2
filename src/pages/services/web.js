@@ -62,19 +62,19 @@ export default withStyles(styles)(({ classes }) => {
 					</div>
 				</Grid>
 				<Grid item xs={12} md={6}>
-					<Typography className={classes.title} gutterBottom={true}>
+					<Typography className={classes.title} gutterBottom>
 						Web app development
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Ready to bring you and your users together with a functionally rich and intuitively easy web
 						application? An entire subset of our software engineers at Primoko live for creating websites
 						like that to meet business objectives.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Whether you want a from-scratch website, repairs to an existing and problematic site, or a team
 						to take over the build, enhancement, or maintenance of a site, Primoko is the team to call.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						We will work closely with you from concept, planning, and design, to development, deployment,
 						and support for projects that run the gamut:
 					</Typography>
@@ -97,7 +97,7 @@ export default withStyles(styles)(({ classes }) => {
 							</ul>
 						</Grid>
 					</Grid>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						We invite you to contact us for a free consultation today.
 					</Typography>
 				</Grid>

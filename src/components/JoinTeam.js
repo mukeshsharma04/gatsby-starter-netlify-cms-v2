@@ -41,14 +41,14 @@ export default withStyles(styles)(({ classes }) => {
 		<Grid id="career" container className={classes.container}>
 			<Grid item xs={12}>
 				<br />
-				<Typography className={classes.title} gutterBottom={true}>
+				<Typography className={classes.title} gutterBottom>
 					Join the team
 				</Typography>
-				{/* <Typography className={classes.paragraph} gutterBottom={true}>
+				{/* <Typography className={classes.paragraph} gutterBottom>
 					Are you a nerd looking for home? Or a nerd looking to work from home? Checkout our current
 					opportunities.
 				</Typography> */}
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				<Typography className={classes.paragraph} gutterBottom>
 					Are you a nerd looking for home?
 				</Typography>
 				<Grid item xs={12} md={3}>

@@ -147,7 +147,7 @@ class LetsTalk extends React.Component {
 			<React.Fragment>
 				<Grid container className={classes.container} justify="space-between" spacing={40}>
 					<Grid item xs={12} md={12} lg={7}>
-						<Typography className={classes.title} gutterBottom={true}>
+						<Typography className={classes.title} gutterBottom>
 							Contact us
 						</Typography>
 						<form id="email-capture" method="post" noValidate>
@@ -203,22 +203,22 @@ class LetsTalk extends React.Component {
 					<Grid item xs={12} md={12} lg={4}>
 						<Grid direction="row" justify="center" container>
 							<Grid item xs={12} sm={5} md={5} lg={12}>
-								<Typography className={classes.title} gutterBottom={true}>
+								<Typography className={classes.title} gutterBottom>
 									Our office
 								</Typography>
-								<Typography className={classes.paragraph} gutterBottom={true}>
+								<Typography className={classes.paragraph} gutterBottom>
 									231 Clarksville Rd
 								</Typography>
-								<Typography className={classes.paragraph} gutterBottom={true}>
+								<Typography className={classes.paragraph} gutterBottom>
 									Suite 3
 								</Typography>
-								<Typography className={classes.paragraph} gutterBottom={true}>
+								<Typography className={classes.paragraph} gutterBottom>
 									West Windsor, NJ - 08550
 								</Typography>
-								<Typography className={classes.link} gutterBottom={true}>
+								<Typography className={classes.link} gutterBottom>
 									(413) 248-7626
 								</Typography>
-								<Typography className={classes.link} gutterBottom={true}>
+								<Typography className={classes.link} gutterBottom>
 									hello@primoko.com
 								</Typography>
 							</Grid>
@@ -237,13 +237,13 @@ class LetsTalk extends React.Component {
 						</Grid>
 					</Grid>
 					<Grid item xs={12} md={12}>
-						<Typography className={classes.paragraph} gutterBottom={true}>
+						<Typography className={classes.paragraph} gutterBottom>
 							Have questions? Want to run an idea by us? Ready for a quote?
 						</Typography>
-						<Typography className={classes.paragraph} gutterBottom={true}>
+						<Typography className={classes.paragraph} gutterBottom>
 							We’d love to hear from you.
 						</Typography>
-						<Typography className={classes.paragraph} gutterBottom={true}>
+						<Typography className={classes.paragraph} gutterBottom>
 							Please call us, or complete the form that follows
 						</Typography>
 					</Grid>

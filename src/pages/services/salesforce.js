@@ -46,24 +46,24 @@ export default withStyles(styles)(({ classes }) => {
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container}>
 				<Grid item xs={12} md={12}>
-					<Typography className={classes.title} gutterBottom={true}>
+					<Typography className={classes.title} gutterBottom>
 						We will put Salesforce to work for you.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						The Salesforce cloud-based CRM leads the pack in terms of helping businesses quickly roll out
 						fast-integrating, user-friendly applications that scale.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Primoko has the expertise you need to customize and connect Salesforce to legacy systems, SaaS
 						applications, and other business software. This applies whether you’re just starting with
 						Salesforce, re-engineering the way you do business, or in need of ongoing maintenance to
 						continually fine-tune the system for increased functionality, usability, and adoption.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Salesforce work may include client-side scripting, portal development, integration, and building
 						customized applications on the Force.com platform.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Contact us today. Let’s discuss how to put Salesforce to work for you.
 					</Typography>
 				</Grid>

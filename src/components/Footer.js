@@ -159,7 +159,7 @@ const Footer = ({ classes }) => {
 							align="right"
 							className={classes.client}
 							color="inherit"
-							gutterBottom={true}
+							gutterBottom
 						>
 							Client Login
 						</Typography>
@@ -180,7 +180,7 @@ const Footer = ({ classes }) => {
 									variant="subheading"
 									className={classes.client}
 									color="inherit"
-									gutterBottom={true}
+									gutterBottom
 								>
 									Let’s talk
 								</Typography>
@@ -204,7 +204,7 @@ const Footer = ({ classes }) => {
 										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										Email address
 									</Typography>
@@ -218,7 +218,7 @@ const Footer = ({ classes }) => {
 										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										Message
 									</Typography>
@@ -245,7 +245,7 @@ const Footer = ({ classes }) => {
 											variant="headline"
 											className={classes.heading}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											About Primoko
 										</Typography>
@@ -258,7 +258,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Overview
 										</Typography>
@@ -271,7 +271,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Team
 										</Typography>
@@ -284,7 +284,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Careers
 										</Typography>
@@ -299,7 +299,7 @@ const Footer = ({ classes }) => {
 										variant="headline"
 										className={classes.heading}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										Results
 									</Typography>
@@ -311,7 +311,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Clients &amp; Testimonials
 										</Typography>
@@ -324,7 +324,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Select Case Studies
 										</Typography>
@@ -342,7 +342,7 @@ const Footer = ({ classes }) => {
 										variant="headline"
 										className={classes.heading}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										Services
 									</Typography>
@@ -354,7 +354,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Overview
 										</Typography>
@@ -367,7 +367,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Mobile
 										</Typography>
@@ -380,7 +380,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Web
 										</Typography>
@@ -393,7 +393,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											DevOps
 										</Typography>
@@ -406,7 +406,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Recruitment & Staffing
 										</Typography>
@@ -419,7 +419,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Salesforce
 										</Typography>
@@ -434,7 +434,7 @@ const Footer = ({ classes }) => {
 										variant="headline"
 										className={classes.heading}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										The Primoko Difference
 									</Typography>
@@ -446,7 +446,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Overview
 										</Typography>
@@ -459,7 +459,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Process
 										</Typography>
@@ -472,7 +472,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Manifesto
 										</Typography>
@@ -485,7 +485,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Pricing
 										</Typography>
@@ -498,7 +498,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											FAQs
 										</Typography>
@@ -522,7 +522,7 @@ const Footer = ({ classes }) => {
 										variant="headline"
 										className={classNames(classes.heading, classes.flex)}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										Careers<div className={classNames(classes.tooltip, classes.paragraph)}>
 											100% Remote work available
@@ -536,7 +536,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classNames(classes.paragraph, classes.margin)}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Sr. Software Engineer (iOS)
 										</Typography>
@@ -549,7 +549,7 @@ const Footer = ({ classes }) => {
 											align="left"
 											className={classes.paragraph}
 											color="inherit"
-											gutterBottom={true}
+											gutterBottom
 										>
 											Sr. Software Engineer (React)
 										</Typography>
@@ -572,7 +572,7 @@ const Footer = ({ classes }) => {
 									align="left"
 									className={classes.client}
 									color="inherit"
-									gutterBottom={true}
+									gutterBottom
 								>
 									Let’s talk
 								</Typography>
@@ -596,7 +596,7 @@ const Footer = ({ classes }) => {
 										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										Email address
 									</Typography>
@@ -610,7 +610,7 @@ const Footer = ({ classes }) => {
 										align="left"
 										className={classNames(classes.paragraph, classes.spaceNormal)}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										Message
 									</Typography>
@@ -629,7 +629,7 @@ const Footer = ({ classes }) => {
 						align="left"
 						className={classes.paragraph}
 						color="inherit"
-						gutterBottom={true}
+						gutterBottom
 					>
 						Copyright © 2018 Primoko Inc and respective clients. All rights reserved.
 					</Typography>

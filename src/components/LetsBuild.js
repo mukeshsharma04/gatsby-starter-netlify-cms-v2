@@ -78,21 +78,21 @@ export default withStyles(styles)(({ classes }) => {
 				<div className={classes.image} />
 			</Grid>
 			<Grid item xs={12} md={7}>
-				<Typography className={classes.title} gutterBottom={true}>
+				<Typography className={classes.title} gutterBottom>
 					Let's build.
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				<Typography className={classes.paragraph} gutterBottom>
 					You’ve undertaken a project. Or you’re creating a product. Congratulations! The future looks bright.
 					But your team is already loaded or isn’t fully trained in the required technologies. Maybe there
 					simply is not enough bandwidth.
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				<Typography className={classes.paragraph} gutterBottom>
 					That's where Primoko comes in.
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				<Typography className={classes.paragraph} gutterBottom>
 					We can step in and quickly begin advising you on all architecture decisions, mapping out the pros
 					and cons of various design decisions, and coding and implementing your vision. We’re not jacks of
 					all trades here; we’re experts in a few. If those few are what you’re looking for, then you’ll be

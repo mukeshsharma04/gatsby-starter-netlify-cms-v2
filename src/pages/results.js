@@ -59,10 +59,10 @@ export default withStyles(styles)(({ classes }) => {
 		<React.Fragment>
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={12}>
-					<Typography className={classes.title} gutterBottom={true}>
+					<Typography className={classes.title} gutterBottom>
 						Selected clients
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom={true}>
+					<Typography className={classes.paragraph} gutterBottom>
 						Primoko is proud to bring you our expert and elite engineering experience with the following
 						companies.
 					</Typography>

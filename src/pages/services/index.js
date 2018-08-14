@@ -112,17 +112,17 @@ export default withStyles(styles)(
 					<Banner banner={withPrefix('/img/agency.jpg')} tag={tag} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classes.title} gutterBottom>
 								Custom software development for even the most persistent and seemingly impossible
 								difficulties.
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Software engineering is the magic that makes business growth and innovation possible.
 								But it can also be a roadblock, especially if your team isn’t familiar with the
 								technologies you need to move your project from idea to reality, and more so if your
 								team members don’t know what they don’t know.
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								We at Primoko DO know what others don’t. And our engineers with various specialties are
 								standing by to act as the fuel that will make your project go.
 							</Typography>
@@ -130,10 +130,10 @@ export default withStyles(styles)(
 						</Grid>
 
 						<Grid item className={classes.space} xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classes.title} gutterBottom>
 								Mobile
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Stay ahead of the curve by adapting tomorrow’s technology for your mobile application.
 								Experience includes work in the banking and luxury ecommerce domains.
 							</Typography>
@@ -148,10 +148,10 @@ export default withStyles(styles)(
 							</Grid>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classes.title} gutterBottom>
 								Web
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Web apps that work will differentiate and drive your business. From coding specific
 								solutions and solving technical problems to holding full ownership—from design and
 								development to testing and ongoing maintenance—Primoko has you covered.
@@ -167,10 +167,10 @@ export default withStyles(styles)(
 							</Grid>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classes.title} gutterBottom>
 								DevOps
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Imagine feedback cycles measured in hours instead of weeks. Imagine simplicity,
 								performance, and speed. Imagine automation wherever it fits. We are big fans of DevOps,
 								especially of automating it as much as possible.
@@ -186,10 +186,10 @@ export default withStyles(styles)(
 							</Grid>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classes.title} gutterBottom>
 								Salesforce
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Build a unified view of your customer with a new Salesforce integration and
 								implementation. Or, breath new life into an existing implementation.
 							</Typography>
@@ -207,25 +207,25 @@ export default withStyles(styles)(
 					<Banner banner={withPrefix('/img/code.jpg')} height="322px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classes.title} gutterBottom>
 								Pricing
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								“How much does it cost?” That’s the big question we’re asked most often. And although we
 								can’t say for certainty without exploring the scope and nature of your project, we can
 								give you an idea.
 							</Typography>
 						</Grid>
 						<Grid className={classes.space} item xs={12} md={8}>
-							<Typography className={classes.title} gutterBottom={true}>
+							<Typography className={classes.title} gutterBottom>
 								Elite Engineer Recruitment
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom={true}>
+							<Typography className={classes.paragraph} gutterBottom>
 								Need brilliant talent for your organization? Find elite software engineers the same
 								caliber as those that work for Primoko by connecting with the same recruiters we use at
 								our sister company, Humanoko.
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom={true}>
+							<Typography className={classes.paragraph} gutterBottom>
 								Backstory: we created Humanoko after our clients, who had been bombarding us with
 								requests to find elite engineers, began trying to poach ours! That’s when we knew it was
 								time to create a recruitment firm specializing in bringing forward-thinking companies
@@ -239,7 +239,7 @@ export default withStyles(styles)(
 										variant="subheading"
 										className={classes.client}
 										color="inherit"
-										gutterBottom={true}
+										gutterBottom
 									>
 										HUMANOKO
 									</Typography>

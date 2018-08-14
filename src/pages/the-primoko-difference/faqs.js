@@ -53,7 +53,7 @@ export default withStyles(styles)(({ classes }) => {
 			<TabBar fields={thePrimokoDiffernceFields} />
 			<Grid container className={classes.container} justify="space-between" spacing={40}>
 				<Grid item xs={12} md={12}>
-					<Typography className={classes.paragraph} gutterBottom={true}>
+					<Typography className={classes.paragraph} gutterBottom>
 						You have questions? We have answers. (But if you don’t see your question here, let’s talk.)
 					</Typography>
 				</Grid>

@@ -71,17 +71,17 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<Grid container justify="space-between" className={classes.container}>
 			<Grid item xs={12} md={7}>
-				<Typography className={classes.title} gutterBottom={true}>
+				<Typography className={classes.title} gutterBottom>
 					Only engineers drive our bus. In other words, we’re a software engineering firm with only software
 					engineers. Imagine that!
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				<Typography className={classes.paragraph} gutterBottom>
 					We’re software engineers first. Yes, we do handle the sales, marketing, customer relations and other
 					non-engineering functions, but everyone in the company comes from a technical background.
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				<Typography className={classes.paragraph} gutterBottom>
 					We’re also elite, meaning that we’re very good at what we do. We bring years of experience
 					architecting large projects to the table and look forward to stepping in at whatever level you need
 					us.

@@ -63,11 +63,11 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<Grid id="team" container className={classes.container}>
 			<Grid item xs={12}>
-				<Typography className={classes.title} gutterBottom={true}>
+				<Typography className={classes.title} gutterBottom>
 					Meet the team
 				</Typography>
 				<br />
-				<Typography className={classes.paragraph} gutterBottom={true}>
+				<Typography className={classes.paragraph} gutterBottom>
 					Our band of hardcore engineers also happens to be good at the soft stuff, like planning, managing,
 					and serving our clients.
 				</Typography>

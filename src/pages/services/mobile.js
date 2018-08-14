@@ -66,15 +66,15 @@ export default withStyles(styles)(({ classes }) => {
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
-					<Typography className={classes.title} gutterBottom={true}>
+					<Typography className={classes.title} gutterBottom>
 						Reach and engage with your audiences where they live—on mobile.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						A high percent of your prospects and customers are online, chatting and emailing, playing games,
 						watching videos, and conducting business using smartphones, tablets, and wearables like the
 						Apple Watch.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Primoko specializes in creating complex yet usable iOS and Android applications that will
 						connect you with your market in new and future-forward ways.
 					</Typography>
@@ -100,10 +100,10 @@ export default withStyles(styles)(({ classes }) => {
 							</ul>
 						</Grid>
 					</Grid>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						The list goes on.
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Contact Primoko today. Tell us what you’d like to create, and we’ll tell you how we can bring it
 						to life.
 					</Typography>

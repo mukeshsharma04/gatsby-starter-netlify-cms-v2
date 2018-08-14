@@ -84,14 +84,14 @@ export default withStyles(styles)(({ classes }) => {
 			<Banner banner={withPrefix('/img/achievement.jpg')} tag={tag} height="425px" />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={8}>
-					<Typography className={classes.title} gutterBottom={true}>
+					<Typography className={classes.title} gutterBottom>
 						Why Primoko? We speak geek.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom={true}>
+					<Typography className={classes.paragraph} gutterBottom>
 						If you search the web for "web development," "software development," or "app development,"
 						you’ll find millions of companies plying their wares.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom={true}>
+					<Typography className={classes.paragraph} gutterBottom>
 						We’re one of those millions, but here’s what makes us different.
 					</Typography>
 					<div className={classes.unordered}>
@@ -115,7 +115,7 @@ export default withStyles(styles)(({ classes }) => {
 							separate, outside vendor.
 						</Typography>
 					</div>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom={true}>
+					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						We like to chase the hard engineering problems, the kind that hold companies back.
 					</Typography>
 					<Grid item xs={12} md={4}>
