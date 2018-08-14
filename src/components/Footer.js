@@ -507,22 +507,11 @@ const Footer = ({ classes }) => {
 							</Grid>
 						</Grid>
 					</Grid>
-
-					{/*Third Row*/}
-					<Grid container className={classes.space}>
-						<Typography
-							variant="subheading"
-							align="left"
-							className={classes.paragraph}
-							color="inherit"
-							gutterBottom={true}
-						>
-							Copyright © 2018 Primoko Inc and respective clients. All rights reserved.
-						</Typography>
-					</Grid>
 				</Grid>
 				{/*First Column End*/}
-
+				<Hidden smUp>
+					<div className={classes.space}>&#160;</div>
+				</Hidden>
 				{/* Client Part Start */}
 				<Grid item xs={12} md={3}>
 					<Grid container>
@@ -633,6 +622,18 @@ const Footer = ({ classes }) => {
 					</Grid>
 				</Hidden>
 				{/*Second Column For Desktop End*/}
+
+				<Grid container className={classes.margin}>
+					<Typography
+						variant="subheading"
+						align="left"
+						className={classes.paragraph}
+						color="inherit"
+						gutterBottom={true}
+					>
+						Copyright © 2018 Primoko Inc and respective clients. All rights reserved.
+					</Typography>
+				</Grid>
 			</Grid>
 		</div>
 	);
