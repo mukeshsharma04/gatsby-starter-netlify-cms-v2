@@ -39,7 +39,14 @@ const styles = (theme) => ({
 		marginTop: theme.spacing.unit * 4
 	},
 	outerBox: {
-		width: '459.6px',
+		backgroundImage: `url(${withPrefix('/img/illustration-dev-ops.png')})`,
+		position: 'relative',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		margin: 'auto',
+		[theme.breakpoints.up('sm')]: {
+			width: '459.6px'
+		},
 		height: '300.5px'
 	}
 });
@@ -74,9 +81,7 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={5}>
-					<div className={classes.outerBox}>
-						<img src={withPrefix('/img/illustration-dev-ops.png')} />
-					</div>
+					<div className={classes.outerBox} />
 				</Grid>
 			</Grid>
 		</React.Fragment>

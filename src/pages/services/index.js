@@ -26,7 +26,8 @@ const styles = (theme) => ({
 	},
 	recruitment: {
 		margin: 'auto',
-		padding: '8%'
+		paddingLeft: '8%',
+		paddingRight: '8%'
 	},
 	text: {
 		[theme.breakpoints.down('sm')]: {

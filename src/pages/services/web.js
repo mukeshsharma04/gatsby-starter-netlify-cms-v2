@@ -7,6 +7,7 @@ import Banner from '../../components/Banner';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
 import { withPrefix } from 'gatsby-link';
+import Hidden from '@material-ui/core/Hidden';
 
 const styles = (theme) => ({
 	container: {
@@ -44,6 +45,11 @@ const styles = (theme) => ({
 		listStyle: 'disc'
 	},
 	outerBox: {
+		backgroundImage: `url(${withPrefix('/img/we-know-web.png')})`,
+		position: 'relative',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		margin: 'auto',
 		[theme.breakpoints.up('sm')]: {
 			width: '459.6px'
 		},
@@ -56,11 +62,11 @@ export default withStyles(styles)(({ classes }) => {
 		<React.Fragment>
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container} justify="space-between">
-				<Grid item xs={12} md={5}>
-					<div className={classes.outerBox}>
-						<img src={withPrefix('/img/we-know-web.png')} />
-					</div>
-				</Grid>
+				<Hidden smDown>
+					<Grid item xs={12} md={5}>
+						<div className={classes.outerBox} />
+					</Grid>
+				</Hidden>
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title} gutterBottom>
 						Web app development
@@ -100,6 +106,11 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						We invite you to contact us for a free consultation today.
 					</Typography>
+					<Hidden mdUp>
+						<Grid item xs={12} md={5}>
+							<div className={classes.outerBox} />
+						</Grid>
+					</Hidden>
 				</Grid>
 			</Grid>
 			<Banner banner={withPrefix('/img/computers.png')} height="440px" />
