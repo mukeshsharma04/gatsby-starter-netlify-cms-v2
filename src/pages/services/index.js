@@ -24,6 +24,10 @@ const styles = (theme) => ({
 			padding: theme.spacing.unit * 10
 		}
 	},
+	recruitment: {
+		margin: 'auto',
+		padding: '8%'
+	},
 	text: {
 		[theme.breakpoints.down('sm')]: {
 			...theme.typography.mhero
@@ -77,8 +81,15 @@ const styles = (theme) => ({
 		marginBottom: theme.spacing.unit
 	},
 	block: {
-		width: '260px',
-		height: '206px',
+		[theme.breakpoints.down('sm')]: {
+			width: '-webkit-fill-available',
+			height: '290px'
+		},
+		[theme.breakpoints.up('md')]: {
+			width: '-webkit-fill-available',
+			height: '455px'
+		},
+		float: 'right',
 		background: `linear-gradient(to right, #4198ff, #6f73ff)`
 	},
 	logo: {
@@ -205,18 +216,8 @@ export default withStyles(styles)(
 						</Grid>
 					</Grid>
 					<Banner banner={withPrefix('/img/code.jpg')} height="322px" />
-					<Grid container className={classes.container} justify="space-between">
-						<Grid item xs={12} md={12}>
-							<Typography className={classes.title} gutterBottom>
-								Pricing
-							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								“How much does it cost?” That’s the big question we’re asked most often. And although we
-								can’t say for certainty without exploring the scope and nature of your project, we can
-								give you an idea.
-							</Typography>
-						</Grid>
-						<Grid className={classes.space} item xs={12} md={8}>
+					<Grid container justify="space-between">
+						<Grid className={classes.recruitment} item xs={12} md={6}>
 							<Typography className={classes.title} gutterBottom>
 								Elite Engineer Recruitment
 							</Typography>
@@ -232,7 +233,7 @@ export default withStyles(styles)(
 								and brilliant software engineers together; that’s when we launched Humanoko.
 							</Typography>
 						</Grid>
-						<Grid className={classNames(classes.space)} item xs={12} md={3}>
+						<Grid item xs={12} md={6}>
 							<div className={classes.block}>
 								<Grid container className={classes.blockade} justify="center" alignItems="center">
 									<Typography
