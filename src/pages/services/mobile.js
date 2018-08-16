@@ -57,6 +57,24 @@ const styles = (theme) => ({
 	outerBox: {
 		width: '281px',
 		height: '569px'
+	},
+	subparagraph: {
+		borderBottom: '6px solid #6f73ff'
+	},
+	mobile: {
+		backgroundImage: `url(${withPrefix('/img/we-know-mobile.png')})`,
+		position: 'relative',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'auto',
+		margin: 'auto',
+		[theme.breakpoints.up('xs')]: {
+			height: '280px',
+			width: '286px'
+		},
+		[theme.breakpoints.up('md')]: {
+			height: '569px',
+			width: '286px'
+		}
 	}
 });
 
@@ -67,7 +85,7 @@ export default withStyles(styles)(({ classes }) => {
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title} gutterBottom>
-						Reach and engage with your audiences where they live—on mobile.
+						Reach and engage with your audiences where they live—<span className={classes.subparagraph}>on mobile.</span>
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						A high percent of your prospects and customers are online, chatting and emailing, playing games,
@@ -109,7 +127,7 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={4}>
-					<img src={withPrefix('/img/we-know-mobile.png')} />
+					<div className={classes.mobile} />
 				</Grid>
 			</Grid>
 			<Quotes

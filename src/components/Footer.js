@@ -180,6 +180,7 @@ const Footer = ({ classes }) => {
 									variant="subheading"
 									className={classes.client}
 									color="inherit"
+									align="left"
 									gutterBottom
 								>
 									Let’s talk
