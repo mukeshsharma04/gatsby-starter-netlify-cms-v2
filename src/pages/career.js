@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { withPrefix } from 'gatsby-link';
+import Button from '../components/Button';
+import green from '@material-ui/core/colors/green';
 
 const styles = (theme) => ({
 	container: {
@@ -43,6 +45,14 @@ const styles = (theme) => ({
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.paragraph
 		}
+	},
+	button: {
+		[theme.breakpoints.down('sm')]: {
+			width: '100%'
+		},
+		[theme.breakpoints.up('md')]: {
+			width: '260px'
+		}
 	}
 });
 
@@ -78,6 +88,7 @@ export default withStyles(styles)(
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
 							</Typography>
+							<Button styles={classes.button} text="Apply now" />
 						</Grid>
 						<Grid item xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom>
@@ -96,6 +107,7 @@ export default withStyles(styles)(
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
 							</Typography>
+							<Button styles={classes.button} text="Apply now" />
 						</Grid>
 					</Grid>
 				</React.Fragment>
