@@ -39,6 +39,9 @@ const styles = (theme) => ({
 		color: '#fff',
 		lineHeight: 2
 	},
+	letsactive: {
+		color: '#fff',
+	},
 	list: {
 		width: 350
 	},
@@ -165,7 +168,10 @@ class NavBar extends React.Component {
 							>
 								The Primoko Difference
 							</Link>
-							<Link to="/letstalk" className={classNames(classes.letstalk)}>
+							<Link
+								to="/letstalk"
+								className={classNames(classes.letstalk, this.activeLink('/letstalk') && classes.letsactive)}
+							>
 								Let's Talk
 							</Link>
 						</Hidden>

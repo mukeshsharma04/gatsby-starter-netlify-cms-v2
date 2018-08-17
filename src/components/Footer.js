@@ -110,7 +110,7 @@ const styles = (theme) => ({
 		textDecoration: 'none',
 		color: 'inherit',
 		'&:hover': {
-			textDecoration: 'none',
+			textDecoration: 'underline',
 			color: 'inherit'
 		}
 	},

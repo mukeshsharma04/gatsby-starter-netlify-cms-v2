@@ -163,8 +163,8 @@ class CustomizedTabs extends React.Component {
 						</Grid>
 					</TabContainer>
 				)}
-				{value === 1 && <TabContainer>Item Two</TabContainer>}
-				{value === 2 && <TabContainer>Item Three</TabContainer>}
+				{value === 1 && <TabContainer>Office 2</TabContainer>}
+				{value === 2 && <TabContainer>Office 3</TabContainer>}
 			</div>
 		);
 	}
