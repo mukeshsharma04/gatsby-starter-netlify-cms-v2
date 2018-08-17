@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import Quotes from '../../components/Quotes';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
+import Check from '@material-ui/icons/Check';
 
 const styles = (theme) => ({
 	container: {
@@ -35,8 +36,45 @@ const styles = (theme) => ({
 			...theme.typography.paragraph
 		}
 	},
+	subheading: {
+		...theme.typography.subheading
+	},
 	space: {
 		marginTop: theme.spacing.unit * 4
+	},
+	block: {
+		[theme.breakpoints.up('sm')]: {
+			width: '258px'
+		},
+		height: '238px',
+		boxShadow: '0 2px 7px 0 rgba(0, 0, 0, 0.05)',
+		border: 'solid 1px #6f73ff',
+		padding: '0 6%'
+	},
+	divider: {
+		borderBottom: 'solid 2px #6f73ff',
+		paddingBottom: '4%'
+	},
+	icon: {
+		width: '14px',
+		fill: '#6f73ff'
+	},
+	subpara: {
+		fontFamily: 'Lato',
+		fontSize: '12px',
+		fontWeight: 'normal',
+		fontStyle: 'normal',
+		fontStretch: 'normal',
+		lineHeight: '1.67',
+		letterSpacing: 'normal',
+		color: '#666666'
+	},
+	textGroup: {
+		display: 'flex',
+		paddingBottom: '5%'
+	},
+	left: {
+		textAlign: 'left'
 	}
 });
 
@@ -44,8 +82,8 @@ export default withStyles(styles)(({ classes }) => {
 	return (
 		<React.Fragment>
 			<TabBar fields={servicesFields} />
-			<Grid container className={classes.container}>
-				<Grid item xs={12} md={12}>
+			<Grid container className={classes.container} justify="space-between">
+				<Grid item xs={12} md={7}>
 					<Typography className={classes.title} gutterBottom>
 						We will put Salesforce to work for you.
 					</Typography>
@@ -66,6 +104,25 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Contact us today. Let’s discuss how to put Salesforce to work for you.
 					</Typography>
+				</Grid>
+				<Grid item xs={12} md={4}>
+					<div className={classes.block}>
+						<Typography className={classNames(classes.subheading, classes.space, classes.left)}>
+							<span className={classes.divider}>We s</span>peak Salesforce
+						</Typography>
+						<div className={classNames(classes.textGroup, classes.space)}>
+							<Check className={classes.icon} /> &#160;
+							<div className={classNames(classes.subpara)}>Lorem ipsum dolor</div>
+						</div>
+						<div className={classNames(classes.textGroup)}>
+							<Check className={classes.icon} /> &#160;
+							<div className={classNames(classes.subpara)}>Lorem ipsum dolor</div>
+						</div>
+						<div className={classNames(classes.textGroup)}>
+							<Check className={classes.icon} /> &#160;
+							<div className={classNames(classes.subpara)}>Lorem ipsum dolor</div>
+						</div>
+					</div>
 				</Grid>
 			</Grid>
 			<Quotes quote="If you know how to create software, then you can create big things." author="Xavier Niel" />

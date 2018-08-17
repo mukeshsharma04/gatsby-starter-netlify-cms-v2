@@ -113,7 +113,12 @@ export default withStyles(styles)(({ classes }) => {
 					</Hidden>
 				</Grid>
 			</Grid>
-			<Banner banner={withPrefix('/img/computers.png')} height="440px" />
+			<Hidden mdUp>
+				<Banner banner={withPrefix('/img/computers.png')} height="200px" />
+			</Hidden>
+			<Hidden smDown>
+				<Banner banner={withPrefix('/img/computers.png')} height="440px" />
+			</Hidden>
 		</React.Fragment>
 	);
 });
