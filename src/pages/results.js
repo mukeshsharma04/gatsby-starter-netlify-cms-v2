@@ -9,22 +9,14 @@ import Hidden from '@material-ui/core/Hidden';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-			paddingTop: theme.spacing.unit * 2,
-			paddingBottom: theme.spacing.unit * 2,
-			paddingLeft: theme.spacing.unit * 2,
-			paddingRight: theme.spacing.unit * 2
+			paddingTop: '81px',
+			paddingLeft: '149px',
+			paddingRight: '128px'
 		},
 		[theme.breakpoints.up('md')]: {
-			paddingTop: theme.spacing.unit * 7,
-			paddingBottom: theme.spacing.unit * 7,
-			paddingLeft: theme.spacing.unit * 7,
-			paddingRight: theme.spacing.unit * 7
-		},
-		[theme.breakpoints.up('lg')]: {
-			paddingTop: theme.spacing.unit * 10,
-			paddingBottom: theme.spacing.unit * 10,
-			paddingLeft: theme.spacing.unit * 15,
-			paddingRight: theme.spacing.unit * 30
+			paddingTop: '81px',
+			paddingLeft: '149px',
+			paddingRight: '128px'
 		}
 	},
 	title: {
@@ -36,6 +28,7 @@ const styles = (theme) => ({
 		}
 	},
 	paragraph: {
+		paddingTop: '30px',
 		[theme.breakpoints.down('sm')]: {
 			...theme.typography.mparagraph
 		},
@@ -67,7 +60,7 @@ export default withStyles(styles)(({ classes }) => {
 						companies.
 					</Typography>
 				</Grid>
-				<Grid item xs={12} md={12}>
+				<Grid item xs={12} md={12} className={classes.space}>
 					<Hidden xsDown>
 						<Grid container justify="flex-start" alignItems="center">
 							<Grid item xs={6} md={5}>
@@ -133,6 +126,7 @@ export default withStyles(styles)(({ classes }) => {
 						</Grid>
 					</Hidden>
 				</Grid>
+				<div className={classes.space} />
 			</Grid>
 			<Quotes
 				quote="The team at Primoko is top notch. Cognizant of best practices for code hygiene and thorough 
