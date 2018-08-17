@@ -51,7 +51,10 @@ const styles = (theme) => ({
 	},
 	mhamburger: {
 		...theme.typography.mDropdownLi,
-		paddingLeft: '7%'
+		paddingLeft: '7%',
+		'&:hover': {
+			textDecoration: 'underline'
+		},
 	},
 	toolbar: {
 		display: 'flex',
