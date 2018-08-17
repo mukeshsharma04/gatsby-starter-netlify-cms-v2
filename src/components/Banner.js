@@ -37,9 +37,10 @@ export default withStyles(styles)(({ classes, text, tag, banner, height }) => {
 			style={{
 				position: 'relative',
 				backgroundImage: `url(${withPrefix(banner)})`,
-				backgroundPosition: 'center',
-				backgroundRepeat: 'no-repeat',
 				backgroundSize: 'cover',
+				backgroundPosition: 'center center',
+				backgroundRepeat: 'no-repeat',
+				backgroundAttachment: 'fixed',
 				width: '100%',
 				height: height
 			}}

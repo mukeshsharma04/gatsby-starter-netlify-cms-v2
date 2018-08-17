@@ -72,7 +72,8 @@ const styles = (theme) => ({
 		height: '35px',
 		borderRadius: '4px',
 		backgroundColor: '#ffffff',
-		marginTop: '3%'
+		marginTop: '3%',
+		border: 0
 	},
 	textBox: {
 		width: '100%',

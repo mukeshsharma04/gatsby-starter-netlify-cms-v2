@@ -14,9 +14,10 @@ const styles = (theme) => ({
 	banner: {
 		position: 'relative',
 		backgroundImage: `url(${withPrefix('/img/typing.png')})`,
-		backgroundPosition: 'center',
-		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
+		backgroundPosition: 'center center',
+		backgroundRepeat: 'no-repeat',
+		backgroundAttachment: 'fixed',
 		width: '100%',
 		[theme.breakpoints.down('sm')]: {
 			height: '200px'
