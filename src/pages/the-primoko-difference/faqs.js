@@ -9,14 +9,14 @@ import { thePrimokoDiffernceFields } from '../../metadata';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-      padding: theme.spacing.unit * 2
-    },
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing.unit * 7
-    },
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing.unit * 10
-    }
+			padding: theme.spacing.unit * 2
+		},
+		[theme.breakpoints.up('md')]: {
+			padding: theme.spacing.unit * 7
+		},
+		[theme.breakpoints.up('lg')]: {
+			padding: theme.spacing.unit * 10
+		}
 	},
 	title: {
 		[theme.breakpoints.down('sm')]: {
@@ -39,11 +39,18 @@ const styles = (theme) => ({
 	},
 	link: {
 		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mtabLink
+			fontSize: '14px'
 		},
 		[theme.breakpoints.up('sm')]: {
-			...theme.typography.tabLink
-		}
+			fontSize: '16px'
+		},
+		fontFamily: 'Lato',
+		fontWeight: '500',
+		fontStyle: 'normal',
+		fontStretch: 'normal',
+		lineHeight: 'normal',
+		letterSpacing: 'normal',
+		color: '#4198ff'
 	}
 });
 

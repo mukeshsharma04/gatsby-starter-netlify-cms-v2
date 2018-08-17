@@ -47,10 +47,9 @@ const styles = (theme) => ({
 		display: 'list-item'
 	},
 	space: {
-		marginTop: theme.spacing.unit * 4
+		marginTop: theme.spacing.unit * 2
 	},
 	rangeButton: {
-		width: '241px',
 		height: '52px',
 		backgroundColor: '#f8f8f8',
 		textAlign: 'center',
@@ -63,6 +62,11 @@ const styles = (theme) => ({
 	},
 	quoteButton: {
 		textAlign: 'center'
+	},
+	button: {
+		[theme.breakpoints.down('sm')]: {
+			width: '100%'
+		}
 	}
 });
 
@@ -130,7 +134,7 @@ export default withStyles(styles)(({ classes }) => {
 				</Grid>
 				<Grid container direction="row" alignItems="center" justify="center" className={classes.space}>
 					<Grid className={classes.quoteButton} item xs={12} md={4}>
-						<Button text="Get a quote" />
+						<Button text="Get a quote" styles={classes.button} />
 					</Grid>
 				</Grid>
 			</Grid>

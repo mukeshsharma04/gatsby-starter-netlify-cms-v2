@@ -8,6 +8,7 @@ import Button from '../../components/Button';
 import TabBar from '../../components/TabBar';
 import { thePrimokoDiffernceFields } from '../../metadata';
 import Link, { withPrefix } from 'gatsby-link';
+import { Hidden } from '@material-ui/core';
 
 const styles = (theme) => ({
 	container: {
@@ -127,13 +128,15 @@ export default withStyles(styles)(({ classes }) => {
 						/>
 					</Grid>
 				</Grid>
-				<Grid item xs={12} md={3}>
-					<div className={classes.block}>
-						<Grid container className={classes.blockade} justify="center" alignItems="center">
-							<img src={withPrefix('/img/primoko-logo-white.png')} className={classes.logo} />
-						</Grid>
-					</div>
-				</Grid>
+				<Hidden smDown>
+					<Grid item xs={12} md={3}>
+						<div className={classes.block}>
+							<Grid container className={classes.blockade} justify="center" alignItems="center">
+								<img src={withPrefix('/img/primoko-logo-white.png')} className={classes.logo} />
+							</Grid>
+						</div>
+					</Grid>
+				</Hidden>
 			</Grid>
 		</React.Fragment>
 	);

@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import Button from '../components/Button';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import Quotes from '../components/Quotes';
+import CustomizedTabs from '../components/CustomizedTabs';
 
 const styles = (theme) => ({
 	container: {
@@ -25,25 +26,6 @@ const styles = (theme) => ({
 		},
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.title
-		}
-	},
-	paragraph: {
-		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mparagraph
-		},
-		[theme.breakpoints.up('sm')]: {
-			...theme.typography.paragraph
-		}
-	},
-	space: {
-		marginTop: theme.spacing.unit * 4
-	},
-	link: {
-		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mtabLink
-		},
-		[theme.breakpoints.up('sm')]: {
-			...theme.typography.tabLink
 		}
 	},
 	label: {
@@ -146,7 +128,7 @@ class LetsTalk extends React.Component {
 		return (
 			<React.Fragment>
 				<Grid container className={classes.container} justify="space-between" spacing={40}>
-					<Grid item xs={12} md={12} lg={7}>
+					<Grid item xs={12} md={7} lg={7}>
 						<Typography className={classes.title} gutterBottom>
 							Contact us
 						</Typography>
@@ -200,52 +182,11 @@ class LetsTalk extends React.Component {
 							</Grid>
 						</form>
 					</Grid>
-					<Grid item xs={12} md={12} lg={4}>
-						<Grid direction="row" justify="center" container>
-							<Grid item xs={12} sm={5} md={5} lg={12}>
-								<Typography className={classes.title} gutterBottom>
-									Our office
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									231 Clarksville Rd
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									Suite 3
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									West Windsor, NJ - 08550
-								</Typography>
-								<Typography className={classes.link} gutterBottom>
-									(413) 248-7626
-								</Typography>
-								<Typography className={classes.link} gutterBottom>
-									hello@primoko.com
-								</Typography>
-							</Grid>
-							&#160;
-							<Grid item xs={12} sm={7} md={7} lg={12}>
-								<iframe
-									width="350"
-									height="298"
-									src="https://maps.google.com/maps?width=400&amp;height=298&amp;hl=en&amp;q=231%20Clarksville%20Rd%20Suite%203%20West%20Windsor%2C%20NJ%20-%2008550+(Primoko)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-									frameBorder="0"
-									scrolling="no"
-									marginHeight="0"
-									marginWidth="0"
-								/>
-							</Grid>
-						</Grid>
-					</Grid>
-					<Grid item xs={12} md={12}>
-						<Typography className={classes.paragraph} gutterBottom>
-							Have questions? Want to run an idea by us? Ready for a quote?
+					<Grid item xs={12} md={4} lg={4}>
+						<Typography className={classes.title} gutterBottom>
+							Our offices
 						</Typography>
-						<Typography className={classes.paragraph} gutterBottom>
-							We’d love to hear from you.
-						</Typography>
-						<Typography className={classes.paragraph} gutterBottom>
-							Please call us, or complete the form that follows
-						</Typography>
+						<CustomizedTabs />
 					</Grid>
 				</Grid>
 				<Quotes
