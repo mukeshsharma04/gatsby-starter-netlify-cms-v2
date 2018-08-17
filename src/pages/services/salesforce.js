@@ -112,15 +112,11 @@ export default withStyles(styles)(({ classes }) => {
 						</Typography>
 						<div className={classNames(classes.textGroup, classes.space)}>
 							<Check className={classes.icon} /> &#160;
-							<div className={classNames(classes.subpara)}>Lorem ipsum dolor</div>
+							<div className={classNames(classes.subpara)}>Visualforce, Javascript Remoting, Heroku</div>
 						</div>
 						<div className={classNames(classes.textGroup)}>
 							<Check className={classes.icon} /> &#160;
-							<div className={classNames(classes.subpara)}>Lorem ipsum dolor</div>
-						</div>
-						<div className={classNames(classes.textGroup)}>
-							<Check className={classes.icon} /> &#160;
-							<div className={classNames(classes.subpara)}>Lorem ipsum dolor</div>
+							<div className={classNames(classes.subpara)}>CRM, Calendar, Commerce Cloud, Einstein</div>
 						</div>
 					</div>
 				</Grid>

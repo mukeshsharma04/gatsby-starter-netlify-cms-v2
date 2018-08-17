@@ -8,6 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '../components/Button';
 import Hidden from '@material-ui/core/Hidden';
 import JoinTeam from '../components/JoinTeam';
+import Link from 'gatsby-link';
 
 const styles = (theme) => ({
 	banner: {
@@ -49,13 +50,17 @@ const styles = (theme) => ({
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.paragraph
 		},
-		marginTop: theme.spacing.unit * 3
+		marginTop: theme.spacing.unit * 2,
+		padding: '0 5%'
 	},
 	button: {
 		width: '260px',
 		height: '39px',
 		borderRadius: '19.5px',
-		marginTop: theme.spacing.unit * 3
+		marginTop: theme.spacing.unit * 3,
+		'&:hover': {
+			color: '#ffffff'
+		}
 	}
 });
 
@@ -72,9 +77,17 @@ const About = ({ classes }) => {
 									Join the team
 								</Typography>
 								<Typography className={classes.paragraph} align="center">
-									Are you a nerd looking for home?
+									Are you a nerd looking for home? Or a nerd looking to work from home? Checkout our
+									current opportunities.
 								</Typography>
-								<Button styles={classes.button} text="See career opportunities" />
+								<div style={{ width: '100%', textAlign: 'center' }}>
+									<Button
+										styles={classes.button}
+										text="See career opportunities"
+										to="/career"
+										component={Link}
+									/>
+								</div>
 							</Grid>
 						</Grid>
 					</Grid>

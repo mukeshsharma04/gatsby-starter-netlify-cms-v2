@@ -43,10 +43,14 @@ const styles = (theme) => ({
 	},
 	link: {
 		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mtabLink
+			...theme.typography.mtabLink,
+			textAlign: 'left',
+			textDecoration: 'underline'
 		},
 		[theme.breakpoints.up('sm')]: {
-			...theme.typography.tabLink
+			...theme.typography.tabLink,
+			textAlign: 'left',
+			textDecoration: 'underline'
 		}
 	}
 });
@@ -101,9 +105,9 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						Questions? Comments Concerns?
 					</Typography>
-					<Typography className={classNames(classes.link, classes.space)} gutterBottom>
-						Please let us know.
-					</Typography>
+					<a href="/letstalk" className={classNames(classes.link, classes.space)}>
+						<div>Please let us know.</div>
+					</a>
 				</Grid>
 			</Grid>
 			<Quotes quote="Excellence is a continuous process and not an accident." author="A.P.J. Abdul Kalam" />

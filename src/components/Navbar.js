@@ -99,6 +99,7 @@ const styles = (theme) => ({
 		marginTop: '40px'
 	},
 	letstalk: {
+		display: 'inline-flex',
 		...theme.typography.link,
 		color: 'white',
 		fontWeight: 500,
@@ -170,9 +171,9 @@ class NavBar extends React.Component {
 							</Link>
 							<Link
 								to="/letstalk"
-								className={classNames(classes.letstalk, this.activeLink('/letstalk') && classes.letsactive)}
+								className={classNames(classes.navLink, this.activeLink('/letstalk') && classes.active)}
 							>
-								Let's Talk
+								<div className={classes.letstalk}>Let's Talk</div>
 							</Link>
 						</Hidden>
 						<IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
