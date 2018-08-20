@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Quotes from '../components/Quotes';
 import { withPrefix } from 'gatsby-link';
 import Hidden from '@material-ui/core/Hidden';
+import classNames from 'classnames';
 
 const styles = (theme) => ({
 	container: {
@@ -63,45 +64,33 @@ export default withStyles(styles)(({ classes }) => {
 				</Grid>
 				<Grid item xs={12} md={12} className={classes.space}>
 					<Hidden xsDown>
-						<Grid container justify="space-between">
-							<Grid item xs={5}>
-								<Grid container direction="column" justify="space-evenly" alignItems="flex-start">
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/barneys.png')} width="178px" />
-									</Grid>
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/orchestra-tech.png')} width="186px" />
-									</Grid>
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/filmakr.png')} width="186px" />
-									</Grid>
-								</Grid>
+						<Grid container justify="flex-start" alignItems="center">
+							<Grid item xs={5} className={classes.gridItem}>
+								<img src={withPrefix('img/barneys.png')} width="178px" />
 							</Grid>
-							<Grid item xs={4}>
-								<Grid container direction="column" justify="space-evenly" alignItems="flex-start">
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/bofa.png')} width="220px" />
-									</Grid>
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/jefferson.png')} width="176px" />
-									</Grid>
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/time-warner.jpg')} width="145px" />
-									</Grid>
-								</Grid>
+							<Grid item xs={4} className={classes.gridItem}>
+								<img src={withPrefix('img/bofa.png')} width="220px" />
 							</Grid>
-							<Grid item xs={3}>
-								<Grid container direction="column" justify="space-evenly" alignItems="flex-end">
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/Philips-Shield.png')} width="64px" />
-									</Grid>
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/pricee.png')} width="114px" />
-									</Grid>
-									<Grid item className={classes.gridItem}>
-										<img src={withPrefix('img/rutgers-logo.png')} width="200px" />
-									</Grid>
-								</Grid>
+							<Grid item xs={3} className={classNames(classes.right, classes.gridItem)}>
+								<img src={withPrefix('img/Philips-Shield.png')} width="64px" />
+							</Grid>
+							<Grid item xs={5} className={classes.gridItem}>
+								<img src={withPrefix('img/orchestra-tech.png')} width="186px" />
+							</Grid>
+							<Grid item xs={4} className={classes.gridItem}>
+								<img src={withPrefix('img/jefferson.png')} width="176px" />
+							</Grid>
+							<Grid item xs={3} className={classNames(classes.right, classes.gridItem)}>
+								<img src={withPrefix('img/pricee.png')} width="114px" />
+							</Grid>
+							<Grid item xs={5} className={classes.gridItem}>
+								<img src={withPrefix('img/filmakr.png')} width="186px" />
+							</Grid>
+							<Grid item xs={4} className={classes.gridItem}>
+								<img src={withPrefix('img/time-warner.jpg')} width="145px" />
+							</Grid>
+							<Grid item xs={3} className={classNames(classes.right, classes.gridItem)}>
+								<img src={withPrefix('img/rutgers-logo.png')} width="200px" />
 							</Grid>
 						</Grid>
 					</Hidden>
@@ -109,31 +98,31 @@ export default withStyles(styles)(({ classes }) => {
 				<Grid item xs={12} md={12}>
 					<Hidden smUp>
 						<Grid container justify="center" alignItems="center">
-							<Grid item xs={6}>
+							<Grid item xs={6} className={classes.gridItem}>
 								<img src={withPrefix('img/barneys.png')} width="178px" />
 							</Grid>
-							<Grid item xs={6} className={classes.right}>
+							<Grid item xs={6} className={classNames(classes.right, classes.gridItem)}>
 								<img src={withPrefix('img/Philips-Shield.png')} width="64px" />
 							</Grid>
-							<Grid item xs={6}>
+							<Grid item xs={6} className={classes.gridItem}>
 								<img src={withPrefix('img/bofa.png')} width="220px" />
 							</Grid>
-							<Grid item xs={6} className={classes.right}>
+							<Grid item xs={6} className={classNames(classes.right, classes.gridItem)}>
 								<img src={withPrefix('img/pricee.png')} width="114px" />
 							</Grid>
-							<Grid item xs={6}>
+							<Grid item xs={6} className={classes.gridItem}>
 								<img src={withPrefix('img/jefferson.png')} width="176px" />
 							</Grid>
-							<Grid item xs={6} className={classes.right}>
+							<Grid item xs={6} className={classNames(classes.right, classes.gridItem)}>
 								<img src={withPrefix('img/orchestra-tech.png')} width="186px" />
 							</Grid>
-							<Grid item xs={6}>
+							<Grid item xs={6} className={classes.gridItem}>
 								<img src={withPrefix('img/filmakr.png')} width="186px" />
 							</Grid>
-							<Grid item xs={6} className={classes.right}>
+							<Grid item xs={6} className={classNames(classes.right, classes.gridItem)}>
 								<img src={withPrefix('img/time-warner.jpg')} width="145px" />
 							</Grid>
-							<Grid item xs={12} className={classes.center}>
+							<Grid item xs={12} className={classNames(classes.center, classes.gridItem)}>
 								<img src={withPrefix('img/rutgers-logo.png')} width="200px" />
 							</Grid>
 						</Grid>
