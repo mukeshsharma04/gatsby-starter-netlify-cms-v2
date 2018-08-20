@@ -54,7 +54,19 @@ const styles = (theme) => ({
 			width: '260px'
 		},
 		marginBottom: '7%'
-	}
+	},
+	text: {
+		[theme.breakpoints.down('sm')]: {
+			...theme.typography.mhero
+		},
+		[theme.breakpoints.up('sm')]: {
+			...theme.typography.hero
+		},
+		width: 'fit-content',
+		color: 'white',
+		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
+		padding: '10px'
+	},
 });
 
 export default withStyles(styles)(
@@ -70,7 +82,7 @@ export default withStyles(styles)(
 
 			return (
 				<React.Fragment>
-					<Banner banner={withPrefix('/img/agency.jpg')} tag={tag} height="425px" />
+					<Banner banner={withPrefix('/img/startup.jpg')} tag={tag} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom>

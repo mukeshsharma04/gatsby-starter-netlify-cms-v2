@@ -43,7 +43,7 @@ const styles = (theme) => ({
 		color: '#fff',
 	},
 	list: {
-		width: 350
+		width: 375
 	},
 	hamburger: {
 		...theme.typography.mHamburgerTitle,

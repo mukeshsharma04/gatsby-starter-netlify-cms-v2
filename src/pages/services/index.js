@@ -91,14 +91,15 @@ const styles = (theme) => ({
 			height: '455px'
 		},
 		float: 'right',
-		background: `linear-gradient(to right, #4198ff, #6f73ff)`
+		position: 'relative',
+		backgroundImage: `url(${withPrefix('/img/concept.jpg')})`,
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat',
+		width: '100%'
 	},
 	logo: {
 		width: '153.5px',
 		height: '31px'
-	},
-	blockade: {
-		height: '210px'
 	},
 	client: {
 		color: 'white',
@@ -235,18 +236,7 @@ export default withStyles(styles)(
 							</Typography>
 						</Grid>
 						<Grid item xs={12} md={6}>
-							<div className={classes.block}>
-								<Grid container className={classes.blockade} justify="center" alignItems="center">
-									<Typography
-										variant="subheading"
-										className={classes.client}
-										color="inherit"
-										gutterBottom
-									>
-										HUMANOKO
-									</Typography>
-								</Grid>
-							</div>
+							<div className={classes.block} />
 						</Grid>
 					</Grid>
 					<Quotes
