@@ -11,13 +11,13 @@ import { withPrefix } from 'gatsby-link';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-			padding: theme.spacing.unit * 2
+			padding: '40px 30px'
 		},
 		[theme.breakpoints.up('md')]: {
-			padding: theme.spacing.unit * 7
+			padding: '86px 60px'
 		},
 		[theme.breakpoints.up('lg')]: {
-			padding: theme.spacing.unit * 10
+			padding: '86px'
 		}
 	},
 	row: {
@@ -67,6 +67,10 @@ const styles = (theme) => ({
 		[theme.breakpoints.down('sm')]: {
 			width: '100%'
 		}
+	},
+	spacing: {
+		marginTop: '40px',
+		marginBottom: '40px'
 	}
 });
 
@@ -75,7 +79,7 @@ export default withStyles(styles)(({ classes }) => {
 		<React.Fragment>
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container}>
-				<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
+				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} md={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
 						<img src={withPrefix('/img/cupcake.png')} />
 					</Grid>
@@ -94,7 +98,7 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
 				</Grid>
-				<Grid className={classNames(classes.row, classes.divider)} item xs={12} md={4}>
+				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} md={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
 						<img src={withPrefix('/img/cake.png')} />
 					</Grid>
@@ -113,7 +117,7 @@ export default withStyles(styles)(({ classes }) => {
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$1,000 — $10,000</div>
 				</Grid>
-				<Grid className={classes.row} item xs={12} md={4}>
+				<Grid className={classNames(classes.row, classes.spacing)} item xs={12} md={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
 						<img src={withPrefix('/img/wedding-cake.png')} />
 					</Grid>

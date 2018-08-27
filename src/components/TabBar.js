@@ -12,8 +12,7 @@ const styles = (theme) => ({
 	},
 	appBar: {
 		backgroundColor: 'rgba(255, 255, 255, 0.98)',
-		boxShadow: '0 1px 0 0 #dfdfdf',
-		height: '60px'
+		boxShadow: '0 1px 0 0 #dfdfdf'
 	},
 	navLink: {
 		color: '#4198ff',

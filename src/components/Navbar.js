@@ -140,7 +140,7 @@ class NavBar extends React.Component {
 								<img
 									src={withPrefix('/img/primoko-logo-white.png')}
 									alt="Primoko"
-									style={{ height: '20px' }}
+									style={{ height: '28px' }}
 								/>
 							</Link>
 						</Typography>

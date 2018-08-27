@@ -10,13 +10,13 @@ import green from '@material-ui/core/colors/green';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-			padding: theme.spacing.unit * 2
+			padding: '40px 30px'
 		},
 		[theme.breakpoints.up('md')]: {
-			padding: theme.spacing.unit * 7
+			padding: '86px 60px'
 		},
 		[theme.breakpoints.up('lg')]: {
-			padding: theme.spacing.unit * 10
+			padding: '86px'
 		}
 	},
 	title: {

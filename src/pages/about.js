@@ -85,7 +85,7 @@ const About = ({ classes }) => {
 									<Button
 										styles={classes.button}
 										text="See career opportunities"
-										to="/career"
+										to="/careers"
 										component={Link}
 									/>
 								</div>

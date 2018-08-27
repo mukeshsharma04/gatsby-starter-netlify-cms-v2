@@ -3,11 +3,12 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { withPrefix } from 'gatsby-link';
 import Typography from '@material-ui/core/Typography';
+import Hidden from '@material-ui/core/Hidden';
 
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-			padding: theme.spacing.unit * 2
+			padding: '40px 30px'
 		},
 		[theme.breakpoints.up('md')]: {
 			padding: theme.spacing.unit * 7
@@ -23,6 +24,9 @@ const styles = (theme) => ({
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',
 		[theme.breakpoints.down('sm')]: {
+			marginLeft: 'auto',
+			marginRight: 'auto',
+			marginTop: '40px',
 			width: '350px',
 			height: '350px'
 		},
@@ -58,15 +62,18 @@ const styles = (theme) => ({
 	textBlue: {
 		[theme.breakpoints.down('sm')]: {
 			...theme.typography.mparagraph,
-			color: '#4198ff'
+			color: '#4198ff',
+			fontWeight: '900'
 		},
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.paragraph,
-			color: '#4198ff'
+			color: '#4198ff',
+			fontWeight: '900'
 		},
-		fontWeight: '900',
 		'&:hover': {
-			color: '#4198ff'
+			color: '#4198ff',
+			fontWeight: '900',
+			textDecoration: 'underline'
 		}
 	}
 });
@@ -74,9 +81,11 @@ const styles = (theme) => ({
 export default withStyles(styles)(({ classes }) => {
 	return (
 		<Grid container justify="space-between" className={classes.container}>
-			<Grid item xs={12} md={4}>
-				<div className={classes.image} />
-			</Grid>
+			<Hidden xsDown>
+				<Grid item xs={12} md={4}>
+					<div className={classes.image} />
+				</Grid>
+			</Hidden>
 			<Grid item xs={12} md={7}>
 				<Typography className={classes.title} gutterBottom>
 					Let's build.
@@ -100,9 +109,14 @@ export default withStyles(styles)(({ classes }) => {
 				</Typography>
 				<br />
 				<a href="/" className={classes.textBlue}>
-					[Learn more about our software development services.]
+					Learn more about our software development services.
 				</a>
 			</Grid>
+			<Hidden smUp>
+				<Grid item xs={12} md={4}>
+					<div className={classes.image} />
+				</Grid>
+			</Hidden>
 		</Grid>
 	);
 });

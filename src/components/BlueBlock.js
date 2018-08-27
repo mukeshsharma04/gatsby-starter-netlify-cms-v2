@@ -17,6 +17,12 @@ const styles = (theme) => ({
 	space3: {
 		marginTop: '10px'
 	},
+	space4: {
+		marginBottom: '25px'
+	},
+	space5: {
+		marginBottom: '21px'
+	},
 	block: {
 		[theme.breakpoints.up('sm')]: {
 			width: '258px'
@@ -78,7 +84,7 @@ export default withStyles(styles)(({ classes, main, menu, subMenu, bottom, class
 			{bottom &&
 				bottom.map((v, k) => (
 					<div key={k} className={classNames(classes.textGroup)}>
-						<div className={classNames(classes.subpara)}>{v}</div>
+						<div className={classNames(classes.subpara, classes.space4)}>{v}</div>
 					</div>
 				))}
 		</div>

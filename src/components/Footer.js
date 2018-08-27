@@ -15,13 +15,13 @@ const styles = (theme) => ({
 		backgroundColor: '#333333',
 		flexGrow: 1,
 		[theme.breakpoints.down('sm')]: {
-			padding: theme.spacing.unit * 2
+			padding: '40px 30px'
 		},
 		[theme.breakpoints.up('md')]: {
-			padding: theme.spacing.unit * 7
+			padding: '86px 60px'
 		},
 		[theme.breakpoints.up('lg')]: {
-			padding: theme.spacing.unit * 10
+			padding: '86px'
 		},
 		color: '#ffffff'
 	},
@@ -56,7 +56,7 @@ const styles = (theme) => ({
 		color: '#ffffff'
 	},
 	space: {
-		marginTop: '10%'
+		marginTop: '40px'
 	},
 	linkedin: {
 		width: '20px',
@@ -175,7 +175,7 @@ const Footer = ({ classes }) => {
 				<Hidden smUp>
 					<Grid item xs={12} md={3}>
 						{/*First Row*/}
-						<Grid container>
+						<Grid container className={classes.space}>
 							<Grid item xs={6} md={6}>
 								<Typography
 									variant="subheading"
@@ -236,9 +236,9 @@ const Footer = ({ classes }) => {
 				{/*Second Column For Mobile End*/}
 
 				{/*First Column Start*/}
-				<Grid item xs={12} md={5}>
+				<Grid item xs={12} md={4}>
 					{/*First Row*/}
-					<Grid container>
+					<Grid container className={classes.space}>
 						<Grid item xs={6} md={6}>
 							<Grid direction="column" className={classes.row} container>
 								<Grid item xs={12}>
@@ -511,12 +511,10 @@ const Footer = ({ classes }) => {
 					</Grid>
 				</Grid>
 				{/*First Column End*/}
-				<Hidden smUp>
-					<div className={classes.space}>&#160;</div>
-				</Hidden>
+
 				{/* Client Part Start */}
-				<Grid item xs={12} md={3}>
-					<Grid container>
+				<Grid item xs={12} md={4}>
+					<Grid container className={classes.space}>
 						<Grid item xs={12} md={12}>
 							<Grid direction="column" className={classes.row} container>
 								<Grid item xs={12} className={classes.client}>
@@ -567,7 +565,7 @@ const Footer = ({ classes }) => {
 				<Hidden xsDown>
 					<Grid item xs={12} md={3}>
 						{/*First Row*/}
-						<Grid container>
+						<Grid container className={classes.space}>
 							<Grid item xs={6} md={6}>
 								<Typography
 									variant="subheading"

@@ -76,8 +76,7 @@ const styles = (theme) => ({
 	},
 	chip: {
 		color: '#6f73ff',
-		border: 'solid 2px #6f73ff',
-		backgroundColor: 'white',
+		backgroundColor: '#f0f1ff',
 		marginRight: theme.spacing.unit,
 		marginBottom: theme.spacing.unit
 	},

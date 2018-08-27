@@ -9,18 +9,21 @@ import { thePrimokoDiffernceFields } from '../../metadata';
 const styles = (theme) => ({
 	container: {
 		[theme.breakpoints.down('sm')]: {
-			padding: theme.spacing.unit * 2
+			padding: '40px 30px'
 		},
 		[theme.breakpoints.up('md')]: {
-			padding: theme.spacing.unit * 7
+			padding: '86px 60px'
 		},
 		[theme.breakpoints.up('lg')]: {
-			padding: theme.spacing.unit * 10
+			padding: '86px'
 		}
 	},
 	row: {
 		boxShadow: '0 2px 20px 0 rgba(0, 0, 0, 0.15)',
-		padding: '5%'
+		padding: '5%',
+		transform: 'translateY(-500px)',
+		backgroundColor: 'white',
+		marginBottom: '-500px'
 	},
 	parallax: {
 		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
