@@ -7,6 +7,7 @@ import Quotes from '../../components/Quotes';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
 import Check from '@material-ui/icons/Check';
+import BlueBlock from '../../components/BlueBlock';
 
 const styles = (theme) => ({
 	container: {
@@ -106,19 +107,7 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={4}>
-					<div className={classes.block}>
-						<Typography className={classNames(classes.subheading, classes.space, classes.left)}>
-							<span className={classes.divider}>We s</span>peak Salesforce
-						</Typography>
-						<div className={classNames(classes.textGroup, classes.space)}>
-							<Check className={classes.icon} /> &#160;
-							<div className={classNames(classes.subpara)}>Visualforce, Javascript Remoting, Heroku</div>
-						</div>
-						<div className={classNames(classes.textGroup)}>
-							<Check className={classes.icon} /> &#160;
-							<div className={classNames(classes.subpara)}>CRM, Calendar, Commerce Cloud, Einstein</div>
-						</div>
-					</div>
+					<BlueBlock main="We speak Salesforce" subMenu={['Visualforce, Javascript Remoting, Heroku', 'CRM, Calendar, Commerce Cloud, Einstein']} />
 				</Grid>
 			</Grid>
 			<Quotes quote="If you know how to create software, then you can create big things." author="Xavier Niel" />

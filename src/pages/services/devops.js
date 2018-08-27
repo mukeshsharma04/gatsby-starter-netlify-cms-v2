@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
 import { withPrefix } from 'gatsby-link';
+import BlueBlock from '../../components/BlueBlock';
 
 const styles = (theme) => ({
 	container: {
@@ -44,10 +45,17 @@ const styles = (theme) => ({
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		margin: 'auto',
+		marginTop: '60px',
 		[theme.breakpoints.up('sm')]: {
 			width: '459.6px'
 		},
-		height: '300.5px'
+		[theme.breakpoints.up('md')]: {
+			width: '459.6px'
+		},
+	},
+	block: {
+		width: '100%',
+		height: 'auto'
 	}
 });
 
@@ -81,6 +89,20 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={5}>
+					<BlueBlock
+						className={classes.block}
+						main="We speak Salesforce"
+						menu={[ 'Recent projects have used' ]}
+						subMenu={[
+							'CMake, Make, MSBuild, Ant, Maven, Grunt, Gradle',
+							'Jmeter, Junit, Jasmine, Jenkins, Cucumber',
+							'TeamCity, Jenkins, Bamboo, CodeShip, Visual Studio',
+							'SmartFrog, RapidDeploy, CodeDeploy, Otto',
+							'Git, GitHub, BitBucket, SubVersion',
+							'Nomad, Docker'
+						]}
+						bottom={[ 'Need a different technology? Contact us; it may be part of our current portfolio.' ]}
+					/>
 					<div className={classes.outerBox} />
 				</Grid>
 			</Grid>
