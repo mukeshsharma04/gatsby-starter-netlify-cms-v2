@@ -7,6 +7,7 @@ import Quotes from '../../components/Quotes';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
 import { withPrefix } from 'gatsby-link';
+import BlueBlock from '../../components/BlueBlock';
 
 const styles = (theme) => ({
 	container: {
@@ -128,7 +129,15 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={4}>
-					<div className={classes.mobile} />
+					<BlueBlock
+						main="We speak mobile"
+						menu="Recent projects have used:"
+						subMenu={[
+							{ label: 'iOS, including Apple Watch', icon: 'ios' },
+							{ label: 'Android, including Wear OS', icon: 'android' },
+							{ label: 'React Native', icon: 'react' }
+						]}
+					/>
 				</Grid>
 			</Grid>
 			<Quotes

@@ -75,7 +75,11 @@ export default withStyles(styles)(({ classes }) => {
 								<img src={withPrefix('img/bofa.png')} width="220px" />
 							</Grid>
 							<Grid item xs={3} className={classNames(classes.right, classes.gridItem)}>
-								<img src={withPrefix('img/Philips-Shield.png')} width="64px" className={classes.opacity} />
+								<img
+									src={withPrefix('img/Philips-Shield.png')}
+									width="64px"
+									className={classes.opacity}
+								/>
 							</Grid>
 							<Grid item xs={5} className={classes.gridItem}>
 								<img src={withPrefix('img/orchestra-tech.png')} width="186px" />

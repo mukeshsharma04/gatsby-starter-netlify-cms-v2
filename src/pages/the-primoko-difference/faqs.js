@@ -51,6 +51,12 @@ const styles = (theme) => ({
 		lineHeight: 'normal',
 		letterSpacing: 'normal',
 		color: '#4198ff'
+	},
+	letsLink: {
+		textDecoration: 'none',
+		'&:hover': {
+			textDecoration: 'underline'
+		}
 	}
 });
 
@@ -61,7 +67,10 @@ export default withStyles(styles)(({ classes }) => {
 			<Grid container className={classes.container} justify="space-between" spacing={40}>
 				<Grid item xs={12} md={12}>
 					<Typography className={classes.paragraph} gutterBottom>
-						You have questions? We have answers. (But if you don’t see your question here, let’s talk.)
+						You have questions? We have answers. (But if you don’t see your question here,{' '}
+						<a href="/letstalk" className={classes.letsLink}>
+							let’s talk.)
+						</a>
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={6}>

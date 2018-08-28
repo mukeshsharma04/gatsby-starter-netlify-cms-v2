@@ -51,7 +51,7 @@ const styles = (theme) => ({
 		},
 		[theme.breakpoints.up('md')]: {
 			width: '459.6px'
-		},
+		}
 	},
 	block: {
 		width: '100%',
@@ -91,15 +91,15 @@ export default withStyles(styles)(({ classes }) => {
 				<Grid item xs={12} md={5}>
 					<BlueBlock
 						className={classes.block}
-						main="We speak Salesforce"
-						menu={[ 'Recent projects have used' ]}
+						main="We speak DevOps"
+						menu="Recent projects have used"
 						subMenu={[
-							'CMake, Make, MSBuild, Ant, Maven, Grunt, Gradle',
-							'Jmeter, Junit, Jasmine, Jenkins, Cucumber',
-							'TeamCity, Jenkins, Bamboo, CodeShip, Visual Studio',
-							'SmartFrog, RapidDeploy, CodeDeploy, Otto',
-							'Git, GitHub, BitBucket, SubVersion',
-							'Nomad, Docker'
+							{ label: 'CMake, Make, MSBuild, Ant, Maven, Grunt, Gradle', icon: 'check' },
+							{ label: 'Jmeter, Junit, Jasmine, Jenkins, Cucumber', icon: 'check' },
+							{ label: 'TeamCity, Jenkins, Bamboo, CodeShip, Visual Studio', icon: 'check' },
+							{ label: 'SmartFrog, RapidDeploy, CodeDeploy, Otto', icon: 'check' },
+							{ label: 'Git, GitHub, BitBucket, SubVersion', icon: 'check' },
+							{ label: 'Nomad, Docker', icon: 'check' }
 						]}
 						bottom={[ 'Need a different technology? Contact us; it may be part of our current portfolio.' ]}
 					/>

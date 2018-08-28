@@ -191,7 +191,8 @@ class LetsTalk extends React.Component {
 				</Grid>
 				<Quotes
 					author="David Guterson"
-					quote="Everybody has a world, and that world is completely hidden until we begin to inquire. As soon as we do, that entire world opens to us and yields itself. And you see how full and complex it is."
+					quote="Everybody has a world, and that world is completely hidden until we begin to inquire. 
+					As soon as we do, that entire world opens to us and yields itself. And you see how full and complex it is."
 				/>
 			</React.Fragment>
 		);

@@ -40,7 +40,7 @@ const styles = (theme) => ({
 		lineHeight: 2
 	},
 	letsactive: {
-		color: '#fff',
+		color: '#fff'
 	},
 	list: {
 		width: 375
@@ -54,7 +54,7 @@ const styles = (theme) => ({
 		paddingLeft: '7%',
 		'&:hover': {
 			textDecoration: 'underline'
-		},
+		}
 	},
 	toolbar: {
 		display: 'flex',
@@ -133,7 +133,13 @@ class NavBar extends React.Component {
 
 		return (
 			<div className={classes.root}>
-				<AppBar position="static" style={{ background: 'linear-gradient(to right, #4B96FC, #6F77FB)' }}>
+				<AppBar
+					position="static"
+					style={{
+						background: 'linear-gradient(to right, #4B96FC, #6F77FB)',
+						boxShadow: '0px 2px 10px 0px rgba(0, 0, 0, 0.15)'
+					}}
+				>
 					<Toolbar varient="dense">
 						<Typography variant="title" color="inherit" className={classes.root}>
 							<Link to="/">

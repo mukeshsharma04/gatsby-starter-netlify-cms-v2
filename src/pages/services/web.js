@@ -8,6 +8,7 @@ import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
 import { withPrefix } from 'gatsby-link';
 import Hidden from '@material-ui/core/Hidden';
+import BlueBlock from '../../components/BlueBlock';
 
 const styles = (theme) => ({
 	container: {
@@ -62,11 +63,6 @@ export default withStyles(styles)(({ classes }) => {
 		<React.Fragment>
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container} justify="space-between">
-				<Hidden smDown>
-					<Grid item xs={12} md={5}>
-						<div className={classes.outerBox} />
-					</Grid>
-				</Hidden>
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title} gutterBottom>
 						Web app development
@@ -106,11 +102,19 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						We invite you to contact us for a free consultation today.
 					</Typography>
-					<Hidden mdUp>
-						<Grid item xs={12} md={5}>
-							<div className={classes.outerBox} />
-						</Grid>
-					</Hidden>
+				</Grid>
+				<Grid item xs={12} md={4}>
+					<BlueBlock
+						main="We speak web"
+						menu="Recent projects have used:"
+						subMenu={[
+							{ label: 'NodeJS', icon: 'node' },
+							{ label: 'React', icon: 'react' },
+							{ label: 'Angular', icon: 'angular' },
+							{ label: 'AWS', icon: 'aws' },
+							{ label: 'Firebase', icon: 'firebase' }
+						]}
+					/>
 				</Grid>
 			</Grid>
 			<Hidden mdUp>

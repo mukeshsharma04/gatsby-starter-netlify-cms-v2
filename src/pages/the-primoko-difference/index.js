@@ -41,6 +41,9 @@ const styles = (theme) => ({
 	space: {
 		marginTop: theme.spacing.unit * 4
 	},
+	space2: {
+		marginTop: '40px'
+	},
 	text: {
 		[theme.breakpoints.down('sm')]: {
 			...theme.typography.mhero
@@ -70,6 +73,17 @@ const styles = (theme) => ({
 	},
 	blockade: {
 		height: '210px'
+	},
+	readButton: {
+		marginTop: '40px'
+	},
+	button: {
+		width: 'max-content'
+	},
+	gridItem: {
+		[theme.breakpoints.up('sm')]: {
+			paddingRight: '40px'
+		}
 	}
 });
 
@@ -84,11 +98,11 @@ export default withStyles(styles)(({ classes }) => {
 			<TabBar fields={thePrimokoDiffernceFields} />
 			<Banner banner={withPrefix('/img/achievement.jpg')} tag={tag} height="425px" />
 			<Grid container className={classes.container} justify="space-between">
-				<Grid item xs={12} md={8}>
+				<Grid item xs={12} md={8} className={classes.gridItem}>
 					<Typography className={classes.title} gutterBottom>
 						Why Primoko? We speak geek.
 					</Typography>
-					<Typography className={classes.paragraph} gutterBottom>
+					<Typography className={classNames(classes.paragraph, classes.space2)} gutterBottom>
 						If you search the web for "web development," "software development," or "app development,"
 						you’ll find millions of companies plying their wares.
 					</Typography>
@@ -119,17 +133,18 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						We like to chase the hard engineering problems, the kind that hold companies back.
 					</Typography>
-					<Grid item xs={12} md={4}>
+					<Grid item xs={12} md={4} className={classes.readButton}>
 						<Button
 							text="Read our manifesto"
 							fullWidth
 							to="/the-primoko-difference/manifesto"
+							styles={classes.button}
 							component={Link}
 						/>
 					</Grid>
 				</Grid>
 				<Hidden smDown>
-					<Grid item xs={12} md={3}>
+					<Grid item xs={12} md={4}>
 						<div className={classes.block}>
 							<Grid container className={classes.blockade} justify="center" alignItems="center">
 								<img src={withPrefix('/img/primoko-logo-white.png')} className={classes.logo} />

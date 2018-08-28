@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
-import Check from '@material-ui/icons/Check';
+import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
 	subheading: {
@@ -17,28 +17,25 @@ const styles = (theme) => ({
 	space3: {
 		marginTop: '10px'
 	},
-	space4: {
-		marginBottom: '25px'
-	},
 	space5: {
 		marginBottom: '21px'
 	},
 	block: {
 		[theme.breakpoints.up('sm')]: {
-			width: '258px'
+			width: '100%'
 		},
-		height: '238px',
 		boxShadow: '0 2px 7px 0 rgba(0, 0, 0, 0.05)',
 		border: 'solid 1px #6f73ff',
-		padding: '0 6%'
+		padding: '25px 30px'
 	},
 	divider: {
 		borderBottom: 'solid 2px #6f73ff',
-		paddingBottom: '4%'
+		paddingBottom: '15px'
 	},
 	icon: {
-		width: '14px',
-		fill: '#6f73ff'
+		width: '12px',
+		height: '11px',
+		backgroundColor: '#ffffff'
 	},
 	subpara: {
 		fontFamily: 'Lato',
@@ -55,38 +52,50 @@ const styles = (theme) => ({
 	},
 	left: {
 		textAlign: 'left'
+	},
+	middle: {
+		marginTop: 'auto',
+		marginBottom: 'auto'
+	},
+	textBlock: {
+		minHeight: '20px'
 	}
 });
 
-export default withStyles(styles)(({ classes, main, menu, subMenu, bottom, className }) => {
+export default withStyles(styles)(({ classes, main, menu, subMenu, bottom1, bottom2, className }) => {
 	return (
 		<div className={classNames(classes.block, ...className)}>
-			<Typography className={classNames(classes.subheading, classes.space1, classes.left)}>
+			<Typography className={classNames(classes.subheading, classes.left)}>
 				<span className={classes.divider}>{main.substring(0, 3)}</span>
 				{main.substring(3)}
 			</Typography>
-			{menu &&
-				menu.map((v, k) => (
-					<div key={k} className={classNames(classes.textGroup, k === 0 && classes.space1)}>
-						<div className={classNames(classes.subpara)}>{v}</div>
-					</div>
-				))}
+			<div className={classNames(classes.textGroup, menu && classes.space1)}>
+				<div className={classNames(classes.subpara)}>{menu}</div>
+			</div>
 			{subMenu &&
 				subMenu.map((v, k) => (
 					<div
 						key={k}
-						className={classNames(classes.textGroup, k === 0 && !menu ? classes.space2 : classes.space3)}
+						className={classNames(
+							classes.textGroup,
+							k === 0 && !menu ? classes.space1 : classes.space3,
+							classes.textBlock
+						)}
 					>
-						<Check className={classes.icon} /> &#160;
-						<div className={classNames(classes.subpara)}>{v}</div>
+						<img
+							src={withPrefix('/icons/' + v.icon + '.png')}
+							className={classNames(classes.middle, classes.icon)}
+						/>{' '}
+						&#160;
+						<div className={classNames(classes.middle, classes.subpara)}>{v.label}</div>
 					</div>
 				))}
-			{bottom &&
-				bottom.map((v, k) => (
-					<div key={k} className={classNames(classes.textGroup)}>
-						<div className={classNames(classes.subpara, classes.space4)}>{v}</div>
-					</div>
-				))}
+			<div className={classNames(classes.textGroup)}>
+				<div className={classNames(classes.subpara, classes.space3)}>
+					Need a different technology? <a href="/letstalk">Contact us;</a> it may be part of our current
+					portfolio.
+				</div>
+			</div>
 		</div>
 	);
 });

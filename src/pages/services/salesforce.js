@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import Quotes from '../../components/Quotes';
 import TabBar from '../../components/TabBar';
 import { servicesFields } from '../../metadata';
-import Check from '@material-ui/icons/Check';
 import BlueBlock from '../../components/BlueBlock';
 
 const styles = (theme) => ({
@@ -107,7 +106,13 @@ export default withStyles(styles)(({ classes }) => {
 					</Typography>
 				</Grid>
 				<Grid item xs={12} md={4}>
-					<BlueBlock main="We speak Salesforce" subMenu={['Visualforce, Javascript Remoting, Heroku', 'CRM, Calendar, Commerce Cloud, Einstein']} />
+					<BlueBlock
+						main="We speak Salesforce"
+						subMenu={[
+							{ label: 'Visualforce, Javascript Remoting, Heroku', icon: 'heroku' },
+							{ label: 'CRM, Calendar, Commerce Cloud, Einstein', icon: 'crm' }
+						]}
+					/>
 				</Grid>
 			</Grid>
 			<Quotes quote="If you know how to create software, then you can create big things." author="Xavier Niel" />
