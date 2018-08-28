@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Banner from '../components/Banner';
+import Banner from '../../components/Banner';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { withPrefix } from 'gatsby-link';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 import classNames from 'classnames';
+import Link from 'gatsby-link';
 
 const styles = (theme) => ({
 	container: {
@@ -111,7 +112,7 @@ export default withStyles(styles)(
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
 							</Typography>
-							<Button styles={classes.button} text="Apply now" />
+							<Button styles={classes.button} to={'/careers/ios'} component={Link} text="Apply now" />
 						</Grid>
 						<Grid item xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom>
@@ -130,7 +131,7 @@ export default withStyles(styles)(
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
 							</Typography>
-							<Button styles={classes.button} text="Apply now" />
+							<Button styles={classes.button} to={'/careers/ios'} component={Link} text="Apply now" />
 						</Grid>
 					</Grid>
 				</React.Fragment>
