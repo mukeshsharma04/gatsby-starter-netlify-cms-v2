@@ -61,7 +61,18 @@ const styles = (theme) => ({
 		marginBottom: '45px'
 	},
 	quoteButton: {
-		textAlign: 'center'
+		textAlign: 'center',
+		[theme.breakpoints.down('sm')]: {
+			position: 'fixed',
+			top: '90%',
+			left: '0',
+			width: '100%',
+			backgroundColor: 'white',
+			height: '10%',
+			borderTop: '1px solid #d1d1d1',
+			padding: '0 30px',
+			zIndex: '100'
+		}
 	},
 	button: {
 		[theme.breakpoints.down('sm')]: {

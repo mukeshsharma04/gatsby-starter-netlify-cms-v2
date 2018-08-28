@@ -59,7 +59,8 @@ const styles = (theme) => ({
 		height: '569px'
 	},
 	subparagraph: {
-		borderBottom: '6px solid #6f73ff'
+		borderBottom: '6px solid #6f73ff',
+		paddingBottom: '6px'
 	},
 	mobile: {
 		backgroundImage: `url(${withPrefix('/img/we-know-mobile.png')})`,

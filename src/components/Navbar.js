@@ -87,7 +87,7 @@ const styles = (theme) => ({
 		marginTop: theme.spacing.unit * 2
 	},
 	titleSpace: {
-		marginTop: theme.spacing.unit * 1 / 2
+		marginTop: '20px'
 	},
 	paragraphSpace: {
 		marginTop: theme.spacing.unit * 1 / 4

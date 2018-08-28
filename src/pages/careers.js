@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { withPrefix } from 'gatsby-link';
 import Button from '../components/Button';
-import green from '@material-ui/core/colors/green';
+import classNames from 'classnames';
 
 const styles = (theme) => ({
 	container: {
@@ -67,6 +67,16 @@ const styles = (theme) => ({
 		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
 		padding: '10px'
 	},
+	row: {
+		position: 'relative',
+		'&:after': {
+			position: 'absolute',
+			backgroundColor: 'red',
+			width: '420px',
+			height: '50px',
+			backgroundImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0) 2%, #ffffff)'
+		}
+	}
 });
 
 export default withStyles(styles)(
@@ -96,7 +106,7 @@ export default withStyles(styles)(
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.row)} gutterBottom>
 								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
