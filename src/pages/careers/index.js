@@ -131,7 +131,7 @@ export default withStyles(styles)(
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
 							</Typography>
-							<Button styles={classes.button} to={'/careers/ios'} component={Link} text="Apply now" />
+							<Button styles={classes.button} to={'/careers/react'} component={Link} text="Apply now" />
 						</Grid>
 					</Grid>
 				</React.Fragment>
