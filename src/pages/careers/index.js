@@ -40,6 +40,7 @@ const styles = (theme) => ({
 		paddingBottom: '20px'
 	},
 	paragraph: {
+		position: 'relative',
 		[theme.breakpoints.down('sm')]: {
 			...theme.typography.mparagraph
 		},
@@ -69,14 +70,12 @@ const styles = (theme) => ({
 		padding: '10px'
 	},
 	row: {
-		position: 'relative',
-		'&:after': {
-			position: 'absolute',
-			backgroundColor: 'red',
-			width: '420px',
-			height: '50px',
-			backgroundImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0) 2%, #ffffff)'
-		}
+		position: 'absolute',
+		bottom: 0,
+		left: 0,
+		width: '100%',
+		height: '50px',
+		backgroundImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0) 2%, #ffffff)'
 	}
 });
 
@@ -107,10 +106,11 @@ export default withStyles(styles)(
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.row)} gutterBottom>
+							<Typography className={classNames(classes.paragraph)} gutterBottom>
 								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
+								<span className={classes.row}>&#160;</span>
 							</Typography>
 							<Button styles={classes.button} to={'/careers/ios'} component={Link} text="Apply now" />
 						</Grid>
@@ -130,6 +130,7 @@ export default withStyles(styles)(
 								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
+								<span className={classes.row}>&#160;</span>
 							</Typography>
 							<Button styles={classes.button} to={'/careers/react'} component={Link} text="Apply now" />
 						</Grid>
