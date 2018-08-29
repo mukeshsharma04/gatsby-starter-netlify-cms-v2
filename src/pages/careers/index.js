@@ -29,15 +29,15 @@ const styles = (theme) => ({
 		}
 	},
 	subheading: {
+		width: 'fit-content',
+		borderBottom: '6px solid #6f73ff',
+		paddingBottom: '34px',
 		[theme.breakpoints.down('sm')]: {
 			...theme.typography.subheading
 		},
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.subheading
-		},
-		width: 'fit-content',
-		borderBottom: '6px solid #6f73ff',
-		paddingBottom: '20px'
+		}
 	},
 	paragraph: {
 		position: 'relative',
@@ -76,6 +76,9 @@ const styles = (theme) => ({
 		width: '100%',
 		height: '50px',
 		backgroundImage: 'linear-gradient(to bottom, rgba(255, 255, 255, 0) 2%, #ffffff)'
+	},
+	space: {
+		marginTop: '30px'
 	}
 });
 
@@ -101,18 +104,23 @@ export default withStyles(styles)(
 							<Typography className={classes.subheading} gutterBottom>
 								Location, NY
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							</Typography>
-							<Typography className={classNames(classes.paragraph)} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
 								<span className={classes.row}>&#160;</span>
 							</Typography>
-							<Button styles={classes.button} to={'/careers/ios'} component={Link} text="Apply now" />
+							<Button
+								styles={classNames(classes.button, classes.space)}
+								to={'/careers/ios'}
+								component={Link}
+								text="Apply now"
+							/>
 						</Grid>
 						<Grid item xs={12} md={5}>
 							<Typography className={classes.title} gutterBottom>
@@ -121,18 +129,23 @@ export default withStyles(styles)(
 							<Typography className={classes.subheading} gutterBottom>
 								Location, NY
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
 								nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 								officia deserunt mollit anim id est laborum.
 								<span className={classes.row}>&#160;</span>
 							</Typography>
-							<Button styles={classes.button} to={'/careers/react'} component={Link} text="Apply now" />
+							<Button
+								styles={classNames(classes.button, classes.space)}
+								to={'/careers/react'}
+								component={Link}
+								text="Apply now"
+							/>
 						</Grid>
 					</Grid>
 				</React.Fragment>
