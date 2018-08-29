@@ -238,7 +238,7 @@ class NavBar extends React.Component {
 													subLink
 												/>
 												<ListItemLink
-													to="/about/#career"
+													to="/careers"
 													style={classes.mhamburger}
 													primary="Careers"
 													subLink
