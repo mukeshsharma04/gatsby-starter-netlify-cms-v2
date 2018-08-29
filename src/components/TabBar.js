@@ -12,7 +12,8 @@ const styles = (theme) => ({
 	},
 	appBar: {
 		backgroundColor: 'rgba(255, 255, 255, 0.98)',
-		boxShadow: '0 1px 0 0 #dfdfdf'
+		boxShadow: '0 1px 0 0 #dfdfdf',
+		marginTop: '64px'
 	},
 	navLink: {
 		color: '#4198ff',
@@ -29,6 +30,9 @@ const styles = (theme) => ({
 		color: '#4198ff',
 		borderBottom: '3px solid #469AFC',
 		lineHeight: 2
+	},
+	appBarSpace: {
+		height: '64px'
 	}
 });
 
@@ -44,7 +48,7 @@ class NavBar extends React.Component {
 		return (
 			<Hidden xsDown>
 				<div className={classes.root}>
-					<AppBar position="static" className={classes.appBar}>
+					<AppBar position="fixed" className={classes.appBar}>
 						<Toolbar varient="dense">
 							{fields.map((v, k) => (
 								<Link
@@ -57,6 +61,7 @@ class NavBar extends React.Component {
 							))}
 						</Toolbar>
 					</AppBar>
+					<div className={classes.appBarSpace}>&#160;</div>
 				</div>
 			</Hidden>
 		);

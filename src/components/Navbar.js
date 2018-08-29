@@ -115,6 +115,9 @@ const styles = (theme) => ({
 		borderRadius: '12.5px',
 		backgroundColor: 'rgba(0, 0, 0, 0.25)',
 		padding: '0.5% 2%'
+	},
+	appBarSpace: {
+		height: '64px'
 	}
 });
 
@@ -134,7 +137,7 @@ class NavBar extends React.Component {
 		return (
 			<div className={classes.root}>
 				<AppBar
-					position="static"
+					position="fixed"
 					style={{
 						background: 'linear-gradient(to right, #4B96FC, #6F77FB)',
 						boxShadow: '0px 2px 10px 0px rgba(0, 0, 0, 0.15)'
@@ -370,6 +373,7 @@ class NavBar extends React.Component {
 						</IconButton>
 					</Toolbar>
 				</AppBar>
+				<div className={classes.appBarSpace}>&#160;</div>
 			</div>
 		);
 	}
