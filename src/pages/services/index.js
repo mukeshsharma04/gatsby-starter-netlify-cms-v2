@@ -217,7 +217,7 @@ export default withStyles(styles)(
 						</Grid>
 					</Grid>
 					<Banner banner={withPrefix('/img/code.jpg')} height="322px" />
-					<Grid container justify="space-between">
+					<Grid container justify="space-between" id="recruitment-staffing">
 						<Grid className={classes.recruitment} item xs={12} md={6}>
 							<Typography className={classes.title} gutterBottom>
 								Elite Engineer Recruitment

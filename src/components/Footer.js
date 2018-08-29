@@ -154,7 +154,7 @@ const Footer = ({ classes }) => {
 					</Link>
 				</Grid>
 				<Grid item xs={6} md={6} className={classes.right}>
-					<Link className={classes.link} to="/">
+					<Link className={classes.link} to="#">
 						<Typography
 							variant="subheading"
 							align="right"
@@ -307,7 +307,7 @@ const Footer = ({ classes }) => {
 									</Typography>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/results">
 										<Typography
 											variant="subheading"
 											align="left"
@@ -320,7 +320,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/">
+									<Link className={classes.link} to="/results">
 										<Typography
 											variant="subheading"
 											align="left"
@@ -402,7 +402,7 @@ const Footer = ({ classes }) => {
 									</Link>
 								</Grid>
 								<Grid item xs={12}>
-									<Link className={classes.link} to="/services/recruitment-staffing">
+									<Link className={classes.link} to="/services/#recruitment-staffing">
 										<Typography
 											variant="subheading"
 											align="left"

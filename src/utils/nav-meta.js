@@ -66,7 +66,7 @@ const NavMeta = {
           "label": "DevOps"
         },
         {
-          "route": "/services/recruitment-and-staffing",
+          "route": "/services/#recruitment-staffing",
           "label": "Recruitment and Staffing"
         },
         {

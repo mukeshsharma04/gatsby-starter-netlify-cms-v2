@@ -275,7 +275,7 @@ class NavBar extends React.Component {
 													subLink
 												/>
 												<ListItemLink
-													to="/services/recruitment-staffing"
+													to="/services/#recruitment-staffing"
 													style={classes.mhamburger}
 													primary="Recruitment &amp; Staffing"
 													subLink
@@ -294,13 +294,13 @@ class NavBar extends React.Component {
 											/>
 											<div>
 												<ListItemLink
-													to="/results/clients-testimonials"
+													to="/results/#clients-testimonials"
 													style={classNames(classes.mhamburger, classes.paragraphSpace)}
 													primary="Clients &amp; Testimonials"
 													subLink
 												/>
 												<ListItemLink
-													to="/results/select-case-studies"
+													to="/results/#select-case-studies"
 													style={classes.mhamburger}
 													primary="Select Case Studies"
 													subLink
@@ -355,7 +355,7 @@ class NavBar extends React.Component {
 												primary="Let's Talk"
 											/>
 											<ListItemLink
-												to="/login"
+												to="#"
 												style={classNames(
 													classes.hamburger,
 													classes.client,
