@@ -11,6 +11,7 @@ import Button from '../../components/Button';
 import Quotes from '../../components/Quotes';
 import { mobile, web, devOps, servicesFields } from '../../metadata';
 import Link, { withPrefix } from 'gatsby-link';
+import ReactDOM from 'react-dom';
 
 const styles = (theme) => ({
 	container: {
@@ -109,6 +110,16 @@ const styles = (theme) => ({
 
 export default withStyles(styles)(
 	class index extends Component {
+		constructor(props) {
+			super(props);
+			this.myRef = React.createRef();
+		}
+
+		componentDidMount() {
+			const domNode = ReactDOM.findDOMNode(this.myRef.current);
+			domNode.scrollIntoView();
+		}
+
 		render() {
 			const { classes } = this.props;
 
@@ -217,7 +228,7 @@ export default withStyles(styles)(
 						</Grid>
 					</Grid>
 					<Banner banner={withPrefix('/img/code.jpg')} height="322px" />
-					<Grid container justify="space-between" id="recruitment-staffing">
+					<Grid container justify="space-between" id="recruitment-staffing" ref={this.myRef}>
 						<Grid className={classes.recruitment} item xs={12} md={6}>
 							<Typography className={classes.title} gutterBottom>
 								Elite Engineer Recruitment
