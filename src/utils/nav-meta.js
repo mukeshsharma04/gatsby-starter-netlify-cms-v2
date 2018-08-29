@@ -109,10 +109,10 @@ const NavMeta = {
           "route": "/the-primoko-difference/manifesto",
           "label": "Manifesto"
         },
-        {
-          "route": "/the-primoko-difference/faq",
-          "label": "FAQs"
-        }
+        // {
+        //   "route": "/the-primoko-difference/faq",
+        //   "label": "FAQs"
+        // }
       ]
     }
   ]

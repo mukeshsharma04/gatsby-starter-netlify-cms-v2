@@ -340,12 +340,12 @@ class NavBar extends React.Component {
 														primary="Pricing"
 														subLink
 													/>
-													<ListItemLink
+													{/* <ListItemLink
 														to="/the-primoko-difference/faqs"
 														style={classes.mhamburger}
 														primary="FAQs"
 														subLink
-													/>
+													/> */}
 												</div>
 											</div>
 											<ListItemLink

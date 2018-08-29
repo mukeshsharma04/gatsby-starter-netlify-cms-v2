@@ -493,7 +493,7 @@ const Footer = ({ classes }) => {
 										</Typography>
 									</Link>
 								</Grid>
-								<Grid item xs={12}>
+								{/* <Grid item xs={12}>
 									<Link className={classes.link} to="/the-primoko-difference/faqs">
 										<Typography
 											variant="subheading"
@@ -505,7 +505,7 @@ const Footer = ({ classes }) => {
 											FAQs
 										</Typography>
 									</Link>
-								</Grid>
+								</Grid> */}
 							</Grid>
 						</Grid>
 					</Grid>
