@@ -46,7 +46,7 @@ const styles = (theme) => ({
 		}
 	},
 	listItem: {
-		display: 'list-item'
+		display: 'flex'
 	},
 	space: {
 		marginTop: theme.spacing.unit * 2
@@ -84,6 +84,9 @@ const styles = (theme) => ({
 	spacing: {
 		marginTop: '40px',
 		marginBottom: '40px'
+	},
+	bullet: {
+		marginRight: '15px'
 	}
 });
 
@@ -92,7 +95,7 @@ export default withStyles(styles)(({ classes }) => {
 		<React.Fragment>
 			<TabBar fields={thePrimokoDiffernceFields} />
 			<Grid container className={classes.container}>
-				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} md={4}>
+				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} sm={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
 						<img src={withPrefix('/img/cupcake.png')} />
 					</Grid>
@@ -103,31 +106,33 @@ export default withStyles(styles)(({ classes }) => {
 						A simple project usually consists of:
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Developer/Project Manager
+						<span className={classes.bullet}>&#8226;</span>1 Developer/Project Manager
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Part-time Quality Assurance Tester
+						<span className={classes.bullet}>&#8226;</span>1 Part-time Quality Assurance Tester
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Part-time UI/UX Designer
+						<span className={classes.bullet}>&#8226;</span>1 Part-time UI/UX Designer
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)}>
 						SIMPLE PROJECT EXAMPLES
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Mobile applications with no server-side implementation
+						<span className={classes.bullet}>&#8226;</span>Mobile applications with no server-side
+						implementation
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Mobile applications with discrete server-side implementation supporting mobile functionality
+						<span className={classes.bullet}>&#8226;</span>Mobile applications with discrete server-side
+						implementation supporting mobile functionality
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Defined, limited feature set web-applications
+						<span className={classes.bullet}>&#8226;</span>Defined, limited feature set web-applications
 					</Typography>
 
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$100K - $200K</div>
 				</Grid>
-				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} md={4}>
+				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} sm={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
 						<img src={withPrefix('/img/cake.png')} />
 					</Grid>
@@ -138,34 +143,35 @@ export default withStyles(styles)(({ classes }) => {
 						A moderate project usually consists of:
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Developer/Project Manager
+						<span className={classes.bullet}>&#8226;</span>1 Developer/Project Manager
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1+ Additional Developer(s)
+						<span className={classes.bullet}>&#8226;</span>1+ Additional Developer(s)
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Part-time Quality Assurance Tester
+						<span className={classes.bullet}>&#8226;</span>1 Part-time Quality Assurance Tester
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Part-time UI/UX Designer
+						<span className={classes.bullet}>&#8226;</span>1 Part-time UI/UX Designer
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)}>
 						MODERATE PROJECT EXAMPLES
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Enterprise applications integrating web and mobile functionality
+						<span className={classes.bullet}>&#8226;</span>Enterprise applications integrating web and
+						mobile functionality
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Consumer-facing service applications
+						<span className={classes.bullet}>&#8226;</span>Consumer-facing service applications
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Applications with user management, multiple user roles, moderate business logic, or siloed
-						workflows
+						<span className={classes.bullet}>&#8226;</span>Applications with user management, multiple user
+						roles, moderate business logic, or siloed workflows
 					</Typography>
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$120K - $250K</div>
 				</Grid>
-				<Grid className={classNames(classes.row, classes.spacing)} item xs={12} md={4}>
+				<Grid className={classNames(classes.row, classes.spacing)} item xs={12} sm={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
 						<img src={withPrefix('/img/wedding-cake.png')} />
 					</Grid>
@@ -176,19 +182,19 @@ export default withStyles(styles)(({ classes }) => {
 						A complex project usually consists of:
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Full-time Project Manager
+						<span className={classes.bullet}>&#8226;</span>1 Full-time Project Manager
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						2+ Developers
+						<span className={classes.bullet}>&#8226;</span>2+ Developers
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1 Application Architect
+						<span className={classes.bullet}>&#8226;</span>1 Application Architect
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1+ Full-time Quality Assurance Tester
+						<span className={classes.bullet}>&#8226;</span>1+ Full-time Quality Assurance Tester
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						1+ Full-time UI/UX Designer
+						<span className={classes.bullet}>&#8226;</span>1+ Full-time UI/UX Designer
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						*May also include database administration (DBA) and Certified Information Systems Security
@@ -198,21 +204,21 @@ export default withStyles(styles)(({ classes }) => {
 						COMPLEX PROJECT EXAMPLES
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Enterprise applications supporting complex business logic, hardware, third-party applications,
-						complex user workflows, robust reporting
+						<span className={classes.bullet}>&#8226;</span>Enterprise applications supporting complex
+						business logic, hardware, third-party applications, complex user workflows, robust reporting
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Data-driven applications
+						<span className={classes.bullet}>&#8226;</span>Data-driven applications
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
-						Consumer-facing application supporting mobile devices, social functionality, AI, complex user
-						interactions, robust reporting
+						<span className={classes.bullet}>&#8226;</span>Consumer-facing application supporting mobile
+						devices, social functionality, AI, complex user interactions, robust reporting
 					</Typography>
 					<div className={classes.space} />
 					<div className={classes.rangeButton}>$250K - $2M+</div>
 				</Grid>
 				<Grid container direction="row" alignItems="center" justify="center" className={classes.space}>
-					<Grid className={classes.quoteButton} item xs={12} md={4}>
+					<Grid className={classes.quoteButton} item xs={12} sm={4}>
 						<Button text="Get a quote" styles={classes.button} />
 					</Grid>
 				</Grid>
