@@ -110,7 +110,7 @@ const styles = (theme) => ({
 		'&:hover': {
 			textDecoration: 'none'
 		},
-		width: '96px',
+		width: '87px',
 		height: '25px',
 		borderRadius: '12.5px',
 		backgroundColor: 'rgba(0, 0, 0, 0.25)',
