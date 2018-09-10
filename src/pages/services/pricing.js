@@ -43,7 +43,9 @@ const styles = (theme) => ({
 		},
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.paragraph
-		},
+		}
+	},
+	listItem: {
 		display: 'list-item'
 	},
 	space: {
@@ -97,17 +99,33 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Simple
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						A simple project usually consists of:
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Developer/Project Manager
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Part-time Quality Assurance Tester
 					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Part-time UI/UX Designer
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						SIMPLE PROJECT EXAMPLES
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Mobile applications with no server-side implementation
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Mobile applications with discrete server-side implementation supporting mobile functionality
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Defined, limited feature set web-applications
+					</Typography>
+
 					<div className={classes.space} />
-					<div className={classes.rangeButton}>$1,000 — $10,000</div>
+					<div className={classes.rangeButton}>$100K - $200K</div>
 				</Grid>
 				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} md={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
@@ -116,17 +134,36 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Moderate
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						A moderate project usually consists of:
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Developer/Project Manager
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1+ Additional Developer(s)
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Part-time Quality Assurance Tester
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Part-time UI/UX Designer
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						MODERATE PROJECT EXAMPLES
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Enterprise applications integrating web and mobile functionality
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Consumer-facing service applications
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Applications with user management, multiple user roles, moderate business logic, or siloed
+						workflows
 					</Typography>
 					<div className={classes.space} />
-					<div className={classes.rangeButton}>$1,000 — $10,000</div>
+					<div className={classes.rangeButton}>$120K - $250K</div>
 				</Grid>
 				<Grid className={classNames(classes.row, classes.spacing)} item xs={12} md={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
@@ -135,17 +172,44 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Complex
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						A complex project usually consists of:
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Full-time Project Manager
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						2+ Developers
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1 Application Architect
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1+ Full-time Quality Assurance Tester
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						1+ Full-time UI/UX Designer
 					</Typography>
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						*May also include database administration (DBA) and Certified Information Systems Security
+						Professional (CISSP) services
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+					<Typography className={classNames(classes.paragraph, classes.space)}>
+						COMPLEX PROJECT EXAMPLES
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Enterprise applications supporting complex business logic, hardware, third-party applications,
+						complex user workflows, robust reporting
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Data-driven applications
+					</Typography>
+					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
+						Consumer-facing application supporting mobile devices, social functionality, AI, complex user
+						interactions, robust reporting
 					</Typography>
 					<div className={classes.space} />
-					<div className={classes.rangeButton}>$1,000 — $10,000</div>
+					<div className={classes.rangeButton}>$250K - $2M+</div>
 				</Grid>
 				<Grid container direction="row" alignItems="center" justify="center" className={classes.space}>
 					<Grid className={classes.quoteButton} item xs={12} md={4}>

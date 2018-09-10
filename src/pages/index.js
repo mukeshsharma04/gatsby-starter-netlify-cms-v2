@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
 		return (
 			<React.Fragment>
 				<Banner
-					text={'Hi. We’re Primoko. Our elite team of engineers is ready to move you from ideas to launch.'}
+					text={"Hi. We're Primoko. Elite team of engineers and artists. And we are ready to move you from idea to launch."}
 					banner={withPrefix('/img/banner.jpg')}
 					height="600px"
 				/>

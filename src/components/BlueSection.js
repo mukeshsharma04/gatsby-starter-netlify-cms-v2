@@ -85,9 +85,9 @@ export default withStyles(styles)(({ classes }) => {
 				</Typography>
 				<br />
 				<Typography className={classes.paragraph} gutterBottom>
-					We’re also elite, meaning that we’re very good at what we do. We bring years of experience
-					architecting large projects to the table and look forward to stepping in at whatever level you need
-					us.
+					We're also elite, meaning we hire and grow the best talent and that makes us very good at what we
+					do. We bring years of experience architecting large projects to the table and look forward to
+					stepping in at whatever level you need us.
 				</Typography>
 				{/* <br />
 				<a href="/" className={classes.textWhite}>

@@ -133,7 +133,7 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
 						We like to chase the hard engineering problems, the kind that hold companies back.
 					</Typography>
-					<Grid item xs={12} md={4} className={classes.readButton}>
+					{/* <Grid item xs={12} md={4} className={classes.readButton}>
 						<Button
 							text="Read our manifesto"
 							fullWidth
@@ -141,7 +141,7 @@ export default withStyles(styles)(({ classes }) => {
 							styles={classes.button}
 							component={Link}
 						/>
-					</Grid>
+					</Grid> */}
 				</Grid>
 				<Hidden smDown>
 					<Grid item xs={12} md={4}>

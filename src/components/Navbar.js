@@ -19,7 +19,7 @@ const styles = (theme) => ({
 	},
 
 	menuButton: {
-		margin: '.5rem 1rem'
+		margin: '.5rem 0rem'
 	},
 
 	navLink: {
@@ -139,8 +139,7 @@ class NavBar extends React.Component {
 				<AppBar
 					position="fixed"
 					style={{
-						background: 'linear-gradient(to right, #4B96FC, #6F77FB)',
-						boxShadow: '0px 2px 10px 0px rgba(0, 0, 0, 0.15)'
+						background: 'linear-gradient(to right, #4B96FC, #6F77FB)'
 					}}
 				>
 					<Toolbar varient="dense">
@@ -328,12 +327,12 @@ class NavBar extends React.Component {
 														primary="Process"
 														subLink
 													/>
-													<ListItemLink
+													{/* <ListItemLink
 														to="/the-primoko-difference/manifesto"
 														style={classes.mhamburger}
 														primary="Manifesto"
 														subLink
-													/>
+													/> */}
 													<ListItemLink
 														to="/services/pricing"
 														style={classes.mhamburger}

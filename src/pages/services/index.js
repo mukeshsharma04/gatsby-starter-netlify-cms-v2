@@ -28,7 +28,10 @@ const styles = (theme) => ({
 	recruitment: {
 		margin: 'auto',
 		paddingLeft: '8%',
-		paddingRight: '8%'
+		paddingRight: '8%',
+		[theme.breakpoints.down('sm')]: {
+			marginTop: '40px'
+		}
 	},
 	text: {
 		[theme.breakpoints.down('sm')]: {
@@ -59,7 +62,10 @@ const styles = (theme) => ({
 		}
 	},
 	space: {
-		marginTop: theme.spacing.unit * 4
+		marginTop: '20px'
+	},
+	space2: {
+		marginTop: '29px'
 	},
 	divider: {
 		marginTop: theme.spacing.unit * 8,
@@ -68,12 +74,13 @@ const styles = (theme) => ({
 	},
 	blueText: {
 		[theme.breakpoints.down('sm')]: {
-			...theme.typography.mparagraph
+			...theme.typography.mparagraph,
+			color: '#6f73ff'
 		},
 		[theme.breakpoints.up('sm')]: {
-			...theme.typography.paragraph
-		},
-		color: '#6f73ff'
+			...theme.typography.paragraph,
+			color: '#6f73ff'
+		}
 	},
 	chip: {
 		color: '#6f73ff',
@@ -105,6 +112,13 @@ const styles = (theme) => ({
 		color: 'white',
 		fontSize: '16px',
 		fontWeight: '500'
+	},
+	humanokoButton: {
+		width: '260px',
+		[theme.breakpoints.down('sm')]: {
+			width: '100%',
+			marginBottom: '40px'
+		}
 	}
 });
 
@@ -233,17 +247,18 @@ export default withStyles(styles)(
 							<Typography className={classes.title} gutterBottom>
 								Elite Engineer Recruitment
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space2)} gutterBottom>
 								Need brilliant talent for your organization? Find elite software engineers the same
 								caliber as those that work for Primoko by connecting with the same recruiters we use at
 								our sister company, Humanoko.
 							</Typography>
-							<Typography className={classes.paragraph} gutterBottom>
+							<Typography className={classNames(classes.paragraph, classes.space2)} gutterBottom>
 								Backstory: we created Humanoko after our clients, who had been bombarding us with
 								requests to find elite engineers, began trying to poach ours! That’s when we knew it was
 								time to create a recruitment firm specializing in bringing forward-thinking companies
 								and brilliant software engineers together; that’s when we launched Humanoko.
 							</Typography>
+							<Button text="HUMANOKO" to="#" component={Link} styles={classes.humanokoButton} />
 						</Grid>
 						<Grid item xs={12} md={6}>
 							<div className={classes.block} />
