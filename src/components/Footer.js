@@ -117,7 +117,7 @@ const styles = (theme) => ({
 	},
 	tooltip: {
 		marginLeft: '5%',
-		padding: '1px',
+		padding: '4px 6px',
 		position: 'relative',
 		background: '#6f73ff',
 		borderRadius: '5px',
