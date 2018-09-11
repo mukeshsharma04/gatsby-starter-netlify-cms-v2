@@ -114,16 +114,20 @@ class CustomizedTabs extends React.Component {
 					onChange={this.handleChange}
 					classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
 				>
-					<Tab disableRipple classes={{ root: classes.tabRoot, selected: classes.tabSelected }} label="HQ" />
 					<Tab
 						disableRipple
 						classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-						label="Office 2"
+						label="US (HQ)"
 					/>
 					<Tab
 						disableRipple
 						classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-						label="Office 3"
+						label="India"
+					/>
+					<Tab
+						disableRipple
+						classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
+						label="Romania"
 					/>
 				</Tabs>
 				{value === 0 && (

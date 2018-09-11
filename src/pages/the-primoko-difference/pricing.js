@@ -102,6 +102,8 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Simple
 					</Typography>
+					<div className={classes.space} />
+					<div className={classes.rangeButton}>$100K - $200K</div>
 					<Typography className={classNames(classes.paragraph, classes.space)}>
 						A simple project usually consists of:
 					</Typography>
@@ -128,9 +130,6 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.listItem, classes.space)} gutterBottom>
 						<span className={classes.bullet}>&#8226;</span>Defined, limited feature set web-applications
 					</Typography>
-
-					<div className={classes.space} />
-					<div className={classes.rangeButton}>$100K - $200K</div>
 				</Grid>
 				<Grid className={classNames(classes.row, classes.divider, classes.spacing)} item xs={12} sm={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
@@ -139,6 +138,8 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Moderate
 					</Typography>
+					<div className={classes.space} />
+					<div className={classes.rangeButton}>$120K - $250K</div>
 					<Typography className={classNames(classes.paragraph, classes.space)}>
 						A moderate project usually consists of:
 					</Typography>
@@ -168,8 +169,6 @@ export default withStyles(styles)(({ classes }) => {
 						<span className={classes.bullet}>&#8226;</span>Applications with user management, multiple user
 						roles, moderate business logic, or siloed workflows
 					</Typography>
-					<div className={classes.space} />
-					<div className={classes.rangeButton}>$120K - $250K</div>
 				</Grid>
 				<Grid className={classNames(classes.row, classes.spacing)} item xs={12} sm={4}>
 					<Grid container className={classes.pricing} direction="row" justify="center" alignItems="center">
@@ -178,6 +177,8 @@ export default withStyles(styles)(({ classes }) => {
 					<Typography className={classes.title} align="center">
 						Complex
 					</Typography>
+					<div className={classes.space} />
+					<div className={classes.rangeButton}>$250K - $2M+</div>
 					<Typography className={classNames(classes.paragraph, classes.space)}>
 						A complex project usually consists of:
 					</Typography>
@@ -214,8 +215,6 @@ export default withStyles(styles)(({ classes }) => {
 						<span className={classes.bullet}>&#8226;</span>Consumer-facing application supporting mobile
 						devices, social functionality, AI, complex user interactions, robust reporting
 					</Typography>
-					<div className={classes.space} />
-					<div className={classes.rangeButton}>$250K - $2M+</div>
 				</Grid>
 				<Grid container direction="row" alignItems="center" justify="center" className={classes.space}>
 					<Grid className={classes.quoteButton} item xs={12} sm={4}>
