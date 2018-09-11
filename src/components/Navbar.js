@@ -90,7 +90,7 @@ const styles = (theme) => ({
 		marginTop: '20px'
 	},
 	paragraphSpace: {
-		marginTop: theme.spacing.unit * 1 / 4
+		marginTop: '14px'
 	},
 	drawerPaper: {
 		[theme.breakpoints.down('xs')]: {
