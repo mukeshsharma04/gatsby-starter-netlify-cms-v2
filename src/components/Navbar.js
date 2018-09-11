@@ -12,6 +12,8 @@ import Drawer from '@material-ui/core/Drawer';
 import ListItemLink from './ListItemLink';
 import Close from '@material-ui/icons/Close';
 import classNames from 'classnames';
+import MenuItem from '@material-ui/core/MenuItem';
+import Popover from '@material-ui/core/Popover';
 
 const styles = (theme) => ({
 	root: {
@@ -123,7 +125,8 @@ const styles = (theme) => ({
 
 class NavBar extends React.Component {
 	state = {
-		showDrawer: false
+		showDrawer: false,
+		anchorEl: null
 	};
 
 	activeLink = (route) => {
@@ -131,8 +134,45 @@ class NavBar extends React.Component {
 		return route === location && true;
 	};
 
+	handlePopoverOpen = (event) => {
+		this.setState({ anchorEl: event.currentTarget });
+	};
+
+	handlePopoverClose = () => {
+		this.setState({ anchorEl: null });
+	};
+
 	render() {
 		const { classes } = this.props;
+		const { anchorEl } = this.state;
+		const open = Boolean(anchorEl);
+
+		const renderMenu = (
+			<Popover
+				id="simple-popper"
+				className={classes.popover}
+				classes={{
+					paper: classes.paper
+				}}
+				open={open}
+				anchorEl={anchorEl}
+				anchorOrigin={{
+					vertical: 'bottom',
+					horizontal: 'left'
+				}}
+				transformOrigin={{
+					vertical: 'top',
+					horizontal: 'left'
+				}}
+				onClose={this.handlePopoverClose}
+				disableRestoreFocus
+			>
+				<MenuItem>Never</MenuItem>
+				<MenuItem>Every Night</MenuItem>
+				<MenuItem>Weeknights</MenuItem>
+				<MenuItem>Weekends</MenuItem>
+			</Popover>
+		);
 
 		return (
 			<div className={classes.root}>
@@ -156,6 +196,9 @@ class NavBar extends React.Component {
 							<Link
 								to="/about"
 								className={classNames(classes.navLink, this.activeLink('/about') && classes.active)}
+								aria-owns={open ? 'simple-popper' : null}
+								aria-haspopup="true"
+								onMouseEnter={this.handlePopoverOpen}
 							>
 								About
 							</Link>
@@ -177,6 +220,9 @@ class NavBar extends React.Component {
 									classes.navLink,
 									this.activeLink('/the-primoko-difference') && classes.active
 								)}
+								aria-owns={open ? 'simple-popper' : null}
+								aria-haspopup="true"
+								onMouseEnter={this.handlePopoverOpen}
 							>
 								The Primoko Difference
 							</Link>
@@ -372,6 +418,7 @@ class NavBar extends React.Component {
 						</IconButton>
 					</Toolbar>
 				</AppBar>
+				{renderMenu}
 				<div className={classes.appBarSpace}>&#160;</div>
 			</div>
 		);
