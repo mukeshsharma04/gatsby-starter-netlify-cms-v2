@@ -7,8 +7,12 @@ import { withPrefix } from 'gatsby-link';
 const styles = (theme) => ({
 	...theme.typography,
 	container: {
+		margin: 'auto',
 		position: 'absolute',
-		top: '40%'
+		top: '0',
+		left: '0',
+		bottom: '0',
+		right: '0'
 	},
 	text: {
 		[theme.breakpoints.down('sm')]: {

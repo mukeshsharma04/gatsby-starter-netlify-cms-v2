@@ -2,9 +2,17 @@ import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import Link from 'gatsby-link';
 import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+	hyperLink: {
+		paddingTop: '0',
+		paddingBottom: '0'
+	}
+};
 
 const ListItemLink = (props) => {
-	const { primary, to, style, subLink } = props;
+	const { primary, to, style, subLink, classes } = props;
 	return subLink ? (
 		<li>
 			<a href={to}>
@@ -13,7 +21,7 @@ const ListItemLink = (props) => {
 		</li>
 	) : (
 		<li>
-			<ListItem button component={Link} to={to}>
+			<ListItem button component={Link} to={to} className={classes.hyperLink}>
 				<p className={style}>{primary}</p>
 			</ListItem>
 		</li>
@@ -26,4 +34,4 @@ ListItemLink.propTypes = {
 	style: PropTypes.string.isRequired
 };
 
-export default ListItemLink;
+export default withStyles(styles)(ListItemLink);
