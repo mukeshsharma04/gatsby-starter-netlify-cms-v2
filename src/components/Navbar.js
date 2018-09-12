@@ -137,7 +137,8 @@ const styles = (theme) => ({
 class NavBar extends React.Component {
 	state = {
 		showDrawer: false,
-		anchorEl: null
+		anchorEl: null,
+		anchor2: null
 	};
 
 	activeLink = (route) => {
@@ -149,13 +150,17 @@ class NavBar extends React.Component {
 		this.setState({ anchorEl: event.currentTarget });
 	};
 
+	handlePopoverOpen2 = (event) => {
+		this.setState({ anchor2: event.currentTarget });
+	};
+
 	handlePopoverClose = () => {
-		this.setState({ anchorEl: null });
+		this.setState({ anchorEl: null, anchor2: null });
 	};
 
 	render() {
 		const { classes } = this.props;
-		const { anchorEl } = this.state;
+		const { anchorEl, anchor2 } = this.state;
 
 		return (
 			<div className={classes.root}>
@@ -205,22 +210,34 @@ class NavBar extends React.Component {
 									className={classes.popper}
 								>
 									<MenuItem>
-										<a className={classes.link}>Overview</a>
+										<a href="/services" className={classes.link}>
+											Overview
+										</a>
 									</MenuItem>
 									<MenuItem>
-										<a className={classes.link}>Mobile</a>
+										<a href="/services/mobile" className={classes.link}>
+											Mobile
+										</a>
 									</MenuItem>
 									<MenuItem>
-										<a className={classes.link}>Web</a>
+										<a href="/services/web" className={classes.link}>
+											Web
+										</a>
 									</MenuItem>
 									<MenuItem>
-										<a className={classes.link}>DevOps</a>
+										<a href="/services/devops" className={classes.link}>
+											DevOps
+										</a>
 									</MenuItem>
 									<MenuItem>
-										<a className={classes.link}>Salesforce</a>
+										<a href="/services/salesforce" className={classes.link}>
+											Salesforce
+										</a>
 									</MenuItem>
 									<MenuItem>
-										<a className={classes.link}>Pricing</a>
+										<a href="/services/pricing" className={classes.link}>
+											Pricing
+										</a>
 									</MenuItem>
 								</Popper>
 							</div>
@@ -244,24 +261,30 @@ class NavBar extends React.Component {
 										classes.navLink,
 										this.activeLink('/the-primoko-difference') && classes.active
 									)}
-									onMouseEnter={this.handlePopoverOpen}
+									onMouseEnter={this.handlePopoverOpen2}
 								>
 									The Primoko Difference
 								</Link>
 								<Popper
 									id="the-primoko-difference"
-									anchorEl={anchorEl}
-									open={Boolean(anchorEl)}
+									anchorEl={anchor2}
+									open={Boolean(anchor2)}
 									className={classes.popper}
 								>
 									<MenuItem>
-										<a className={classes.link}>Overview</a>
+										<a href="/the-primoko-difference" className={classes.link}>
+											Overview
+										</a>
 									</MenuItem>
 									<MenuItem>
-										<a className={classes.link}>Process</a>
+										<a href="/the-primoko-difference/process" className={classes.link}>
+											Process
+										</a>
 									</MenuItem>
 									<MenuItem>
-										<a className={classes.link}>Pricing</a>
+										<a href="/the-primoko-difference/pricing" className={classes.link}>
+											Pricing
+										</a>
 									</MenuItem>
 								</Popper>
 							</div>
