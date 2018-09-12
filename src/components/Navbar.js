@@ -32,14 +32,12 @@ const styles = (theme) => ({
 		textDecoration: 'none',
 		'&:hover': {
 			borderBottom: '3px solid #fff',
-			color: '#fff',
-			lineHeight: 2
+			color: '#fff'
 		}
 	},
 	active: {
 		borderBottom: '3px solid #fff',
-		color: '#fff',
-		lineHeight: 2
+		color: '#fff'
 	},
 	letsactive: {
 		color: '#fff'
@@ -121,11 +119,18 @@ const styles = (theme) => ({
 	appBarSpace: {
 		height: '64px'
 	},
-	popover: {
-		pointerEvents: 'none'
-	},
 	popper: {
-		backgroundColor: 'white'
+		backgroundColor: '#333333',
+		minWidth: '150px',
+		zIndex: '2000'
+	},
+	link: {
+		...theme.typography.link,
+		color: '#ffffff',
+		'&:hover': {
+			textDecoration: 'underline',
+			color: '#ffffff'
+		}
 	}
 });
 
@@ -171,46 +176,96 @@ class NavBar extends React.Component {
 							</Link>
 						</Typography>
 						<Hidden smDown implementation="css">
-							<div onMouseLeave={this.handlePopoverClose} style={{ display: 'inline-flex' }}>
+							<Link
+								to="/services"
+								className={classNames(classes.navLink, this.activeLink('/about') && classes.active)}
+							>
+								About
+							</Link>
+							<div
+								onMouseLeave={this.handlePopoverClose}
+								style={{ display: 'inline-flex' }}
+								aria-owns="services"
+								aria-haspopup="true"
+							>
 								<Link
-									to="/about"
-									className={classNames(classes.navLink, this.activeLink('/about') && classes.active)}
+									to="/services"
+									className={classNames(
+										classes.navLink,
+										this.activeLink('/services') && classes.active
+									)}
 									onMouseEnter={this.handlePopoverOpen}
 								>
-									About
+									Services
 								</Link>
 								<Popper
-									id="simple-menu"
+									id="services"
 									anchorEl={anchorEl}
 									open={Boolean(anchorEl)}
 									className={classes.popper}
 								>
-									<MenuItem>Overview</MenuItem>
-									<MenuItem>Carrers</MenuItem>
-									<MenuItem>Team</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>Overview</a>
+									</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>Mobile</a>
+									</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>Web</a>
+									</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>DevOps</a>
+									</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>Salesforce</a>
+									</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>Pricing</a>
+									</MenuItem>
 								</Popper>
 							</div>
-							<Link
-								to="/services"
-								className={classNames(classes.navLink, this.activeLink('/services') && classes.active)}
-							>
-								Services
-							</Link>
+
 							<Link
 								to="/results"
 								className={classNames(classes.navLink, this.activeLink('/results') && classes.active)}
 							>
 								Results
 							</Link>
-							<Link
-								to="/the-primoko-difference"
-								className={classNames(
-									classes.navLink,
-									this.activeLink('/the-primoko-difference') && classes.active
-								)}
+
+							<div
+								onMouseLeave={this.handlePopoverClose}
+								style={{ display: 'inline-flex' }}
+								aria-owns="the-primoko-difference"
+								aria-haspopup="true"
 							>
-								The Primoko Difference
-							</Link>
+								<Link
+									to="/the-primoko-difference"
+									className={classNames(
+										classes.navLink,
+										this.activeLink('/the-primoko-difference') && classes.active
+									)}
+									onMouseEnter={this.handlePopoverOpen}
+								>
+									The Primoko Difference
+								</Link>
+								<Popper
+									id="the-primoko-difference"
+									anchorEl={anchorEl}
+									open={Boolean(anchorEl)}
+									className={classes.popper}
+								>
+									<MenuItem>
+										<a className={classes.link}>Overview</a>
+									</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>Process</a>
+									</MenuItem>
+									<MenuItem>
+										<a className={classes.link}>Pricing</a>
+									</MenuItem>
+								</Popper>
+							</div>
+
 							<Link
 								to="/letstalk"
 								className={classNames(classes.navLink, this.activeLink('/letstalk') && classes.active)}
