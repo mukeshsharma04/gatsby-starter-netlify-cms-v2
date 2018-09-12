@@ -13,7 +13,7 @@ import ListItemLink from './ListItemLink';
 import Close from '@material-ui/icons/Close';
 import classNames from 'classnames';
 import MenuItem from '@material-ui/core/MenuItem';
-import Popover from '@material-ui/core/Popover';
+import Popper from '@material-ui/core/Popper';
 
 const styles = (theme) => ({
 	root: {
@@ -124,8 +124,8 @@ const styles = (theme) => ({
 	popover: {
 		pointerEvents: 'none'
 	},
-	paper: {
-		padding: theme.spacing.unit
+	popper: {
+		backgroundColor: 'white'
 	}
 });
 
@@ -151,35 +151,6 @@ class NavBar extends React.Component {
 	render() {
 		const { classes } = this.props;
 		const { anchorEl } = this.state;
-		const open = Boolean(anchorEl);
-
-		const renderMenu = (
-			<Popover
-				id="simple-popper"
-				className={classes.popover}
-				classes={{
-					paper: classes.paper
-				}}
-				open={open}
-				anchorEl={anchorEl}
-				anchorOrigin={{
-					vertical: 'bottom',
-					horizontal: 'center'
-				}}
-				transformOrigin={{
-					vertical: 'top',
-					horizontal: 'center'
-				}}
-				onClose={this.handlePopoverClose}
-				disableRestoreFocus
-				disablePortal={true}
-				keepMounted={true}
-			>
-				<MenuItem>Overview</MenuItem>
-				<MenuItem>Team</MenuItem>
-				<MenuItem>Careers</MenuItem>
-			</Popover>
-		);
 
 		return (
 			<div className={classes.root}>
@@ -200,16 +171,25 @@ class NavBar extends React.Component {
 							</Link>
 						</Typography>
 						<Hidden smDown implementation="css">
-							<Link
-								to="/about"
-								className={classNames(classes.navLink, this.activeLink('/about') && classes.active)}
-								aria-owns={open ? 'simple-popper' : null}
-								aria-haspopup="true"
-								onMouseEnter={this.handlePopoverOpen}
-								onMouseLeave={this.handlePopoverClose}
-							>
-								About
-							</Link>
+							<div onMouseLeave={this.handlePopoverClose} style={{ display: 'inline-flex' }}>
+								<Link
+									to="/about"
+									className={classNames(classes.navLink, this.activeLink('/about') && classes.active)}
+									onMouseEnter={this.handlePopoverOpen}
+								>
+									About
+								</Link>
+								<Popper
+									id="simple-menu"
+									anchorEl={anchorEl}
+									open={Boolean(anchorEl)}
+									className={classes.popper}
+								>
+									<MenuItem>Overview</MenuItem>
+									<MenuItem>Carrers</MenuItem>
+									<MenuItem>Team</MenuItem>
+								</Popper>
+							</div>
 							<Link
 								to="/services"
 								className={classNames(classes.navLink, this.activeLink('/services') && classes.active)}
@@ -228,10 +208,6 @@ class NavBar extends React.Component {
 									classes.navLink,
 									this.activeLink('/the-primoko-difference') && classes.active
 								)}
-								aria-owns={open ? 'simple-popper' : null}
-								aria-haspopup="true"
-								onMouseEnter={this.handlePopoverOpen}
-								onMouseLeave={this.handlePopoverClose}
 							>
 								The Primoko Difference
 							</Link>
@@ -427,7 +403,6 @@ class NavBar extends React.Component {
 						</IconButton>
 					</Toolbar>
 				</AppBar>
-				{renderMenu}
 				<div className={classes.appBarSpace}>&#160;</div>
 			</div>
 		);
