@@ -120,6 +120,12 @@ const styles = (theme) => ({
 	},
 	appBarSpace: {
 		height: '64px'
+	},
+	popover: {
+		pointerEvents: 'none'
+	},
+	paper: {
+		padding: theme.spacing.unit
 	}
 });
 
@@ -158,19 +164,20 @@ class NavBar extends React.Component {
 				anchorEl={anchorEl}
 				anchorOrigin={{
 					vertical: 'bottom',
-					horizontal: 'left'
+					horizontal: 'center'
 				}}
 				transformOrigin={{
 					vertical: 'top',
-					horizontal: 'left'
+					horizontal: 'center'
 				}}
 				onClose={this.handlePopoverClose}
 				disableRestoreFocus
+				disablePortal={true}
+				keepMounted={true}
 			>
-				<MenuItem>Never</MenuItem>
-				<MenuItem>Every Night</MenuItem>
-				<MenuItem>Weeknights</MenuItem>
-				<MenuItem>Weekends</MenuItem>
+				<MenuItem>Overview</MenuItem>
+				<MenuItem>Team</MenuItem>
+				<MenuItem>Careers</MenuItem>
 			</Popover>
 		);
 
@@ -199,6 +206,7 @@ class NavBar extends React.Component {
 								aria-owns={open ? 'simple-popper' : null}
 								aria-haspopup="true"
 								onMouseEnter={this.handlePopoverOpen}
+								onMouseLeave={this.handlePopoverClose}
 							>
 								About
 							</Link>
@@ -223,6 +231,7 @@ class NavBar extends React.Component {
 								aria-owns={open ? 'simple-popper' : null}
 								aria-haspopup="true"
 								onMouseEnter={this.handlePopoverOpen}
+								onMouseLeave={this.handlePopoverClose}
 							>
 								The Primoko Difference
 							</Link>
