@@ -182,7 +182,7 @@ class NavBar extends React.Component {
 						</Typography>
 						<Hidden smDown implementation="css">
 							<Link
-								to="/services"
+								to="/about"
 								className={classNames(classes.navLink, this.activeLink('/about') && classes.active)}
 							>
 								About
