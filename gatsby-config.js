@@ -39,13 +39,13 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
     {
       resolve: '@material-ui/core',
       options: {
         pathToTheme: 'src/theme.js',
       },
     },
-    '@material-ui/icons'
+    '@material-ui/icons',
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
