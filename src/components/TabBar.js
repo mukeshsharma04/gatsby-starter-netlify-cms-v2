@@ -44,7 +44,7 @@ class NavBar extends React.Component {
 
 	render() {
 		const { classes, fields } = this.props;
-
+		
 		return (
 			<Hidden xsDown>
 				<div className={classes.root}>

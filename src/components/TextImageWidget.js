@@ -70,15 +70,15 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes }) => {
+export default withStyles(styles)(({ classes, title, heading }) => {
 	return (
 		<Grid container justify="space-between" className={classes.container}>
 			<Grid item xs={12} md={7}>
 				<Typography className={classes.title} gutterBottom>
-					Software engineering companies are only as good as their people.
+					{title}
 				</Typography>
 				<br />
-				<Typography className={classes.subTitle}>Our people are good.</Typography>
+				<Typography className={classes.subTitle}>{heading}</Typography>
 				<div>
 					<br />
 					<Typography className={classes.paragraph} gutterBottom>
