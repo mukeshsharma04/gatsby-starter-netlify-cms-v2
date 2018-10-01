@@ -58,14 +58,9 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 testimonials:
-  - author: Elisabeth Kaurismäki
+  - author: Martin Fowler
     quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
+      Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 full_image: /img/products-full-width.jpg
 pricing:
   heading: Monthly subscriptions

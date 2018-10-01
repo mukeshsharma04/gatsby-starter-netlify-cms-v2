@@ -111,10 +111,7 @@ export const AboutPageTemplate = ({
 			<Hidden smUp>
 				<JoinTeam />
 			</Hidden>
-			<Quote
-				author="Martin Fowler"
-				quote="Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
-			/>
+			{testimonials.map((v, k) => <Quote key={k} author={v.author} quote={v.quote} />)}
 		</div>
 	);
 };
