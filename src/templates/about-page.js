@@ -81,7 +81,7 @@ export const AboutPageTemplate = ({
 
 	return (
 		<div>
-			<TextImageWidget title={title} heading={heading} />
+			<TextImageWidget title={title} heading={heading} description={description} />
 			<div className={classes.banner}>
 				<Hidden xsDown>
 					<Grid container direction="row" justify="flex-end" alignItems="center" className={classes.block}>

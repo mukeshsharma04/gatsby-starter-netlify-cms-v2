@@ -70,7 +70,7 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes, title, heading }) => {
+export default withStyles(styles)(({ classes, title, heading, description }) => {
 	return (
 		<Grid container justify="space-between" className={classes.container}>
 			<Grid item xs={12} md={7}>
@@ -79,26 +79,15 @@ export default withStyles(styles)(({ classes, title, heading }) => {
 				</Typography>
 				<br />
 				<Typography className={classes.subTitle}>{heading}</Typography>
-				<div>
-					<br />
-					<Typography className={classes.paragraph} gutterBottom>
-						Primoko is a software engineering firm whose founders bring 50+ years of software engineering
-						experience to the table to tackle your most challenging engineering projects.
-					</Typography>
-					<br />
-					<Typography className={classes.paragraph} gutterBottom>
-						Give us a bull; we’ll bring our cape.
-					</Typography>
-					<br />
-					<Typography className={classes.paragraph} gutterBottom>
-						Give us a runaway train; we’ll bring our catch engine.
-					</Typography>
-					<br />
-					<Typography className={classes.paragraph} gutterBottom>
-						Give us your most difficult engineering obstacle; we’ll bring an engineering expert with the
-						skills and tools to face it.
-					</Typography>
-				</div>
+
+				{description.split('<br />').map((v, k) => (
+					<div>
+						<br />
+						<Typography key={k} className={classes.paragraph} gutterBottom>
+							{v}
+						</Typography>
+					</div>
+				))}
 			</Grid>
 			<Grid item xs={12} md={4}>
 				<div className={classes.image} />
