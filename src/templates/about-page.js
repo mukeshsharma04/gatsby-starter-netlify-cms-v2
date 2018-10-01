@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Content, { HTMLContent } from '../components/Content';
 import TextImageWidget from '../components/TextImageWidget';
 import { withStyles } from '@material-ui/core/styles';
 import Quote from '../components/Quotes';

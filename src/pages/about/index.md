@@ -5,7 +5,13 @@ title: Software engineering companies are only as good as their people.
 image: /img/jumbotron.jpg
 heading: Our people are good.
 description: >-
-  this is description
+  Primoko is a software engineering firm whose founders bring 50+ years of software engineering experience to the table to tackle your most challenging engineering projects.
+  <br />
+  Give us a bull; we’ll bring our cape.
+  <br />
+  Give us a runaway train; we’ll bring our catch engine.
+  <br />
+  Give us your most difficult engineering obstacle; we’ll bring an engineering expert with the skills and tools to face it.
 intro:
   blurbs:
     - image: /img/coffee.png
