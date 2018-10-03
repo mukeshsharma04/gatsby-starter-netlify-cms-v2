@@ -25,8 +25,8 @@ const styles = (theme) => ({
 class IndexPage extends React.Component {
 	render() {
 		const { data, classes } = this.props;
-    const { frontmatter } = data.markdownRemark;
-    console.log(frontmatter);
+		const { frontmatter } = data.markdownRemark;
+		console.log(frontmatter);
 
 		return (
 			<React.Fragment>
@@ -59,9 +59,16 @@ export const pageQuery = graphql`
 			frontmatter {
 				title
 				image
-				main {
+				firstSection {
 					heading
 					description
+					image
+					linkText
+				}
+				secondSection {
+					heading
+					description
+					image
 				}
 				testimonials {
 					author
