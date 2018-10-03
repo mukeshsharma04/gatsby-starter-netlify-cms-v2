@@ -81,9 +81,9 @@ export default withStyles(styles)(({ classes, title, heading, description }) => 
 				<Typography className={classes.subTitle}>{heading}</Typography>
 
 				{description.split('<br />').map((v, k) => (
-					<div>
+					<div key={k}>
 						<br />
-						<Typography key={k} className={classes.paragraph} gutterBottom>
+						<Typography className={classes.paragraph} gutterBottom>
 							{v}
 						</Typography>
 					</div>

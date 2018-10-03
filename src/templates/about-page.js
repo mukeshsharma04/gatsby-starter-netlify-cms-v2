@@ -65,39 +65,28 @@ const styles = (theme) => ({
 	}
 });
 
-export const AboutPageTemplate = ({
-	image,
-	title,
-	heading,
-	description,
-	intro,
-	main,
-	testimonials,
-	fullImage,
-	pricing,
-	classes
-}) => {
+export const AboutPageTemplate = ({ title, heading, description, joinTeam, testimonials, image, classes }) => {
 	classes = classes || {};
+	console.log(image);
 
 	return (
 		<div>
-			<TextImageWidget title={title} heading={heading} description={description} />
-			<div className={classes.banner}>
+			<TextImageWidget title={title} heading={heading} description={description} joinTeam={joinTeam} />
+			<div className={classes.banner} style={{ backgroundImage: `url(${withPrefix(image)})` }}>
 				<Hidden xsDown>
 					<Grid container direction="row" justify="flex-end" alignItems="center" className={classes.block}>
 						<Grid container justify="center" alignItems="center">
 							<Grid item>
 								<Typography className={classes.subTitle} align="center">
-									Join the team
+									{joinTeam.heading}
 								</Typography>
 								<Typography className={classes.paragraph} align="center">
-									Are you a nerd looking for home? Or a nerd looking to work from home? Checkout our
-									current opportunities.
+									{joinTeam.description}
 								</Typography>
 								<div style={{ width: '100%', textAlign: 'center' }}>
 									<Button
 										styles={classes.button}
-										text="See career opportunities"
+										text={joinTeam.button}
 										to="/careers"
 										component={Link}
 									/>
@@ -129,11 +118,8 @@ const AboutPage = ({ data, classes }) => {
 			title={frontmatter.title}
 			heading={frontmatter.heading}
 			description={frontmatter.description}
-			intro={frontmatter.intro}
-			main={frontmatter.main}
+			joinTeam={frontmatter.joinTeam}
 			testimonials={frontmatter.testimonials}
-			fullImage={frontmatter.full_image}
-			pricing={frontmatter.pricing}
 			classes={classes}
 		/>
 	);
@@ -153,44 +139,14 @@ export const aboutPageQuery = graphql`
 				image
 				heading
 				description
-				intro {
-					blurbs {
-						image
-						text
-					}
+				joinTeam {
 					heading
+					button
 					description
-				}
-				main {
-					heading
-					description
-					image1 {
-						alt
-						image
-					}
-					image2 {
-						alt
-						image
-					}
-					image3 {
-						alt
-						image
-					}
 				}
 				testimonials {
 					author
 					quote
-				}
-				full_image
-				pricing {
-					heading
-					description
-					plans {
-						description
-						items
-						plan
-						price
-					}
 				}
 			}
 		}

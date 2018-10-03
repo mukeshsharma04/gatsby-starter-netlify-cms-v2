@@ -29,7 +29,7 @@ const styles = (theme) => ({
 	textMultiline: {
 		background: `linear-gradient(101deg, #4198ff, #6f73ff)`,
 		display: 'inline',
-		padding: '0.8rem',
+		padding: '0.85rem',
 		boxDecorationBreak: 'clone',
 		WebkitBoxDecorationBreak: 'clone'
 	}
