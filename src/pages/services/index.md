@@ -9,7 +9,7 @@ description: >-
 	<br />
 	We at Primoko DO know what others don’t. And our engineers with various specialties are standing by to act as
 main:
-  - heading: Mobile
+  heading: Mobile
 		buttonText: See mobile services
 		workedWithText: Technology we’ve worked with
 		technologies: iOS,Android,React Native,Swift,Objetive-C,Xcode

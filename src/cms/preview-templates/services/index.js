@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import ServicesIndexPagePreviewTemplate from '../../../templates/services';
 
 const ServicesIndexPagePreview = ({ entry }) => {
-	const entryMain = entry.getIn([ 'data', 'testimonials' ]);
-	const main = entryMain ? entryMain.toJS() : [];
 	const entryTestimonials = entry.getIn([ 'data', 'testimonials' ]);
 	const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
 
@@ -14,7 +12,7 @@ const ServicesIndexPagePreview = ({ entry }) => {
 			title={entry.getIn([ 'data', 'title' ])}
 			heading={entry.getIn([ 'data', 'heading' ])}
 			description={entry.getIn([ 'data', 'description' ])}
-			main={main}
+			main={entry.getIn([ 'data', 'main' ])}
 			testimonials={testimonials}
 		/>
 	);
