@@ -19,7 +19,6 @@ const styles = (theme) => ({
 		overflow: 'hidden'
 	},
 	image: {
-		backgroundImage: `url(${withPrefix('/img/chart.png')})`,
 		backgroundSize: 'contain',
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',
@@ -78,43 +77,35 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes }) => {
+export default withStyles(styles)(({ data, classes }) => {
 	return (
 		<Grid container justify="space-between" className={classes.container}>
 			<Hidden xsDown>
 				<Grid item xs={12} md={4}>
-					<div className={classes.image} />
+					<div className={classes.image} style={{ backgroundImage: `url(${withPrefix(data.image)})` }} />
 				</Grid>
 			</Hidden>
 			<Grid item xs={12} md={7}>
 				<Typography className={classes.title} gutterBottom>
-					Let's build.
+					{data.heading}
 				</Typography>
-				<br />
-				<Typography className={classes.paragraph} gutterBottom>
-					You’ve undertaken a project. Or you’re creating a product. Congratulations! The future looks bright.
-					But your team is already loaded or isn’t fully trained in the required technologies. Maybe there
-					simply is not enough bandwidth.
-				</Typography>
-				<br />
-				<Typography className={classes.paragraph} gutterBottom>
-					That's where Primoko comes in.
-				</Typography>
-				<br />
-				<Typography className={classes.paragraph} gutterBottom>
-					We can step in and quickly begin advising you on all architecture decisions, mapping out the pros
-					and cons of various design decisions, and coding and implementing your vision. We’re not jacks of
-					all trades here; we’re experts in a few. If those few are what you’re looking for, then you’ll be
-					hard-pressed to find better engineers anywhere.
-				</Typography>
+				{data.description &&
+					data.description.split('<br />').map((v, k) => (
+						<div key={k}>
+							<br />
+							<Typography className={classes.paragraph} gutterBottom>
+								{v}
+							</Typography>
+						</div>
+					))}
 				<br />
 				<a href="/" className={classes.textBlue}>
-					Learn more about our software development services.
+					{data.linkText}
 				</a>
 			</Grid>
 			<Hidden smUp>
 				<Grid item xs={12} md={4}>
-					<div className={classes.image} />
+					<div className={classes.image} style={{ backgroundImage: `url(${withPrefix(data.image)})` }} />
 				</Grid>
 			</Hidden>
 		</Grid>

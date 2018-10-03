@@ -19,7 +19,6 @@ const styles = (theme) => ({
 		overflow: 'hidden'
 	},
 	image: {
-		backgroundImage: `url(${withPrefix('/img/zeros.png')})`,
 		backgroundSize: 'contain',
 		backgroundRepeat: 'no-repeat',
 		backgroundPosition: 'center',
@@ -70,32 +69,30 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes }) => {
+export default withStyles(styles)(({ data, classes }) => {
 	return (
 		<Grid container justify="space-between" className={classes.container}>
 			<Grid item xs={12} md={7}>
 				<Typography className={classes.title} gutterBottom>
-					Only engineers drive our bus. In other words, we’re a software engineering firm with only software
-					engineers. Imagine that!
+					{data.heading}
 				</Typography>
+				{data.description &&
+					data.description.split('<br />').map((v, k) => (
+						<div key={k}>
+							<br />
+							<Typography className={classes.paragraph} gutterBottom>
+								{v}
+							</Typography>
+						</div>
+					))}
 				<br />
-				<Typography className={classes.paragraph} gutterBottom>
-					We’re software engineers first. Yes, we do handle the sales, marketing, customer relations and other
-					non-engineering functions, but everyone in the company comes from a technical background.
-				</Typography>
-				<br />
-				<Typography className={classes.paragraph} gutterBottom>
-					We're also elite, meaning we hire and grow the best talent and that makes us very good at what we
-					do. We bring years of experience architecting large projects to the table and look forward to
-					stepping in at whatever level you need us.
-				</Typography>
 				{/* <br />
 				<a href="/" className={classes.textWhite}>
 					Meet the team.
 				</a> */}
 			</Grid>
 			<Grid item xs={12} md={4}>
-				<div className={classes.image} />
+				<div className={classes.image} style={{ backgroundImage: `url(${withPrefix(data.image)})` }} />
 			</Grid>
 		</Grid>
 	);

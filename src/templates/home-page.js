@@ -26,20 +26,13 @@ class IndexPage extends React.Component {
 	render() {
 		const { data, classes } = this.props;
 		const { frontmatter } = data.markdownRemark;
-		console.log(frontmatter);
 
 		return (
 			<React.Fragment>
-				<Banner
-					text={
-						"Hi. We're Primoko. Elite team of engineers and artists. And we are ready to move you from idea to launch."
-					}
-					banner={withPrefix('/img/banner.jpg')}
-					height="600px"
-				/>
-				<LetsBuild />
-				<BlueSection />
-				<Quotes quote="A clever person solves a problem. A wise person avoids it." author="Albert Einstein" />
+				<Banner text={frontmatter.title} banner={withPrefix(frontmatter.image)} height="600px" />
+				<LetsBuild data={frontmatter.firstSection} />
+				<BlueSection data={frontmatter.secondSection} />
+				{frontmatter.testimonials.map((v, k) => <Quotes key={k} author={v.author} quote={v.quote} />)}
 			</React.Fragment>
 		);
 	}

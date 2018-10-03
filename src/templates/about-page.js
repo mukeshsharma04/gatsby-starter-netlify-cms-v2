@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextImageWidget from '../components/TextImageWidget';
 import { withStyles } from '@material-ui/core/styles';
-import Quote from '../components/Quotes';
+import Quotes from '../components/Quotes';
 import { withPrefix } from 'gatsby-link';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -98,7 +98,7 @@ export const AboutPageTemplate = ({ title, heading, description, joinTeam, testi
 			<Hidden smUp>
 				<JoinTeam />
 			</Hidden>
-			{testimonials.map((v, k) => <Quote key={k} author={v.author} quote={v.quote} />)}
+			{testimonials.map((v, k) => <Quotes key={k} author={v.author} quote={v.quote} />)}
 		</div>
 	);
 };
