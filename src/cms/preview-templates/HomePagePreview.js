@@ -5,7 +5,6 @@ import HomePagePreview from '../../templates/home-page';
 const ProductPagePreview = ({ entry, getAsset }) => {
 	const entryTestimonials = entry.getIn([ 'data', 'testimonials' ]);
 	const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
-	console.log(entry.getIn([ 'data' ]));
 
 	return (
 		<HomePagePreview

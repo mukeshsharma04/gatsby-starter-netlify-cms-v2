@@ -80,63 +80,76 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ data, classes }) => {
-	const { frontmatter } = data.markdownRemark;
-	const heading = frontmatter.heading.split('—');
+export default withStyles(styles)(
+	class ServicesMobilePagePreviewTemplate extends React.Component {
+		render() {
+			const { data, classes } = this.props;
+			const { frontmatter } = data.markdownRemark;
+			const heading = frontmatter.heading.split('—');
 
-	return (
-		<React.Fragment>
-			<TabBar fields={servicesFields} />
-			<Grid container className={classes.container} justify="space-between">
-				<Grid item xs={12} md={6}>
-					<Typography className={classes.title} gutterBottom>
-						{heading[0]}—<span className={classes.subparagraph}>{heading[1]}</span>
-					</Typography>
-					{frontmatter.description &&
-						frontmatter.description.split('<br />').map((v, k) => (
-							<Typography key={k} className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								{v}
+			return (
+				<React.Fragment>
+					<TabBar fields={servicesFields} />
+					<Grid container className={classes.container} justify="space-between">
+						<Grid item xs={12} md={6}>
+							<Typography className={classes.title} gutterBottom>
+								{heading[0]}—<span className={classes.subparagraph}>{heading[1]}</span>
 							</Typography>
-						))}
-					<Grid container className={classes.space} justify="space-between">
-						<Grid item xs={6} md={6}>
-							<ul className={classes.list}>
-								{frontmatter.rightList &&
-									frontmatter.rightList.split(',').map((v, k) => <li key={k}>{v}</li>)}
-							</ul>
+							{frontmatter.description &&
+								frontmatter.description.split('<br />').map((v, k) => (
+									<Typography
+										key={k}
+										className={classNames(classes.paragraph, classes.space)}
+										gutterBottom
+									>
+										{v}
+									</Typography>
+								))}
+							<Grid container className={classes.space} justify="space-between">
+								<Grid item xs={6} md={6}>
+									<ul className={classes.list}>
+										{frontmatter.rightList &&
+											frontmatter.rightList.split(',').map((v, k) => <li key={k}>{v}</li>)}
+									</ul>
+								</Grid>
+								<Grid item xs={6} md={5}>
+									<ul className={classes.list}>
+										{frontmatter.leftList &&
+											frontmatter.leftList.split(',').map((v, k) => <li key={k}>{v}</li>)}
+									</ul>
+								</Grid>
+							</Grid>
+							{frontmatter.others &&
+								frontmatter.others.split('<br />').map((v, k) => (
+									<Typography
+										key={k}
+										className={classNames(classes.paragraph, classes.space)}
+										gutterBottom
+									>
+										{v}
+									</Typography>
+								))}
 						</Grid>
-						<Grid item xs={6} md={5}>
-							<ul className={classes.list}>
-								{frontmatter.leftList &&
-									frontmatter.leftList.split(',').map((v, k) => <li key={k}>{v}</li>)}
-							</ul>
+						<Grid item xs={12} md={4}>
+							<BlueBlock
+								main="We speak mobile"
+								menu="Recent projects have used:"
+								subMenu={[
+									{ label: 'iOS, including Apple Watch', icon: 'ios' },
+									{ label: 'Android, including Wear OS', icon: 'android' },
+									{ label: 'React Native', icon: 'react' }
+								]}
+							/>
 						</Grid>
 					</Grid>
-					{frontmatter.others &&
-						frontmatter.others.split('<br />').map((v, k) => (
-							<Typography key={k} className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								{v}
-							</Typography>
-						))}
-				</Grid>
-				<Grid item xs={12} md={4}>
-					<BlueBlock
-						main="We speak mobile"
-						menu="Recent projects have used:"
-						subMenu={[
-							{ label: 'iOS, including Apple Watch', icon: 'ios' },
-							{ label: 'Android, including Wear OS', icon: 'android' },
-							{ label: 'React Native', icon: 'react' }
-						]}
-					/>
-				</Grid>
-			</Grid>
-			{frontmatter.testimonials.map((v, k) => (
-				<Quotes key={k} author={v.author} quote={v.quote} authorRole={v.authorRole} />
-			))}
-		</React.Fragment>
-	);
-});
+					{frontmatter.testimonials.map((v, k) => (
+						<Quotes key={k} author={v.author} quote={v.quote} authorRole={v.authorRole} />
+					))}
+				</React.Fragment>
+			);
+		}
+	}
+);
 
 export const pageQuery = graphql`
 	query ServicesMobilePage($id: String!) {
