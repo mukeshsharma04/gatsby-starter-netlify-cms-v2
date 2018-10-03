@@ -47,4 +47,12 @@ collections:
           - {label: Description, name: description, widget: string}
           - {label: "Join Team", name: joinTeam, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: button, name: button, widget: text}, {label: Description, name: description, widget: text}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          
+      - file: "src/pages/index.md"
+        label: "Home Page"
+        name: "homepage"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
