@@ -5,7 +5,7 @@ import { AboutPageTemplate } from '../../templates/about-page';
 const AboutPagePreview = ({ entry }) => {
 	const entryTestimonials = entry.getIn([ 'data', 'testimonials' ]);
 	const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
-	console.log('data', entry.getIn([ 'data' ]));
+	
 	return (
 		<AboutPageTemplate
 			image={entry.getIn([ 'data', 'image' ])}
