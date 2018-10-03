@@ -5,8 +5,6 @@ import ServicesMobilePagePreviewTemplate from '../../../templates/services/mobil
 const ServicesMobilePagePreview = ({ entry }) => {
 	const entryTestimonials = entry.getIn([ 'data', 'testimonials' ]);
 	const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
-	const entryTechnologies = entry.getIn([ 'data', 'technologies' ]);
-	const technologies = entryTechnologies ? entryTechnologies.toJS() : [];
 
 	return (
 		<ServicesMobilePagePreviewTemplate
@@ -16,12 +14,7 @@ const ServicesMobilePagePreview = ({ entry }) => {
 			leftList={entry.getIn([ 'data', 'leftList' ])}
 			others={entry.getIn([ 'data', 'others' ])}
 			description={entry.getIn([ 'data', 'description' ])}
-			humanoko={{
-				heading: entry.getIn([ 'data', 'humanoko', 'heading' ]),
-				description: entry.getIn([ 'data', 'humanoko', 'description' ])
-			}}
 			testimonials={testimonials}
-			technologies={technologies}
 		/>
 	);
 };
