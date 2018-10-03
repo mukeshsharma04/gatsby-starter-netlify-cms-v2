@@ -9,7 +9,7 @@ import classNames from 'classnames';
 import Chip from '@material-ui/core/Chip';
 import Button from '../../components/Button';
 import Quotes from '../../components/Quotes';
-import { mobile, web, devOps, servicesFields } from '../../metadata';
+import { servicesFields } from '../../metadata';
 import Link, { withPrefix } from 'gatsby-link';
 import ReactDOM from 'react-dom';
 
@@ -99,7 +99,6 @@ const styles = (theme) => ({
 		},
 		float: 'right',
 		position: 'relative',
-		backgroundImage: `url(${withPrefix('/img/concept.jpg')})`,
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
 		width: '100%'
@@ -136,140 +135,95 @@ export default withStyles(styles)(
 
 		render() {
 			const { data, classes } = this.props;
-			console.log(data);
+			const { frontmatter } = data.markdownRemark;
+			console.log(frontmatter);
 
 			const tag = (
 				<Typography className={classes.text} align="center">
-					Services
+					{frontmatter.title}
 				</Typography>
 			);
 
 			return (
 				<React.Fragment>
 					<TabBar fields={servicesFields} />
-					<Banner banner={withPrefix('/img/agency.jpg')} tag={tag} height="425px" />
+					<Banner banner={withPrefix(frontmatter.image)} tag={tag} height="425px" />
 					<Grid container className={classes.container} justify="space-between">
 						<Grid item xs={12} md={12}>
 							<Typography className={classes.title} gutterBottom>
-								Custom software development for even the most persistent and seemingly impossible
-								difficulties.
+								{frontmatter.heading}
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								Software engineering is the magic that makes business growth and innovation possible.
-								But it can also be a roadblock, especially if your team isn’t familiar with the
-								technologies you need to move your project from idea to reality, and more so if your
-								team members don’t know what they don’t know.
-							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								We at Primoko DO know what others don’t. And our engineers with various specialties are
-								standing by to act as the fuel that will make your project go.
-							</Typography>
+							{frontmatter.description &&
+								frontmatter.description.split('<br />').map((v, k) => (
+									<div key={k}>
+										<br />
+										<Typography className={classes.paragraph} gutterBottom>
+											{v}
+										</Typography>
+									</div>
+								))}
 							<Divider className={classes.divider} />
 						</Grid>
 
-						<Grid item className={classes.space} xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom>
-								Mobile
-							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								Stay ahead of the curve by adapting tomorrow’s technology for your mobile application.
-								Experience includes work in the banking and luxury ecommerce domains.
-							</Typography>
-							<Typography className={classNames(classes.blueText, classes.space)}>
-								Technology we’ve worked with:
-							</Typography>
-							<div className={classes.space}>
-								{mobile.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
-							</div>
-							<Grid item xs={10} md={8}>
-								<Button text="See mobile services" to="/services/mobile" component={Link} />
-							</Grid>
-						</Grid>
-						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom>
-								Web
-							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								Web apps that work will differentiate and drive your business. From coding specific
-								solutions and solving technical problems to holding full ownership—from design and
-								development to testing and ongoing maintenance—Primoko has you covered.
-							</Typography>
-							<Typography className={classNames(classes.blueText, classes.space)}>
-								Technology we’ve worked with:
-							</Typography>
-							<div className={classes.space}>
-								{web.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
-							</div>
-							<Grid item xs={10} md={8}>
-								<Button text="See web services" to="/services/web" component={Link} />
-							</Grid>
-						</Grid>
-						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom>
-								DevOps
-							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								Imagine feedback cycles measured in hours instead of weeks. Imagine simplicity,
-								performance, and speed. Imagine automation wherever it fits. We are big fans of DevOps,
-								especially of automating it as much as possible.
-							</Typography>
-							<Typography className={classNames(classes.blueText, classes.space)}>
-								Technology we’ve worked with:
-							</Typography>
-							<div className={classes.space}>
-								{devOps.map((v, k) => <Chip key={k} label={v} className={classes.chip} />)}
-							</div>
-							<Grid item xs={10} md={8}>
-								<Button text="See DevOps services" to="/services/devops" component={Link} />
-							</Grid>
-						</Grid>
-						<Grid className={classes.space} item xs={12} md={5}>
-							<Typography className={classes.title} gutterBottom>
-								Salesforce
-							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-								Build a unified view of your customer with a new Salesforce integration and
-								implementation. Or, breath new life into an existing implementation.
-							</Typography>
-							<Typography className={classNames(classes.blueText, classes.space)}>
-								Technology we’ve worked with:
-							</Typography>
-							<div className={classes.space}>
-								<Chip label="Salesforce commerce" className={classes.chip} />
-							</div>
-							<Grid item xs={10} md={8}>
-								<Button text="See Salesforce services" to="/services/salesforce" component={Link} />
-							</Grid>
-						</Grid>
+						{frontmatter.technologies &&
+							frontmatter.technologies.map((v, k) => (
+								<Grid item key={k} className={classes.space} xs={12} md={5}>
+									<Typography className={classes.title} gutterBottom>
+										{v.heading}
+									</Typography>
+									<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
+										{v.description}
+									</Typography>
+									<Typography className={classNames(classes.blueText, classes.space)}>
+										{v.helperText}
+									</Typography>
+									<div className={classes.space}>
+										{v.tags
+											.split(',')
+											.map((vlaue, key) => (
+												<Chip key={key} label={vlaue} className={classes.chip} />
+											))}
+									</div>
+									<Grid item xs={10} md={8}>
+										<Button text={v.buttonText} to="/services/mobile" component={Link} />
+									</Grid>
+								</Grid>
+							))}
 					</Grid>
-					<Banner banner={withPrefix('/img/code.jpg')} height="322px" />
+					<Banner banner={withPrefix(frontmatter.sepratorImage)} height="322px" />
 					<Grid container justify="space-between" id="recruitment-staffing" ref={this.myRef}>
 						<Grid className={classes.recruitment} item xs={12} md={6}>
 							<Typography className={classes.title} gutterBottom>
-								Elite Engineer Recruitment
+								{frontmatter.humanoko.heading}
 							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space2)} gutterBottom>
-								Need brilliant talent for your organization? Find elite software engineers the same
-								caliber as those that work for Primoko by connecting with the same recruiters we use at
-								our sister company, Humanoko.
-							</Typography>
-							<Typography className={classNames(classes.paragraph, classes.space2)} gutterBottom>
-								Backstory: we created Humanoko after our clients, who had been bombarding us with
-								requests to find elite engineers, began trying to poach ours! That’s when we knew it was
-								time to create a recruitment firm specializing in bringing forward-thinking companies
-								and brilliant software engineers together; that’s when we launched Humanoko.
-							</Typography>
-							<Button text="HUMANOKO" to="#" component={Link} styles={classes.humanokoButton} />
+							{frontmatter.humanoko.description &&
+								frontmatter.humanoko.description.split('<br />').map((v, k) => (
+									<div key={k}>
+										<Typography
+											className={classNames(classes.paragraph, classes.space2)}
+											gutterBottom
+										>
+											{v}
+										</Typography>
+									</div>
+								))}
+							<Button
+								text={frontmatter.humanoko.button}
+								to="#"
+								component={Link}
+								styles={classes.humanokoButton}
+							/>
 						</Grid>
 						<Grid item xs={12} md={6}>
-							<div className={classes.block} />
+							<div
+								className={classes.block}
+								style={{ backgroundImage: `url(${withPrefix(frontmatter.humanoko.image)})` }}
+							/>
 						</Grid>
 					</Grid>
-					<Quotes
-						quote="The best way to get a project done faster is to start sooner [like now]."
-						author="Jim Highsmith,"
-						authorRole="with our parenthetical and emphasis"
-					/>
+					{frontmatter.testimonials.map((v, k) => (
+						<Quotes key={k} author={v.author} quote={v.quote} authorRole={v.authorRole} />
+					))}
 				</React.Fragment>
 			);
 		}
@@ -282,13 +236,26 @@ export const pageQuery = graphql`
 			frontmatter {
 				title
 				image
-				main {
+				sepratorImage
+				heading
+				description
+				humanoko {
 					heading
+					button
+					image
 					description
-        }
-        testimonials {
+				}
+				testimonials {
 					author
+					authorRole
 					quote
+				}
+				technologies {
+					heading
+					tags
+					helperText
+					buttonText
+					description
 				}
 			}
 		}

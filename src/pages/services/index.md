@@ -1,24 +1,46 @@
 ---
 templateKey: 'services/index'
 path: /services/
-title: Software engineering companies are only as good as their people.
-image: /img/typing.png
-heading: Our people are good.
+title: Services
+image: /img/agency.jpg
+sepratorImage: /img/code.jpg
+heading: Custom software development for even the most persistent and seemingly impossible difficulties.
 description: >-
-  Primoko is a software engineering firm whose founders bring 50+ years of software engineering experience to the table to tackle your most challenging engineering projects.
-  <br />
-  Give us a bull; we’ll bring our cape.
-  <br />
-  Give us a runaway train; we’ll bring our catch engine.
-  <br />
-  Give us your most difficult engineering obstacle; we’ll bring an engineering expert with the skills and tools to face it.
-joinTeam:
-  heading: Join the team
-  button: See career opportunities
+  Software engineering is the magic that makes business growth and innovation possible. But it can also be a roadblock, especially if your team isn’t familiar with the technologies you need to move your project from idea to reality, and more so if your team members don’t know what they don’t know.<br />We at Primoko DO know what others don’t. And our engineers with various specialties are standing by to act as the fuel that will make your project go.
+humanoko:
+  heading: Elite Engineer Recruitment
+  button: Humanoko
+  image: /img/concept.jpg
   description: >
-    Are you a nerd looking for home? Or a nerd looking to work from home? Checkout our current opportunities.
+    Need brilliant talent for your organization? Find elite software engineers the same caliber as those that work for Primoko by connecting with the same recruiters we use at our sister company, Humanoko.<br />Backstory: we created Humanoko after our clients, who had been bombarding us with requests to find elite engineers, began trying to poach ours! That’s when we knew it was time to create a recruitment firm specializing in bringing forward-thinking companies and brilliant software engineers together; that’s when we launched Humanoko.
 testimonials:
-  - author: Martin Fowler
+  - author: Jim Highsmith,
+    authorRole: with our parenthetical and emphasis
     quote: >-
-      Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+      The best way to get a project done faster is to start sooner [like now].
+technologies:
+  - heading: Mobile
+    tags: iOS,Android,React Native,Swift,Objetive-C,Xcode
+    helperText: Technology we’ve worked with
+    buttonText: See mobile services
+    description: >-
+      Stay ahead of the curve by adapting tomorrow’s technology for your mobile application. Experience includes work in the banking and luxury ecommerce domains.
+  - heading: Web
+    tags: Mongo DB,Express JS,Angular,Node JS,Linux,Apache,MySQL,PHP,JQuery,React,AWS,Firebase
+    helperText: Technology we’ve worked with
+    buttonText: See web services
+    description: >-
+      Web apps that work will differentiate and drive your business. From coding specific solutions and solving technical  problems to holding full ownership—from design and development to testing and ongoing maintenance—Primoko has you covered.
+  - heading: DevOps
+    tags: Jenkins,CruiseControl,AWS,Docker,Maven,Ant,Git,SVN
+    helperText: Technology we’ve worked with
+    buttonText: See DevOps services
+    description: >-
+      Imagine feedback cycles measured in hours instead of weeks. Imagine simplicity, performance, and speed. Imagine automation wherever it fits. We are big fans of DevOps, especially of automating it as much as possible.
+  - heading: Salesforce
+    tags: Salesforce commerce
+    helperText: Technology we’ve worked with
+    buttonText: See Salesforce services
+    description: >-
+      Build a unified view of your customer with a new Salesforce integration and implementation. Or, breath new life into an existing implementation.
 ---
