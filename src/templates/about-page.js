@@ -67,7 +67,6 @@ const styles = (theme) => ({
 
 export const AboutPageTemplate = ({ title, heading, description, joinTeam, testimonials, image, classes }) => {
 	classes = classes || {};
-	console.log(image);
 
 	return (
 		<div>
