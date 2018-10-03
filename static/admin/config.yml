@@ -57,3 +57,15 @@ collections:
           - {label: "First Section", name: firstSection, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}, {label: "Link Text", name: linkText, widget: text}]}
           - {label: "Second Section", name: secondSection, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      - file: "src/pages/services/index.md"
+        label: "Services Overview Page"
+        name: "overview"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services/index"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+      
