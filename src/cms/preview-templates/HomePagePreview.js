@@ -21,7 +21,6 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 				heading: entry.getIn([ 'data', 'secondSection', 'heading' ]),
 				description: entry.getIn([ 'data', 'secondSection', 'description' ]),
 				image: entry.getIn([ 'data', 'secondSection', 'image' ]),
-				linkText: entry.getIn([ 'data', 'secondSection', 'linkText' ])
 			}}
 			testimonials={testimonials}
 		/>
