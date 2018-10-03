@@ -80,53 +80,44 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes }) => {
+export default withStyles(styles)(({ data, classes }) => {
+	const { frontmatter } = data.markdownRemark;
+	const heading = frontmatter.heading.split('—');
+
 	return (
 		<React.Fragment>
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={6}>
 					<Typography className={classes.title} gutterBottom>
-						Reach and engage with your audiences where they live—<span className={classes.subparagraph}>on mobile.</span>
+						{heading[0]}—<span className={classes.subparagraph}>{heading[1]}</span>
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						A high percent of your prospects and customers are online, chatting and emailing, playing games,
-						watching videos, and conducting business using smartphones, tablets, and wearables like the
-						Apple Watch.
-					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Primoko specializes in creating complex yet usable iOS and Android applications that will
-						connect you with your market in new and future-forward ways.
-					</Typography>
-					<Grid container className={classes.space}>
+					{frontmatter.description &&
+						frontmatter.description.split('<br />').map((v, k) => (
+							<Typography key={k} className={classNames(classes.paragraph, classes.space)} gutterBottom>
+								{v}
+							</Typography>
+						))}
+					<Grid container className={classes.space} justify="space-between">
 						<Grid item xs={6} md={6}>
 							<ul className={classes.list}>
-								<li>Games</li>
-								<li>Education apps</li>
-								<li>Shopping &amp; E-Commerce apps</li>
-								<li>Luxury brand and experience apps</li>
-								<li>Loyalty apps</li>
-								<li>Booking apps</li>
+								{frontmatter.rightList &&
+									frontmatter.rightList.split(',').map((v, k) => <li key={k}>{v}</li>)}
 							</ul>
 						</Grid>
-						<Grid item xs={6} md={6}>
+						<Grid item xs={6} md={5}>
 							<ul className={classes.list}>
-								<li>Calendar apps</li>
-								<li>Design apps</li>
-								<li>Travel guide apps</li>
-								<li>Health and wellness apps</li>
-								<li>Marketplace apps</li>
-								<li>Productivity apps</li>
+								{frontmatter.leftList &&
+									frontmatter.leftList.split(',').map((v, k) => <li key={k}>{v}</li>)}
 							</ul>
 						</Grid>
 					</Grid>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						The list goes on.
-					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Contact Primoko today. Tell us what you’d like to create, and we’ll tell you how we can bring it
-						to life.
-					</Typography>
+					{frontmatter.others &&
+						frontmatter.others.split('<br />').map((v, k) => (
+							<Typography key={k} className={classNames(classes.paragraph, classes.space)} gutterBottom>
+								{v}
+							</Typography>
+						))}
 				</Grid>
 				<Grid item xs={12} md={4}>
 					<BlueBlock
@@ -140,12 +131,29 @@ export default withStyles(styles)(({ classes }) => {
 					/>
 				</Grid>
 			</Grid>
-			<Quotes
-				quote="Mobile is becoming not only the new digital hub, but also the bridge to the physical world. 
-				That’s why mobile will affect more than just your digital operations - it will transorm your entire business."
-				author="Thomas Husson,"
-				authorRole="VP and Principal Analyst at Forrester Research"
-			/>
+			{frontmatter.testimonials.map((v, k) => (
+				<Quotes key={k} author={v.author} quote={v.quote} authorRole={v.authorRole} />
+			))}
 		</React.Fragment>
 	);
 });
+
+export const pageQuery = graphql`
+	query ServicesMobilePage($id: String!) {
+		markdownRemark(id: { eq: $id }) {
+			frontmatter {
+				title
+				heading
+				description
+				rightList
+				leftList
+				others
+				testimonials {
+					author
+					authorRole
+					quote
+				}
+			}
+		}
+	}
+`;
