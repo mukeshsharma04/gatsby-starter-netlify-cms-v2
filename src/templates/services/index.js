@@ -136,7 +136,8 @@ export default withStyles(styles)(
 
 		render() {
 			const { data, classes } = this.props;
-			console.log(data);
+			const { frontmatter } = data.markdownRemark;
+			console.log(frontmatter);
 
 			const tag = (
 				<Typography className={classes.text} align="center">

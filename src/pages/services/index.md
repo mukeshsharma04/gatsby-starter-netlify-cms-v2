@@ -1,24 +1,24 @@
 ---
 templateKey: 'services/index'
-path: /services/
-title: Software engineering companies are only as good as their people.
-image: /img/typing.png
-heading: Our people are good.
+path: /services/index
+title: Services
+image: /img/agency.jpg
+heading: Custom software development for even the most persistent and seemingly impossible difficulties.
 description: >-
-  Primoko is a software engineering firm whose founders bring 50+ years of software engineering experience to the table to tackle your most challenging engineering projects.
-  <br />
-  Give us a bull; we’ll bring our cape.
-  <br />
-  Give us a runaway train; we’ll bring our catch engine.
-  <br />
-  Give us your most difficult engineering obstacle; we’ll bring an engineering expert with the skills and tools to face it.
-joinTeam:
-  heading: Join the team
-  button: See career opportunities
-  description: >
-    Are you a nerd looking for home? Or a nerd looking to work from home? Checkout our current opportunities.
+  Software engineering is the magic that makes business growth and innovation possible. But it can also be a roadblock, especially if your team isn’t familiar with the technologies you need to move your project from idea to reality, and more so if your team members don’t know what they don’t know.
+	<br />
+	We at Primoko DO know what others don’t. And our engineers with various specialties are standing by to act as
+main:
+  - heading: Mobile
+		buttonText: See mobile services
+		workedWithText: Technology we’ve worked with
+		technologies: iOS,Android,React Native,Swift,Objetive-C,Xcode
+  	description: >
+			Stay ahead of the curve by adapting tomorrow’s technology for your mobile application. Experience includes work in the banking and luxury ecommerce domains.
+seperatorImage: /img/code.jpg
 testimonials:
-  - author: Martin Fowler
+	- author: Jim Highsmith
+		desig: with our parenthetical and emphasis
     quote: >-
-      Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+      The best way to get a project done faster is to start sooner [like now].
 ---

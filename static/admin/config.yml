@@ -66,6 +66,6 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
           - {label: Description, name: description, widget: string}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Main, name: main, widget: list, fields: [{label: Heading, name: heading, widget: string}, {label: "Button Text", name: buttonText, widget: string}, {label: "Worked With Text", name: workedWithText, widget: string}, {label: Technologies, name: technologies, widget: string}, {label: Description, name: description, widget: text}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       
