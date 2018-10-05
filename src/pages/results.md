@@ -39,18 +39,27 @@ desktop:
     - center:
         image: /img/bofa.png
         width: 220px
+      left:
+        image: /img/barneys.png
+        width: 178px
       right:
         image: /img/Philips-Shield.png
         width: 64px
     - center:
         image: /img/jefferson.png
         width: 176px
+      left:
+        image: /img/orchestra-tech.png
+        width: 186px
       right:
         image: /img/pricee.png
         width: 114px
     - center:
         image: /img/time-warner.jpg
         width: 145px
+      left:
+        image: /img/filmakr.png
+        width: 186px
       right:
         image: /img/rutgers-logo.png
         width: 200px
