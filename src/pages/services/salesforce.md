@@ -15,6 +15,6 @@ description: >-
   today. Let’s discuss how to put Salesforce to work for you.`
 testimonials:
   - author: Xavier Niel
-    quote: 'You know how to create software, then you can create big things.'
+    quote: 'If you know how to create software, then you can create big things.'
 ---
 
