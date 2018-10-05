@@ -7,16 +7,28 @@ description: >-
 mobile:
   heading: Mobile
   mobileImages:
-    - right:
+    - left:
+        image: /img/barneys.png
+        width: 178px
+      right:
         image: /img/Philips-Shield.png
         width: 64px
-    - right:
+    - left:
+        image: /img/bofa.png
+        width: 220px
+      right:
         image: /img/pricee.png
         width: 114px
-    - right:
+    - left:
+        image: /img/jefferson.png
+        width: 176px
+      right:
         image: /img/orchestra-tech.png
         width: 186px
-    - right:
+    - left:
+        image: /img/filmakr.png
+        width: 186px
+      right:
         image: /img/time-warner.jpg
         width: 145px
     - center:
