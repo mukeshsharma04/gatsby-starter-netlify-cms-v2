@@ -54,6 +54,8 @@ const styles = (theme) => ({
 
 const ResultsPageTemplate = ({ data, classes }) => {
 	const { frontmatter } = data.markdownRemark;
+	const desktops = frontmatter.desktop.desktopImages;
+	const mobiles = frontmatter.mobile.mobileImages;
 	
 	return (
 		<React.Fragment>
@@ -69,7 +71,7 @@ const ResultsPageTemplate = ({ data, classes }) => {
 				<Grid item xs={12} md={12} className={classes.space}>
 					<Hidden xsDown>
 						<Grid container justify="flex-start" alignItems="center">
-							{frontmatter.desktopImages.map((v, k) => (
+							{desktops.map((v, k) => (
 								<React.Fragment key={k}>
 									{v.left && (
 										<Grid item xs={5} className={classes.gridItem}>
@@ -100,8 +102,8 @@ const ResultsPageTemplate = ({ data, classes }) => {
 				<Grid item xs={12} md={12}>
 					<Hidden smUp>
 						<Grid container justify="center" alignItems="center">
-							{frontmatter.mobileImages &&
-								frontmatter.mobileImages.map((v, k) => (
+							{mobiles &&
+								mobiles.map((v, k) => (
 									<React.Fragment key={k}>
 										{v.left && (
 											<Grid item xs={6} className={classes.gridItem}>
@@ -146,32 +148,36 @@ export const aboutPageQuery = graphql`
 			frontmatter {
 				title
 				description
-				mobileImages {
-					left {
-						image
-						width
-					}
-					center {
-						image
-						width
-					}
-					right {
-						image
-						width
+				mobile {
+					mobileImages {
+						left {
+							image
+							width
+						}
+						center {
+							image
+							width
+						}
+						right {
+							image
+							width
+						}
 					}
 				}
-				desktopImages {
-					left {
-						image
-						width
-					}
-					center {
-						image
-						width
-					}
-					right {
-						image
-						width
+				desktop {
+					desktopImages {
+						left {
+							image
+							width
+						}
+						center {
+							image
+							width
+						}
+						right {
+							image
+							width
+						}
 					}
 				}
 				testimonials {
