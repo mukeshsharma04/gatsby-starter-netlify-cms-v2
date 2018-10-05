@@ -7,20 +7,16 @@ description: >-
 mobile:
   heading: Mobile
   mobileImages:
-    - left: []
-      right:
+    - right:
         image: /img/Philips-Shield.png
         width: 64px
-    - left: []
-      right:
+    - right:
         image: /img/pricee.png
         width: 114px
-    - left: []
-      right:
+    - right:
         image: /img/orchestra-tech.png
         width: 186px
-    - left: []
-      right:
+    - right:
         image: /img/time-warner.jpg
         width: 145px
     - center:
@@ -31,21 +27,18 @@ desktop:
     - center:
         image: /img/bofa.png
         width: 220px
-      left: []
       right:
         image: /img/Philips-Shield.png
         width: 64px
     - center:
         image: /img/jefferson.png
         width: 176px
-      left: []
       right:
         image: /img/pricee.png
         width: 114px
     - center:
         image: /img/time-warner.jpg
         width: 145px
-      left: []
       right:
         image: /img/rutgers-logo.png
         width: 200px

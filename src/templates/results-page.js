@@ -150,10 +150,6 @@ export const aboutPageQuery = graphql`
 				description
 				mobile {
 					mobileImages {
-						left {
-							image
-							width
-						}
 						center {
 							image
 							width
@@ -166,10 +162,6 @@ export const aboutPageQuery = graphql`
 				}
 				desktop {
 					desktopImages {
-						left {
-							image
-							width
-						}
 						center {
 							image
 							width
