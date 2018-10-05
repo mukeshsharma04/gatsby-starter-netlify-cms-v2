@@ -115,3 +115,15 @@ collections:
           - {label: Mobile, name: mobile, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Mobile Images, name: mobileImages, widget: list, fields: [{label: "Left", name: left, widget: object, fields: [{label: "Image", name: image, widget: image}, {label: "Width", name: width, widget: string}]}, {label: "Center", name: center, widget: object, fields: [{label: "Image", name: image, widget: image}, {label: "Width", name: width, widget: string}]}, {label: "Right", name: right, widget: object, fields: [{label: "Image", name: image, widget: image}, {label: "Width", name: width, widget: string}]}]}]}
           - {label: Desktop, name: desktop, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Desktop Images, name: desktopImages, widget: list, fields: [{label: "Left", name: left, widget: object, fields: [{label: "Image", name: image, widget: image}, {label: "Width", name: width, widget: string}]}, {label: "Center", name: center, widget: object, fields: [{label: "Image", name: image, widget: image}, {label: "Width", name: width, widget: string}]}, {label: "Right", name: right, widget: object, fields: [{label: "Image", name: image, widget: image}, {label: "Width", name: width, widget: string}]}]}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}, {label: Role, name: authorRole, widget: string}]}
+      - file: "src/pages/the-primoko-difference/index.md"
+        label: "The Primoko Difference Overview Page"
+        name: "differenceOverview"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "/the-primoko-difference"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Heading, name: heading, widget: text}
+          - {label: Description, name: description, widget: text}
+          - {label: List, name: list, widget: list}
+          - {label: Others, name: others, widget: text}

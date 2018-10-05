@@ -10,6 +10,7 @@ import ServicesWebPagePreview from './preview-templates/services/web';
 import ServicesDevOpsPagePreview from './preview-templates/services/devops';
 import ServicesPricingPagePreview from './preview-templates/services/pricing';
 import ResultsPagePreview from './preview-templates/ResultsPagePreview';
+import ThePrimokoDifferenceIndexPagePreview from './preview-templates/the-primoko-difference/index';
 
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
@@ -21,3 +22,4 @@ CMS.registerPreviewTemplate('services/web', ServicesWebPagePreview);
 CMS.registerPreviewTemplate('services/devops', ServicesDevOpsPagePreview);
 CMS.registerPreviewTemplate('services/pricing', ServicesPricingPagePreview);
 CMS.registerPreviewTemplate('results', ResultsPagePreview);
+CMS.registerPreviewTemplate('the-primoko-difference', ThePrimokoDifferenceIndexPagePreview);
