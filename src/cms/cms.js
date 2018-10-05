@@ -9,7 +9,7 @@ import ServicesMobilePagePreview from './preview-templates/services/mobile';
 import ServicesWebPagePreview from './preview-templates/services/web';
 import ServicesDevOpsPagePreview from './preview-templates/services/devops';
 import ServicesPricingPagePreview from './preview-templates/services/pricing';
-//import ResultsPagePreview from './preview-templates/ResultsPagePreview';
+import ResultsPagePreview from './preview-templates/ResultsPagePreview';
 
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
@@ -20,4 +20,4 @@ CMS.registerPreviewTemplate('services/mobile', ServicesMobilePagePreview);
 CMS.registerPreviewTemplate('services/web', ServicesWebPagePreview);
 CMS.registerPreviewTemplate('services/devops', ServicesDevOpsPagePreview);
 CMS.registerPreviewTemplate('services/pricing', ServicesPricingPagePreview);
-//CMS.registerPreviewTemplate('results', ResultsPagePreview);
+CMS.registerPreviewTemplate('results', ResultsPagePreview);
