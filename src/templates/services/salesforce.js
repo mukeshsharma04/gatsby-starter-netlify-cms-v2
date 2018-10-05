@@ -78,32 +78,23 @@ const styles = (theme) => ({
 	}
 });
 
-export default withStyles(styles)(({ classes }) => {
+const ServicesSalesForcePagePreviewTemplate = ({ data, classes }) => {
+	const { frontmatter } = data.markdownRemark;
+
 	return (
 		<React.Fragment>
 			<TabBar fields={servicesFields} />
 			<Grid container className={classes.container} justify="space-between">
 				<Grid item xs={12} md={7}>
 					<Typography className={classes.title} gutterBottom>
-						We will put Salesforce to work for you.
+						{frontmatter.heading}
 					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						The Salesforce cloud-based CRM leads the pack in terms of helping businesses quickly roll out
-						fast-integrating, user-friendly applications that scale.
-					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Primoko has the expertise you need to customize and connect Salesforce to legacy systems, SaaS
-						applications, and other business software. This applies whether you’re just starting with
-						Salesforce, re-engineering the way you do business, or in need of ongoing maintenance to
-						continually fine-tune the system for increased functionality, usability, and adoption.
-					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Salesforce work may include client-side scripting, portal development, integration, and building
-						customized applications on the Force.com platform.
-					</Typography>
-					<Typography className={classNames(classes.paragraph, classes.space)} gutterBottom>
-						Contact us today. Let’s discuss how to put Salesforce to work for you.
-					</Typography>
+					{frontmatter.description &&
+						frontmatter.description.split('<br />').map((v, k) => (
+							<Typography key={k} className={classNames(classes.paragraph, classes.space)} gutterBottom>
+								{v}
+							</Typography>
+						))}
 				</Grid>
 				<Grid item xs={12} md={4}>
 					<BlueBlock
@@ -115,7 +106,26 @@ export default withStyles(styles)(({ classes }) => {
 					/>
 				</Grid>
 			</Grid>
-			<Quotes quote="If you know how to create software, then you can create big things." author="Xavier Niel" />
+			{frontmatter.testimonials.map((v, k) => <Quotes key={k} author={v.author} quote={v.quote} />)}
 		</React.Fragment>
 	);
-});
+};
+
+export default withStyles(styles)(ServicesSalesForcePagePreviewTemplate);
+
+export const pageQuery = graphql`
+	query ServicesSalesForcePage($id: String!) {
+		markdownRemark(id: { eq: $id }) {
+			frontmatter {
+				title
+				heading
+				description
+				testimonials {
+					author
+					authorRole
+					quote
+				}
+			}
+		}
+	}
+`;
