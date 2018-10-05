@@ -81,3 +81,11 @@ collections:
           - {label: "Right List", name: rightList, widget: string}
           - {label: "Left List", name: leftList, widget: string}
           - {label: Others, name: others, widget: text}
+      - file: "src/pages/services/devops.md"
+        label: "Services DevOps Page"
+        name: "devops"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services/devops"}
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: text}
