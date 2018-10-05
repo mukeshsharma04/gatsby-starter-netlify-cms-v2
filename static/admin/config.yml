@@ -6,24 +6,11 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-
   - name: "pages"
     label: "Pages"
     files:
       - file: "src/pages/products/index.md"
-        label: "Products Page"
+        label: "Sample Page"
         name: "products"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
@@ -82,3 +69,15 @@ collections:
           - {label: "Left List", name: leftList, widget: string}
           - {label: Others, name: others, widget: text}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}, {label: Role, name: authorRole, widget: string}]}
+      - file: "src/pages/services/web.md"
+        label: "Services Web Page"
+        name: "web"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services/web"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: text}
+          - {label: "Right List", name: rightList, widget: string}
+          - {label: "Left List", name: leftList, widget: string}
+          - {label: Others, name: others, widget: text}
