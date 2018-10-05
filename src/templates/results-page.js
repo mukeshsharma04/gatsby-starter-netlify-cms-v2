@@ -54,9 +54,7 @@ const styles = (theme) => ({
 
 const ResultsPageTemplate = ({ data, classes }) => {
 	const { frontmatter } = data.markdownRemark;
-	const desktops = frontmatter.desktop.desktopImages;
-	const mobiles = frontmatter.mobile.mobileImages;
-	
+
 	return (
 		<React.Fragment>
 			<Grid container className={classes.container} justify="space-between">
@@ -150,6 +148,10 @@ export const aboutPageQuery = graphql`
 				description
 				mobile {
 					mobileImages {
+						left {
+							image
+							width
+						}
 						center {
 							image
 							width
@@ -162,6 +164,10 @@ export const aboutPageQuery = graphql`
 				}
 				desktop {
 					desktopImages {
+						left {
+							image
+							width
+						}
 						center {
 							image
 							width
