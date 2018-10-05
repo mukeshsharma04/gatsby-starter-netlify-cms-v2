@@ -7,27 +7,19 @@ description: >-
 mobile:
   heading: Mobile
   mobileImages:
-    - left:
-        - image: /img/barneys.png
-          width: 178px
+    - left: []
       right:
         image: /img/Philips-Shield.png
         width: 64px
-    - left:
-        - image: /img/bofa.png
-          width: 220px
+    - left: []
       right:
         image: /img/pricee.png
         width: 114px
-    - left:
-        - image: /img/jefferson.png
-          width: 176px
+    - left: []
       right:
         image: /img/orchestra-tech.png
         width: 186px
-    - left:
-        - image: /img/filmakr.png
-          width: 186px
+    - left: []
       right:
         image: /img/time-warner.jpg
         width: 145px
@@ -39,27 +31,21 @@ desktop:
     - center:
         image: /img/bofa.png
         width: 220px
-      left:
-        - image: /img/barneys.png
-          width: 178px
+      left: []
       right:
         image: /img/Philips-Shield.png
         width: 64px
     - center:
         image: /img/jefferson.png
         width: 176px
-      left:
-        - image: /img/orchestra-tech.png
-          width: 186px
+      left: []
       right:
         image: /img/pricee.png
         width: 114px
     - center:
         image: /img/time-warner.jpg
         width: 145px
-      left:
-        - image: /img/filmakr.png
-          width: 186px
+      left: []
       right:
         image: /img/rutgers-logo.png
         width: 200px
