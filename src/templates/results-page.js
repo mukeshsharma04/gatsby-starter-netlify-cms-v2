@@ -54,6 +54,8 @@ const styles = (theme) => ({
 
 const ResultsPageTemplate = ({ data, classes }) => {
 	const { frontmatter } = data.markdownRemark;
+	const desktops = frontmatter.desktop.desktopImages;
+	const mobiles = frontmatter.mobile.mobileImages;
 
 	return (
 		<React.Fragment>
@@ -73,22 +75,22 @@ const ResultsPageTemplate = ({ data, classes }) => {
 								<React.Fragment key={k}>
 									{v.left && (
 										<Grid item xs={5} className={classes.gridItem}>
-											<img src={withPrefix(v.left[0].image)} width={v.left[0].width} />
+											<img src={withPrefix(v.left.image)} width={v.left.width} />
 										</Grid>
 									)}
 									{v.center && (
 										<Grid item xs={4} className={classes.gridItem}>
-											<img src={withPrefix(v.center[0].image)} width={v.center[0].width} />
+											<img src={withPrefix(v.center.image)} width={v.center.width} />
 										</Grid>
 									)}
 									{v.right && (
 										<Grid item xs={3} className={classNames(classes.right, classes.gridItem)}>
 											<img
 												className={
-													v.right[0].image.indexOf('Philips') > 0 ? classes.opacity : null
+													v.right.image.indexOf('Philips') > 0 ? classes.opacity : null
 												}
-												src={withPrefix(v.right[0].image)}
-												width={v.right[0].width}
+												src={withPrefix(v.right.image)}
+												width={v.right.width}
 											/>
 										</Grid>
 									)}
@@ -105,22 +107,22 @@ const ResultsPageTemplate = ({ data, classes }) => {
 									<React.Fragment key={k}>
 										{v.left && (
 											<Grid item xs={6} className={classes.gridItem}>
-												<img src={withPrefix(v.left[0].image)} width={v.left[0].width} />
+												<img src={withPrefix(v.left.image)} width={v.left.width} />
 											</Grid>
 										)}
 										{v.center && (
 											<Grid item xs={12} className={classNames(classes.center, classes.gridItem)}>
-												<img src={withPrefix(v.center[0].image)} width={v.center[0].width} />
+												<img src={withPrefix(v.center.image)} width={v.center.width} />
 											</Grid>
 										)}
 										{v.right && (
 											<Grid item xs={6} className={classNames(classes.right, classes.gridItem)}>
 												<img
 													className={
-														v.right[0].image.indexOf('Philips') > 0 ? classes.opacity : null
+														v.right.image.indexOf('Philips') > 0 ? classes.opacity : null
 													}
-													src={withPrefix(v.right[0].image)}
-													width={v.right[0].width}
+													src={withPrefix(v.right.image)}
+													width={v.right.width}
 												/>
 											</Grid>
 										)}

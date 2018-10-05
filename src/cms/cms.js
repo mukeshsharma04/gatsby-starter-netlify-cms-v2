@@ -20,4 +20,4 @@ CMS.registerPreviewTemplate('services/mobile', ServicesMobilePagePreview);
 CMS.registerPreviewTemplate('services/web', ServicesWebPagePreview);
 CMS.registerPreviewTemplate('services/devops', ServicesDevOpsPagePreview);
 CMS.registerPreviewTemplate('services/pricing', ServicesPricingPagePreview);
-// CMS.registerPreviewTemplate('results', ResultsPagePreview);
+CMS.registerPreviewTemplate('results', ResultsPagePreview);
