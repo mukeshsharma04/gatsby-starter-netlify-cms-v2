@@ -136,5 +136,6 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: text}
           - {label: Description, name: description, widget: text}
+          - {label: List, name: list, widget: list}
           - {label: Peace, name: peace, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}, {label: Role, name: authorRole, widget: string}]}

@@ -8,7 +8,6 @@ const ThePrimokoDifferenceProcessPagePreview = ({ entry }) => {
 
 	return (
 		<ThePrimokoDifferenceProcessPagePreviewTemplate
-			content={widgetFor('body')}
 			image={entry.getIn([ 'data', 'image' ])}
 			title={entry.getIn([ 'data', 'title' ])}
 			heading={entry.getIn([ 'data', 'heading' ])}
@@ -22,8 +21,7 @@ const ThePrimokoDifferenceProcessPagePreview = ({ entry }) => {
 ThePrimokoDifferenceProcessPagePreview.propTypes = {
 	entry: PropTypes.shape({
 		getIn: PropTypes.func
-	}),
-  widgetFor: PropTypes.func,
+	})
 };
 
 export default ThePrimokoDifferenceProcessPagePreview;

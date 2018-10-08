@@ -35,7 +35,7 @@ const styles = (theme) => ({
 		[theme.breakpoints.up('sm')]: {
 			...theme.typography.paragraph
 		},
-		"& p" : {
+		'& p': {
 			marginTop: '30px'
 		}
 	},
@@ -68,7 +68,9 @@ const styles = (theme) => ({
 });
 
 const ThePrimokoDifferenceProcessPagePreviewTemplate = ({ data, classes }) => {
-	const { frontmatter, html } = data.markdownRemark;
+	const { frontmatter } = data.markdownRemark;
+
+	console.log(frontmatter);
 
 	return (
 		<React.Fragment>
@@ -79,29 +81,34 @@ const ThePrimokoDifferenceProcessPagePreviewTemplate = ({ data, classes }) => {
 					<Typography className={classNames(classes.paragraph, classes.space)}>
 						{frontmatter.heading}
 					</Typography>
+					{frontmatter.list.map((v, k) => (
 						<div
+							key={k}
 							className={classNames(classes.paragraph, classes.space)}
-							dangerouslySetInnerHTML={{ __html: html }}
+							dangerouslySetInnerHTML={{ __html: v }}
 						/>
+					))}
 				</Grid>
 
 				<Grid item xs={12} md={4}>
-					<img
-						src={withPrefix(frontmatter.image)}
-						className={classNames(classes.logo, classes.space)}
-					/>
+					<img src={withPrefix(frontmatter.image)} className={classNames(classes.logo, classes.space)} />
 				</Grid>
 
 				<Grid item xs={12} md={7}>
-					<Typography className={classNames(classes.title, classes.space2)}>{frontmatter.peace.heading}</Typography>
-					{frontmatter.peace.description.split('<br />').map((v,k) => <Typography key={k} className={classNames(classes.paragraph, classes.space)}>
-					{v}</Typography>)}
+					<Typography className={classNames(classes.title, classes.space2)}>
+						{frontmatter.peace.heading}
+					</Typography>
+					{frontmatter.peace.description.split('<br />').map((v, k) => (
+						<Typography key={k} className={classNames(classes.paragraph, classes.space)}>
+							{v}
+						</Typography>
+					))}
 					<a href="/letstalk" className={classes.textBlue}>
 						<div className={classes.space}>Please let us know.</div>
 					</a>
 				</Grid>
 			</Grid>
-			
+
 			{frontmatter.testimonials.map((v, k) => <Quotes key={k} author={v.author} quote={v.quote} />)}
 		</React.Fragment>
 	);
@@ -118,6 +125,7 @@ export const pageQuery = graphql`
 				image
 				heading
 				description
+				list
 				peace {
 					heading
 					description
