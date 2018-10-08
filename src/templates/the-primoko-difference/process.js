@@ -118,7 +118,6 @@ export const pageQuery = graphql`
 				image
 				heading
 				description
-				list
 				peace {
 					heading
 					description
