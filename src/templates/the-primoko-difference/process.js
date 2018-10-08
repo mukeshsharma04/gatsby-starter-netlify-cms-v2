@@ -70,8 +70,6 @@ const styles = (theme) => ({
 const ThePrimokoDifferenceProcessPagePreviewTemplate = ({ data, classes }) => {
 	const { frontmatter } = data.markdownRemark;
 
-	console.log(frontmatter);
-
 	return (
 		<React.Fragment>
 			<TabBar fields={thePrimokoDiffernceFields} />
