@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HomePagePreview from '../../templates/home-page';
+import IndexPage from '../../templates/home-page';
 
-const ProductPagePreview = ({ entry, getAsset }) => {
+const HomePagePreview = ({ entry, getAsset }) => {
 	const entryTestimonials = entry.getIn([ 'data', 'testimonials' ]);
 	const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
 
 	return (
-		<HomePagePreview
+		<IndexPage
 			image={entry.getIn([ 'data', 'image' ])}
 			title={entry.getIn([ 'data', 'title' ])}
 			firstSection={{
@@ -26,11 +26,11 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 	);
 };
 
-ProductPagePreview.propTypes = {
+HomePagePreview.propTypes = {
 	entry: PropTypes.shape({
 		getIn: PropTypes.func
 	}),
 	getAsset: PropTypes.func
 };
 
-export default ProductPagePreview;
+export default HomePagePreview;

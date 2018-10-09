@@ -58,7 +58,7 @@ const styles = (theme) => ({
 	}
 });
 
-class LetsTalk extends React.Component {
+class LetsTalkPage extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -124,7 +124,9 @@ class LetsTalk extends React.Component {
 	};
 
 	render() {
-		const { classes } = this.props;
+		const { data, classes } = this.props;
+		const { frontmatter } = data.markdownRemark;
+
 		return (
 			<React.Fragment>
 				<Grid container className={classes.container} justify="space-between" spacing={40}>
@@ -184,19 +186,36 @@ class LetsTalk extends React.Component {
 					</Grid>
 					<Grid item xs={12} md={4} lg={4}>
 						<Typography className={classes.title} gutterBottom>
-							Our offices
+							{frontmatter.title}
 						</Typography>
-						<CustomizedTabs />
+						<CustomizedTabs data={frontmatter.office} />
 					</Grid>
 				</Grid>
-				<Quotes
-					author="David Guterson"
-					quote="Everybody has a world, and that world is completely hidden until we begin to inquire. 
-					As soon as we do, that entire world opens to us and yields itself. And you see how full and complex it is."
-				/>
+				{frontmatter.testimonials.map((v, k) => <Quotes key={k} author={v.author} quote={v.quote} />)}
 			</React.Fragment>
 		);
 	}
 }
 
-export default withStyles(styles)(LetsTalk);
+export default withStyles(styles)(LetsTalkPage);
+
+export const pageQuery = graphql`
+	query LetsTalkPageQuery($id: String!) {
+		markdownRemark(id: { eq: $id }) {
+			frontmatter {
+				title
+				office {
+					heading
+					description
+					phone
+					email
+					map
+				}
+				testimonials {
+					author
+					quote
+				}
+			}
+		}
+	}
+`;

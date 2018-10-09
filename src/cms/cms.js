@@ -13,6 +13,7 @@ import ResultsPagePreview from './preview-templates/ResultsPagePreview';
 import ThePrimokoDifferenceIndexPagePreview from './preview-templates/the-primoko-difference/index';
 import ThePrimokoDifferenceProcessPagePreview from './preview-templates/the-primoko-difference/process';
 import ThePrimokoDifferencePricingPagePreview from './preview-templates/the-primoko-difference/pricing';
+import LetsTalkPagePreview from './preview-templates/LetsTalkPagePreview';
 
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
@@ -27,3 +28,4 @@ CMS.registerPreviewTemplate('results', ResultsPagePreview);
 CMS.registerPreviewTemplate('the-primoko-difference', ThePrimokoDifferenceIndexPagePreview);
 CMS.registerPreviewTemplate('the-primoko-difference/process', ThePrimokoDifferenceProcessPagePreview);
 CMS.registerPreviewTemplate('the-primoko-difference/pricing', ThePrimokoDifferencePricingPagePreview);
+CMS.registerPreviewTemplate('letstalk', LetsTalkPagePreview);

@@ -146,4 +146,12 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "the-primoko-difference/pricing"}
           - {label: Title, name: title, widget: string}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}, {label: Note, name: note, widget: string}, {label: Project, name: project, widget: string}, {label: Examples, name: examples, widget: list}, {label: Image, name: image, widget: image}]}]}
+      - file: "src/pages/letstalk.md"
+        label: "Lets Talk Page"
+        name: "letsTalkPage"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "letstalk-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Office, name: office, widget: list, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Phone, name: phone, widget: string}, {label: Email, name: email, widget: string}, {label: Map, name: map, widget: text}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
       

@@ -104,9 +104,9 @@ class CustomizedTabs extends React.Component {
 	};
 
 	render() {
-		const { classes } = this.props;
+		const { data, classes } = this.props;
 		const { value } = this.state;
-
+		console.log(data);
 		return (
 			<div className={classes.root}>
 				<Tabs
@@ -114,42 +114,31 @@ class CustomizedTabs extends React.Component {
 					onChange={this.handleChange}
 					classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
 				>
-					<Tab
-						disableRipple
-						classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-						label="US (HQ)"
-					/>
-					<Tab
-						disableRipple
-						classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-						label="India"
-					/>
-					<Tab
-						disableRipple
-						classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-						label="Romania"
-					/>
+					{data.map((v, k) => (
+						<Tab
+							key={k}
+							disableRipple
+							classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
+							label={v.heading}
+						/>
+					))}
 				</Tabs>
 				{value === 0 && (
 					<TabContainer>
 						<Grid direction="row" justify="space-between" container>
 							<Grid item xs={6} md={6}>
-								<Typography className={classes.paragraph} gutterBottom>
-									231 Clarksville Rd
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									Suite 3
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									West Windsor, NJ - 08550
-								</Typography>
+								<div
+									className={classes.paragraph}
+									dangerouslySetInnerHTML={{ __html: data[value].description }}
+									style={{ lineHeight: '30px' }}
+								/>
 							</Grid>
 							<Grid item xs={6} md={6}>
 								<Typography className={classNames(classes.link, classes.right)} gutterBottom>
-									(413) 248-7626
+									{data[value].phone}
 								</Typography>
 								<Typography className={classNames(classes.link, classes.right)} gutterBottom>
-									hello@primoko.com
+									{data[value].email}
 								</Typography>
 							</Grid>
 							&#160;
@@ -171,22 +160,18 @@ class CustomizedTabs extends React.Component {
 					<TabContainer>
 						<Grid direction="row" justify="space-between" container>
 							<Grid item xs={6} md={6}>
-								<Typography className={classes.paragraph} gutterBottom>
-									Plot 23,
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									Maruti Industrial Area,
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									Sector 18, Gurugram, Haryana 122015, India
-								</Typography>
+								<div
+									className={classes.paragraph}
+									dangerouslySetInnerHTML={{ __html: data[value].description }}
+									style={{ lineHeight: '30px' }}
+								/>
 							</Grid>
 							<Grid item xs={6} md={6}>
 								<Typography className={classNames(classes.link, classes.right)} gutterBottom>
-									(413) 248-7626
+									{data[value].phone}
 								</Typography>
 								<Typography className={classNames(classes.link, classes.right)} gutterBottom>
-									hello@primoko.com
+									{data[value].email}
 								</Typography>
 							</Grid>
 							&#160;
@@ -208,22 +193,18 @@ class CustomizedTabs extends React.Component {
 					<TabContainer>
 						<Grid direction="row" justify="space-between" container>
 							<Grid item xs={6} md={6}>
-								<Typography className={classes.paragraph} gutterBottom>
-									Marin Preda
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									Street No. 10-12,
-								</Typography>
-								<Typography className={classes.paragraph} gutterBottom>
-									Cluj-Napoca, Romania, 400502
-								</Typography>
+								<div
+									className={classes.paragraph}
+									dangerouslySetInnerHTML={{ __html: data[value].description }}
+									style={{ lineHeight: '30px' }}
+								/>
 							</Grid>
 							<Grid item xs={6} md={6}>
 								<Typography className={classNames(classes.link, classes.right)} gutterBottom>
-									(413) 248-7626
+									{data[value].phone}
 								</Typography>
 								<Typography className={classNames(classes.link, classes.right)} gutterBottom>
-									hello@primoko.com
+									{data[value].email}
 								</Typography>
 							</Grid>
 							&#160;
