@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import classNames from 'classnames';
 import Button from '../../components/Button';
 import TabBar from '../../components/TabBar';
-import { servicesFields } from '../../metadata';
+import { thePrimokoDiffernceFields } from '../../metadata';
 import { withPrefix } from 'gatsby-link';
 
 const styles = (theme) => ({
@@ -90,13 +90,13 @@ const styles = (theme) => ({
 	}
 });
 
-const ServicesPricingPagePreviewTemplate = ({ data, classes }) => {
+const ThePrimokoDifferencePricingPagePreviewTemplate = ({ data, classes }) => {
 	const { frontmatter } = data.markdownRemark;
 	const { plans } = frontmatter.pricing;
 	
 	return (
 		<React.Fragment>
-			<TabBar fields={servicesFields} />
+			<TabBar fields={thePrimokoDiffernceFields} />
 			<Grid container className={classes.container}>
 				{plans &&
 					plans.map((v, k) => (
@@ -164,10 +164,10 @@ const ServicesPricingPagePreviewTemplate = ({ data, classes }) => {
 	);
 };
 
-export default withStyles(styles)(ServicesPricingPagePreviewTemplate);
+export default withStyles(styles)(ThePrimokoDifferencePricingPagePreviewTemplate);
 
 export const pageQuery = graphql`
-	query ServicesPricingPage($id: String!) {
+	query ThePrimokoDifferencePricingPage($id: String!) {
 		markdownRemark(id: { eq: $id }) {
 			frontmatter {
 				title
