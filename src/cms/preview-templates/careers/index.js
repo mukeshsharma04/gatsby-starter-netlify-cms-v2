@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CareersPageTemplate } from '../../templates/careers-page';
+import CareersPageTemplate from '../../../templates/career/index';
 
 const CareersPagePreview = ({ entry }) => {
 	
@@ -10,7 +10,8 @@ const CareersPagePreview = ({ entry }) => {
 			title={entry.getIn([ 'data', 'title' ])}
 			heading={entry.getIn([ 'data', 'heading' ])}
 			description={entry.getIn([ 'data', 'description' ])}
-			testimonials={testimonials}
+			ios={entry.getIn([ 'data', 'ios' ])}
+			react={entry.getIn([ 'data', 'react' ])}
 		/>
 	);
 };

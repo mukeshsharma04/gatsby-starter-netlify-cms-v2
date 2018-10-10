@@ -83,7 +83,7 @@ const styles = (theme) => ({
 	}
 });
 
-const CareerPage = ({ data, classes }) => {
+const CareersPageTemplate = ({ data, classes }) => {
 	const { frontmatter } = data.markdownRemark;
 
 	const tag = (
@@ -115,7 +115,7 @@ const CareerPage = ({ data, classes }) => {
 						styles={classNames(classes.button, classes.space)}
 						to={'/careers/ios'}
 						component={Link}
-						text="Apply now"
+						text={frontmatter.ios.button}
 					/>
 				</Grid>
 				<Grid item xs={12} md={5}>
@@ -137,7 +137,7 @@ const CareerPage = ({ data, classes }) => {
 						styles={classNames(classes.button, classes.space)}
 						to={'/careers/react'}
 						component={Link}
-						text="Apply now"
+						text={frontmatter.react.button}
 					/>
 				</Grid>
 			</Grid>
@@ -145,14 +145,14 @@ const CareerPage = ({ data, classes }) => {
 	);
 };
 
-CareerPage.propTypes = {
+CareersPageTemplate.propTypes = {
 	data: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(CareerPage);
+export default withStyles(styles)(CareersPageTemplate);
 
 export const careerPageQuery = graphql`
-	query CareerPage($id: String!) {
+	query CareersPageTemplate($id: String!) {
 		markdownRemark(id: { eq: $id }) {
 			frontmatter {
 				title
