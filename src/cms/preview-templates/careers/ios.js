@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CareersIosPageTemplate from '../../../templates/career/ios';
+import CareersIosPageTemplate from '../../../templates/careers/ios';
 
 const CareersIosPagePreview = ({ entry }) => {
 	

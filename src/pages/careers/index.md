@@ -1,5 +1,5 @@
 ---
-templateKey: 'career/index'
+templateKey: 'careers/index'
 path: /career
 title: Careers
 image: /img/startup.jpg

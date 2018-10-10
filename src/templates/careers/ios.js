@@ -58,7 +58,6 @@ const styles = (theme) => ({
 
 const CareersIosPageTemplate = ({ data, classes }) => {
 	const { frontmatter } = data.markdownRemark;
-	console.log('frontmatter', frontmatter);
 
 	return (
 		<React.Fragment>

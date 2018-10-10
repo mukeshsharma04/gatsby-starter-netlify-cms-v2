@@ -1,6 +1,6 @@
 ---
-templateKey: 'career/ios'
-path: /career/ios
+templateKey: 'careers/ios'
+path: /careers/ios
 title: Careers IOS
 ios:
   title: Senior software engineer - iOS
