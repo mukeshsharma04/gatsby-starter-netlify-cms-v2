@@ -154,4 +154,12 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Office, name: office, widget: list, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Phone, name: phone, widget: string}, {label: Email, name: email, widget: string}, {label: Map, name: map, widget: text}]}
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-      
+      - file: "src/pages/careers/index.md"
+        label: "Careers"
+        name: "careers"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "careers"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: IOS, name: ios, widget: object, fields: [{label: Title, name: title, widget: text}, {label: Heading, name: heading, widget: text}, {label: button, name: button, widget: text}, {label: Description, name: description, widget: text}]}
+          - {label: React, name: react, widget: object, fields: [{label: Title, name: title, widget: text}, {label: Heading, name: heading, widget: text}, {label: button, name: button, widget: text}, {label: Description, name: description, widget: text}]}
