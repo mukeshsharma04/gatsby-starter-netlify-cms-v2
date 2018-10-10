@@ -2,7 +2,7 @@
 templateKey: 'careers/react'
 path: /careers/react
 title: Careers React
-ios:
+react:
   title: Senior software engineer - React Js
   heading: Our people are good.
   button: Apply Now
