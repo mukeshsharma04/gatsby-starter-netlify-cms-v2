@@ -104,10 +104,11 @@ const CareerPage = ({ data, classes }) => {
 						{frontmatter.ios.heading}
 					</Typography>
 					<div style={{ position: 'relative' }}>
-						<div
-							className={classNames(classes.paragraph, classes.space)}
-							dangerouslySetInnerHTML={{ __html: frontmatter.ios.description.slice(0, 550) }}
-						/>
+						{frontmatter.ios.description.split('<br />').map((v, k) => (
+							<Typography key={k} className={classNames(classes.paragraph, classes.space)} gutterBottom>
+								{v}
+							</Typography>
+						))}
 						<span className={classes.row}>&#160;</span>
 					</div>
 					<Button
@@ -125,10 +126,11 @@ const CareerPage = ({ data, classes }) => {
 						{frontmatter.react.heading}
 					</Typography>
 					<div style={{ position: 'relative' }}>
-						<div
-							className={classNames(classes.paragraph, classes.space)}
-							dangerouslySetInnerHTML={{ __html: frontmatter.react.description.slice(0, 550) }}
-						/>
+						{frontmatter.react.description.split('<br />').map((v, k) => (
+							<Typography key={k} className={classNames(classes.paragraph, classes.space)} gutterBottom>
+								{v}
+							</Typography>
+						))}
 						<span className={classes.row}>&#160;</span>
 					</div>
 					<Button
