@@ -8,8 +8,6 @@ const CareersPagePreview = ({ entry }) => {
 		<CareersPageTemplate
 			image={entry.getIn([ 'data', 'image' ])}
 			title={entry.getIn([ 'data', 'title' ])}
-			heading={entry.getIn([ 'data', 'heading' ])}
-			description={entry.getIn([ 'data', 'description' ])}
 			ios={entry.getIn([ 'data', 'ios' ])}
 			react={entry.getIn([ 'data', 'react' ])}
 		/>
@@ -19,8 +17,7 @@ const CareersPagePreview = ({ entry }) => {
 CareersPagePreview.propTypes = {
 	entry: PropTypes.shape({
 		getIn: PropTypes.func
-	}),
-	getAsset: PropTypes.func
+	})
 };
 
 export default CareersPagePreview;

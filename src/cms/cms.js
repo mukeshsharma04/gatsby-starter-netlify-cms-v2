@@ -14,8 +14,9 @@ import ThePrimokoDifferenceIndexPagePreview from './preview-templates/the-primok
 import ThePrimokoDifferenceProcessPagePreview from './preview-templates/the-primoko-difference/process';
 import ThePrimokoDifferencePricingPagePreview from './preview-templates/the-primoko-difference/pricing';
 import LetsTalkPagePreview from './preview-templates/LetsTalkPagePreview';
-import CareersPagePreview from './preview-templates/careers/index';
+//import CareersPagePreview from './preview-templates/careers/index';
 import CareersIosPagePreview from './preview-templates/careers/ios';
+import CareersReactPagePreview from './preview-templates/careers/react';
 
 CMS.registerPreviewTemplate('about', AboutPagePreview);
 CMS.registerPreviewTemplate('products', ProductPagePreview);
@@ -31,5 +32,6 @@ CMS.registerPreviewTemplate('the-primoko-difference', ThePrimokoDifferenceIndexP
 CMS.registerPreviewTemplate('the-primoko-difference/process', ThePrimokoDifferenceProcessPagePreview);
 CMS.registerPreviewTemplate('the-primoko-difference/pricing', ThePrimokoDifferencePricingPagePreview);
 CMS.registerPreviewTemplate('letstalk', LetsTalkPagePreview);
-CMS.registerPreviewTemplate('careers', CareersPagePreview);
+//CMS.registerPreviewTemplate('careers', CareersPagePreview);
 CMS.registerPreviewTemplate('careers/ios', CareersIosPagePreview);
+CMS.registerPreviewTemplate('careers/react', CareersReactPagePreview);

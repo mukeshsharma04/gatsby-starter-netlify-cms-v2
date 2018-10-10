@@ -1,6 +1,6 @@
 ---
 templateKey: 'careers/index'
-path: /career
+path: /careers
 title: Careers
 image: /img/startup.jpg
 ios:
